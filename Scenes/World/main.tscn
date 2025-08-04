@@ -76,7 +76,7 @@ ambient_light_source = 3
 reflected_light_source = 2
 
 [sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_qvtyt"]
-frustum_far = 8000.0
+frustum_far = 300.0
 
 [node name="Main" type="Node3D"]
 
