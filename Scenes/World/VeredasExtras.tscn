@@ -1,0 +1,116 @@
+[gd_scene load_steps=8 format=4 uid="uid://d4lgmrky3wj82"]
+
+[ext_resource type="Material" uid="uid://sfntlht18jy4" path="res://Resource/Materials/Calles/Vereda.tres" id="1_lj1p3"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_veege"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1xnom"]
+resource_name = "VeredasExtras_Plane"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray("AAD/////AAD/////AAAAAA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": ExtResource("1_lj1p3"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP///7///wAAAAD/v///AAD///+/AAAAAAAA/7////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_veege")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cxcb7"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_n1pqe"]
+resource_name = "VeredasExtras_Plane_001"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray("AAD/////AAD/////AAAAAA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": ExtResource("1_lj1p3"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP///7///wAAAAD/v///AAD///+/AAAAAAAA/7////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_cxcb7")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_h7ho6"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -7.00167, 2, 1e-05, 8.00167),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8A"),
+"name": "Material_007",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("//8AAP//AAAAAAAA//8AAP//AAACwAAAAAAAAALAAAD//wAA+z8AAAAAAAD7PwAA//8AAAAAAAAAAAAAAAAAAP//AAD9fwAAAAAAAP1/AAD//wAAAEAAAAAAAAAAQAAA//8AAP6/AAAAAAAA/r8AAP//AAABgAAAAAAAAAGAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bmlx3"]
+resource_name = "VeredasExtras_Mesh_5"
+_surfaces = [{
+"aabb": AABB(-1, 0, -7.00167, 2, 1e-05, 8.00167),
+"attribute_data": PackedByteArray("/////wAA/////wAAAAAAAP////8AAP////8AAAAAAAD/////AAD/////AAAAAAAA/////wAA/////wAAAAAAAA=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8A"),
+"material": ExtResource("1_lj1p3"),
+"name": "Material_007",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("//8AAP///78AAAAA////v///AAACwP+/AAAAAALA/7///wAA+z//vwAAAAD7P/+///8AAAAA/78AAAAAAAD/v///AAD9f/+/AAAAAP1//7///wAAAED/vwAAAAAAQP+///8AAP6//78AAAAA/r//v///AAABgP+/AAAAAAGA/7////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_h7ho6")
+
+[node name="VeredasExtras" type="Node3D"]
+
+[node name="Plane" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, 3.50788, 0, 28.4547)
+mesh = SubResource("ArrayMesh_1xnom")
+skeleton = NodePath("")
+
+[node name="Plane_001" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, 3.51355, -0.000778656, 3.49803)
+mesh = SubResource("ArrayMesh_n1pqe")
+skeleton = NodePath("")
+
+[node name="Der" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, 3.50005, 0, 23.4966)
+mesh = SubResource("ArrayMesh_bmlx3")
+skeleton = NodePath("")

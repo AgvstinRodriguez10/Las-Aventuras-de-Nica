@@ -1,0 +1,99 @@
+[gd_scene load_steps=6 format=3 uid="uid://tmkk0hisgpct"]
+
+[ext_resource type="PackedScene" uid="uid://rnqvipfo1iw6" path="res://Scenes/World/Calles/CuadraDarsenaIzquierda.tscn" id="1_vu68e"]
+[ext_resource type="PackedScene" uid="uid://daqotynvcl1u2" path="res://Assets/San Nicolas/Object/Decoración/BalaCalle.tscn" id="2_swyip"]
+[ext_resource type="PackedScene" uid="uid://d13rf38gehy5" path="res://Scenes/World/Objetos/Ligth.tscn" id="3_swyip"]
+[ext_resource type="PackedScene" uid="uid://b6txb1e0ge8qv" path="res://Scenes/World/Calles/Cuadra - 4/izq.tscn" id="3_x6dmu"]
+[ext_resource type="PackedScene" uid="uid://dvjy5erkeic7" path="res://Scenes/World/Calles/Cuadra - 4/der.tscn" id="4_wam30"]
+
+[node name="B Mitre 250 200" type="Node3D"]
+
+[node name="CuadraDarsenaIzquierda" parent="." instance=ExtResource("1_vu68e")]
+transform = Transform3D(-6, 0, -5.24537e-07, 0, 6, 0, 5.24537e-07, 0, -6, 0, 0, 727.8)
+
+[node name="Decoracion" type="Node3D" parent="."]
+
+[node name="Balas" type="Node3D" parent="Decoracion"]
+
+[node name="Der" type="Node3D" parent="Decoracion/Balas"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 585.59)
+
+[node name="1" parent="Decoracion/Balas/Der" instance=ExtResource("2_swyip")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.95352, 0.0597737, -37.7293)
+
+[node name="2" parent="Decoracion/Balas/Der" instance=ExtResource("2_swyip")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.95352, 0.0597737, -22.7293)
+
+[node name="3" parent="Decoracion/Balas/Der" instance=ExtResource("2_swyip")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.95352, 0.0597737, -7.72934)
+
+[node name="5" parent="Decoracion/Balas/Der" instance=ExtResource("2_swyip")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.95352, 0.0597737, 22.2707)
+
+[node name="6" parent="Decoracion/Balas/Der" instance=ExtResource("2_swyip")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.95352, 0.0597737, 36.2707)
+
+[node name="7" parent="Decoracion/Balas/Der" instance=ExtResource("2_swyip")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.95352, 0.0597737, 52.2707)
+
+[node name="9" parent="Decoracion/Balas/Der" instance=ExtResource("2_swyip")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.95352, 0.0597737, 82.2707)
+
+[node name="10" parent="Decoracion/Balas/Der" instance=ExtResource("2_swyip")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.95352, 0.0597737, 97.2707)
+
+[node name="11" parent="Decoracion/Balas/Der" instance=ExtResource("2_swyip")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.95352, 0.0597737, 112.271)
+
+[node name="Izq" type="Node3D" parent="Decoracion/Balas"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 585.586)
+
+[node name="1" parent="Decoracion/Balas/Izq" instance=ExtResource("2_swyip")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.95352, 0.0597737, -37.7293)
+
+[node name="3" parent="Decoracion/Balas/Izq" instance=ExtResource("2_swyip")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.95352, 0.0597737, -7.72934)
+
+[node name="5" parent="Decoracion/Balas/Izq" instance=ExtResource("2_swyip")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.95352, 0.0597737, 82.2707)
+
+[node name="7" parent="Decoracion/Balas/Izq" instance=ExtResource("2_swyip")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.95352, 0.0597737, 112.271)
+
+[node name="8" parent="Decoracion/Balas/Izq" instance=ExtResource("2_swyip")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.95352, 0.0597737, 127.271)
+
+[node name="9" parent="Decoracion/Balas/Izq" instance=ExtResource("2_swyip")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.95352, 0.0597737, 67.2706)
+
+[node name="10" parent="Decoracion/Balas/Izq" instance=ExtResource("2_swyip")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.95352, 0.0597737, 7.27069)
+
+[node name="Faroles" type="Node3D" parent="Decoracion"]
+
+[node name="Izq" type="Node3D" parent="Decoracion/Faroles"]
+
+[node name="1" parent="Decoracion/Faroles/Izq" instance=ExtResource("3_swyip")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.06898, 0, 562.304)
+
+[node name="2" parent="Decoracion/Faroles/Izq" instance=ExtResource("3_swyip")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.06898, 0, 682.304)
+
+[node name="Der" type="Node3D" parent="Decoracion/Faroles"]
+
+[node name="1" parent="Decoracion/Faroles/Der" instance=ExtResource("3_swyip")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.93102, 0, 593.304)
+
+[node name="2" parent="Decoracion/Faroles/Der" instance=ExtResource("3_swyip")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.93102, 0, 652.702)
+
+[node name="3" parent="Decoracion/Faroles/Der" instance=ExtResource("3_swyip")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.93102, 0, 712.702)
+
+[node name="Edificios" type="Node3D" parent="."]
+
+[node name="Izq" parent="Edificios" instance=ExtResource("3_x6dmu")]
+
+[node name="Der" parent="Edificios" instance=ExtResource("4_wam30")]
+
+[node name="Autos" type="Node3D" parent="."]

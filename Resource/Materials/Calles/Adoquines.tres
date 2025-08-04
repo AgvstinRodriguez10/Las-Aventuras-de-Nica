@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://0q4sd8uj7kf5"]
+
+[ext_resource type="Texture2D" uid="uid://cu8w3rddb8w13" path="res://Assets/San Nicolas/Cuadras/CuadraDarsenaIzquierda_adoquines_3.jpg" id="1_h66yy"]
+[ext_resource type="Texture2D" uid="uid://b14pqony8xctr" path="res://Assets/San Nicolas/Cuadras/CuadraDarsenaIzquierda_normal_adoquines.png" id="2_x1ry7"]
+
+[resource]
+resource_name = "Calle.003"
+cull_mode = 2
+albedo_texture = ExtResource("1_h66yy")
+albedo_texture_force_srgb = true
+normal_enabled = true
+normal_scale = 1.2
+normal_texture = ExtResource("2_x1ry7")
+uv1_scale = Vector3(5, 5, 1)
+uv1_offset = Vector3(0, -4, 0)

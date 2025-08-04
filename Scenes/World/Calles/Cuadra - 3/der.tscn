@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://bld018yr76wid"]
+
+[ext_resource type="PackedScene" uid="uid://dj0ylvw4ggkux" path="res://Assets/San Nicolas/Edificios/Cuadra - 3/Der/Edificio extra.fbx" id="1_kp0xy"]
+[ext_resource type="PackedScene" uid="uid://rgp7tf45b7rd" path="res://Assets/San Nicolas/Edificios/Cuadra - 3/Der/edificio 1.fbx" id="2_si83e"]
+[ext_resource type="PackedScene" uid="uid://b2ubu56jqlins" path="res://Assets/San Nicolas/Edificios/Cuadra - 3/Der/edificio 2.fbx" id="3_ucado"]
+[ext_resource type="PackedScene" uid="uid://c2xe5ntaiwrin" path="res://Assets/San Nicolas/Edificios/Cuadra - 3/Der/edificio 3.fbx" id="4_yiqdx"]
+[ext_resource type="PackedScene" uid="uid://cmtnmcie8itx7" path="res://Assets/San Nicolas/Edificios/Cuadra - 3/Der/edificio 4.fbx" id="5_0xr8b"]
+[ext_resource type="PackedScene" uid="uid://dbef4ha7eggl" path="res://Assets/San Nicolas/Edificios/Cuadra - 3/Der/edificio 5.fbx" id="6_g54d8"]
+
+[node name="Der" type="Node3D"]
+
+[node name="Edificio extra" parent="." instance=ExtResource("1_kp0xy")]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, -9.15601, 1.03825, 364.862)
+
+[node name="edificio 1" parent="." instance=ExtResource("2_si83e")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, -16.6346, -0.850413, 368.613)
+
+[node name="edificio 2" parent="." instance=ExtResource("3_ucado")]
+transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, -19.6979, 0, 413.412)
+
+[node name="edificio 3" parent="." instance=ExtResource("4_yiqdx")]
+transform = Transform3D(-3.49691e-07, 0, 8, 0, 8, 0, -8, 0, -3.49691e-07, -20.4572, 3.08505, 443.343)
+
+[node name="edificio 4" parent="." instance=ExtResource("5_0xr8b")]
+transform = Transform3D(-3.49691e-07, 0, 8, 0, 8, 0, -8, 0, -3.49691e-07, -19.8642, 2.7786, 487.617)
+
+[node name="edificio 5" parent="." instance=ExtResource("6_g54d8")]
+transform = Transform3D(-8, 0, -1.20797e-06, 0, 8, 0, 1.20797e-06, 0, -8, -16.1657, 0, 517.383)

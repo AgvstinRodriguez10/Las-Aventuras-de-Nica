@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b13tr6v2hqhqb"]
+
+[ext_resource type="PackedScene" uid="uid://cn0jorsrvagge" path="res://Assets/San Nicolas/Edificios/Plaza/B/edificio 1.fbx" id="1_ir8vb"]
+[ext_resource type="PackedScene" uid="uid://1q2pxq15ouif" path="res://Assets/San Nicolas/Edificios/Plaza/B/edificio 2.fbx" id="2_m2x8q"]
+[ext_resource type="PackedScene" uid="uid://d21dyoe8o3uqr" path="res://Assets/San Nicolas/Edificios/Plaza/B/edificio 3.fbx" id="3_u2oeb"]
+
+[node name="B" type="Node3D"]
+
+[node name="edificio 1" parent="." instance=ExtResource("1_ir8vb")]
+transform = Transform3D(-6, 0, -9.05975e-07, 0, 6, 0, 9.05975e-07, 0, -6, 43.33, 3.05359, 1323)
+
+[node name="edificio 2" parent="." instance=ExtResource("2_m2x8q")]
+transform = Transform3D(-4, 0, -6.03983e-07, 0, 4, 0, 6.03983e-07, 0, -4, 153.124, 2.17929, 1322.12)
+
+[node name="edificio 3" parent="." instance=ExtResource("3_u2oeb")]
+transform = Transform3D(-2.18557e-07, 0, 5, 0, 5, 0, -5, 0, -2.18557e-07, -15.255, 2.3754, 1324.82)

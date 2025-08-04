@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://sfntlht18jy4"]
+
+[ext_resource type="Texture2D" uid="uid://bhcxxust7qgah" path="res://Assets/San Nicolas/Cuadras/CuadraDarsenaIzquierda_image (8).png" id="1_0gcal"]
+
+[resource]
+resource_name = "Material.007"
+cull_mode = 2
+albedo_color = Color(0.745098, 0.745098, 0.745098, 1)
+albedo_texture = ExtResource("1_0gcal")
+albedo_texture_force_srgb = true
+roughness = 0.5
+uv1_scale = Vector3(8, 8, 1)
+uv1_offset = Vector3(0, -7, 0)

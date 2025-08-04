@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0wmw4j3yfftu"]
+
+[ext_resource type="PackedScene" uid="uid://beywohxmus5m4" path="res://Assets/San Nicolas/Edificios/Cuadra - 6/Izq/edificio 1.fbx" id="1_wtmql"]
+[ext_resource type="PackedScene" uid="uid://sve3elyfhaca" path="res://Assets/San Nicolas/Edificios/Cuadra - 6/Izq/edificio 2.fbx" id="2_ytdft"]
+[ext_resource type="PackedScene" uid="uid://dj0mlb5vf7f1v" path="res://Assets/San Nicolas/Edificios/Cuadra - 6/Izq/edificio 3.fbx" id="3_w0dvm"]
+[ext_resource type="PackedScene" uid="uid://ct86h6myfrvsm" path="res://Assets/San Nicolas/Edificios/Cuadra - 6/Izq/edificio 4.fbx" id="4_j1t81"]
+
+[node name="Izq" type="Node3D"]
+
+[node name="edificio 1" parent="." instance=ExtResource("1_wtmql")]
+transform = Transform3D(-2.6, 0, -3.92589e-07, 0, 2.6, 0, 3.92589e-07, 0, -2.6, 36.7993, 2.41506, 956.285)
+
+[node name="edificio 2" parent="." instance=ExtResource("2_ytdft")]
+transform = Transform3D(-2.18557e-07, 0, -5, 0, 5, 0, 5, 0, -2.18557e-07, 19.7371, 0, 1002.24)
+
+[node name="edificio 3" parent="." instance=ExtResource("3_w0dvm")]
+transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, 19.1457, 2.13773, 1037.34)
+
+[node name="edificio 4" parent="." instance=ExtResource("4_j1t81")]
+transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, 21.6092, 0.750371, 1073.9)

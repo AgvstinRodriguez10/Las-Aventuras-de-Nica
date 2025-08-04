@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://dcmdpwf6w8opd"]
+
+[ext_resource type="PackedScene" uid="uid://bxs55inw16h7x" path="res://Scenes/World/Calles/Cuadras (Completas)/b_mitre_400_350.tscn" id="1_i7jcd"]
+[ext_resource type="PackedScene" uid="uid://6vltpx4piqv4" path="res://Scenes/World/Calles/Cuadras (Completas)/b_mitre_350_300.tscn" id="2_86gof"]
+[ext_resource type="PackedScene" uid="uid://4vitstolrp7f" path="res://Scenes/World/Calles/Cuadras (Completas)/b_mitre_300_250.tscn" id="3_lgbp7"]
+[ext_resource type="PackedScene" uid="uid://tmkk0hisgpct" path="res://Scenes/World/Calles/Cuadras (Completas)/b_mitre_250_200.tscn" id="4_3m1dj"]
+[ext_resource type="PackedScene" uid="uid://b0dvif1xvfdav" path="res://Scenes/World/Calles/Cuadras (Completas)/b_mitre_200_150.tscn" id="5_kko3t"]
+[ext_resource type="PackedScene" uid="uid://7ue4eim1d5xt" path="res://Scenes/World/Calles/Cuadras (Completas)/b_mitre_150_100.tscn" id="6_t1gqk"]
+[ext_resource type="PackedScene" uid="uid://bv1y3kkv4x8rx" path="res://Scenes/World/plaza.tscn" id="7_86gof"]
+[ext_resource type="PackedScene" uid="uid://btg2o08c332n2" path="res://Scenes/World/Calles/Plaza/a.tscn" id="8_kko3t"]
+[ext_resource type="PackedScene" uid="uid://b13tr6v2hqhqb" path="res://Scenes/World/Calles/Plaza/b.tscn" id="9_t1gqk"]
+[ext_resource type="PackedScene" uid="uid://ccaersgh5mbh4" path="res://Scenes/World/Calles/Plaza/c.tscn" id="10_4c4k8"]
+[ext_resource type="PackedScene" uid="uid://d4lgmrky3wj82" path="res://Scenes/World/VeredasExtras.tscn" id="11_t1gqk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kko3t"]
+size = Vector3(12.0995, 0.523926, 1675.56)
+
+[node name="San Nicolas" type="Node3D"]
+
+[node name="Collision" type="StaticBody3D" parent="."]
+collision_mask = 18
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.123718, -0.238037, 668.683)
+shape = SubResource("BoxShape3D_kko3t")
+
+[node name="B Mitre 400 350" parent="." instance=ExtResource("1_i7jcd")]
+
+[node name="B Mitre 350 300" parent="." instance=ExtResource("2_86gof")]
+
+[node name="B Mitre 300 250" parent="." instance=ExtResource("3_lgbp7")]
+
+[node name="B Mitre 250 200" parent="." instance=ExtResource("4_3m1dj")]
+
+[node name="B Mitre 200 150" parent="." instance=ExtResource("5_kko3t")]
+
+[node name="B Mitre 150 100" parent="." instance=ExtResource("6_t1gqk")]
+
+[node name="Plaza" parent="." instance=ExtResource("7_86gof")]
+
+[node name="Edificios" type="Node3D" parent="Plaza"]
+
+[node name="A" parent="Plaza/Edificios" instance=ExtResource("8_kko3t")]
+
+[node name="B" parent="Plaza/Edificios" instance=ExtResource("9_t1gqk")]
+
+[node name="C" parent="Plaza/Edificios" instance=ExtResource("10_4c4k8")]
+
+[node name="VeredasExtras" type="Node3D" parent="."]
+
+[node name="VeredasExtras" parent="VeredasExtras" instance=ExtResource("11_t1gqk")]
+transform = Transform3D(-6, 0, -5.24537e-07, 0, 6, 0, 5.24537e-07, 0, -6, -29.8126, 0, 153.47)
+
+[node name="VeredasExtras2" parent="VeredasExtras" instance=ExtResource("11_t1gqk")]
+transform = Transform3D(-6, 0, -5.24537e-07, 0, 6, 0, 5.24537e-07, 0, -6, 72.0165, 0, 153.47)
+
+[node name="VeredasExtras3" parent="VeredasExtras" instance=ExtResource("11_t1gqk")]
+transform = Transform3D(-6, 0, -5.24537e-07, 0, 6, 0, 5.24537e-07, 0, -6, -29.8126, 0, 345.323)
+
+[node name="VeredasExtras4" parent="VeredasExtras" instance=ExtResource("11_t1gqk")]
+transform = Transform3D(-6, 0, -5.24537e-07, 0, 6, 0, 5.24537e-07, 0, -6, 72.0165, 0, 345.323)
+
+[node name="VeredasExtras5" parent="VeredasExtras" instance=ExtResource("11_t1gqk")]
+transform = Transform3D(-6, 0, -5.24537e-07, 0, 6, 0, 5.24537e-07, 0, -6, -29.8126, 0, 536.323)
+
+[node name="VeredasExtras6" parent="VeredasExtras" instance=ExtResource("11_t1gqk")]
+transform = Transform3D(-6, 0, -5.24537e-07, 0, 6, 0, 5.24537e-07, 0, -6, 72.0165, 0, 536.323)
+
+[node name="VeredasExtras7" parent="VeredasExtras" instance=ExtResource("11_t1gqk")]
+transform = Transform3D(-6, 0, -5.24537e-07, 0, 6, 0, 5.24537e-07, 0, -6, -29.8126, 0, 728.323)
+
+[node name="VeredasExtras8" parent="VeredasExtras" instance=ExtResource("11_t1gqk")]
+transform = Transform3D(-6, 0, -5.24537e-07, 0, 6, 0, 5.24537e-07, 0, -6, 72.0165, 0, 728.323)
+
+[node name="VeredasExtras9" parent="VeredasExtras" instance=ExtResource("11_t1gqk")]
+transform = Transform3D(-6, 0, -5.24537e-07, 0, 6, 0, 5.24537e-07, 0, -6, -29.8126, 0, 921.323)
+
+[node name="VeredasExtras10" parent="VeredasExtras" instance=ExtResource("11_t1gqk")]
+transform = Transform3D(-6, 0, -5.24537e-07, 0, 6, 0, 5.24537e-07, 0, -6, 72.0165, 0, 921.323)
+
+[node name="VeredasExtras11" parent="VeredasExtras" instance=ExtResource("11_t1gqk")]
+transform = Transform3D(-6, 0, -5.24537e-07, 0, 6, 0, 5.24537e-07, 0, -6, -29.8126, 0, 1111.32)
+
+[node name="VeredasExtras12" parent="VeredasExtras" instance=ExtResource("11_t1gqk")]
+transform = Transform3D(-6, 0, -5.24537e-07, 0, 6, 0, 5.24537e-07, 0, -6, 72.0165, 0, 1111.32)

@@ -1,0 +1,131 @@
+[gd_scene load_steps=6 format=3 uid="uid://dngf56sh7pjqo"]
+
+[ext_resource type="Script" uid="uid://dtauwcvryl0cr" path="res://Script/GUI/pause_menu.gd" id="1_cifqg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0a2ss"]
+font_size = 50
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_mtqfn"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_cifqg"]
+resource_name = "animPause"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mtqfn"]
+_data = {
+&"RESET": SubResource("Animation_mtqfn"),
+&"animPause": SubResource("Animation_cifqg")
+}
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_cifqg")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 132.0
+text = "GAME PAUSED"
+label_settings = SubResource("LabelSettings_0a2ss")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="resume" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -60.0
+offset_right = 96.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "CONTINUAR"
+
+[node name="restart" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = 36.0
+offset_right = 96.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "REINTENTAR"
+
+[node name="exit" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = 132.0
+offset_right = 96.0
+offset_bottom = 204.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "SALIR
+"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_mtqfn")
+}
+
+[connection signal="pressed" from="Panel/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Panel/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Panel/exit" to="." method="_on_exit_pressed"]
