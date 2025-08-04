@@ -24,19 +24,10 @@ func _ready() -> void:
 	labelPlus.hide()
 
 func _process(delta: float) -> void:
+	print(player.velocity_z)
 	labelScore.text = str(score)
+	score += 0.2
 	
-	if score < limit_max and player.is_movie == false:
-		score += score_plus
-	elif score > limit_max:
-		score_plus += score_base
-		limit_max = limit_max + score
-		if player.velocity_z <= 600:
-			player.velocity_z += velocity_plus
-		else:
-			player.velocity_z = 300
-			yagui.velocity_z = 300
-		
 	labelScore.text = str(int(score))
 	
 	if player.is_hitt == true:
@@ -63,6 +54,13 @@ func add_point():
 	score += 100
 	coins = get_tree().get_nodes_in_group("Coins")
 
-
 func _on_timer_timeout() -> void:
 	player.life_plus = false
+
+func upgradeVelocityZ():
+	if player.velocity_z <= 600:
+		player.velocity_z += velocity_plus
+		#yagui.velocity_z += velocity_plus_enemies
+	else:
+		player.velocity_z = 300
+		#yagui.velocity_z = 300

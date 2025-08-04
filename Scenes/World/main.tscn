@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://djlnov41bncl8"]
+[gd_scene load_steps=19 format=3 uid="uid://djlnov41bncl8"]
 
 [ext_resource type="PackedScene" uid="uid://ikd1j0tjscug" path="res://Scenes/GUI/hud.tscn" id="1_by2pg"]
 [ext_resource type="PackedScene" uid="uid://dcmdpwf6w8opd" path="res://Scenes/World/san_nicolas.tscn" id="1_n1kio"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://mc36wktsjlfn" path="res://Script/GUI/label.gd" id="8_6jptx"]
 [ext_resource type="FontFile" uid="uid://c2hhi7jed7eo3" path="res://Assets/Fonts/kagenobolditalic-q2kvl.otf" id="8_wpgpo"]
 [ext_resource type="PackedScene" uid="uid://bo2da4in2mjf8" path="res://Scenes/Coins/SNFicha.tscn" id="9_w7l72"]
+[ext_resource type="PackedScene" uid="uid://h2yyj2bmrsqb" path="res://Scenes/Coins/RDFicha.tscn" id="10_yteiy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6jptx"]
 font = ExtResource("8_wpgpo")
@@ -110,6 +111,7 @@ autoplay = "label"
 
 [node name="Timer" type="Timer" parent="Label"]
 wait_time = 3.5
+one_shot = true
 
 [node name="PauseMenu" parent="." instance=ExtResource("1_wpgpo")]
 
@@ -146,7 +148,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.739924, 7.17762)
 [node name="SNFichas" type="Node3D" parent="."]
 
 [node name="SNFicha" parent="SNFichas" instance=ExtResource("9_w7l72")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.973, 26.916)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.973, 69.5891)
+
+[node name="SNFicha2" parent="SNFichas" instance=ExtResource("9_w7l72")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.973, 48.916)
+
+[node name="RDFichas" type="Node3D" parent="."]
+
+[node name="RDFicha" parent="RDFichas" instance=ExtResource("10_yteiy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.99592, 66.824)
 
 [node name="Obstaculos" type="Node3D" parent="."]
 

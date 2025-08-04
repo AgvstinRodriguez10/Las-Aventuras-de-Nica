@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=4 uid="uid://h2yyj2bmrsqb"]
+[gd_scene load_steps=6 format=4 uid="uid://h2yyj2bmrsqb"]
+
+[ext_resource type="Script" uid="uid://xqskrrc1uwaj" path="res://Script/Coins/CoinRD.gd" id="1_ufi81"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_no0u1"]
 resource_name = "Material_001.003"
@@ -40,9 +42,21 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0mjvq")
 
-[node name="RDFicha" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_3udj3"]
+size = Vector3(1.03441, 0.957428, 0.15155)
+
+[node name="RDFicha" type="Area3D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_ufi81")
 
 [node name="Plane" type="MeshInstance3D" parent="."]
-transform = Transform3D(150, 0, 0, 0, 150, 0, 0, 0, 150, 0, 0, 0)
+transform = Transform3D(60, 0, 0, 0, 60, 0, 0, 0, 60, 0, 0, 0)
 mesh = SubResource("ArrayMesh_w5rn7")
 skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00662994, -0.0662994, -0.01297)
+shape = SubResource("BoxShape3D_3udj3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
