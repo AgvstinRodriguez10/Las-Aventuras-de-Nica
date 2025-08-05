@@ -1,0 +1,28 @@
+[remap]
+
+importer="2d_array_texture"
+type="CompressedTexture2DArray"
+uid="uid://donb15y8s4bkv"
+path.bptc="res://.godot/imported/Cuadra1-Izq.exr-a5a325dcb39c5c334d574596f2b768ec.bptc.ctexarray"
+path.astc="res://.godot/imported/Cuadra1-Izq.exr-a5a325dcb39c5c334d574596f2b768ec.astc.ctexarray"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Resource/LigthmapGI/Cuadra1-Izq.exr"
+dest_files=["res://.godot/imported/Cuadra1-Izq.exr-a5a325dcb39c5c334d574596f2b768ec.bptc.ctexarray", "res://.godot/imported/Cuadra1-Izq.exr-a5a325dcb39c5c334d574596f2b768ec.astc.ctexarray"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/channel_pack=1
+mipmaps/generate=false
+mipmaps/limit=-1
+slices/horizontal=1
+slices/vertical=4
