@@ -63,7 +63,4 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00120544, 0.176178, 0.009552)
 shape = SubResource("BoxShape3D_6v0qi")
 
-[node name="Timer" type="Timer" parent="."]
-
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

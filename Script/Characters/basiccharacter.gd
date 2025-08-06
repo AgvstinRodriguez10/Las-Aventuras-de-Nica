@@ -12,7 +12,8 @@ enum STATES  {
 	IDLE,
 	RUN,
 	JUMP,
-	FALL
+	FALL,
+	HIT
 }
 var eje_local_x:Vector3
 
@@ -45,13 +46,9 @@ func animationController(delta):
 			gravityApply(delta)
 			if is_on_floor():
 				currentState = STATES.RUN
-	# /// ANIMACIONES /// #
-	#if is_on_floor() and is_movie == false:
-		#animationPlayer.play("anim_run")
-	#elif not is_on_floor() and is_movie == false:
-		#animationPlayer.play("anim_jump")
-	#elif is_movie == true:
-		#animationPlayer.play("anim_idle")
+		STATES.HIT:
+			animationPlayer.play("anim_hitt")
+			
 
 func movingToForward(delta: float):
 	# Almacena la direccion local de donde mira el modelo

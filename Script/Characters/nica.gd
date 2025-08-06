@@ -130,4 +130,11 @@ func powerUpActive():
 			durationPowerUp = powerUpDuration.ABOSRBCOIN
 
 func is_hitt_change():
-	is_hitt = !is_hitt
+	if is_hitt:
+		currentState = STATES.RUN
+		is_hitt = false
+
+func lostLife():
+	currentState = STATES.HIT
+	life -= 1
+	is_hitt = true
