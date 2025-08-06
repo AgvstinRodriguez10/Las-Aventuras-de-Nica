@@ -3,6 +3,8 @@ class_name Player
 @onready var animation_nica: AnimationPlayer = $"Nica-v1_0/AnimationPlayer"
 @onready var camera_focus: Marker3D = $"../CameraFocus"
 
+@onready var soundRun = $SoundRUN
+
 const JUMP_VELOCITY: float = 10.0  # Jump strength
 const GRAVITY: float = 24.0  # Gravity strength
 const LANES: Array = [-1, 0, 1]  # Lane positions on x-axis
@@ -60,8 +62,10 @@ func _physics_process(delta: float) -> void:
 	if is_hitt == false:
 		if is_on_floor() and is_movie == false:
 			animation_nica.play("anim_run")
+			soundRun.play()
 		elif not is_on_floor() and is_movie == false:
 			animation_nica.play("anim_jump")
+			soundRun.stop()
 		elif is_movie == true:
 			animation_nica.play("anim_idle")
 	else :
