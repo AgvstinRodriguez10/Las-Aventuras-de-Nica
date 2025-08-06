@@ -492,28 +492,38 @@ shadow_mesh = SubResource("ArrayMesh_0o7wm")
 
 [node name="Darsena" type="MeshInstance3D" parent="Calles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 19.99)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_vk4c6")
 skeleton = NodePath("")
 
 [node name="1" type="MeshInstance3D" parent="Calles"]
 transform = Transform3D(-1.19209e-07, 0, 1, 0, 1, 0, -1, 0, -1.19209e-07, 0, 0, 3)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_lj4m5")
 skeleton = NodePath("")
 
 [node name="Cruce" type="Node3D" parent="."]
 
 [node name="AlcantarillasCurvas" type="MeshInstance3D" parent="Cruce"]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0.00204387, 0, -0.0047497)
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_2f4g8")
 skeleton = NodePath("")
 
 [node name="Calle" type="MeshInstance3D" parent="Cruce"]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 5, 0, 0)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_77vj4")
 skeleton = NodePath("")
 
 [node name="Vereda" type="MeshInstance3D" parent="Cruce"]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, -3.49459, 0, 3.48658)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_ecxrm")
 skeleton = NodePath("")
 
@@ -521,10 +531,14 @@ skeleton = NodePath("")
 
 [node name="Der" type="MeshInstance3D" parent="Veredas"]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, 3.50005, 0, 23.4966)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_7mm4m")
 skeleton = NodePath("")
 
 [node name="Izq" type="MeshInstance3D" parent="Veredas"]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, -3.49708, 0, 23.4897)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_0g4sy")
 skeleton = NodePath("")

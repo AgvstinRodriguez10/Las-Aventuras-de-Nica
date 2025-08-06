@@ -54,6 +54,8 @@ collision_mask = 2
 script = ExtResource("1_a05qm")
 
 [node name="Plane" type="MeshInstance3D" parent="."]
+lod_bias = 0.5
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_wd3dv")
 skeleton = NodePath("")
 

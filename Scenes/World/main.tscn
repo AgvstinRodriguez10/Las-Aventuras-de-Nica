@@ -1,5 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://djlnov41bncl8"]
+[gd_scene load_steps=20 format=3 uid="uid://djlnov41bncl8"]
 
+[ext_resource type="PackedScene" uid="uid://d33hm0kfvhtj3" path="res://Scenes/GUI/fps_count.tscn" id="1_1pvyk"]
 [ext_resource type="PackedScene" uid="uid://ikd1j0tjscug" path="res://Scenes/GUI/hud.tscn" id="1_by2pg"]
 [ext_resource type="PackedScene" uid="uid://dcmdpwf6w8opd" path="res://Scenes/World/san_nicolas.tscn" id="1_n1kio"]
 [ext_resource type="PackedScene" uid="uid://dngf56sh7pjqo" path="res://Scenes/GUI/pause_menu.tscn" id="1_wpgpo"]
@@ -76,9 +77,11 @@ ambient_light_source = 3
 reflected_light_source = 2
 
 [sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_qvtyt"]
-frustum_far = 300.0
+frustum_far = 250.0
 
 [node name="Main" type="Node3D"]
+
+[node name="FPSCount" parent="." instance=ExtResource("1_1pvyk")]
 
 [node name="Label" type="CanvasLayer" parent="."]
 process_mode = 3
@@ -137,6 +140,8 @@ light_bake_mode = 1
 shadow_enabled = true
 shadow_bias = 10.0
 shadow_reverse_cull_face = true
+directional_shadow_fade_start = 0.2
+directional_shadow_max_distance = 50.0
 
 [node name="EcoFichas" type="Node3D" parent="."]
 

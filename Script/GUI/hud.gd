@@ -24,7 +24,6 @@ func _ready() -> void:
 	labelPlus.hide()
 
 func _process(delta: float) -> void:
-	print(player.velocity_z)
 	labelScore.text = str(score)
 	score += 0.2
 	

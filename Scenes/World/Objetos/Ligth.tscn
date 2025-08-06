@@ -75,5 +75,7 @@ shadow_mesh = SubResource("ArrayMesh_3s40b")
 [node name="Ligth" type="Node3D"]
 
 [node name="Circle" type="MeshInstance3D" parent="."]
+lod_bias = 0.5
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_fidbu")
 skeleton = NodePath("")

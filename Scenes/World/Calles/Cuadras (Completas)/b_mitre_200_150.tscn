@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0dvif1xvfdav"]
+[gd_scene load_steps=7 format=3 uid="uid://b0dvif1xvfdav"]
 
 [ext_resource type="PackedScene" uid="uid://btb7f35hi806d" path="res://Scenes/World/Calles/CuadraNormal.tscn" id="1_l3woc"]
 [ext_resource type="PackedScene" uid="uid://8vruaec756ww" path="res://Scenes/World/Calles/Cuadra - 5/izq.tscn" id="2_6gmhs"]
 [ext_resource type="PackedScene" uid="uid://cd32lseooa65n" path="res://Scenes/World/Calles/Cuadra - 5/der.tscn" id="3_2kapg"]
 [ext_resource type="PackedScene" uid="uid://daqotynvcl1u2" path="res://Assets/San Nicolas/Object/Decoración/BalaCalle.tscn" id="4_eeou1"]
 [ext_resource type="PackedScene" uid="uid://d13rf38gehy5" path="res://Scenes/World/Objetos/Ligth.tscn" id="5_6gmhs"]
+[ext_resource type="PackedScene" uid="uid://dstppbqgrwtt1" path="res://Scenes/World/Optimization/area_street_delete.tscn" id="6_2kapg"]
 
 [node name="B Mitre 200 150" type="Node3D"]
 
@@ -106,3 +107,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.93102, 0, 844.111)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.93102, 0, 904.111)
 
 [node name="Autos" type="Node3D" parent="."]
+
+[node name="AreaStreetDelete" parent="." instance=ExtResource("6_2kapg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 973.813)

@@ -3,7 +3,6 @@ class_name Player
 @onready var animation_nica: AnimationPlayer = $"Nica-v1_0/AnimationPlayer"
 @onready var camera_focus: Marker3D = $"../CameraFocus"
 
-const MOVE_SPEED : float = 0.01
 const JUMP_VELOCITY: float = 10.0  # Jump strength
 const GRAVITY: float = 24.0  # Gravity strength
 const LANES: Array = [-1, 0, 1]  # Lane positions on x-axis
@@ -58,13 +57,15 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 	move_and_slide()
 	# /// ANIMACIONES /// #
-	if is_on_floor() and is_movie == false:
-		animation_nica.play("anim_run")
-	elif not is_on_floor() and is_movie == false:
-		animation_nica.play("anim_jump")
-	elif is_movie == true:
-		animation_nica.play("anim_idle")
-		
+	if is_hitt == false:
+		if is_on_floor() and is_movie == false:
+			animation_nica.play("anim_run")
+		elif not is_on_floor() and is_movie == false:
+			animation_nica.play("anim_jump")
+		elif is_movie == true:
+			animation_nica.play("anim_idle")
+	else :
+		animation_nica.play("anim_hitt")
 func changeLine(dire):
 	var dist_recorrida = 0
 	# Esta funcion "interpola" entre un punto y otro con el await para hacer una pasada en cada frame
@@ -119,6 +120,9 @@ func reset_target_line():
 
 func is_movie_change():
 	is_movie = !is_movie
+
+func is_hitt_change():
+	is_hitt = !is_hitt
 
 func actualizar_eje_local():
 	eje_local_x = global_transform.basis.x.normalized()

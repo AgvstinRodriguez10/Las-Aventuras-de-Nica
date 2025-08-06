@@ -102,15 +102,21 @@ shadow_mesh = SubResource("ArrayMesh_h7ho6")
 
 [node name="Plane" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, 3.50788, 0, 28.4547)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_1xnom")
 skeleton = NodePath("")
 
 [node name="Plane_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, 3.51355, -0.000778656, 3.49803)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_n1pqe")
 skeleton = NodePath("")
 
 [node name="Der" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, 3.50005, 0, 23.4966)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_bmlx3")
 skeleton = NodePath("")
