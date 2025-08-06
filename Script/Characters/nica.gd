@@ -62,7 +62,8 @@ func _physics_process(delta: float) -> void:
 	if is_hitt == false:
 		if is_on_floor() and is_movie == false:
 			animation_nica.play("anim_run")
-			soundRun.play()
+			if not soundRun.playing:
+				soundRun.play()
 		elif not is_on_floor() and is_movie == false:
 			animation_nica.play("anim_jump")
 			soundRun.stop()

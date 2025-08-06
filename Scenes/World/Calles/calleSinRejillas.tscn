@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=4 uid="uid://vrc3x88h2vb5"]
+
+[ext_resource type="Texture2D" uid="uid://dkr5wt8lhbbef" path="res://Assets/San Nicolas/Cuadras/Extras/calleSinRejillas_adoquines.jpg" id="1_mukhq"]
+[ext_resource type="Texture2D" uid="uid://rk3bcme6tfl" path="res://Assets/San Nicolas/Cuadras/Extras/calleSinRejillas_normal_adoquines.png" id="2_sbu8a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t4e43"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oyvjr"]
+resource_name = "Calle"
+cull_mode = 2
+albedo_color = Color(0.599368, 0.599368, 0.599368, 1)
+albedo_texture = ExtResource("1_mukhq")
+normal_enabled = true
+normal_scale = 1.2
+normal_texture = ExtResource("2_sbu8a")
+uv1_scale = Vector3(4, 4, 1)
+uv1_offset = Vector3(0, -3, 0)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_022n5"]
+_surfaces = [{
+"aabb": AABB(-1, -0.00429489, -0.716915, 2, 0.00156073, 1.43383),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD/////AAD//wAA//8AAP///////wAAAAAAAP//AAD/////AAAAAAAAAAAAAAAAAAD//wAAAAD//wAAAAAAAA==")
+}, {
+"aabb": AABB(-1, -0.00429489, -0.716915, 2, 0.00429489, 1.43383),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAABAAMABAADAAUAAgAGAAAAAgAHAAYABwAIAAYABwAJAAgACQAKAAgACQALAAoA"),
+"name": "Calle",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("/////2H9AAAAAAAAYf0AAAAA//9h/QAA//8AAGH9AAAAAAAA//8AAP//AAD//wAA/////50CAAAAAP//nQIAAP//AACdAgAAAAAAAJ0CAAD//wAAAAAAAAAAAAAAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nmeop"]
+resource_name = "calleSinRejillas_Plane"
+_surfaces = [{
+"aabb": AABB(-1, -0.00429489, -0.716915, 2, 0.00156073, 1.43383),
+"attribute_data": PackedByteArray("AACqqv//qar//6mqAACqqv//VFUAAFVVAABVVf//VFU="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
+"material": SubResource("StandardMaterial3D_t4e43"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD//////////wAA////////////////AAAAAP//////////AAD+fwAAAAAAAP5/AAD//wAA/n///wAAAAD+f////3////9/////f////3//f////3////9/////f///")
+}, {
+"aabb": AABB(-1, -0.00429489, -0.716915, 2, 0.00429489, 1.43383),
+"attribute_data": PackedByteArray("yAo3Wdb4N1nW+DdZyAo3Wdb4N1nICoyuyAo3Wdb4jK4wOzchbznYIW85NyEwO9ghsnd2LaFxoy+hcXYtsnejL9b4jK7ICoyuyAqMrtb4jK4="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
+"material": SubResource("StandardMaterial3D_oyvjr"),
+"name": "Calle",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("/////2H9/n8AAAAAYf3+fwAA//9h/f5///8AAGH9/n8AAP//Yf3///////+dAv///////2H9//8AAP//nQL//wAAAACdAv////8AAAAA/////wAAnQL//wAAAAAAAP//AAAAAP///////wAAYf3/////AAD/////AAAAAGH9//8AAP//nQL/////AACdAv///////50C//8AAAAAnQL///9/////f////3////9/////f/+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9//7////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_022n5")
+
+[node name="calleSinRejillas" type="Node3D"]
+
+[node name="Plane" type="MeshInstance3D" parent="."]
+lod_bias = 0.001
+visibility_range_end = 300.0
+mesh = SubResource("ArrayMesh_nmeop")
+skeleton = NodePath("")

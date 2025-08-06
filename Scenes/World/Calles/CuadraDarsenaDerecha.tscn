@@ -366,6 +366,8 @@ shadow_mesh = SubResource("ArrayMesh_yvxc2")
 
 [node name="Calle_001" type="MeshInstance3D" parent="Calles"]
 transform = Transform3D(-1.19209e-07, 0, 1, 0, 1, 0, -1, 0, -1.19209e-07, 0.00259293, -0.000461892, 12.9972)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_diub0")
 skeleton = NodePath("")
 
@@ -373,16 +375,22 @@ skeleton = NodePath("")
 
 [node name="Vereda" type="MeshInstance3D" parent="Cruce"]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, 0.00113368, -0.000136809, -0.000741005)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_gksle")
 skeleton = NodePath("")
 
 [node name="AlcantarillasCurvas" type="MeshInstance3D" parent="Cruce"]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, -5.82077e-11)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_xdmp6")
 skeleton = NodePath("")
 
 [node name="Calle" type="MeshInstance3D" parent="Cruce"]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0.000819683, -0.000461891, -2.14373)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_g8ujw")
 skeleton = NodePath("")
 
@@ -390,11 +398,15 @@ skeleton = NodePath("")
 
 [node name="1" type="MeshInstance3D" parent="Veredas"]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, 3.67392, 0, 16.5183)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_gy5vw")
 skeleton = NodePath("")
 
 [node name="2" type="MeshInstance3D" parent="Veredas"]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, -3.49708, 0, 15.9897)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_qdpyy")
 skeleton = NodePath("")
 
@@ -402,5 +414,7 @@ skeleton = NodePath("")
 
 [node name="3" type="MeshInstance3D" parent="Darsea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.512, 0, 10)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_a0kqs")
 skeleton = NodePath("")

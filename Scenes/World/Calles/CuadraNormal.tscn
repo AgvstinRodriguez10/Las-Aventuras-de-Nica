@@ -332,30 +332,42 @@ shadow_mesh = SubResource("ArrayMesh_jmyjp")
 
 [node name="Vereda" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, -3.49459, 0, 3.48658)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_e656g")
 skeleton = NodePath("")
 
 [node name="AlcantarillasCurvas" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_qora3")
 skeleton = NodePath("")
 
 [node name="Calle" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 5, 0, 0)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_o3xy7")
 skeleton = NodePath("")
 
 [node name="Calle_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1.19209e-07, 0, 1, 0, 1, 0, -1, 0, -1.19209e-07, 0, 0, 3)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_i1umx")
 skeleton = NodePath("")
 
 [node name="Vereda_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, 3.50005, 0, 23.4966)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_xvmbs")
 skeleton = NodePath("")
 
 [node name="Plane_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, -3.49708, 0, 23.4897)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_0ysd0")
 skeleton = NodePath("")
