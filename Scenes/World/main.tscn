@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://djlnov41bncl8"]
+[gd_scene load_steps=24 format=3 uid="uid://djlnov41bncl8"]
 
 [ext_resource type="PackedScene" uid="uid://d33hm0kfvhtj3" path="res://Scenes/GUI/fps_count.tscn" id="1_1pvyk"]
 [ext_resource type="PackedScene" uid="uid://ikd1j0tjscug" path="res://Scenes/GUI/hud.tscn" id="1_by2pg"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dgf0l74w3bdo8" path="res://Scenes/Coins/EcoFicha.tscn" id="6_23yoc"]
 [ext_resource type="PackedScene" uid="uid://bgssrhg2hyl8i" path="res://Scenes/World/Objetos/Valla.tscn" id="7_jyfha"]
 [ext_resource type="Script" uid="uid://mc36wktsjlfn" path="res://Script/GUI/label.gd" id="8_6jptx"]
+[ext_resource type="PackedScene" uid="uid://3gk3aubcupa6" path="res://Scenes/Characters/yagui.tscn" id="8_t55t5"]
 [ext_resource type="FontFile" uid="uid://c2hhi7jed7eo3" path="res://Assets/Fonts/kagenobolditalic-q2kvl.otf" id="8_wpgpo"]
 [ext_resource type="PackedScene" uid="uid://bo2da4in2mjf8" path="res://Scenes/Coins/SNFicha.tscn" id="9_w7l72"]
 [ext_resource type="PackedScene" uid="uid://h2yyj2bmrsqb" path="res://Scenes/Coins/RDFicha.tscn" id="10_yteiy"]
@@ -79,6 +80,15 @@ reflected_light_source = 2
 [sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_qvtyt"]
 frustum_far = 250.0
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_t55t5"]
+
+[sub_resource type="Sky" id="Sky_g3oxa"]
+sky_material = SubResource("ProceduralSkyMaterial_t55t5")
+
+[sub_resource type="Environment" id="Environment_ombbc"]
+background_mode = 2
+sky = SubResource("Sky_g3oxa")
+
 [node name="Main" type="Node3D"]
 
 [node name="FPSCount" parent="." instance=ExtResource("1_1pvyk")]
@@ -131,8 +141,16 @@ environment = SubResource("Environment_xhtl2")
 attributes = SubResource("CameraAttributesPhysical_qvtyt")
 current = true
 
+[node name="Yagui" parent="." instance=ExtResource("8_t55t5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -22.4715)
+
 [node name="Nica" parent="." instance=ExtResource("2_ntgcc")]
 transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Nica"]
+transform = Transform3D(-2, -8.17588e-08, -1.95139e-07, -1.63518e-07, 1.76787, 0.935212, 1.34259e-07, 0.935212, -1.76787, 1.06245e-06, 6.47261, -12.153)
+visible = false
+environment = SubResource("Environment_ombbc")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.665869, -0.121724, -0.736072, 0.746069, 0.108639, 0.656947, 1.44913e-08, -0.986601, 0.163154, 0, 0, 0)

@@ -1,76 +1,67 @@
-extends CharacterBody3D
+extends BasicCharacter
 class_name Player
-@onready var animation_nica: AnimationPlayer = $"Nica-v1_0/AnimationPlayer"
+#@onready var animation_nica: AnimationPlayer = $"Nica-v1_0/AnimationPlayer"
 @onready var camera_focus: Marker3D = $"../CameraFocus"
 
-@onready var soundRun = $SoundRUN
-
-const JUMP_VELOCITY: float = 10.0  # Jump strength
-const GRAVITY: float = 24.0  # Gravity strength
 const LANES: Array = [-1, 0, 1]  # Lane positions on x-axis
-var starting_point: float
 
 var lateral_free_position := Vector3.ZERO
 
 #va de 0 a 2 para enumerar las lineas
 var target_lane: int = 1
-var velocity_z = 300
 var velocity_y
-const velociti_change_line:float = 0.5
-var eje_local_x:Vector3
+var baseVelocity
 
-var is_movie : bool = false
+const velociti_change_line:float = 0.5
+
 var is_hitt : bool = false
 var life_plus : bool = false
 var life = 3
 
+var durationPowerUp:float = 0.0
+
+enum POWERUPSTATE {
+	NOTHING,
+	SPEEDUP,
+	ABOSRBCOIN
+}
+var currentPowerUp: POWERUPSTATE = POWERUPSTATE.NOTHING
+
+var powerUpDuration:Dictionary = {
+	"SPEEDUP" : 2,
+	"ABOSRBCOIN": 2
+}
+
 func _ready() -> void:
-	position = position
-	eje_local_x = global_transform.basis.x.normalized()
-	starting_point = 0
+	super._ready()
+	animationPlayer = $"Nica-v1_0/AnimationPlayer"
+	baseVelocity = velocity_z
 
 func _physics_process(delta: float) -> void:
-	if is_movie == false:
-		# Almacena la direccion local de donde mira el modelo
-		var forward_direction = -global_transform.basis.z.normalized()
-		# Aplica velocidad hacia el frente, independientemente de donde mire
-		var move_vector = forward_direction * velocity_z * delta
-		if is_on_floor():
-			if Input.is_action_just_pressed("Derecha") and target_lane > 0:
-				target_lane -= 1 # minimo 0
-				changeLine(0.5)
-			if Input.is_action_just_pressed("Izquierda") and target_lane < LANES.size() - 1:
-				target_lane += 1 # maximo 2
-				changeLine(-0.5)
-			velocity = move_vector
-
-		camera_follow(delta)
-
-	else:
-		velocity = Vector3.ZERO
-
-	# ///GRAVEDAD/// #
-	if not is_on_floor() and is_movie == false:
-		velocity.y -= GRAVITY * delta
-	else:
-		velocity.y = 0
-	# ///LOGICA DE SALTO/// #
-	if is_on_floor() and Input.is_action_pressed("Saltar") and is_movie == false:
-		velocity.y = JUMP_VELOCITY
+	if currentState == STATES.RUN:
+		if Input.is_action_just_pressed("Derecha") and target_lane > 0:
+			target_lane -= 1 # minimo 0
+			changeLine(0.5)
+		if Input.is_action_just_pressed("Izquierda") and target_lane < LANES.size() - 1:
+			target_lane += 1 # maximo 2
+			changeLine(-0.5)
+			# ///LOGICA DE SALTO/// #
+		if Input.is_action_pressed("Saltar"):
+			currentState = STATES.JUMP
+	
+	if currentPowerUp != POWERUPSTATE.NOTHING:
+		if durationPowerUp > 0:
+			durationPowerUp -= delta
+		else:
+			# finaliza el power up
+			durationPowerUp = 0
+			currentPowerUp = POWERUPSTATE.NOTHING
+			powerUpActive()
+	
+	camera_follow(delta)
+	animationController(delta)
 	move_and_slide()
-	# /// ANIMACIONES /// #
-	if is_hitt == false:
-		if is_on_floor() and is_movie == false:
-			animation_nica.play("anim_run")
-			if not soundRun.playing:
-				soundRun.play()
-		elif not is_on_floor() and is_movie == false:
-			animation_nica.play("anim_jump")
-			soundRun.stop()
-		elif is_movie == true:
-			animation_nica.play("anim_idle")
-	else :
-		animation_nica.play("anim_hitt")
+		
 func changeLine(dire):
 	var dist_recorrida = 0
 	# Esta funcion "interpola" entre un punto y otro con el await para hacer una pasada en cada frame
@@ -123,11 +114,20 @@ func camera_follow(delta:float):
 func reset_target_line():
 	target_lane = 1
 
-func is_movie_change():
-	is_movie = !is_movie
+func setPower(power:POWERUPSTATE):
+	currentPowerUp = power
+	powerUpActive()
+
+func powerUpActive():
+	match currentPowerUp:
+		POWERUPSTATE.NOTHING:
+			#reinicia todos los valores
+			velocity_z = baseVelocity
+		POWERUPSTATE.SPEEDUP:
+			velocity_z = velocity_z * 1.5
+			durationPowerUp = powerUpDuration.SPEEDUP
+		POWERUPSTATE.ABOSRBCOIN:
+			durationPowerUp = powerUpDuration.ABOSRBCOIN
 
 func is_hitt_change():
 	is_hitt = !is_hitt
-
-func actualizar_eje_local():
-	eje_local_x = global_transform.basis.x.normalized()

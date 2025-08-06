@@ -3053,4 +3053,3 @@ shape = SubResource("CapsuleShape3D_r8wu8")
 
 [node name="SoundRUN" type="AudioStreamPlayer3D" parent="."]
 stream = SubResource("AudioStreamWAV_r8wu8")
-bus = &"SFX"

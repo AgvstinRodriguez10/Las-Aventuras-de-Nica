@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Las Aventuras de Nica 3D"
+config/name="NicaAdventure"
 run/main_scene="uid://c6g1kat5u4r3x"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
