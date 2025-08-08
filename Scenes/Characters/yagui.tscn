@@ -392,11 +392,11 @@ size = Vector3(10.7211, 5.55322, 1.72021)
 [sub_resource type="Animation" id="Animation_t0w3o"]
 resource_name = "anim_idle"
 
-[sub_resource type="Animation" id="Animation_ojtb6"]
-resource_name = "anim_run"
-
 [sub_resource type="Animation" id="Animation_yyyqe"]
 resource_name = "anim_jump"
+
+[sub_resource type="Animation" id="Animation_ojtb6"]
+resource_name = "anim_run"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c7d80"]
 _data = {

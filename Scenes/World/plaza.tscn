@@ -3,7 +3,7 @@
 [ext_resource type="Material" uid="uid://dn3uib65vub6t" path="res://Resource/Materials/Calles/Desague.tres" id="2_4b5ph"]
 [ext_resource type="Material" uid="uid://0q4sd8uj7kf5" path="res://Resource/Materials/Calles/Adoquines.tres" id="3_5eoer"]
 [ext_resource type="Material" uid="uid://sfntlht18jy4" path="res://Resource/Materials/Calles/Vereda.tres" id="4_0xpm0"]
-[ext_resource type="PackedScene" uid="uid://d0x0jtxje4pf0" path="res://Assets/San Nicolas/Cuadras/Extras/calleSinRejillas.glb" id="4_843nu"]
+[ext_resource type="PackedScene" uid="uid://d0x0jtxje4pf0" path="res://Assets/San Nicolas/Extras/calleSinRejillas.glb" id="4_843nu"]
 [ext_resource type="Texture2D" uid="uid://byq0fnir4h0pa" path="res://Assets/San Nicolas/Object/Grass/Poliigon_GrassPatchyGround_4585_BaseColor.jpg" id="5_esl70"]
 [ext_resource type="Texture2D" uid="uid://bjam4a7cgudxm" path="res://Assets/San Nicolas/Object/Grass/Poliigon_GrassPatchyGround_4585_Metallic.jpg" id="6_d643n"]
 [ext_resource type="Texture2D" uid="uid://cq48lpfvdpqs7" path="res://Assets/San Nicolas/Object/Grass/Poliigon_GrassPatchyGround_4585_Normal.png" id="7_lsnii"]

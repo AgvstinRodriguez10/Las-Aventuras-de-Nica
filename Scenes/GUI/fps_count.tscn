@@ -6,8 +6,8 @@
 bg_color = Color(0, 0, 0, 0.207843)
 
 [sub_resource type="LabelSettings" id="LabelSettings_1pvyk"]
-font_size = 30
-font_color = Color(0, 0.627451, 0, 1)
+font_size = 15
+font_color = Color(1, 1, 0, 1)
 
 [node name="FPSCount" type="CanvasLayer"]
 script = ExtResource("1_sr7y8")
@@ -17,21 +17,55 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -73.0
-offset_right = 73.0
-offset_bottom = 42.0
+offset_right = 176.0
+offset_bottom = 232.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yteiy")
 
 [node name="FPS" type="Label" parent="Panel"]
-layout_mode = 0
-offset_right = 147.0
+layout_mode = 1
+offset_right = 249.0
 offset_bottom = 43.0
 text = "FPS : 0"
 label_settings = SubResource("LabelSettings_1pvyk")
-horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="FPSD" type="Label" parent="Panel"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 37.0
+[node name="DrawCalls" type="Label" parent="Panel"]
+layout_mode = 1
+offset_left = 1.0
+offset_top = 48.0
+offset_right = 249.0
+offset_bottom = 91.0
+text = "Draw : "
+label_settings = SubResource("LabelSettings_1pvyk")
+vertical_alignment = 1
+
+[node name="objectInFrame" type="Label" parent="Panel"]
+layout_mode = 1
+offset_left = 1.0
+offset_top = 96.0
+offset_right = 249.0
+offset_bottom = 139.0
+text = "Objects:"
+label_settings = SubResource("LabelSettings_1pvyk")
+vertical_alignment = 1
+
+[node name="MemVRAM" type="Label" parent="Panel"]
+layout_mode = 1
+offset_left = 1.0
+offset_top = 144.0
+offset_right = 249.0
+offset_bottom = 187.0
+text = "VRAM"
+label_settings = SubResource("LabelSettings_1pvyk")
+vertical_alignment = 1
+
+[node name="MemoryText" type="Label" parent="Panel"]
+layout_mode = 1
+offset_left = 1.0
+offset_top = 192.0
+offset_right = 249.0
+offset_bottom = 235.0
+text = "TexMem"
+label_settings = SubResource("LabelSettings_1pvyk")
+vertical_alignment = 1

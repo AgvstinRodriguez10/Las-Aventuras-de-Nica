@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://rk3bcme6tfl"
-path.s3tc="res://.godot/imported/calleSinRejillas_normal_adoquines.png-caeb4216250bae5efcab5e7cd5350230.s3tc.ctex"
-path.etc2="res://.godot/imported/calleSinRejillas_normal_adoquines.png-caeb4216250bae5efcab5e7cd5350230.etc2.ctex"
+path.s3tc="res://.godot/imported/calleSinRejillas_normal_adoquines.png-cddc4e6f1a362adbd730dc24c9947a68.s3tc.ctex"
+path.etc2="res://.godot/imported/calleSinRejillas_normal_adoquines.png-cddc4e6f1a362adbd730dc24c9947a68.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assets/San Nicolas/Cuadras/Extras/calleSinRejillas_normal_adoquines.png"
-dest_files=["res://.godot/imported/calleSinRejillas_normal_adoquines.png-caeb4216250bae5efcab5e7cd5350230.s3tc.ctex", "res://.godot/imported/calleSinRejillas_normal_adoquines.png-caeb4216250bae5efcab5e7cd5350230.etc2.ctex"]
+source_file="res://Assets/San Nicolas/Extras/calleSinRejillas_normal_adoquines.png"
+dest_files=["res://.godot/imported/calleSinRejillas_normal_adoquines.png-cddc4e6f1a362adbd730dc24c9947a68.s3tc.ctex", "res://.godot/imported/calleSinRejillas_normal_adoquines.png-cddc4e6f1a362adbd730dc24c9947a68.etc2.ctex"]
 
 [params]
 

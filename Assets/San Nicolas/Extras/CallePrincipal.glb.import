@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cjv14ffrb1xo1"
-path="res://.godot/imported/CallePrincipal.glb-459fd5493958023b722726bdaa2e5c1b.scn"
+path="res://.godot/imported/CallePrincipal.glb-9044e1f47142f23a3768f70caee95811.scn"
 
 [deps]
 
-source_file="res://Assets/San Nicolas/Cuadras/Extras/CallePrincipal.glb"
-dest_files=["res://.godot/imported/CallePrincipal.glb-459fd5493958023b722726bdaa2e5c1b.scn"]
+source_file="res://Assets/San Nicolas/Extras/CallePrincipal.glb"
+dest_files=["res://.godot/imported/CallePrincipal.glb-9044e1f47142f23a3768f70caee95811.scn"]
 
 [params]
 

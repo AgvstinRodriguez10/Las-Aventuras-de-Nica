@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://vrc3x88h2vb5"]
 
-[ext_resource type="Texture2D" uid="uid://dkr5wt8lhbbef" path="res://Assets/San Nicolas/Cuadras/Extras/calleSinRejillas_adoquines.jpg" id="1_mukhq"]
-[ext_resource type="Texture2D" uid="uid://rk3bcme6tfl" path="res://Assets/San Nicolas/Cuadras/Extras/calleSinRejillas_normal_adoquines.png" id="2_sbu8a"]
+[ext_resource type="Texture2D" uid="uid://dkr5wt8lhbbef" path="res://Assets/San Nicolas/Extras/calleSinRejillas_adoquines.jpg" id="1_mukhq"]
+[ext_resource type="Texture2D" uid="uid://rk3bcme6tfl" path="res://Assets/San Nicolas/Extras/calleSinRejillas_normal_adoquines.png" id="2_sbu8a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t4e43"]
 

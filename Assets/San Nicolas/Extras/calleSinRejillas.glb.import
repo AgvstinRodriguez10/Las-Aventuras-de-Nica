@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d0x0jtxje4pf0"
-path="res://.godot/imported/calleSinRejillas.glb-03d14a1b31ee4357e5611ad4270b78d8.scn"
+path="res://.godot/imported/calleSinRejillas.glb-9cc40fea72e4c275574080152046eed0.scn"
 
 [deps]
 
-source_file="res://Assets/San Nicolas/Cuadras/Extras/calleSinRejillas.glb"
-dest_files=["res://.godot/imported/calleSinRejillas.glb-03d14a1b31ee4357e5611ad4270b78d8.scn"]
+source_file="res://Assets/San Nicolas/Extras/calleSinRejillas.glb"
+dest_files=["res://.godot/imported/calleSinRejillas.glb-9cc40fea72e4c275574080152046eed0.scn"]
 
 [params]
 

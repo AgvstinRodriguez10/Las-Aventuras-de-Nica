@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c365miiytb1pb"
-path.s3tc="res://.godot/imported/CallePrincipal_adoquines.jpg-df824d78da9041337821611a0768420f.s3tc.ctex"
-path.etc2="res://.godot/imported/CallePrincipal_adoquines.jpg-df824d78da9041337821611a0768420f.etc2.ctex"
+uid="uid://cdkdwdob4rfa1"
+path.s3tc="res://.godot/imported/CallePrincipal_desagues.jpg-7640b1eb6885ed4a4cf736b83aac2796.s3tc.ctex"
+path.etc2="res://.godot/imported/CallePrincipal_desagues.jpg-7640b1eb6885ed4a4cf736b83aac2796.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "f1044bfce28f68f3b6596cb7c1fe86f3"
+"md5": "f95a05450a8b7699fb36cd66bf42875c"
 }
 
 [deps]
 
-source_file="res://Assets/San Nicolas/Cuadras/Extras/CallePrincipal_adoquines.jpg"
-dest_files=["res://.godot/imported/CallePrincipal_adoquines.jpg-df824d78da9041337821611a0768420f.s3tc.ctex", "res://.godot/imported/CallePrincipal_adoquines.jpg-df824d78da9041337821611a0768420f.etc2.ctex"]
+source_file="res://Assets/San Nicolas/Extras/CallePrincipal_desagues.jpg"
+dest_files=["res://.godot/imported/CallePrincipal_desagues.jpg-7640b1eb6885ed4a4cf736b83aac2796.s3tc.ctex", "res://.godot/imported/CallePrincipal_desagues.jpg-7640b1eb6885ed4a4cf736b83aac2796.etc2.ctex"]
 
 [params]
 

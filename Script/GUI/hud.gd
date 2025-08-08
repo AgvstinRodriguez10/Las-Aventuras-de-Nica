@@ -22,7 +22,14 @@ var limit_max : int = 200
 
 func _ready() -> void:
 	labelPlus.hide()
-
+	#$"../San Nicolas".queue_free()
+	#$"../DirectionalLight3D".queue_free()
+	#$"../Obstaculos".queue_free()
+	#$"../EcoFichas".queue_free()
+	#$"../SNFichas".queue_free()
+	#$"../RDFichas".queue_free()
+	#$"../Yagui".queue_free()
+	
 func _process(delta: float) -> void:
 	labelScore.text = str(score)
 	score += 0.2

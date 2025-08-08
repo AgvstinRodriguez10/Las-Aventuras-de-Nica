@@ -63,21 +63,17 @@ _data = {
 &"label": SubResource("Animation_4lj40")
 }
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ntgcc"]
-sky_top_color = Color(0.265948, 0.321296, 0.398277, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g3oxa"]
 sky_cover = ExtResource("2_qvtyt")
 
-[sub_resource type="Sky" id="Sky_qvtyt"]
-sky_material = SubResource("ProceduralSkyMaterial_ntgcc")
-radiance_size = 2
+[sub_resource type="Sky" id="Sky_ombbc"]
+sky_material = SubResource("ProceduralSkyMaterial_g3oxa")
 
-[sub_resource type="Environment" id="Environment_xhtl2"]
+[sub_resource type="Environment" id="Environment_8o8og"]
 background_mode = 2
-sky = SubResource("Sky_qvtyt")
-ambient_light_source = 3
-reflected_light_source = 2
+sky = SubResource("Sky_ombbc")
 
-[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_qvtyt"]
+[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_psyr8"]
 frustum_far = 250.0
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_t55t5"]
@@ -92,6 +88,7 @@ sky = SubResource("Sky_g3oxa")
 [node name="Main" type="Node3D"]
 
 [node name="FPSCount" parent="." instance=ExtResource("1_1pvyk")]
+process_mode = 3
 
 [node name="Label" type="CanvasLayer" parent="."]
 process_mode = 3
@@ -137,8 +134,8 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CameraFocus"]
 transform = Transform3D(-0.999945, -0.0104717, -7.62253e-08, -0.0101191, 0.966274, 0.257318, -0.0026945, 0.257304, -0.966327, 0, 3.93963, -8.4115)
-environment = SubResource("Environment_xhtl2")
-attributes = SubResource("CameraAttributesPhysical_qvtyt")
+environment = SubResource("Environment_8o8og")
+attributes = SubResource("CameraAttributesPhysical_psyr8")
 current = true
 
 [node name="Yagui" parent="." instance=ExtResource("8_t55t5")]
