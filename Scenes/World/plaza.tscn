@@ -865,6 +865,8 @@ transform = Transform3D(4.24264, 0, -4.24264, 0, 6, 0, 4.24264, 0, 4.24264, 146.
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Caminos/Pasto"]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 95.7217, -0.0463684, 1207.43)
+lod_bias = 0.001
+visibility_range_end = 300.0
 size = Vector3(17.2042, 0.001, 17.3396)
 material = SubResource("StandardMaterial3D_mjesi")
 

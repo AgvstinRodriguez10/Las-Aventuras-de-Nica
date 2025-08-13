@@ -1,9 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://djlnov41bncl8"]
+[gd_scene load_steps=26 format=3 uid="uid://djlnov41bncl8"]
 
 [ext_resource type="PackedScene" uid="uid://d33hm0kfvhtj3" path="res://Scenes/GUI/fps_count.tscn" id="1_1pvyk"]
 [ext_resource type="PackedScene" uid="uid://ikd1j0tjscug" path="res://Scenes/GUI/hud.tscn" id="1_by2pg"]
 [ext_resource type="PackedScene" uid="uid://dcmdpwf6w8opd" path="res://Scenes/World/san_nicolas.tscn" id="1_n1kio"]
 [ext_resource type="PackedScene" uid="uid://dngf56sh7pjqo" path="res://Scenes/GUI/pause_menu.tscn" id="1_wpgpo"]
+[ext_resource type="PackedScene" uid="uid://6h6e464pgrsa" path="res://Scenes/GUI/danger_alert.tscn" id="2_g3oxa"]
 [ext_resource type="PackedScene" uid="uid://bg2ova3uojcc0" path="res://Scenes/Characters/nica.tscn" id="2_ntgcc"]
 [ext_resource type="Texture2D" uid="uid://cqx4vm2ocv0vh" path="res://Assets/Sky/sky.hdr" id="2_qvtyt"]
 [ext_resource type="PackedScene" uid="uid://dgf0l74w3bdo8" path="res://Scenes/Coins/EcoFicha.tscn" id="6_23yoc"]
@@ -85,10 +86,15 @@ sky_material = SubResource("ProceduralSkyMaterial_t55t5")
 background_mode = 2
 sky = SubResource("Sky_g3oxa")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_g3oxa"]
+size = Vector3(17.7956, 3.13379, 1)
+
 [node name="Main" type="Node3D"]
 
 [node name="FPSCount" parent="." instance=ExtResource("1_1pvyk")]
 process_mode = 3
+
+[node name="DangerAlert" parent="." instance=ExtResource("2_g3oxa")]
 
 [node name="Label" type="CanvasLayer" parent="."]
 process_mode = 3
@@ -139,15 +145,27 @@ attributes = SubResource("CameraAttributesPhysical_psyr8")
 current = true
 
 [node name="Yagui" parent="." instance=ExtResource("8_t55t5")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -22.4715)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -23.916)
 
 [node name="Nica" parent="." instance=ExtResource("2_ntgcc")]
 transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Nica"]
 transform = Transform3D(-2, -8.17588e-08, -1.95139e-07, -1.63518e-07, 1.76787, 0.935212, 1.34259e-07, 0.935212, -1.76787, 1.06245e-06, 6.47261, -12.153)
-visible = false
 environment = SubResource("Environment_ombbc")
+
+[node name="Alert" type="Area3D" parent="Nica"]
+transform = Transform3D(-2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, 0, 0, 0)
+collision_layer = 2
+collision_mask = 24
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Nica/Alert"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.471222, 1.06689, -8.92588)
+shape = SubResource("BoxShape3D_g3oxa")
+
+[node name="TimerAlert" type="Timer" parent="Nica/Alert"]
+wait_time = 8.0
+one_shot = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.665869, -0.121724, -0.736072, 0.746069, 0.108639, 0.656947, 1.44913e-08, -0.986601, 0.163154, 0, 0, 0)
@@ -169,7 +187,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.739924, 7.17762)
 [node name="SNFichas" type="Node3D" parent="."]
 
 [node name="SNFicha" parent="SNFichas" instance=ExtResource("9_w7l72")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.973, 69.5891)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.973, 108.564)
 
 [node name="SNFicha2" parent="SNFichas" instance=ExtResource("9_w7l72")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.973, 48.916)
@@ -177,7 +195,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.973, 48.916)
 [node name="RDFichas" type="Node3D" parent="."]
 
 [node name="RDFicha" parent="RDFichas" instance=ExtResource("10_yteiy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.99592, 66.824)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.99592, 61.3248)
+
+[node name="RDFicha2" parent="RDFichas" instance=ExtResource("10_yteiy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.99592, 117.319)
 
 [node name="Obstaculos" type="Node3D" parent="."]
 
@@ -188,3 +209,5 @@ transform = Transform3D(-1.5299e-07, 0, 3.5, 0, 3.5, 0, -3.5, 0, -1.5299e-07, 1,
 transform = Transform3D(-1.5299e-07, 0, 3.5, 0, 3.5, 0, -3.5, 0, -1.5299e-07, 1, 0, 34.4531)
 
 [connection signal="timeout" from="Label/Timer" to="Label" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Nica/Alert" to="HUD" method="_on_alert_body_entered"]
+[connection signal="timeout" from="Nica/Alert/TimerAlert" to="HUD" method="_on_timer_alert_timeout"]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://chywbois6fgn1"]
+
+[ext_resource type="PackedScene" uid="uid://d0x0jtxje4pf0" path="res://Assets/San Nicolas/Extras/calleSinRejillas.glb" id="1_kdkpb"]
+
+[node name="calleSinRejillas" instance=ExtResource("1_kdkpb")]
+
+[node name="Plane" parent="." index="0"]
+lod_bias = 0.001
+visibility_range_end = 300.0

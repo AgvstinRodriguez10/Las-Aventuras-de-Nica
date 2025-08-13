@@ -1,8 +1,5 @@
 extends CanvasLayer
 
-@onready var timer = $Label/Timer
-@onready var animationPlayer = $AnimationPlayer
-
 func _ready() -> void:
 	show()
 

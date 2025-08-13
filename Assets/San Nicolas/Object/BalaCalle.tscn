@@ -46,5 +46,7 @@ shadow_mesh = SubResource("ArrayMesh_s5f1r")
 
 [node name="Círculo" type="MeshInstance3D" parent="."]
 transform = Transform3D(35, 0, 0, 0, -1.5299e-06, 35, 0, -35, -1.5299e-06, 0, 0, 0)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_77l65")
 skeleton = NodePath("")

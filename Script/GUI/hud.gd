@@ -6,8 +6,11 @@ class_name UI
 @onready var animationPlayerHUD = $AnimationPlayer
 
 @onready var player = $"../Nica"
-@onready var yagui = $"../Enemies/Yagui 3D"
-@onready var animationPlayer = $UI/labelScorePlus/AnimationPlayer
+@onready var yagui = $"../Yagui"
+
+@onready var dangerTimer = $"../Nica/Alert/TimerAlert"
+@onready var dangerAnim = $"../DangerAlert/AnimationPlayer"
+@onready var dangerCollision = $"../Nica/Alert/CollisionShape3D"
 
 
 
@@ -66,7 +69,15 @@ func _on_timer_timeout() -> void:
 func upgradeVelocityZ():
 	if player.velocity_z <= 600:
 		player.velocity_z += velocity_plus
-		#yagui.velocity_z += velocity_plus_enemies
 	else:
 		player.velocity_z = 300
-		#yagui.velocity_z = 300
+
+func _on_alert_body_entered(body: Node3D) -> void:
+	if body.name == "Yagui" and dangerCollision.disabled == false:
+		dangerAnim.play("ALERT")
+		dangerCollision.disabled = true
+		dangerTimer.start()
+
+
+func _on_timer_alert_timeout() -> void:
+	$"../Nica/Alert/CollisionShape3D".disabled = false

@@ -19,6 +19,14 @@ config/icon="res://icon.svg"
 
 buses/default_bus_layout=""
 
+[display]
+
+window/size/viewport_width=1366
+window/size/viewport_height=768
+window/size/window_width_override=1366
+window/size/window_height_override=768
+window/stretch/mode="viewport"
+
 [gui]
 
 theme/custom="uid://lx6j7vbg6ma"
@@ -65,7 +73,6 @@ FPS={
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true

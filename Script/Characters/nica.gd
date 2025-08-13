@@ -28,7 +28,7 @@ enum POWERUPSTATE {
 var currentPowerUp: POWERUPSTATE = POWERUPSTATE.NOTHING
 
 var powerUpDuration:Dictionary = {
-	"SPEEDUP" : 2,
+	"SPEEDUP" : 3,
 	"ABOSRBCOIN": 2
 }
 
@@ -124,7 +124,7 @@ func powerUpActive():
 			#reinicia todos los valores
 			velocity_z = baseVelocity
 		POWERUPSTATE.SPEEDUP:
-			velocity_z = velocity_z * 1.5
+			velocity_z = velocity_z * 2
 			durationPowerUp = powerUpDuration.SPEEDUP
 		POWERUPSTATE.ABOSRBCOIN:
 			durationPowerUp = powerUpDuration.ABOSRBCOIN
@@ -138,3 +138,18 @@ func lostLife():
 	currentState = STATES.HIT
 	life -= 1
 	is_hitt = true
+
+func animationController(delta:float):
+	super.animationController(delta)
+	match currentState:
+		STATES.JUMP:
+			animationPlayer.play("anim_jump")
+			velocity.y = JUMP_VELOCITY
+			if velocity.y > 0:
+				currentState = STATES.FALL
+		STATES.FALL:
+			gravityApply(delta)
+			if is_on_floor():
+				currentState = STATES.RUN
+		STATES.HIT:
+			animationPlayer.play("anim_hitt")

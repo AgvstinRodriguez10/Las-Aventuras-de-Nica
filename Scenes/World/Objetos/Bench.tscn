@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=4 uid="uid://drw1pjxuu8xp8"]
+[gd_scene load_steps=71 format=4 uid="uid://drw1pjxuu8xp8"]
 
 [ext_resource type="Texture2D" uid="uid://cu4niielkbt1r" path="res://Assets/San Nicolas/Object/Decoración/Bench_0.png" id="1_sm1o2"]
 
@@ -10,38 +10,6 @@ metallic = 0.492192
 roughness = 0.0
 texture_filter = 0
 texture_repeat = false
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_etwsf"]
-_surfaces = [{
-"aabb": AABB(0.9375, -0.761917, -0.539841, 0.0625, 0.625, 0.0625),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAwAAAAIAAgABAAQABQAAAAMABQABAAAAAwACAAYABgAFAAMABgACAAQABwABAAUABwAFAAYAAQAHAAQABAAHAAYA"),
-"name": "material_0",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("////////AAD/////AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAA/////wAAAAAAAAAAAAAAAP//AAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_hyf7d"]
-resource_name = "Sketchfab_Scene_Object_0"
-_surfaces = [{
-"aabb": AABB(0.9375, -0.761917, -0.539841, 0.0625, 0.625, 0.0625),
-"attribute_data": PackedByteArray("/0v/p/9P/6f/S/9//0//f/9T/6f/V/+n/1P/f/9X/3//f/+r/3v/q/9//6//e/+v/3//q/97/6v/f/+n/3v/p/9P/6f/U/+n/0//f/9T/3//R/+n/0v/p/9H/3//S/9/"),
-"format": 34896613399,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAgABAAMABAAFAAYABgAFAAcACAAJAAoACgAJAAsADAANAA4ADgANAA8AEAARABIAEgARABMAFAAVABYAFgAVABcA"),
-"material": SubResource("StandardMaterial3D_aqv18"),
-"name": "material_0",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("/////////z//////AAD/P///AAD///8///8AAAAA/z8AAP//AAD/PwAA//////8/AAAAAAAA/z8AAAAA////PwAA//8AAAAA/////wAAAAAAAP////8AAP///////wAAAAAAAP///////wAA/////wAAAAAAAP////8AAAAA//8AAP/////+f/////////5/AAAAAP///n///wAA///+f/////8AAAAAAAD//wAAAAD//wAAAAAAAAAAAAAAAAAA/38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_etwsf")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_atg1a"]
 _surfaces = [{
@@ -1133,17 +1101,12 @@ shadow_mesh = SubResource("ArrayMesh_5202q")
 
 [node name="Bench" type="Node3D"]
 
-[node name="1" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.824417, 0.727341)
-
-[node name="Object_6" type="MeshInstance3D" parent="1"]
-mesh = SubResource("ArrayMesh_hyf7d")
-skeleton = NodePath("")
-
 [node name="2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.92388, -0.382683, 0, 0.382683, 0.92388, -0.25, 0.824417, 0.727341)
 
 [node name="Object_8" type="MeshInstance3D" parent="2"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_u8lij")
 skeleton = NodePath("")
 
@@ -1151,6 +1114,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, -0.25, 0.824417, 0.727341)
 
 [node name="Object_10" type="MeshInstance3D" parent="3"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_srkri")
 skeleton = NodePath("")
 
@@ -1158,6 +1123,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0.382683, -0.92388, 0, 0.92388, 0.382683, -0.25, 0.824417, 0.727341)
 
 [node name="Object_12" type="MeshInstance3D" parent="4"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_yqo7k")
 skeleton = NodePath("")
 
@@ -1165,6 +1132,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0.382683, 0.92388, 0, -0.92388, 0.382683, -0.25, 0.824417, 0.727341)
 
 [node name="Object_14" type="MeshInstance3D" parent="5"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_otm41")
 skeleton = NodePath("")
 
@@ -1172,6 +1141,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -0.25, 0.824417, 0.727341)
 
 [node name="Object_16" type="MeshInstance3D" parent="6"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_fnfrp")
 skeleton = NodePath("")
 
@@ -1179,6 +1150,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0.92388, 0.382683, 0, -0.382683, 0.92388, -0.25, 0.824417, 0.727341)
 
 [node name="Object_18" type="MeshInstance3D" parent="7"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_x3co2")
 skeleton = NodePath("")
 
@@ -1186,6 +1159,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.824417, 0.727341)
 
 [node name="Object_20" type="MeshInstance3D" parent="8"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_euqt3")
 skeleton = NodePath("")
 
@@ -1193,6 +1168,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.25, 0.824417, 0.727341)
 
 [node name="Object_22" type="MeshInstance3D" parent="9"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_5agan")
 skeleton = NodePath("")
 
@@ -1200,6 +1177,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.25, 0.824417, 0.727341)
 
 [node name="Object_24" type="MeshInstance3D" parent="10"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_5bbnl")
 skeleton = NodePath("")
 
@@ -1207,6 +1186,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.25, 0.824417, 0.727341)
 
 [node name="Object_26" type="MeshInstance3D" parent="11"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_uvyv0")
 skeleton = NodePath("")
 
@@ -1214,6 +1195,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0.92388, -0.382683, 0, 0.382683, 0.92388, -0.25, 0.824417, 0.727341)
 
 [node name="Object_28" type="MeshInstance3D" parent="12"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_cf1gl")
 skeleton = NodePath("")
 
@@ -1221,6 +1204,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.25, 0.824417, 0.727341)
 
 [node name="Object_30" type="MeshInstance3D" parent="13"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_x5q5s")
 skeleton = NodePath("")
 
@@ -1228,6 +1213,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0.92388, -0.382683, 0, 0.382683, 0.92388, -0.25, 0.824417, 0.727341)
 
 [node name="Object_32" type="MeshInstance3D" parent="14"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_4nca8")
 skeleton = NodePath("")
 
@@ -1235,6 +1222,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.25, 0.824417, 0.727341)
 
 [node name="Object_34" type="MeshInstance3D" parent="15"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_f8bi3")
 skeleton = NodePath("")
 
@@ -1242,6 +1231,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0.92388, -0.382683, 0, 0.382683, 0.92388, -2.1875, 0.824417, 0.727341)
 
 [node name="Object_36" type="MeshInstance3D" parent="16"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_j7s7y")
 skeleton = NodePath("")
 
@@ -1249,6 +1240,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, -2.1875, 0.824417, 0.727341)
 
 [node name="Object_38" type="MeshInstance3D" parent="17"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_u88sm")
 skeleton = NodePath("")
 
@@ -1256,6 +1249,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0.382683, -0.92388, 0, 0.92388, 0.382683, -2.1875, 0.824417, 0.727341)
 
 [node name="Object_40" type="MeshInstance3D" parent="18"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_q42ju")
 skeleton = NodePath("")
 
@@ -1263,6 +1258,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -2.1875, 0.824417, 0.727341)
 
 [node name="Object_42" type="MeshInstance3D" parent="19"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_kohis")
 skeleton = NodePath("")
 
@@ -1270,6 +1267,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0.382683, 0.92388, 0, -0.92388, 0.382683, -2.1875, 0.824417, 0.727341)
 
 [node name="Object_44" type="MeshInstance3D" parent="20"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_2tpvj")
 skeleton = NodePath("")
 
@@ -1277,6 +1276,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -2.1875, 0.824417, 0.727341)
 
 [node name="Object_46" type="MeshInstance3D" parent="21"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_thf7n")
 skeleton = NodePath("")
 
@@ -1284,6 +1285,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0.92388, 0.382683, 0, -0.382683, 0.92388, -2.1875, 0.824417, 0.727341)
 
 [node name="Object_48" type="MeshInstance3D" parent="22"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_8vd43")
 skeleton = NodePath("")
 
@@ -1291,6 +1294,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1875, 0.824417, 0.727341)
 
 [node name="Object_50" type="MeshInstance3D" parent="23"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_2hu8p")
 skeleton = NodePath("")
 
@@ -1298,6 +1303,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1875, 0.824417, 0.727341)
 
 [node name="Object_52" type="MeshInstance3D" parent="24"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_qibb4")
 skeleton = NodePath("")
 
@@ -1305,6 +1312,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.25, 0.824417, 0.727341)
 
 [node name="Object_54" type="MeshInstance3D" parent="25"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_ahuhi")
 skeleton = NodePath("")
 
@@ -1312,6 +1321,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.25, 0.824417, 0.727341)
 
 [node name="Object_56" type="MeshInstance3D" parent="26"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_hkr0b")
 skeleton = NodePath("")
 
@@ -1319,6 +1330,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.25, 0.824417, 0.727341)
 
 [node name="Object_58" type="MeshInstance3D" parent="27"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_tbqrs")
 skeleton = NodePath("")
 
@@ -1326,6 +1339,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.25, 0.824417, 0.727341)
 
 [node name="Object_60" type="MeshInstance3D" parent="28"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_qsplb")
 skeleton = NodePath("")
 
@@ -1333,6 +1348,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0.92388, -0.382683, 0, 0.382683, 0.92388, -0.25, 0.824417, 0.727341)
 
 [node name="Object_62" type="MeshInstance3D" parent="29"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_igl3o")
 skeleton = NodePath("")
 
@@ -1340,6 +1357,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.25, 0.824417, 0.727341)
 
 [node name="Object_64" type="MeshInstance3D" parent="30"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_hbca8")
 skeleton = NodePath("")
 
@@ -1347,6 +1366,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.25, 0.824417, 0.727341)
 
 [node name="Object_66" type="MeshInstance3D" parent="31"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_77tue")
 skeleton = NodePath("")
 
@@ -1354,6 +1375,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, -0.25, 0.824417, 0.727341)
 
 [node name="Object_68" type="MeshInstance3D" parent="32"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_400ae")
 skeleton = NodePath("")
 
@@ -1361,6 +1384,9 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0.92388, -0.382683, 0, 0.382683, 0.92388, -0.25, 0.824417, 0.727341)
 
 [node name="Object_70" type="MeshInstance3D" parent="33"]
+lod_bias = 0.001
+gi_lightmap_texel_scale = 0.2
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_62as4")
 skeleton = NodePath("")
 
@@ -1368,6 +1394,8 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0.92388, -0.382683, 0, 0.382683, 0.92388, -0.25, 0.824417, 0.727341)
 
 [node name="Object_72" type="MeshInstance3D" parent="34"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_mcs33")
 skeleton = NodePath("")
 
@@ -1375,5 +1403,7 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0.92388, -0.382683, 0, 0.382683, 0.92388, -0.25, 0.824417, 0.727341)
 
 [node name="Object_74" type="MeshInstance3D" parent="35"]
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_7p88a")
 skeleton = NodePath("")

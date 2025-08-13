@@ -1,14 +1,15 @@
 [gd_scene load_steps=7 format=4 uid="uid://bgssrhg2hyl8i"]
 
 [ext_resource type="Script" uid="uid://3k58hnnypyod" path="res://Script/Objetos/valla.gd" id="1_a05qm"]
-[ext_resource type="Texture2D" uid="uid://tyybyhen8u0p" path="res://Assets/Objetos/Obstaculos/Valla_MetalValla_albedo000.png" id="2_7nyl8"]
+[ext_resource type="Texture2D" uid="uid://beavgh6yhv2q1" path="res://Assets/Objetos/Obstaculos/CartelValla.png" id="2_7nyl8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0eo0w"]
 resource_name = "MetalValla"
 cull_mode = 2
-albedo_texture = ExtResource("2_7nyl8")
-metallic = 0.8
-roughness = 0.1
+albedo_color = Color(0, 0, 0, 1)
+metallic = 0.35
+detail_enabled = true
+detail_albedo = ExtResource("2_7nyl8")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_e0fa7"]
 _surfaces = [{

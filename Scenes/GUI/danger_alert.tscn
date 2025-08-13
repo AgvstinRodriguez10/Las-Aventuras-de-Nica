@@ -1,0 +1,126 @@
+[gd_scene load_steps=7 format=3 uid="uid://6h6e464pgrsa"]
+
+[ext_resource type="Texture2D" uid="uid://d4lbes3320kkr" path="res://Resource/Extras/DangerAlert.tres" id="1_o1e7e"]
+
+[sub_resource type="Gradient" id="Gradient_o1e7e"]
+interpolation_color_space = 2
+offsets = PackedFloat32Array(0.337778, 0.635556, 0.737778)
+colors = PackedColorArray(1, 0.387955, 0.319725, 1, 1.01881, 0.92888, 0.913484, 0.0994765, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_k2kj2"]
+gradient = SubResource("Gradient_o1e7e")
+fill_from = Vector2(0.336182, 0.321937)
+fill_to = Vector2(1, 1)
+
+[sub_resource type="Animation" id="Animation_k2kj2"]
+resource_name = "ALERT"
+length = 3.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.662745), Color(1, 1, 1, 1), Color(1, 1, 1, 0.662745), Color(1, 1, 1, 1), Color(1, 1, 1, 0.662745), Color(1, 1, 1, 1), Color(1, 1, 1, 0.662745), Color(1, 1, 1, 1), Color(1, 1, 1, 0.662745), Color(1, 1, 1, 1), Color(1, 1, 1, 0.662745), Color(1, 1, 1, 1), Color(1, 1, 1, 0.662745), Color(1, 1, 1, 1), Color(1, 1, 1, 0.662745), Color(1, 1, 1, 1), Color(1, 1, 1, 0.662745), Color(1, 1, 1, 1), Color(1, 1, 1, 0.662745)]
+}
+
+[sub_resource type="Animation" id="Animation_ik8mj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n0ipc"]
+_data = {
+&"ALERT": SubResource("Animation_k2kj2"),
+&"RESET": SubResource("Animation_ik8mj")
+}
+
+[node name="DangerAlert" type="CanvasLayer"]
+
+[node name="Container" type="Control" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.941123)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Left" type="Sprite2D" parent="Container"]
+position = Vector2(32, 392)
+scale = Vector2(1, 9.75)
+texture = ExtResource("1_o1e7e")
+
+[node name="corner1" type="Sprite2D" parent="Container"]
+position = Vector2(44, 40)
+scale = Vector2(1.375, 1.25)
+texture = SubResource("GradientTexture2D_k2kj2")
+
+[node name="Right" type="Sprite2D" parent="Container"]
+position = Vector2(1334.25, 385.303)
+scale = Vector2(-1, -9.45306)
+texture = ExtResource("1_o1e7e")
+
+[node name="corner2" type="Sprite2D" parent="Container"]
+position = Vector2(1328, 42.5)
+rotation = 1.5708
+scale = Vector2(1.32812, 1.25)
+texture = SubResource("GradientTexture2D_k2kj2")
+
+[node name="Top" type="Sprite2D" parent="Container"]
+position = Vector2(687.67, 32)
+rotation = 1.5708
+scale = Vector2(1, 18.7603)
+texture = ExtResource("1_o1e7e")
+
+[node name="corner3" type="Sprite2D" parent="Container"]
+position = Vector2(1322.17, 728)
+rotation = 3.14159
+scale = Vector2(1.38041, 1.25)
+texture = SubResource("GradientTexture2D_k2kj2")
+
+[node name="Bottom" type="Sprite2D" parent="Container"]
+position = Vector2(672.253, 736)
+rotation = -1.5708
+scale = Vector2(1, 19.0045)
+texture = ExtResource("1_o1e7e")
+
+[node name="corner4" type="Sprite2D" parent="Container"]
+position = Vector2(40, 728)
+rotation = 4.71239
+scale = Vector2(1.28125, 1.25)
+texture = SubResource("GradientTexture2D_k2kj2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Container")
+libraries = {
+&"": SubResource("AnimationLibrary_n0ipc")
+}

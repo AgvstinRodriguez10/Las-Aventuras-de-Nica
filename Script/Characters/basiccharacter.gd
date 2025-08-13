@@ -37,18 +37,6 @@ func animationController(delta):
 				currentState = STATES.IDLE
 			elif !is_on_floor():
 				currentState = STATES.JUMP
-		STATES.JUMP:
-			animationPlayer.play("anim_jump")
-			velocity.y = JUMP_VELOCITY
-			if velocity.y > 0:
-				currentState = STATES.FALL
-		STATES.FALL:
-			gravityApply(delta)
-			if is_on_floor():
-				currentState = STATES.RUN
-		STATES.HIT:
-			animationPlayer.play("anim_hitt")
-			
 
 func movingToForward(delta: float):
 	# Almacena la direccion local de donde mira el modelo
