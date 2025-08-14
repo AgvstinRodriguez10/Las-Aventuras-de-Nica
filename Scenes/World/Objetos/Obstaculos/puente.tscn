@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfttwterfi486"]
+[gd_scene load_steps=4 format=3 uid="uid://bfttwterfi486"]
 
 [ext_resource type="PackedScene" uid="uid://dv52g75eo242t" path="res://Scenes/World/Objetos/Obstaculos/rampa_normal.tscn" id="1_pfr5o"]
 [ext_resource type="PackedScene" uid="uid://bfnomj38x8st1" path="res://Scenes/World/Objetos/Tabla.tscn" id="2_1tl4j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pfr5o"]
+size = Vector3(1.40717, 1.03082, 7.63672)
 
 [node name="Puente" type="Node3D"]
 
@@ -13,3 +16,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 
 [node name="TablaLarga" parent="." instance=ExtResource("2_1tl4j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.983, 30.014)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TablaLarga"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00491333, -0.459625, -0.0287628)
+shape = SubResource("BoxShape3D_pfr5o")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=4 uid="uid://bfnomj38x8st1"]
+[gd_scene load_steps=2 format=4 uid="uid://bfnomj38x8st1"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_c4bpp"]
 _surfaces = [{
@@ -11,15 +11,8 @@ _surfaces = [{
 "vertex_data": PackedByteArray("kMQlwADgC70A0Jc+kMQlwADgC70A0Je+kMQlwADgCz0A0Je+kMQlQADgC70A0Je+kMQlwADgC70A0Je+kMQlwADgC70A0Jc+kMQlwADgCz0A0Je+kMQlwADgC70A0Je+kMQlQADgC70A0Je+kMQlwADgCz0A0Je+kMQlwADgCz0A0Jc+kMQlwADgC70A0Jc+kMQlwADgC70A0Jc+kMQlwADgCz0A0Jc+kMQlQADgCz0A0Jc+kMQlQADgCz0A0Jc+kMQlwADgCz0A0Jc+kMQlwADgCz0A0Je+kMQlwADgC70A0Jc+kMQlQADgC70A0Jc+kMQlQADgC70A0Je+kMQlQADgCz0A0Jc+kMQlQADgC70A0Jc+kMQlwADgC70A0Jc+kMQlQADgC70A0Je+kMQlQADgC70A0Jc+kMQlQADgCz0A0Jc+kMQlQADgC70A0Je+kMQlQADgCz0A0Je+kMQlwADgCz0A0Je+kMQlwADgCz0A0Je+kMQlQADgCz0A0Je+kMQlQADgCz0A0Jc+kMQlQADgCz0A0Jc+kMQlQADgCz0A0Je+kMQlQADgC70A0Je+AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
 }]
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_r5py1"]
-data = PackedVector3Array(-2.5901, -0.0341, 0.2965, -2.5901, -0.0341, -0.2965, -2.5901, 0.0341, -0.2965, 2.5901, -0.0341, -0.2965, -2.5901, -0.0341, -0.2965, -2.5901, -0.0341, 0.2965, -2.5901, 0.0341, -0.2965, -2.5901, -0.0341, -0.2965, 2.5901, -0.0341, -0.2965, -2.5901, 0.0341, -0.2965, -2.5901, 0.0341, 0.2965, -2.5901, -0.0341, 0.2965, -2.5901, -0.0341, 0.2965, -2.5901, 0.0341, 0.2965, 2.5901, 0.0341, 0.2965, 2.5901, 0.0341, 0.2965, -2.5901, 0.0341, 0.2965, -2.5901, 0.0341, -0.2965, -2.5901, -0.0341, 0.2965, 2.5901, -0.0341, 0.2965, 2.5901, -0.0341, -0.2965, 2.5901, 0.0341, 0.2965, 2.5901, -0.0341, 0.2965, -2.5901, -0.0341, 0.2965, 2.5901, -0.0341, -0.2965, 2.5901, -0.0341, 0.2965, 2.5901, 0.0341, 0.2965, 2.5901, -0.0341, -0.2965, 2.5901, 0.0341, -0.2965, -2.5901, 0.0341, -0.2965, -2.5901, 0.0341, -0.2965, 2.5901, 0.0341, -0.2965, 2.5901, 0.0341, 0.2965, 2.5901, 0.0341, 0.2965, 2.5901, 0.0341, -0.2965, 2.5901, -0.0341, -0.2965)
-
 [node name="TablaLarga" type="StaticBody3D"]
 
 [node name="Tabla" type="MeshInstance3D" parent="."]
 transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 0, 0, 0)
 mesh = SubResource("ArrayMesh_c4bpp")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 0, 0, 0)
-shape = SubResource("ConcavePolygonShape3D_r5py1")

@@ -210,9 +210,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.99592, 117.319)
 [node name="Valla" parent="Obstaculos" instance=ExtResource("7_jyfha")]
 transform = Transform3D(-1.5299e-07, 0, 3.5, 0, 3.5, 0, -3.5, 0, -1.5299e-07, 1, 0, 17.098)
 
-[node name="Valla2" parent="Obstaculos" instance=ExtResource("7_jyfha")]
-transform = Transform3D(-1.5299e-07, 0, 3.5, 0, 3.5, 0, -3.5, 0, -1.5299e-07, 1, 0, 34.4531)
-
 [node name="RampaInvertida" parent="Obstaculos" instance=ExtResource("15_psyr8")]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 1, 0.001, 49.087)
 

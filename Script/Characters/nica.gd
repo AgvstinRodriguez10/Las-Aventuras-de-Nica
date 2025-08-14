@@ -18,6 +18,12 @@ var is_hitt : bool = false
 var life_plus : bool = false
 var life = 3
 
+const LANES_X := {
+	0: -1.0,  # carril izquierdo
+	1:  0.0,  # carril central
+	2:  1.0   # carril derecho
+}
+
 var durationPowerUp:float = 0.0
 
 enum POWERUPSTATE {
@@ -40,24 +46,24 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if currentState == STATES.RUN:
 		if Input.is_action_just_pressed("Derecha") and target_lane > 0:
-			target_lane -= 1 # minimo 0
-			changeLine(0.5)
+			target_lane -= 1
 		if Input.is_action_just_pressed("Izquierda") and target_lane < LANES.size() - 1:
-			target_lane += 1 # maximo 2
-			changeLine(-0.5)
-			# ///LOGICA DE SALTO/// #
+			target_lane += 1
 		if Input.is_action_pressed("Saltar"):
 			currentState = STATES.JUMP
 	
+	# Movimiento suave hacia el carril objetivo
+	var desired_x = LANES_X[target_lane]
+	position.x = lerp(position.x, desired_x, delta * 10)
+
 	if currentPowerUp != POWERUPSTATE.NOTHING:
 		if durationPowerUp > 0:
 			durationPowerUp -= delta
 		else:
-			# finaliza el power up
 			durationPowerUp = 0
 			currentPowerUp = POWERUPSTATE.NOTHING
 			powerUpActive()
-	
+
 	camera_follow(delta)
 	animationController(delta)
 	move_and_slide()
@@ -130,6 +136,7 @@ func camera_follow(delta:float):
 
 func reset_target_line():
 	target_lane = 1
+	position.x = LANES_X[target_lane]
 
 func setPower(power:POWERUPSTATE):
 	currentPowerUp = power
