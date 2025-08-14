@@ -79,11 +79,14 @@ func animationController(delta:float):
 
 func changeLine(dire):
 	var dist_recorrida = 0
-	# Esta funcion "interpola" entre un punto y otro con el await para hacer una pasada en cada frame
 	while dist_recorrida < 2:
-		position += eje_local_x * (velociti_change_line) * dire
+		var move = eje_local_x * velociti_change_line * dire
+		var collision = move_and_collide(move)
+		if collision:
+			break  # choca con algo, detener
 		dist_recorrida += velociti_change_line
 		await get_tree().process_frame
+
 func camera_follow(delta:float):
 	# Obtenemos el eje local del personaje
 	var forward_dir = global_transform.basis.z.normalized()
