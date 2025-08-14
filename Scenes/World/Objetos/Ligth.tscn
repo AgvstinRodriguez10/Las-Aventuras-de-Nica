@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=4 uid="uid://d13rf38gehy5"]
+[gd_scene load_steps=10 format=4 uid="uid://d13rf38gehy5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_54jh4"]
 resource_name = "Metal"
@@ -72,6 +72,35 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3s40b")
 
+[sub_resource type="Curve" id="Curve_d48vv"]
+_data = [Vector2(0.00246305, 0.00389111), 0.0, 0.0, 0, 0, Vector2(0.204434, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.501946), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_11l4u"]
+curve = SubResource("Curve_d48vv")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7ienk"]
+angle_min = 1.07288e-05
+angle_max = 360.0
+direction = Vector3(0, 1, 0)
+spread = 0.0
+initial_velocity_max = 3.0
+angular_velocity_min = -1.60933e-05
+angular_velocity_max = 40.0
+gravity = Vector3(0, 0, 0)
+linear_accel_min = 0.999998
+linear_accel_max = 5.0
+scale_min = 0.1
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_11l4u")
+color = Color(1, 0.619137, 0.407326, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d48vv"]
+albedo_color = Color(0.788235, 0.788235, 0.372549, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_11l4u"]
+material = SubResource("StandardMaterial3D_d48vv")
+
 [node name="Ligth" type="Node3D"]
 
 [node name="Circle" type="MeshInstance3D" parent="."]
@@ -79,3 +108,20 @@ lod_bias = 0.5
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_fidbu")
 skeleton = NodePath("")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.72707, 0)
+emitting = false
+lifetime = 0.3
+interp_to_end = 1.0
+one_shot = true
+randomness = 1.0
+local_coords = true
+draw_order = 3
+process_material = SubResource("ParticleProcessMaterial_7ienk")
+draw_pass_1 = SubResource("SphereMesh_11l4u")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.50347, 0)
+light_energy = 3.0
+omni_range = 10.0

@@ -452,6 +452,7 @@ skeleton = NodePath("")
 [node name="Izq" parent="Edificios" instance=ExtResource("6_xr1vn")]
 
 [node name="Der" parent="Edificios" instance=ExtResource("5_gcjee")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.72926, 0, 0)
 
 [node name="Decoraciónes" type="Node3D" parent="."]
 

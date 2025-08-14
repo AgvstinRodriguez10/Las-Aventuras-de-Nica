@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://djlnov41bncl8"]
+[gd_scene load_steps=29 format=3 uid="uid://djlnov41bncl8"]
 
 [ext_resource type="PackedScene" uid="uid://d33hm0kfvhtj3" path="res://Scenes/GUI/fps_count.tscn" id="1_1pvyk"]
 [ext_resource type="PackedScene" uid="uid://ikd1j0tjscug" path="res://Scenes/GUI/hud.tscn" id="1_by2pg"]
@@ -14,6 +14,9 @@
 [ext_resource type="FontFile" uid="uid://c2hhi7jed7eo3" path="res://Assets/Fonts/kagenobolditalic-q2kvl.otf" id="8_wpgpo"]
 [ext_resource type="PackedScene" uid="uid://bo2da4in2mjf8" path="res://Scenes/Coins/SNFicha.tscn" id="9_w7l72"]
 [ext_resource type="PackedScene" uid="uid://h2yyj2bmrsqb" path="res://Scenes/Coins/RDFicha.tscn" id="10_yteiy"]
+[ext_resource type="PackedScene" uid="uid://c3qbpt6e6y68i" path="res://Scenes/World/Objetos/Rampa.tscn" id="15_ombbc"]
+[ext_resource type="PackedScene" uid="uid://bfnomj38x8st1" path="res://Scenes/World/Objetos/Tabla.tscn" id="16_8o8og"]
+[ext_resource type="PackedScene" uid="uid://crj38hhv8sc57" path="res://Scenes/World/Objetos/Cono.tscn" id="17_psyr8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6jptx"]
 font = ExtResource("8_wpgpo")
@@ -71,7 +74,8 @@ sky_cover = ExtResource("2_qvtyt")
 sky_material = SubResource("ProceduralSkyMaterial_g3oxa")
 
 [sub_resource type="Environment" id="Environment_8o8og"]
-background_mode = 2
+background_mode = 1
+background_color = Color(0.432624, 0.432624, 0.432624, 1)
 sky = SubResource("Sky_ombbc")
 
 [sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_psyr8"]
@@ -164,11 +168,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.471222, 1.06689, -8.92588)
 shape = SubResource("BoxShape3D_g3oxa")
 
 [node name="TimerAlert" type="Timer" parent="Nica/Alert"]
-wait_time = 8.0
+wait_time = 9.0
 one_shot = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.665869, -0.121724, -0.736072, 0.746069, 0.108639, 0.656947, 1.44913e-08, -0.986601, 0.163154, 0, 0, 0)
+visible = false
 light_bake_mode = 1
 shadow_enabled = true
 shadow_bias = 10.0
@@ -177,6 +182,7 @@ directional_shadow_fade_start = 0.2
 directional_shadow_max_distance = 50.0
 
 [node name="EcoFichas" type="Node3D" parent="."]
+visible = false
 
 [node name="EcoFicha" parent="EcoFichas" instance=ExtResource("6_23yoc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.739924, 11.1776)
@@ -190,7 +196,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.739924, 7.17762)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.973, 108.564)
 
 [node name="SNFicha2" parent="SNFichas" instance=ExtResource("9_w7l72")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.973, 48.916)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3.69836, 34.4136)
 
 [node name="RDFichas" type="Node3D" parent="."]
 
@@ -207,6 +213,23 @@ transform = Transform3D(-1.5299e-07, 0, 3.5, 0, 3.5, 0, -3.5, 0, -1.5299e-07, 1,
 
 [node name="Valla2" parent="Obstaculos" instance=ExtResource("7_jyfha")]
 transform = Transform3D(-1.5299e-07, 0, 3.5, 0, 3.5, 0, -3.5, 0, -1.5299e-07, 1, 0, 34.4531)
+
+[node name="Rampas y Tablas" type="Node3D" parent="."]
+
+[node name="RampaNormal" parent="Rampas y Tablas" instance=ExtResource("15_ombbc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 0.093, 29.655)
+
+[node name="RampaNormal2" parent="Rampas y Tablas" instance=ExtResource("15_ombbc")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0.093, 45.6825)
+
+[node name="TablaLarga" parent="Rampas y Tablas" instance=ExtResource("16_8o8og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.547, 37.6815)
+
+[node name="Cono2" parent="Rampas y Tablas" instance=ExtResource("17_psyr8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.61383, 36.798)
+
+[node name="Cono3" parent="Rampas y Tablas" instance=ExtResource("17_psyr8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.61383, 37.798)
 
 [connection signal="timeout" from="Label/Timer" to="Label" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Nica/Alert" to="HUD" method="_on_alert_body_entered"]

@@ -28,7 +28,7 @@ enum POWERUPSTATE {
 var currentPowerUp: POWERUPSTATE = POWERUPSTATE.NOTHING
 
 var powerUpDuration:Dictionary = {
-	"SPEEDUP" : 3,
+	"SPEEDUP" : 4,
 	"ABOSRBCOIN": 2
 }
 
@@ -61,7 +61,24 @@ func _physics_process(delta: float) -> void:
 	camera_follow(delta)
 	animationController(delta)
 	move_and_slide()
-		
+
+func animationController(delta:float):
+	super.animationController(delta)
+	match currentState:
+		STATES.JUMP:
+			animationPlayer.play("anim_jump")
+			velocity.y = JUMP_VELOCITY
+			if velocity.y > 0:
+				currentState = STATES.FALL
+		STATES.FALL:
+			gravityApply(delta)
+			if is_on_floor():
+				currentState = STATES.RUN
+		STATES.HIT:
+			animationPlayer.play("anim_hitt")
+			gravityApply(delta)
+			
+
 func changeLine(dire):
 	var dist_recorrida = 0
 	# Esta funcion "interpola" entre un punto y otro con el await para hacer una pasada en cada frame
@@ -131,25 +148,13 @@ func powerUpActive():
 
 func is_hitt_change():
 	if is_hitt:
-		currentState = STATES.RUN
 		is_hitt = false
+	if velocity.y < 0:
+		currentState = STATES.FALL
+	else:
+		currentState = STATES.RUN
 
 func lostLife():
+	is_hitt = true
 	currentState = STATES.HIT
 	life -= 1
-	is_hitt = true
-
-func animationController(delta:float):
-	super.animationController(delta)
-	match currentState:
-		STATES.JUMP:
-			animationPlayer.play("anim_jump")
-			velocity.y = JUMP_VELOCITY
-			if velocity.y > 0:
-				currentState = STATES.FALL
-		STATES.FALL:
-			gravityApply(delta)
-			if is_on_floor():
-				currentState = STATES.RUN
-		STATES.HIT:
-			animationPlayer.play("anim_hitt")
