@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://bgssrhg2hyl8i"]
 
-[ext_resource type="Script" uid="uid://3k58hnnypyod" path="res://Script/Objetos/valla.gd" id="1_a05qm"]
+[ext_resource type="Script" uid="uid://3k58hnnypyod" path="res://Script/Objetos/ObjectKillzone.gd" id="1_a05qm"]
 [ext_resource type="Texture2D" uid="uid://beavgh6yhv2q1" path="res://Assets/Objetos/Obstaculos/CartelValla.png" id="2_7nyl8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0eo0w"]

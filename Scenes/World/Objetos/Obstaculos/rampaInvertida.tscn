@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=4 uid="uid://bccly8rn8epyv"]
+
+[ext_resource type="Script" uid="uid://3k58hnnypyod" path="res://Script/Objetos/ObjectKillzone.gd" id="1_bs38y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dfvc1"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dlwga"]
+_surfaces = [{
+"aabb": AABB(-0.03, -0.01, 0, 0.04, 0.02, 0.015),
+"format": 34359742465,
+"index_count": 186,
+"index_data": PackedByteArray("AAABAAIAAwAEAAAAAQABAAIAAAAFAAMAAQABAAIAAAAAAAUAAQABAAAABQAFAAIAAQAAAAEABQAFAAAAAQABAAAABQAFAAAAAQAAAAUAAgACAAUAAAAAAAEAAgACAAEAAAAAAAEAAgACAAEAAAAAAAUAAgACAAUAAAAAAAUAAgAFAAIAAAAAAAUAAgAFAAAABQACAAEAAAAAAAUABQAFAAIAAAAAAAUAAAAAAAUAAAAAAAUABQAFAAAABQAFAAAABQAFAAAABQAFAAAABQAFAAAABQAFAAAAAQAGAAEABwAGAAEABgAHAAgAAQAJAAcACAAHAAkAAQAGAAoACAAKAAYACgACAAEACQABAAIACgAIAAsACQALAAgACwACAAoAAgAKAAIACwALAAkAAgACAAsACQAJAAsAAgACAAsAAgALAAkACQAJAAsACwALAAIACwALAAIACwALAAkACwAJAAwADAANAAsADQANAAsACwALAA0A"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 14,
+"vertex_data": PackedByteArray("CtcjPArXIzwAAAAACtcjvArXIzwAAAAACtcjvArXI7wAAAAA/0gaPArXI7xGmPY5/0gaPArXIzxGmPY5CtcjPArXI7wAAAAAj8L1vArXIzwAAAAAj8L1vArXIzyPwnU8j8L1vArXI7yPwnU8CtcjvArXIzyPwnU8j8L1vArXI7wAAAAACtcjvArXI7yPwnU8V8EfPArXIzwKN2U5V8EfPArXI7wKN2U5")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_m1s0i"]
+resource_name = "Plane_005"
+_surfaces = [{
+"aabb": AABB(-0.03, -0.01, 0, 0.04, 0.02, 0.015),
+"attribute_data": PackedByteArray("AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAACAPwAAAAAAAAAAAACAPwAAgD8AAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAAAAAAIA/AAAAAAAAgD8AAIA/AACAPwAAgD8AAAAAAACAPwAAAAAAAIA/AACAPwAAAAAAAIA/AAAAAAAAgD8AAIA/AACAPwAAgD8AAAAAAACAPwAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAAAAAACAPwAAgD8AAIA/AAAAAAAAgD8AAAAAAACAPwAAgD8="),
+"format": 34359742487,
+"index_count": 186,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAACAAEAAQAFAAQABgAGAAcABgAGAAcABwAHAAYABwAHAAYABwAIAAkACQAGAAcABgAJAAoACgALAAwABwAHAAwABwAHAAwADAAMAAcADAAMAAcADAANAAoACgANAAYADAAMAA0ADAAMAA0ADQANAAwADQANAAwABgAGAA0ABgAGAA0ABgAGAA0ABgAGAA0ABgAGAA0ABgAGAA0ABgAGAA0ABgAGAA0ADQANAAYADQANAAYADQANAAYADQANAAYADQANAAYADQANAAYADQANAAYADQANAAYACQAJAA4ACQAJAA4ADgAOAAkADgAOAAkADgAOAA8ADwAPAA4ADgAOABAAEAAQAA4ADgAOABAAEAAQAA4AEAAOABEAEQASABAAEwAUABUAFQAWABMAFwAYABkAGQAaABcAGwAcAB0AHQAeABsAHwAgACEAIQAiAB8AIwAkACUAJQAmACMAJwAoACkAKQAqACcA"),
+"material": SubResource("StandardMaterial3D_dfvc1"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 43,
+"vertex_data": PackedByteArray("CtcjPArXIzwAAAAACtcjvArXIzwAAAAACtcjvArXI7wAAAAACtcjPArXI7wAAAAAj8L1vArXI7wAAAAAj8L1vArXIzwAAAAACtcjPArXI7wAAAAACtcjvArXI7wAAAAAj8L1vArXI7wAAAAACtcjvArXI7wAAAAACtcjvArXIzwAAAAAj8L1vArXIzwAAAAACtcjvArXIzwAAAAACtcjPArXIzwAAAAACtcjvArXI7yPwnU8V8EfPArXI7wKN2U5CtcjvArXIzyPwnU8j8L1vArXI7yPwnU8j8L1vArXIzyPwnU8j8L1vArXIzyPwnU8j8L1vArXIzwAAAAACtcjvArXIzwAAAAACtcjvArXIzyPwnU8CtcjvArXI7yPwnU8CtcjvArXI7wAAAAAj8L1vArXI7wAAAAAj8L1vArXI7yPwnU8CtcjvArXIzyPwnU8CtcjvArXIzwAAAAACtcjvArXI7wAAAAACtcjvArXI7yPwnU8j8L1vArXI7yPwnU8j8L1vArXI7wAAAAAj8L1vArXIzwAAAAAj8L1vArXIzyPwnU8V8EfPArXIzwKN2U5V8EfPArXI7wKN2U5CtcjvArXI7yPwnU8CtcjvArXIzyPwnU8/0gaPArXI7xGmPY5/0gaPArXIzxGmPY5CtcjPArXIzwAAAAACtcjPArXI7wAAAAA/////////z//////////P/////////8//////////z//////////v/////////+//3//f////z//f/9/////P/9//3////8//3//f////z//f/9/////P/9//3////8//3//f////z//f/9/////P/9//3////+//3//f////z//f/9/////v/9//3////+//3//f////7//f///////v/9///////+//3///////7//f///////v/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+/////f////7////9/////v////3////+/////f////78AAP9/////vwAA/3////+/AAD/f////78AAP9/////v8m2/3////8/ybb/f////z/Jtv9/////P8m2/3////8/JLn/f////z8kuf9/////PyS5/3////8/JLn/f////z8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dlwga")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_76sif"]
+size = Vector3(0.177856, 1.50829, 1.95593)
+
+[node name="RampaInvertida" type="Area3D"]
+collision_layer = 32
+collision_mask = 2
+script = ExtResource("1_bs38y")
+
+[node name="Plane_005" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.0598e-06, -70, -3.0598e-06, 0, -3.0598e-06, 70, -70, 3.0598e-06, 1.33748e-13, 0, 0, 0)
+mesh = SubResource("ArrayMesh_m1s0i")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(-3.0598e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.0598e-08, -0.00900713, 0.53278, 2.10012)
+shape = SubResource("BoxShape3D_76sif")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

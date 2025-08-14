@@ -244,6 +244,18 @@ tracks/4/keys = {
 "method": &"start"
 }]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Panel/Vida2:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_rgqb5"]
 resource_name = "Life2"
@@ -415,13 +427,11 @@ scale = Vector2(0.015, 0.015)
 texture = ExtResource("3_rgqb5")
 
 [node name="Vida2" type="Sprite2D" parent="Panel"]
-visible = false
 position = Vector2(96, 32)
 scale = Vector2(0.015, 0.015)
 texture = ExtResource("3_rgqb5")
 
 [node name="Vida3" type="Sprite2D" parent="Panel"]
-visible = false
 position = Vector2(160, 32)
 scale = Vector2(0.015, 0.015)
 texture = ExtResource("3_rgqb5")
