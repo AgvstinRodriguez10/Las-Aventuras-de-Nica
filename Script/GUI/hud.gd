@@ -34,10 +34,9 @@ func _ready() -> void:
 	#$"../Yagui".queue_free()
 	
 func _process(delta: float) -> void:
-	labelScore.text = str(score)
-	score += 0.2
+	score += 0.01
 	
-	labelScore.text = str(int(score))
+	labelScore.text = str(float(score))
 	
 	if player.is_hitt == true:
 		if player.life == 2:

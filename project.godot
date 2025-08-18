@@ -71,8 +71,13 @@ FPS={
 3d_physics/layer_5="Enemies"
 3d_physics/layer_6="Obstacles"
 
+[physics]
+
+common/physics_interpolation=true
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
+occlusion_culling/use_occlusion_culling=true
