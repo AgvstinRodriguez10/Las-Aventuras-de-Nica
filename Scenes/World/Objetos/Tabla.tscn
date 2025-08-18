@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=4 uid="uid://bfnomj38x8st1"]
+[gd_scene load_steps=3 format=4 uid="uid://bfnomj38x8st1"]
+
+[ext_resource type="Script" uid="uid://yuql8oy8nxep" path="res://Script/Optimization/MeshInstanceOptimize.gd" id="1_r5py1"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_c4bpp"]
 _surfaces = [{
@@ -16,3 +18,9 @@ _surfaces = [{
 [node name="Tabla" type="MeshInstance3D" parent="."]
 transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 0, 0, 0)
 mesh = SubResource("ArrayMesh_c4bpp")
+script = ExtResource("1_r5py1")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier3D" to="Tabla" method="_on_visible_on_screen_notifier_3d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="Tabla" method="_on_visible_on_screen_notifier_3d_screen_exited"]

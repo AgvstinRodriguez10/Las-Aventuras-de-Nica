@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=4 uid="uid://dgf0l74w3bdo8"]
+[gd_scene load_steps=9 format=4 uid="uid://dgf0l74w3bdo8"]
 
 [ext_resource type="Texture2D" uid="uid://disrkkecy8xov" path="res://Assets/Coin/EcoFicha.png" id="1_6iut2"]
 [ext_resource type="Script" uid="uid://dp4lua0qlf3dq" path="res://Script/Coins/CoinEcoFicha.gd" id="1_n67kc"]
+[ext_resource type="Script" uid="uid://yuql8oy8nxep" path="res://Script/Optimization/MeshInstanceOptimize.gd" id="3_14fb0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n67kc"]
 albedo_texture = ExtResource("1_6iut2")
@@ -60,8 +61,13 @@ transform = Transform3D(30, 0, 0, 0, 30, -4.03077e-06, 0, 4.03077e-06, 30, 0, 0,
 material_override = SubResource("StandardMaterial3D_n67kc")
 mesh = SubResource("ArrayMesh_ih6hg")
 skeleton = NodePath("")
+script = ExtResource("3_14fb0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_6iut2")
 
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_entered" from="VisibleOnScreenNotifier3D" to="Circle" method="_on_visible_on_screen_notifier_3d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="Circle" method="_on_visible_on_screen_notifier_3d_screen_exited"]

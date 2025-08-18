@@ -11,7 +11,7 @@ var number = 1_000_000
 var formated_number = format_number(number)
 
 func _ready() -> void:
-	hide()
+	show()
 
 func _process(delta: float) -> void:
 	fpslabel.text = "FPS: " + str(Engine.get_frames_per_second())

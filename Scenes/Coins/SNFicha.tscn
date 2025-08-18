@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://bo2da4in2mjf8"]
+[gd_scene load_steps=8 format=4 uid="uid://bo2da4in2mjf8"]
 
 [ext_resource type="Texture2D" uid="uid://dgtyrf47a2kdr" path="res://Assets/Coin/MonedaSN.png" id="1_l2e8l"]
 [ext_resource type="Script" uid="uid://bxy3yknlwr42f" path="res://Script/Coins/CoinSN.gd" id="1_pom65"]
+[ext_resource type="Script" uid="uid://yuql8oy8nxep" path="res://Script/Optimization/MeshInstanceOptimize.gd" id="3_k77gg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w217s"]
 resource_name = "Material_0.001"
@@ -57,9 +58,14 @@ script = ExtResource("1_pom65")
 transform = Transform3D(50, 0, 0, 0, 50.75, -6.04987e-06, 0, 6.04987e-06, 50.75, 0, 0, 0)
 mesh = SubResource("ArrayMesh_3fccv")
 skeleton = NodePath("")
+script = ExtResource("3_k77gg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00805664)
 shape = SubResource("BoxShape3D_l2e8l")
 
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_entered" from="VisibleOnScreenNotifier3D" to="Plane" method="_on_visible_on_screen_notifier_3d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="Plane" method="_on_visible_on_screen_notifier_3d_screen_exited"]

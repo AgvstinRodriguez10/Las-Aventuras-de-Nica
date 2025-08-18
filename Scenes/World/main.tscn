@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://djlnov41bncl8"]
+[gd_scene load_steps=25 format=3 uid="uid://djlnov41bncl8"]
 
 [ext_resource type="PackedScene" uid="uid://d33hm0kfvhtj3" path="res://Scenes/GUI/fps_count.tscn" id="1_1pvyk"]
 [ext_resource type="PackedScene" uid="uid://ikd1j0tjscug" path="res://Scenes/GUI/hud.tscn" id="1_by2pg"]
@@ -80,15 +80,6 @@ sky = SubResource("Sky_ombbc")
 [sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_psyr8"]
 frustum_far = 250.0
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_t55t5"]
-
-[sub_resource type="Sky" id="Sky_g3oxa"]
-sky_material = SubResource("ProceduralSkyMaterial_t55t5")
-
-[sub_resource type="Environment" id="Environment_ombbc"]
-background_mode = 2
-sky = SubResource("Sky_g3oxa")
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_g3oxa"]
 size = Vector3(17.7956, 3.13379, 1)
 
@@ -152,10 +143,6 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 
 [node name="Nica" parent="." instance=ExtResource("2_ntgcc")]
 transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, 0, 0)
-
-[node name="Camera3D" type="Camera3D" parent="Nica"]
-transform = Transform3D(-2, -8.17588e-08, -1.95139e-07, -1.63518e-07, 1.76787, 0.935212, 1.34259e-07, 0.935212, -1.76787, 1.06245e-06, 6.47261, -12.153)
-environment = SubResource("Environment_ombbc")
 
 [node name="Alert" type="Area3D" parent="Nica"]
 transform = Transform3D(-2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, 0, 0, 0)

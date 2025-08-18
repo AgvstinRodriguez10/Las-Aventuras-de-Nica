@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=4 uid="uid://bdnklvuvq236p"]
+[gd_scene load_steps=5 format=4 uid="uid://bdnklvuvq236p"]
+
+[ext_resource type="Script" uid="uid://yuql8oy8nxep" path="res://Script/Optimization/MeshInstanceOptimize.gd" id="1_esemo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s13uo"]
 albedo_color = Color(0.235294, 0.235294, 0.235294, 1)
@@ -43,3 +45,9 @@ lod_bias = 0.5
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_ouf0m")
 skeleton = NodePath("")
+script = ExtResource("1_esemo")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier3D" to="Circle" method="_on_visible_on_screen_notifier_3d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="Circle" method="_on_visible_on_screen_notifier_3d_screen_exited"]

@@ -27,6 +27,10 @@ window/size/window_width_override=1366
 window/size/window_height_override=768
 window/stretch/mode="viewport"
 
+[global_group]
+
+Houses=""
+
 [gui]
 
 theme/custom="uid://lx6j7vbg6ma"

@@ -1,6 +1,7 @@
-[gd_scene load_steps=365 format=4 uid="uid://d1dgk81b32dc2"]
+[gd_scene load_steps=366 format=4 uid="uid://d1dgk81b32dc2"]
 
 [ext_resource type="LightmapGIData" uid="uid://bgh6yri6ld4jl" path="res://Resource/LigthmapGI/Cuadra2-Izq.lmbake" id="1_kje72"]
+[ext_resource type="Script" uid="uid://yuql8oy8nxep" path="res://Script/Optimization/MeshInstanceOptimize.gd" id="1_tkoj5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hxff2"]
 resource_name = "Material_0"
@@ -5749,6 +5750,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_au8yd")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="Puerta" type="MeshInstance3D" parent="edificio 3/CREDICOOP/Frente/BASE"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0914868, -0.00371948, -0.0595896)
@@ -5756,6 +5758,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_qm4yx")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="Rampa" type="MeshInstance3D" parent="edificio 3/CREDICOOP/Frente/BASE"]
 transform = Transform3D(0.984808, 0, 0.173648, 0, 1, 0, -0.173648, 0, 0.984808, 0.226429, -0.0773311, -0.125731)
@@ -5763,6 +5766,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_uvh0v")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="Suelo" type="MeshInstance3D" parent="edificio 3/CREDICOOP/Frente/BASE"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0842041, -0.0773311, -0.118881)
@@ -5770,6 +5774,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_in47d")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="Vidrio" type="MeshInstance3D" parent="edificio 3/CREDICOOP/Frente/BASE"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.228301, 0.07711, -0.0343265)
@@ -5777,6 +5782,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_rtot5")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="Cartel" type="Node3D" parent="edificio 3/CREDICOOP/Frente"]
 
@@ -5786,6 +5792,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_se24h")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="Amarillo" type="MeshInstance3D" parent="edificio 3/CREDICOOP/Frente/Cartel/CARTEL"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000104179, -0.00525971, -0.00869587)
@@ -5793,6 +5800,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_bd521")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="Amarillo2" type="MeshInstance3D" parent="edificio 3/CREDICOOP/Frente/Cartel/CARTEL"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000104179, 0.0642352, -0.00869587)
@@ -5800,6 +5808,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_o7pwe")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="Azul" type="MeshInstance3D" parent="edificio 3/CREDICOOP/Frente/Cartel/CARTEL"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000104179, -0.0448038, -0.00869587)
@@ -5807,6 +5816,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_o78bs")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="Azul2" type="MeshInstance3D" parent="edificio 3/CREDICOOP/Frente/Cartel/CARTEL"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000104179, 0.0246911, -0.00869587)
@@ -5814,6 +5824,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_lhxmw")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="Celeste" type="MeshInstance3D" parent="edificio 3/CREDICOOP/Frente/Cartel/CARTEL"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000104179, -0.0547422, -0.0086861)
@@ -5821,6 +5832,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_awfmd")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="Celeste2" type="MeshInstance3D" parent="edificio 3/CREDICOOP/Frente/Cartel/CARTEL"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000104179, 0.0147527, -0.0086861)
@@ -5828,6 +5840,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_3pifb")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="Naraja" type="MeshInstance3D" parent="edificio 3/CREDICOOP/Frente/Cartel/CARTEL"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000104179, -0.0151518, -0.00869587)
@@ -5835,6 +5848,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_nyi2n")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="Naraja2" type="MeshInstance3D" parent="edificio 3/CREDICOOP/Frente/Cartel/CARTEL"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000104179, 0.0543431, -0.00869587)
@@ -5842,6 +5856,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_e1yqu")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="Rojo" type="MeshInstance3D" parent="edificio 3/CREDICOOP/Frente/Cartel/CARTEL"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000104179, -0.0248698, -0.00869587)
@@ -5849,6 +5864,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_5uch4")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="Rojo2" type="MeshInstance3D" parent="edificio 3/CREDICOOP/Frente/Cartel/CARTEL"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000104179, 0.0446251, -0.00869587)
@@ -5856,6 +5872,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_7nnv0")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="Verde" type="MeshInstance3D" parent="edificio 3/CREDICOOP/Frente/Cartel/CARTEL"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000104179, -0.0645784, -0.00864643)
@@ -5863,6 +5880,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_axs7y")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="Verde2" type="MeshInstance3D" parent="edificio 3/CREDICOOP/Frente/Cartel/CARTEL"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000104179, 0.00491651, -0.00864643)
@@ -5870,6 +5888,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_drcoy")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="Violeta" type="MeshInstance3D" parent="edificio 3/CREDICOOP/Frente/Cartel/CARTEL"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000104179, -0.0348383, -0.00869587)
@@ -5877,6 +5896,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_1kgb2")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="Violeta2" type="MeshInstance3D" parent="edificio 3/CREDICOOP/Frente/Cartel/CARTEL"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000104179, 0.0346566, -0.00869587)
@@ -5884,6 +5904,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_xpcqh")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="CARTEL2" type="MeshInstance3D" parent="edificio 3/CREDICOOP/Frente/Cartel"]
 transform = Transform3D(1, 0, -1.69407e-21, 0, 1, 0, -3.38813e-21, 0, 1, 0.049454, 0.0338991, 0.195788)
@@ -5891,6 +5912,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_c6ihh")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="ParteInferior" type="Node3D" parent="edificio 3/CREDICOOP"]
 
@@ -6742,6 +6764,7 @@ lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_ktspx")
 skeleton = NodePath("")
+script = ExtResource("1_tkoj5")
 
 [node name="ParteSuperior2" type="Node3D" parent="edificio 4/Pecos"]
 

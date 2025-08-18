@@ -1,4 +1,6 @@
-[gd_scene load_steps=6 format=4 uid="uid://dv52g75eo242t"]
+[gd_scene load_steps=7 format=4 uid="uid://dv52g75eo242t"]
+
+[ext_resource type="Script" uid="uid://yuql8oy8nxep" path="res://Script/Optimization/MeshInstanceOptimize.gd" id="1_neg36"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dfvc1"]
 
@@ -46,6 +48,7 @@ collision_mask = 2
 transform = Transform3D(-3.0598e-06, -70, -3.0598e-06, 0, -3.0598e-06, 70, -70, 3.0598e-06, 1.33748e-13, 0, 0, 0)
 mesh = SubResource("ArrayMesh_m1s0i")
 skeleton = NodePath("")
+script = ExtResource("1_neg36")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(-3.0598e-06, -70, -3.0598e-06, 0, -3.0598e-06, 70, -70, 3.0598e-06, 1.33748e-13, 0, 0, 0)
@@ -54,3 +57,8 @@ shape = SubResource("ConcavePolygonShape3D_76sif")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(-1.84143e-08, 2.44366e-08, 0.7, 0.559045, 0.42127, 1.33993e-14, -0.42127, 0.559045, -3.0598e-08, 0.00672574, 0.484614, 0.033279)
 shape = SubResource("BoxShape3D_76sif")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier3D" to="Plane_005" method="_on_visible_on_screen_notifier_3d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="Plane_005" method="_on_visible_on_screen_notifier_3d_screen_exited"]

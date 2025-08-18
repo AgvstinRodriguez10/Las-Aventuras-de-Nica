@@ -1,4 +1,6 @@
-[gd_scene load_steps=6 format=4 uid="uid://crj38hhv8sc57"]
+[gd_scene load_steps=7 format=4 uid="uid://crj38hhv8sc57"]
+
+[ext_resource type="Script" uid="uid://yuql8oy8nxep" path="res://Script/Optimization/MeshInstanceOptimize.gd" id="1_ldxrc"]
 
 [sub_resource type="Gradient" id="Gradient_u23x6"]
 interpolation_mode = 1
@@ -53,3 +55,9 @@ shadow_mesh = SubResource("ArrayMesh_b17m0")
 [node name="Conito" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_16bfk")
 skeleton = NodePath("")
+script = ExtResource("1_ldxrc")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier3D" to="Conito" method="_on_visible_on_screen_notifier_3d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="Conito" method="_on_visible_on_screen_notifier_3d_screen_exited"]
