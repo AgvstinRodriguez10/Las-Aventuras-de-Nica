@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 			else:
 				byebye()
 
-func _on_body_entered(body: CharacterBody3D) -> void:
+func _on_body_entered(body: Player) -> void:
 	if body.name == "Nica" and currentState == STATE.IDLE:
 		target = body
 		currentState = STATE.PULLING_UP

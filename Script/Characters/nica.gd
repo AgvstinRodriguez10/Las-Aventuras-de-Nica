@@ -11,17 +11,21 @@ var lateral_free_position := Vector3.ZERO
 var camera_height = 1.0
 var camera_distance = 1.0
 
-#va de 0 a 2 para enumerar las lineas
+# Va de 0 a 2 para enumerar las lineas
 var target_lane: int = 1
 var velocity_y
 var baseVelocity
 
+# Velocidad con la que cambia de carriles
 const velociti_change_line:float = 0.5
 
 var is_hitt : bool = false
+# Variable que se usa para la animacion del up de vide
 var life_plus : bool = false
 var life = 3
+var snficha = 0
 
+# Timer para la duracion de los powerups
 var durationPowerUp:float = 0.0
 
 enum POWERUPSTATE {
@@ -194,3 +198,11 @@ func lostLife():
 	is_hitt = true
 	currentState = STATES.HIT
 	life -= 1
+
+func collectSnFicha():
+	snficha += 1
+	if (snficha == 3):
+		life += 1
+		life_plus = true
+		snficha = 0
+		
