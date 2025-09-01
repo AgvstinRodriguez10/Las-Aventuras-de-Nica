@@ -427,11 +427,13 @@ scale = Vector2(0.015, 0.015)
 texture = ExtResource("3_rgqb5")
 
 [node name="Vida2" type="Sprite2D" parent="Panel"]
+visible = false
 position = Vector2(96, 32)
 scale = Vector2(0.015, 0.015)
 texture = ExtResource("3_rgqb5")
 
 [node name="Vida3" type="Sprite2D" parent="Panel"]
+visible = false
 position = Vector2(160, 32)
 scale = Vector2(0.015, 0.015)
 texture = ExtResource("3_rgqb5")

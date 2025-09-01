@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://djlnov41bncl8"]
+[gd_scene load_steps=24 format=3 uid="uid://djlnov41bncl8"]
 
 [ext_resource type="PackedScene" uid="uid://d33hm0kfvhtj3" path="res://Scenes/GUI/fps_count.tscn" id="1_1pvyk"]
 [ext_resource type="PackedScene" uid="uid://ikd1j0tjscug" path="res://Scenes/GUI/hud.tscn" id="1_by2pg"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://bg2ova3uojcc0" path="res://Scenes/Characters/nica.tscn" id="2_ntgcc"]
 [ext_resource type="Texture2D" uid="uid://cqx4vm2ocv0vh" path="res://Assets/Sky/sky.hdr" id="2_qvtyt"]
 [ext_resource type="PackedScene" uid="uid://dgf0l74w3bdo8" path="res://Scenes/Coins/EcoFicha.tscn" id="6_23yoc"]
-[ext_resource type="PackedScene" uid="uid://bgssrhg2hyl8i" path="res://Scenes/World/Objetos/Valla.tscn" id="7_jyfha"]
 [ext_resource type="Script" uid="uid://mc36wktsjlfn" path="res://Script/GUI/label.gd" id="8_6jptx"]
 [ext_resource type="PackedScene" uid="uid://3gk3aubcupa6" path="res://Scenes/Characters/yagui.tscn" id="8_t55t5"]
 [ext_resource type="FontFile" uid="uid://c2hhi7jed7eo3" path="res://Assets/Fonts/kagenobolditalic-q2kvl.otf" id="8_wpgpo"]
@@ -198,9 +197,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.99592, 61.3248)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.99592, 117.319)
 
 [node name="Obstaculos" type="Node3D" parent="."]
-
-[node name="Valla" parent="Obstaculos" instance=ExtResource("7_jyfha")]
-transform = Transform3D(-1.5299e-07, 0, 3.5, 0, 3.5, 0, -3.5, 0, -1.5299e-07, 1, 0, 17.098)
 
 [node name="RampaInvertida" parent="Obstaculos" instance=ExtResource("15_psyr8")]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 1, 0.001, 49.087)
