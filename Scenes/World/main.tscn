@@ -67,12 +67,13 @@ _data = {
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g3oxa"]
 sky_cover = ExtResource("2_qvtyt")
+ground_curve = 1.47034
 
 [sub_resource type="Sky" id="Sky_ombbc"]
 sky_material = SubResource("ProceduralSkyMaterial_g3oxa")
 
 [sub_resource type="Environment" id="Environment_8o8og"]
-background_mode = 1
+background_mode = 2
 background_color = Color(0.432624, 0.432624, 0.432624, 1)
 sky = SubResource("Sky_ombbc")
 
@@ -166,7 +167,6 @@ directional_shadow_fade_start = 0.2
 directional_shadow_max_distance = 50.0
 
 [node name="EcoFichas" type="Node3D" parent="."]
-visible = false
 
 [node name="EcoFicha" parent="EcoFichas" instance=ExtResource("6_23yoc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.739924, 11.1776)

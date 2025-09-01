@@ -399,9 +399,9 @@ vertical_alignment = 1
 
 [node name="LabelScorePlus" type="Label" parent="labelPlus"]
 modulate = Color(1, 1, 1, 0)
-offset_left = 928.0
+offset_left = 1168.0
 offset_top = 8.0
-offset_right = 1120.0
+offset_right = 1360.0
 offset_bottom = 64.0
 text = " + 100"
 label_settings = SubResource("LabelSettings_aws3g")
@@ -427,7 +427,6 @@ scale = Vector2(0.015, 0.015)
 texture = ExtResource("3_rgqb5")
 
 [node name="Vida2" type="Sprite2D" parent="Panel"]
-visible = false
 position = Vector2(96, 32)
 scale = Vector2(0.015, 0.015)
 texture = ExtResource("3_rgqb5")
