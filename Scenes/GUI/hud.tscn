@@ -399,10 +399,10 @@ vertical_alignment = 1
 
 [node name="LabelScorePlus" type="Label" parent="labelPlus"]
 modulate = Color(1, 1, 1, 0)
-offset_left = 1168.0
-offset_top = 8.0
-offset_right = 1360.0
-offset_bottom = 64.0
+offset_left = 1152.0
+offset_top = 64.0
+offset_right = 1344.0
+offset_bottom = 120.0
 text = " + 100"
 label_settings = SubResource("LabelSettings_aws3g")
 horizontal_alignment = 1

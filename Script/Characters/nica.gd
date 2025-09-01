@@ -206,3 +206,7 @@ func collectSnFicha():
 		life_plus = true
 		snficha = 0
 		
+
+
+func _on_giro_body_entered(body: Node3D) -> void:
+	$"../Giro/AnimationPlayer".play("Giro")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://djlnov41bncl8"]
+[gd_scene load_steps=27 format=3 uid="uid://djlnov41bncl8"]
 
 [ext_resource type="PackedScene" uid="uid://d33hm0kfvhtj3" path="res://Scenes/GUI/fps_count.tscn" id="1_1pvyk"]
 [ext_resource type="PackedScene" uid="uid://ikd1j0tjscug" path="res://Scenes/GUI/hud.tscn" id="1_by2pg"]
@@ -83,6 +83,29 @@ frustum_far = 250.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_g3oxa"]
 size = Vector3(17.7956, 3.13379, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ombbc"]
+size = Vector3(15.7744, 5.87842, 1)
+
+[sub_resource type="Animation" id="Animation_ombbc"]
+resource_name = "Giro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Nica:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 3.14159, 0), Vector3(0, 4.01426, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8o8og"]
+_data = {
+&"Giro": SubResource("Animation_ombbc")
+}
+
 [node name="Main" type="Node3D"]
 
 [node name="FPSCount" parent="." instance=ExtResource("1_1pvyk")]
@@ -133,7 +156,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 [node name="CameraFocus" type="Marker3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="CameraFocus"]
-transform = Transform3D(-0.999945, -0.0104717, -7.62253e-08, -0.0101191, 0.966274, 0.257318, -0.0026945, 0.257304, -0.966327, 0, 3.93963, -8.4115)
+transform = Transform3D(-0.999945, -0.0104718, -8.44833e-08, -0.0101197, 0.966323, 0.257133, -0.00269255, 0.257119, -0.966376, 0, 3.93963, -8.4115)
 environment = SubResource("Environment_8o8og")
 attributes = SubResource("CameraAttributesPhysical_psyr8")
 current = true
@@ -142,7 +165,8 @@ current = true
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -26.9236)
 
 [node name="Nica" parent="." instance=ExtResource("2_ntgcc")]
-transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, 0, 0)
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, 0, 547.951)
+collision_mask = 125
 
 [node name="Alert" type="Area3D" parent="Nica"]
 transform = Transform3D(-2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, 0, 0, 0)
@@ -206,6 +230,21 @@ transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 1, 0.0
 [node name="Puente" parent="Rampas y Tablas" instance=ExtResource("15_8o8og")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.001, 0)
 
+[node name="Giro" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 555.618)
+collision_layer = 64
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Giro"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.605957, 2.43921, 6.17487)
+shape = SubResource("BoxShape3D_ombbc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Giro"]
+libraries = {
+&"": SubResource("AnimationLibrary_8o8og")
+}
+
 [connection signal="timeout" from="Label/Timer" to="Label" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Nica/Alert" to="HUD" method="_on_alert_body_entered"]
 [connection signal="timeout" from="Nica/Alert/TimerAlert" to="HUD" method="_on_timer_alert_timeout"]
+[connection signal="body_entered" from="Giro" to="Nica" method="_on_giro_body_entered"]

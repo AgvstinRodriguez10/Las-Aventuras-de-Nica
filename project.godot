@@ -21,8 +21,6 @@ buses/default_bus_layout=""
 
 [display]
 
-window/size/viewport_width=1366
-window/size/viewport_height=768
 window/stretch/mode="viewport"
 
 [global_group]
