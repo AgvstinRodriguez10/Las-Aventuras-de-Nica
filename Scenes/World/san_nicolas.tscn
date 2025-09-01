@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dcmdpwf6w8opd"]
+[gd_scene load_steps=14 format=3 uid="uid://dcmdpwf6w8opd"]
 
 [ext_resource type="PackedScene" uid="uid://bxs55inw16h7x" path="res://Scenes/World/Calles/Cuadras (Completas)/b_mitre_400_350.tscn" id="1_i7jcd"]
 [ext_resource type="PackedScene" uid="uid://6vltpx4piqv4" path="res://Scenes/World/Calles/Cuadras (Completas)/b_mitre_350_300.tscn" id="2_86gof"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b13tr6v2hqhqb" path="res://Scenes/World/Calles/Plaza/b.tscn" id="9_t1gqk"]
 [ext_resource type="PackedScene" uid="uid://ccaersgh5mbh4" path="res://Scenes/World/Calles/Plaza/c.tscn" id="10_4c4k8"]
 [ext_resource type="PackedScene" uid="uid://d4lgmrky3wj82" path="res://Scenes/World/VeredasExtras.tscn" id="11_t1gqk"]
+[ext_resource type="ArrayOccluder3D" uid="uid://cama0f6u55hhc" path="res://Scenes/World/Optimization/san_nicolas.occ" id="12_4c4k8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kko3t"]
 size = Vector3(12.0995, 0.523926, 1675.56)
@@ -83,3 +84,7 @@ transform = Transform3D(-6, 0, -5.24537e-07, 0, 6, 0, 5.24537e-07, 0, -6, -29.81
 
 [node name="VeredasExtras12" parent="VeredasExtras" instance=ExtResource("11_t1gqk")]
 transform = Transform3D(-6, 0, -5.24537e-07, 0, 6, 0, 5.24537e-07, 0, -6, 72.0165, 0, 1111.32)
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1092.61)
+occluder = ExtResource("12_4c4k8")
