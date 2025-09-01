@@ -72,11 +72,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="Left" type="Sprite2D" parent="Container"]
-position = Vector2(32, 392)
-scale = Vector2(1, 9.75)
+position = Vector2(32, 328)
+scale = Vector2(1, 7.75)
 texture = ExtResource("1_o1e7e")
 
 [node name="corner1" type="Sprite2D" parent="Container"]
@@ -85,36 +84,36 @@ scale = Vector2(1.375, 1.25)
 texture = SubResource("GradientTexture2D_k2kj2")
 
 [node name="Right" type="Sprite2D" parent="Container"]
-position = Vector2(1334.25, 385.303)
-scale = Vector2(-1, -9.45306)
+position = Vector2(1120, 318.5)
+scale = Vector2(-1, -7.91303)
 texture = ExtResource("1_o1e7e")
 
 [node name="corner2" type="Sprite2D" parent="Container"]
-position = Vector2(1328, 42.5)
+position = Vector2(1111, 42)
 rotation = 1.5708
 scale = Vector2(1.32812, 1.25)
 texture = SubResource("GradientTexture2D_k2kj2")
 
 [node name="Top" type="Sprite2D" parent="Container"]
-position = Vector2(687.67, 32)
+position = Vector2(579.67, 31.9996)
 rotation = 1.5708
-scale = Vector2(1, 18.7603)
+scale = Vector2(1, 15.3853)
 texture = ExtResource("1_o1e7e")
 
 [node name="corner3" type="Sprite2D" parent="Container"]
-position = Vector2(1322.17, 728)
+position = Vector2(1108, 611)
 rotation = 3.14159
 scale = Vector2(1.38041, 1.25)
 texture = SubResource("GradientTexture2D_k2kj2")
 
 [node name="Bottom" type="Sprite2D" parent="Container"]
-position = Vector2(672.253, 736)
+position = Vector2(561, 618)
 rotation = -1.5708
-scale = Vector2(1, 19.0045)
+scale = Vector2(1, 15.8018)
 texture = ExtResource("1_o1e7e")
 
 [node name="corner4" type="Sprite2D" parent="Container"]
-position = Vector2(40, 728)
+position = Vector2(42, 607)
 rotation = 4.71239
 scale = Vector2(1.28125, 1.25)
 texture = SubResource("GradientTexture2D_k2kj2")
