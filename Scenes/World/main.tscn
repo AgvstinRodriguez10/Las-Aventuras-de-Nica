@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://djlnov41bncl8"]
+[gd_scene load_steps=29 format=3 uid="uid://djlnov41bncl8"]
 
 [ext_resource type="PackedScene" uid="uid://d33hm0kfvhtj3" path="res://Scenes/GUI/fps_count.tscn" id="1_1pvyk"]
 [ext_resource type="PackedScene" uid="uid://ikd1j0tjscug" path="res://Scenes/GUI/hud.tscn" id="1_by2pg"]
@@ -9,12 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://cqx4vm2ocv0vh" path="res://Assets/Sky/sky.hdr" id="2_qvtyt"]
 [ext_resource type="PackedScene" uid="uid://dgf0l74w3bdo8" path="res://Scenes/Coins/EcoFicha.tscn" id="6_23yoc"]
 [ext_resource type="Script" uid="uid://mc36wktsjlfn" path="res://Script/GUI/label.gd" id="8_6jptx"]
+[ext_resource type="PackedScene" uid="uid://c3ap0ixmsb0bw" path="res://Assets/San Nicolas/Costanera/Costanera + Regatas.fbx" id="8_8o8og"]
 [ext_resource type="PackedScene" uid="uid://3gk3aubcupa6" path="res://Scenes/Characters/yagui.tscn" id="8_t55t5"]
 [ext_resource type="FontFile" uid="uid://c2hhi7jed7eo3" path="res://Assets/Fonts/kagenobolditalic-q2kvl.otf" id="8_wpgpo"]
 [ext_resource type="PackedScene" uid="uid://bo2da4in2mjf8" path="res://Scenes/Coins/SNFicha.tscn" id="9_w7l72"]
 [ext_resource type="PackedScene" uid="uid://h2yyj2bmrsqb" path="res://Scenes/Coins/RDFicha.tscn" id="10_yteiy"]
 [ext_resource type="PackedScene" uid="uid://bfttwterfi486" path="res://Scenes/World/Objetos/Obstaculos/puente.tscn" id="15_8o8og"]
 [ext_resource type="PackedScene" uid="uid://bccly8rn8epyv" path="res://Scenes/World/Objetos/Obstaculos/rampaInvertida.tscn" id="15_psyr8"]
+[ext_resource type="ArrayOccluder3D" uid="uid://cdj7hyw8dd0bj" path="res://Resource/Extras/main.occ" id="17_psyr8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6jptx"]
 font = ExtResource("8_wpgpo")
@@ -100,6 +102,20 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(0, 3.14159, 0), Vector3(0, 4.01426, 0)]
 }
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Nica")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"reset_target_line"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8o8og"]
 _data = {
@@ -153,6 +169,9 @@ one_shot = true
 [node name="San Nicolas" parent="." instance=ExtResource("1_n1kio")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
+[node name="Costanera + Regatas" parent="." instance=ExtResource("8_8o8og")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 99.266, -5, 708.944)
+
 [node name="CameraFocus" type="Marker3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="CameraFocus"]
@@ -165,7 +184,7 @@ current = true
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -26.9236)
 
 [node name="Nica" parent="." instance=ExtResource("2_ntgcc")]
-transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, 0, 0)
+transform = Transform3D(-0.5, 0, 1.26759e-06, 0, 0.5, 0, -1.26759e-06, 0, -0.5, 0, 0, 0)
 collision_mask = 125
 
 [node name="Alert" type="Area3D" parent="Nica"]
@@ -243,6 +262,10 @@ shape = SubResource("BoxShape3D_ombbc")
 libraries = {
 &"": SubResource("AnimationLibrary_8o8og")
 }
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.445, 0, 0)
+occluder = ExtResource("17_psyr8")
 
 [connection signal="timeout" from="Label/Timer" to="Label" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Nica/Alert" to="HUD" method="_on_alert_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://bv1y3kkv4x8rx"]
+[gd_scene load_steps=35 format=4 uid="uid://bv1y3kkv4x8rx"]
 
 [ext_resource type="Material" uid="uid://dn3uib65vub6t" path="res://Resource/Materials/Calles/Desague.tres" id="2_4b5ph"]
 [ext_resource type="Material" uid="uid://0q4sd8uj7kf5" path="res://Resource/Materials/Calles/Adoquines.tres" id="3_5eoer"]
@@ -336,6 +336,60 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jmyjp")
 
+[sub_resource type="ArrayMesh" id="ArrayMesh_ks2d6"]
+_surfaces = [{
+"aabb": AABB(-1, -0.00429489, -1, 2, 0.00429489, 2),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAgAEAAAAAgAFAAQABgAHAAgABgAJAAcACQAKAAcACQALAAoA"),
+"name": "Rejilla",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAAGXTskAAD/////AAAAAP//Bl07JAAAAAD//wAAAAAAAAAAOyQAAP//AAA7JAAAAAD/////AAD//wZdw9sAAP///////wAAAAAGXcPbAAD//wAAw9sAAAAAAADD2wAA")
+}, {
+"aabb": AABB(-1, -0.00429489, -0.716915, 2, 0.00429489, 1.43383),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAABAAMABAADAAUAAgAGAAAAAgAHAAYABwAIAAYABwAJAAgACQAKAAgACQALAAoA"),
+"name": "Calle",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("/////2H9AAAAAAAAYf0AAAAA//9h/QAA//8AAGH9AAAAAAAA//8AAP//AAD//wAA/////50CAAAAAP//nQIAAP//AACdAgAAAAAAAJ0CAAD//wAAAAAAAAAAAAAAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ytn0u"]
+resource_name = "CallePrincipal_Plane"
+_surfaces = [{
+"aabb": AABB(-1, -0.00429489, -1, 2, 0.00429489, 2),
+"attribute_data": PackedByteArray("AABVVf//AAD//1RVAAAAAAAA/////6mq/////wAAqqoAAKqq//+pqv//qaoAAKqq//9UVQAAVVUAAFVV//9UVQ=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0A"),
+"material": ExtResource("2_4b5ph"),
+"name": "Rejilla",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AAAGXTskmr//////AACav///Bl07JJq/AAD//wAAmr8AAP////9kwP//Bl3D22TA////////ZMAAAAZdw9tkwAAABl3D2/////8AAMPb/////wZdw9v//wAAAADD2/////8GXTsk/n8AAAAAOyT+fwAABl07JP5///8AADsk/n////9/////f////3////9/////f////3////9/////f////3////9/////f////3//f////3////9/////f///")
+}, {
+"aabb": AABB(-1, -0.00429489, -0.716915, 2, 0.00429489, 1.43383),
+"attribute_data": PackedByteArray("yAo3Wdb4N1nW+DdZyAo3Wdb4N1nICoyuyAo3Wdb4jK4wOzchbznYIW85NyEwO9ghsnd2LaFxoy+hcXYtsnejL9b4jK7ICoyuyAqMrtb4jK4="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
+"material": ExtResource("3_5eoer"),
+"name": "Calle",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("/////2H9/n8AAAAAYf3+fwAA//9h/f5///8AAGH9/n8AAP//Yf3///////+dAv///////2H9//8AAP//nQL//wAAAACdAv////8AAAAA/////wAAnQL//wAAAAAAAP//AAAAAP///////wAAYf3/////AAD/////AAAAAGH9//8AAP//nQL/////AACdAv///////50C//8AAAAAnQL///9/////f////3////9/////f/+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9//7////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ks2d6")
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_226bj"]
 _surfaces = [{
 "aabb": AABB(-20.997, -0.00429489, -1, 21.997, 0.00429489, 2.00285),
@@ -568,28 +622,14 @@ skeleton = NodePath("")
 [node name="CuadraSanNicolas2" type="Node3D" parent="."]
 transform = Transform3D(-2.62268e-07, 0, -6, 0, 6, 0, 6, 0, -2.62268e-07, 191.634, 0, 1303.15)
 
-[node name="Vereda" type="MeshInstance3D" parent="CuadraSanNicolas2"]
-transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, -3.49459, 0, 3.48658)
-lod_bias = 0.001
-visibility_range_end = 300.0
-mesh = SubResource("ArrayMesh_e656g")
-skeleton = NodePath("")
-
-[node name="AlcantarillasCurvas" type="MeshInstance3D" parent="CuadraSanNicolas2"]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
-lod_bias = 0.001
-visibility_range_end = 300.0
-mesh = SubResource("ArrayMesh_qora3")
-skeleton = NodePath("")
-
-[node name="Calle" type="MeshInstance3D" parent="CuadraSanNicolas2"]
-transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 5, 0, 0)
-lod_bias = 0.001
-visibility_range_end = 300.0
-mesh = SubResource("ArrayMesh_o3xy7")
-skeleton = NodePath("")
-
 [node name="Calle_001" type="MeshInstance3D" parent="CuadraSanNicolas2"]
+transform = Transform3D(-1.19209e-07, 0, 1, 0, 1, 0, -1, 0, -1.19209e-07, 0, 0, 3)
+lod_bias = 0.001
+visibility_range_end = 300.0
+mesh = SubResource("ArrayMesh_i1umx")
+skeleton = NodePath("")
+
+[node name="Calle_002" type="MeshInstance3D" parent="CuadraSanNicolas2"]
 transform = Transform3D(-1.19209e-07, 0, 1, 0, 1, 0, -1, 0, -1.19209e-07, 0, 0, 3)
 lod_bias = 0.001
 visibility_range_end = 300.0
@@ -603,11 +643,45 @@ visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_xvmbs")
 skeleton = NodePath("")
 
+[node name="Vereda_002" type="MeshInstance3D" parent="CuadraSanNicolas2"]
+transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, 3.50002, 0, 3.4966)
+lod_bias = 0.001
+visibility_range_end = 300.0
+mesh = SubResource("ArrayMesh_xvmbs")
+skeleton = NodePath("")
+
 [node name="Plane_003" type="MeshInstance3D" parent="CuadraSanNicolas2"]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, -3.49708, 0, 23.4897)
 lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_0ysd0")
+skeleton = NodePath("")
+
+[node name="Plane_004" type="MeshInstance3D" parent="CuadraSanNicolas2"]
+transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, -3.49712, 0.01, 18.52)
+lod_bias = 0.001
+visibility_range_end = 300.0
+mesh = SubResource("ArrayMesh_0ysd0")
+skeleton = NodePath("")
+
+[node name="Plane" type="MeshInstance3D" parent="CuadraSanNicolas2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 1)
+mesh = SubResource("ArrayMesh_ytn0u")
+skeleton = NodePath("")
+
+[node name="Plane2" type="MeshInstance3D" parent="CuadraSanNicolas2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -1)
+mesh = SubResource("ArrayMesh_ytn0u")
+skeleton = NodePath("")
+
+[node name="Plane3" type="MeshInstance3D" parent="CuadraSanNicolas2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -3)
+mesh = SubResource("ArrayMesh_ytn0u")
+skeleton = NodePath("")
+
+[node name="Plane4" type="MeshInstance3D" parent="CuadraSanNicolas2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -5)
+mesh = SubResource("ArrayMesh_ytn0u")
 skeleton = NodePath("")
 
 [node name="CuadraSanNicolas3" type="Node3D" parent="."]
@@ -643,6 +717,13 @@ skeleton = NodePath("")
 
 [node name="Vereda_001" type="MeshInstance3D" parent="CuadraSanNicolas3"]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, 3.50005, 0, 23.5503)
+lod_bias = 0.001
+visibility_range_end = 300.0
+mesh = SubResource("ArrayMesh_xvmbs")
+skeleton = NodePath("")
+
+[node name="Vereda_002" type="MeshInstance3D" parent="CuadraSanNicolas3"]
+transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, 3.50005, 0.01, 28.5503)
 lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_xvmbs")
@@ -687,7 +768,35 @@ mesh = SubResource("ArrayMesh_kko3t")
 skeleton = NodePath("")
 
 [node name="Plane2" type="MeshInstance3D" parent="CuadraSanNicolas4"]
-transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, -25.0049, 0, 16.8766)
+transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, -24.985, 0, 16.8766)
+lod_bias = 0.001
+visibility_range_end = 300.0
+mesh = SubResource("ArrayMesh_kko3t")
+skeleton = NodePath("")
+
+[node name="Plane3" type="MeshInstance3D" parent="CuadraSanNicolas4"]
+transform = Transform3D(1, 0, 1.77636e-14, 0, 1, 0, -1.77636e-14, 0, 1, -26.985, 0, 16.8766)
+lod_bias = 0.001
+visibility_range_end = 300.0
+mesh = SubResource("ArrayMesh_kko3t")
+skeleton = NodePath("")
+
+[node name="Plane4" type="MeshInstance3D" parent="CuadraSanNicolas4"]
+transform = Transform3D(1, 0, 2.84217e-14, 0, 1, 0, -2.84217e-14, 0, 1, -28.985, 0, 16.8766)
+lod_bias = 0.001
+visibility_range_end = 300.0
+mesh = SubResource("ArrayMesh_kko3t")
+skeleton = NodePath("")
+
+[node name="Plane5" type="MeshInstance3D" parent="CuadraSanNicolas4"]
+transform = Transform3D(1, 0, 3.19744e-14, 0, 1, 0, -3.19744e-14, 0, 1, -30.985, 0, 16.8766)
+lod_bias = 0.001
+visibility_range_end = 300.0
+mesh = SubResource("ArrayMesh_kko3t")
+skeleton = NodePath("")
+
+[node name="Plane6" type="MeshInstance3D" parent="CuadraSanNicolas4"]
+transform = Transform3D(1, 0, 3.19744e-14, 0, 1, 0, -3.19744e-14, 0, 1, -30.985, 0, 16.8766)
 lod_bias = 0.001
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_kko3t")
@@ -1008,9 +1117,6 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -7.95352, 0.0597737, 97.2707)
 
 [node name="7" parent="Decoración/2/Izq" instance=ExtResource("9_d643n")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -7.95352, 0.0597737, 112.271)
-
-[node name="8" parent="Decoración/2/Izq" instance=ExtResource("9_d643n")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -7.95352, 0.0597737, 127.271)
 
 [node name="9" parent="Decoración/2/Izq" instance=ExtResource("9_d643n")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -7.95352, 0.0597737, 67.2706)

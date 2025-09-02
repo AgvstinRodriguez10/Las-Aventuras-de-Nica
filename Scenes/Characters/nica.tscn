@@ -6,7 +6,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_um7xc"]
 resource_name = "Piel"
-transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_q3bkr")
 roughness = 0.5
@@ -19,14 +18,12 @@ roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_adkq2"]
 resource_name = "Ojos"
-transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("2_r8wu8")
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rs48k"]
 resource_name = "Arito"
-transparency = 4
 cull_mode = 2
 albedo_color = Color(0.984314, 0.717647, 0.141176, 1)
 metallic = 1.0
@@ -34,7 +31,6 @@ roughness = 0.577273
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_skvkv"]
 resource_name = "Pelo"
-transparency = 4
 cull_mode = 2
 albedo_color = Color(0.615686, 0.407843, 0.196079, 1)
 
@@ -50,14 +46,12 @@ albedo_texture = ExtResource("2_r8wu8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w6iv5"]
 resource_name = "Bincha"
-transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("2_r8wu8")
 roughness = 0.717391
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_maj5u"]
 resource_name = "TelaPliegue"
-transparency = 4
 cull_mode = 2
 albedo_texture = ExtResource("1_q3bkr")
 
@@ -86,7 +80,6 @@ roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0w3fb"]
 resource_name = "Linterna"
-transparency = 4
 cull_mode = 2
 albedo_color = Color(0.984314, 0.72549, 0.14902, 1)
 metallic = 1.0
@@ -94,7 +87,6 @@ roughness = 0.0636364
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndr4a"]
 resource_name = "Negro"
-transparency = 4
 cull_mode = 2
 albedo_color = Color(0.980392, 0.729411, 0.125491, 1)
 metallic = 1.0
