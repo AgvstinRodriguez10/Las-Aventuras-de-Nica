@@ -1,6 +1,146 @@
-[gd_scene format=3 uid="uid://bg5630cosioxd"]
+[gd_scene load_steps=11 format=3 uid="uid://bg5630cosioxd"]
+
+[ext_resource type="Texture2D" uid="uid://bicwmerccv4nf" path="res://Assets/Extras/PANTALLAINICIOOO-06.png" id="1_cgqpu"]
+[ext_resource type="Script" uid="uid://xtoce68yo8ix" path="res://Script/GUI/pantalla_de_carga.gd" id="1_habic"]
+[ext_resource type="Texture2D" uid="uid://1wvpofvi2gj" path="res://Assets/Extras/CARGAINICIOVACIA-06.png" id="2_habic"]
+[ext_resource type="Texture2D" uid="uid://4dch5lqrugw4" path="res://Assets/Extras/CARGAINICIO-06.png" id="3_q3pre"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_habic"]
+texture = ExtResource("3_q3pre")
+texture_margin_left = 8.48198
+texture_margin_right = 8.48198
+region_rect = Rect2(1949.16, 2432.34, 944.243, 76.4114)
+
+[sub_resource type="InputEventKey" id="InputEventKey_cgqpu"]
+device = -1
+keycode = 4194309
+
+[sub_resource type="Shortcut" id="Shortcut_habic"]
+events = [SubResource("InputEventKey_cgqpu")]
+
+[sub_resource type="Animation" id="Animation_q3pre"]
+resource_name = "Loading"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ProgressBar:value")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 2, 3, 4.5, 5, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 20.0, 40.0, 45.0, 60.0, 100.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(9, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_cgqpu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ProgressBar:value")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [20.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s0fhk"]
+_data = {
+&"Loading": SubResource("Animation_q3pre"),
+&"RESET": SubResource("Animation_cgqpu")
+}
 
 [node name="Pantalla de Carga" type="CanvasLayer"]
+script = ExtResource("1_habic")
 
 [node name="Container" type="Control" parent="."]
 layout_mode = 3
@@ -10,19 +150,75 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Pantallainiciooo-06" type="Sprite2D" parent="Container"]
+position = Vector2(576, 324)
+texture = ExtResource("1_cgqpu")
+
 [node name="ProgressBar" type="ProgressBar" parent="Container"]
 z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -175.0
+offset_top = -57.0
+offset_right = 203.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/fill = SubResource("StyleBoxTexture_habic")
+value = 20.0
+
+[node name="Cargainiciovacia-06" type="Sprite2D" parent="Container"]
+position = Vector2(582, 607)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_habic")
+region_enabled = true
+region_rect = Rect2(1879, 2406, 1042, 130)
+
+[node name="Button" type="Button" parent="Container"]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 528.0
-offset_right = 824.0
-offset_bottom = 555.0
+offset_left = 504.0
+offset_top = 680.0
+offset_right = 648.0
+offset_bottom = 720.0
+disabled = true
+shortcut = SubResource("Shortcut_habic")
+text = "ENTER
+"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Container"]
+libraries = {
+&"": SubResource("AnimationLibrary_s0fhk")
+}
+autoplay = "Loading"
 
 [node name="ColorRect" type="ColorRect" parent="Container"]
+visible = false
+z_index = 2
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0)
+
+[node name="Label" type="Label" parent="Container"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -225.0
+offset_top = -144.0
+offset_right = 208.0
+offset_bottom = -107.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Presione ENTER para continuar..."
+
+[connection signal="pressed" from="Container/Button" to="." method="_on_button_pressed"]
