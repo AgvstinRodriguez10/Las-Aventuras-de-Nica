@@ -1877,7 +1877,7 @@ tracks/7/enabled = true
 tracks/7/path = NodePath("Armature/Skeleton3D:mixamorig_Head")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
-tracks/7/keys = PackedFloat32Array(0, 1, -6.46235e-25, -6.60138e-41, 4.81846e-17, 1)
+tracks/7/keys = PackedFloat32Array(0, 1, -6.46235e-25, 0, 4.81846e-17, 1)
 tracks/8/type = "position_3d"
 tracks/8/imported = true
 tracks/8/enabled = true
@@ -3117,11 +3117,6 @@ shape = SubResource("CapsuleShape3D_r8wu8")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.0121911, 0.473381, -0.880773, 0.00655161, 0.880858, 0.473336, 0.999904, 2.30149e-32, -0.01384, -9.4414, 8.91111, 20.3887)
 environment = SubResource("Environment_bjyqv")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.800543, 0.0229108, -0.598837, 0.599275, -0.0306054, 0.799958, 0, -0.999269, -0.0382308, 0, 0, 0)
-shadow_enabled = true
-shadow_reverse_cull_face = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

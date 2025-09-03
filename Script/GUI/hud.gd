@@ -44,7 +44,8 @@ func _process(delta: float) -> void:
 		elif player.life == 1:
 			animationPlayerHUD.play("Life2")
 		elif player.life == 0:
-			$UI/Vida.hide()
+			#$UI/Vida.hide()
+			get_tree().change_scene_to_file("res://Scenes/World/MenuInicial.tscn")
 	
 	if player.life_plus == true:
 		if player.life == 2:
