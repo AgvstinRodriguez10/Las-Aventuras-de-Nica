@@ -104,22 +104,25 @@ func animationController(delta:float):
 func changeVisionCam():
 	#a probar cuando la camara gire en la plaza
 	#actualmente esto se esta ejecutando con una tecla, revisar
-	var degs = 0
+	var initialDegs = rad_to_deg(camera_focus.rotation.y)
+	var target_degs = initialDegs - 180
+	var currentDegs = 0
+	
 	if !frontalCamIsActive:
 		frontalCamIsActive = true
 		camera_distance = 4.0
-		while(degs > -180):
-			degs -= 20
-			camera_focus.rotation.y = deg_to_rad(degs)
+		while(currentDegs > target_degs):
+			currentDegs += target_degs/20
+			camera_focus.rotation.y = deg_to_rad(currentDegs)
 			await get_tree().create_timer(0).timeout
 		
 		await get_tree().create_timer(frontalCamDuration).timeout
 		
-		while(degs < 0):
-			degs += 20
-			camera_focus.rotation.y = deg_to_rad(degs)
+		while(currentDegs < initialDegs):
+			currentDegs -= target_degs/20
+			camera_focus.rotation.y = deg_to_rad(currentDegs)
 			await get_tree().create_timer(0).timeout
-			
+		
 		camera_distance = 1.0
 		frontalCamIsActive = false
 	
@@ -144,7 +147,7 @@ func camera_follow(delta:float):
 	lateral_free_position = world_pos - lateral_component
 	
 	# La cámara mira al personaje
-	camera_focus.rotation = -camera_focus.rotation.lerp(rotation, 0 * delta)
+	#camera_focus.rotation = -camera_focus.rotation.lerp(rotation, 0 * delta)
 	
 	# Calculamos la posición destino del camera_focus
 	var target_position = lateral_free_position - forward_dir * camera_distance + up_dir * camera_height

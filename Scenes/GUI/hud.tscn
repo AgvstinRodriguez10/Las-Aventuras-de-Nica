@@ -1,10 +1,16 @@
-[gd_scene load_steps=18 format=3 uid="uid://ikd1j0tjscug"]
+[gd_scene load_steps=24 format=3 uid="uid://ikd1j0tjscug"]
 
 [ext_resource type="Script" uid="uid://bbacyarupo523" path="res://Script/GUI/hud.gd" id="1_65piv"]
 [ext_resource type="FontFile" uid="uid://gruu5234vhv1" path="res://Assets/Fonts/kagenobold-v4816.otf" id="2_rbehb"]
 [ext_resource type="FontFile" uid="uid://c2hhi7jed7eo3" path="res://Assets/Fonts/kagenobolditalic-q2kvl.otf" id="3_pne3g"]
-[ext_resource type="Texture2D" uid="uid://qxqskc3scycp" path="res://Assets/HUD/LogoVida.png" id="3_rgqb5"]
 [ext_resource type="Script" uid="uid://8nqc3dvsw8y5" path="res://Script/GUI/label_score_plus.gd" id="4_efr8d"]
+[ext_resource type="Texture2D" uid="uid://bsb7g8o4lkgw1" path="res://Assets/Extras/SNFICHA-01.png" id="5_rgqb5"]
+[ext_resource type="Texture2D" uid="uid://bpjnh5riex5ij" path="res://Assets/Extras/Recurso 2SN.png" id="6_efr8d"]
+[ext_resource type="Texture2D" uid="uid://dv02ul30mvm1v" path="res://Assets/Extras/Recurso 1CONTADOR.png" id="7_aws3g"]
+[ext_resource type="Texture2D" uid="uid://5o6a3on3pbew" path="res://Assets/Extras/SNCONTADORR-01.png" id="8_yveuw"]
+[ext_resource type="Texture2D" uid="uid://1lxi1ywb3tfo" path="res://Assets/Extras/SNCONTADPR-01.png" id="9_7l7l8"]
+[ext_resource type="Texture2D" uid="uid://dmibd87qy865j" path="res://Assets/Extras/ECOPARQUECONTADOR-01-01.png" id="10_2mj2r"]
+[ext_resource type="Texture2D" uid="uid://b8m5v3kg74jgy" path="res://Assets/Extras/RDCONTADOR-01.png" id="11_lsjh4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65piv"]
 bg_color = Color(0.537255, 0.537255, 0.537255, 0.439216)
@@ -416,26 +422,43 @@ libraries = {
 
 [node name="Panel" type="Panel" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_right = 192.0
-offset_bottom = 64.0
-scale = Vector2(1.4, 1.4)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_65piv")
 
 [node name="Vida" type="Sprite2D" parent="Panel"]
+visible = false
 position = Vector2(32, 32)
-scale = Vector2(0.015, 0.015)
-texture = ExtResource("3_rgqb5")
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("5_rgqb5")
 
 [node name="Vida2" type="Sprite2D" parent="Panel"]
+visible = false
 position = Vector2(96, 32)
-scale = Vector2(0.015, 0.015)
-texture = ExtResource("3_rgqb5")
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("5_rgqb5")
 
 [node name="Vida3" type="Sprite2D" parent="Panel"]
 visible = false
 position = Vector2(160, 32)
-scale = Vector2(0.015, 0.015)
-texture = ExtResource("3_rgqb5")
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("5_rgqb5")
+
+[node name="Recurso2sn" type="Sprite2D" parent="Panel"]
+z_index = 1
+position = Vector2(-91.4286, 148.571)
+texture = ExtResource("6_efr8d")
+
+[node name="Recurso1contador" type="Sprite2D" parent="Panel"]
+position = Vector2(-91.4286, 142.857)
+texture = ExtResource("7_aws3g")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -445,5 +468,34 @@ libraries = {
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.5
 one_shot = true
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.0
+offset_right = 106.0
+offset_bottom = 120.0
+grow_horizontal = 2
+texture_under = ExtResource("7_aws3g")
+
+[node name="Sncontadorr-01" type="Sprite2D" parent="."]
+position = Vector2(232, 72)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("8_yveuw")
+
+[node name="Sncontadpr-02" type="Sprite2D" parent="."]
+position = Vector2(-2272, 192)
+texture = ExtResource("9_7l7l8")
+
+[node name="Ecoparquecontador-01-01" type="Sprite2D" parent="."]
+position = Vector2(80, 72)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("10_2mj2r")
+
+[node name="Rdcontador-01" type="Sprite2D" parent="."]
+position = Vector2(392, 72)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("11_lsjh4")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
