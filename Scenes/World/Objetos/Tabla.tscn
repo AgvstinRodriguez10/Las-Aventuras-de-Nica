@@ -15,4 +15,6 @@ _surfaces = [{
 
 [node name="Tabla" type="MeshInstance3D" parent="."]
 transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 0, 0, 0)
+lod_bias = 0.001
+visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_c4bpp")
