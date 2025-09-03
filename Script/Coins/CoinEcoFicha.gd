@@ -4,6 +4,7 @@ class_name CoinEcoFicha
 
 func byebye():
 	userInterface.add_point()
+	userInterface.lblCoinsActualizat("eco")
 	super.byebye()
 	
 

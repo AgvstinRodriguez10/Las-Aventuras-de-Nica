@@ -2,7 +2,7 @@ extends CanvasLayer
 class_name UI
 
 @onready var labelPlus = $labelPlus
-@onready var labelScore = $Label
+@onready var labelScore = $LifeAndScoreContainer/ScoreBackgraund/Score
 @onready var animationPlayerHUD = $AnimationPlayer
 
 @onready var player = $"../Nica"
@@ -12,7 +12,12 @@ class_name UI
 @onready var dangerAnim = $"../DangerAlert/AnimationPlayer"
 @onready var dangerCollision = $"../Nica/Alert/CollisionShape3D"
 
-
+@onready var dictCoinsLbls:Dictionary = {
+	"life": $CoinsContainer/lbl_snCoins,
+	"eco": $CoinsContainer/lbl_ecoCoins,
+	"rd": $CoinsContainer/lbl_rdCoins
+}
+@onready var lifeBar = $LifeAndScoreContainer/LifeBar
 
 var labelCoins : Array
 
@@ -23,6 +28,9 @@ var velocity_plus : int = 30
 var velocity_plus_enemies : int = 30
 var limit_max : int = 200
 
+var obtainCoin:bool = false
+var isInanimationLifebar:bool = false
+
 func _ready() -> void:
 	labelPlus.hide()
 	#$"../San Nicolas".queue_free()
@@ -32,26 +40,38 @@ func _ready() -> void:
 	#$"../SNFichas".queue_free()
 	#$"../RDFichas".queue_free()
 	#$"../Yagui".queue_free()
+	dictCoinsLbls.life.text = str(3)
 	
 func _process(delta: float) -> void:
 	score += 0.1
 	
 	labelScore.text = str(int(score))
-	
 	if player.is_hitt == true:
-		if player.life == 2:
-			animationPlayerHUD.play("Life3")
-		elif player.life == 1:
-			animationPlayerHUD.play("Life2")
-		elif player.life == 0:
-			$UI/Vida.hide()
-	
+		dictCoinsLbls.life.text = str(player.life)
 	if player.life_plus == true:
-		if player.life == 2:
-			animationPlayerHUD.play("+Life2")
-		elif player.life == 3:
-			animationPlayerHUD.play("+Life3")
+		dictCoinsLbls.life.text = str(player.life)
 	
+	if obtainCoin:
+		obtainCoin = false
+		animatedLifeBar()
+
+func animatedLifeBar():
+	isInanimationLifebar = true
+	if (player.snficha == 3):
+		player.life += 1
+		player.life_plus = true
+		player.snficha = 0
+		lifeBar.value = 0
+		isInanimationLifebar = false
+		return
+	elif isInanimationLifebar:
+		var fillTarget = player.snficha * 100 / 3
+		while lifeBar.value < fillTarget:
+			lifeBar.value += 1
+			await get_tree().create_timer(0).timeout
+			#fillTarget = player.snficha * 100 / 3
+			
+	isInanimationLifebar = false
 
 func add_point():
 	var coins : Array
@@ -70,6 +90,13 @@ func upgradeVelocityZ():
 		player.velocity_z += velocity_plus
 	else:
 		player.velocity_z = 300
+
+func lblCoinsActualizat(coin:String):
+	match coin:
+		"eco":
+			dictCoinsLbls.eco.text = str(int(dictCoinsLbls.eco.text) + 1)
+		"rd":
+			dictCoinsLbls.rd.text = str(int(dictCoinsLbls.rd.text) + 1)
 
 func _on_alert_body_entered(body: Node3D) -> void:
 	if body.name == "Yagui" and dangerCollision.disabled == false:

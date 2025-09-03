@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv02ul30mvm1v"
-path="res://.godot/imported/Recurso 1CONTADOR.png-48253e4c429de62c32c47c5b1aaf9805.ctex"
+uid="uid://ddp7bqmo3kweo"
+path="res://.godot/imported/CONT5-01.png-7f3949b48b11a08065e491babf18d238.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Extras/Recurso 1CONTADOR.png"
-dest_files=["res://.godot/imported/Recurso 1CONTADOR.png-48253e4c429de62c32c47c5b1aaf9805.ctex"]
+source_file="res://Assets/HUD/CONT5-01.png"
+dest_files=["res://.godot/imported/CONT5-01.png-7f3949b48b11a08065e491babf18d238.ctex"]
 
 [params]
 

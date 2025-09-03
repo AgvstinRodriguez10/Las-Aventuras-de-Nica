@@ -1,34 +1,15 @@
-[gd_scene load_steps=24 format=3 uid="uid://ikd1j0tjscug"]
+[gd_scene load_steps=21 format=3 uid="uid://ikd1j0tjscug"]
 
 [ext_resource type="Script" uid="uid://bbacyarupo523" path="res://Script/GUI/hud.gd" id="1_65piv"]
 [ext_resource type="FontFile" uid="uid://gruu5234vhv1" path="res://Assets/Fonts/kagenobold-v4816.otf" id="2_rbehb"]
 [ext_resource type="FontFile" uid="uid://c2hhi7jed7eo3" path="res://Assets/Fonts/kagenobolditalic-q2kvl.otf" id="3_pne3g"]
 [ext_resource type="Script" uid="uid://8nqc3dvsw8y5" path="res://Script/GUI/label_score_plus.gd" id="4_efr8d"]
-[ext_resource type="Texture2D" uid="uid://bsb7g8o4lkgw1" path="res://Assets/Extras/SNFICHA-01.png" id="5_rgqb5"]
-[ext_resource type="Texture2D" uid="uid://bpjnh5riex5ij" path="res://Assets/Extras/Recurso 2SN.png" id="6_efr8d"]
-[ext_resource type="Texture2D" uid="uid://dv02ul30mvm1v" path="res://Assets/Extras/Recurso 1CONTADOR.png" id="7_aws3g"]
+[ext_resource type="Texture2D" uid="uid://b0ebgbmbyqxtk" path="res://Assets/HUD/CONT2-01.png" id="6_mednw"]
+[ext_resource type="Texture2D" uid="uid://dwk3h2hnqrii1" path="res://Assets/HUD/CONT1-01.png" id="8_2mj2r"]
 [ext_resource type="Texture2D" uid="uid://5o6a3on3pbew" path="res://Assets/Extras/SNCONTADORR-01.png" id="8_yveuw"]
-[ext_resource type="Texture2D" uid="uid://1lxi1ywb3tfo" path="res://Assets/Extras/SNCONTADPR-01.png" id="9_7l7l8"]
+[ext_resource type="Texture2D" uid="uid://ddp7bqmo3kweo" path="res://Assets/HUD/CONT5-01.png" id="9_lsjh4"]
 [ext_resource type="Texture2D" uid="uid://dmibd87qy865j" path="res://Assets/Extras/ECOPARQUECONTADOR-01-01.png" id="10_2mj2r"]
 [ext_resource type="Texture2D" uid="uid://b8m5v3kg74jgy" path="res://Assets/Extras/RDCONTADOR-01.png" id="11_lsjh4"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65piv"]
-bg_color = Color(0.537255, 0.537255, 0.537255, 0.439216)
-corner_radius_top_left = 60
-corner_radius_top_right = 60
-corner_radius_bottom_right = 60
-corner_radius_bottom_left = 60
-shadow_size = 5
-shadow_offset = Vector2(5, 5)
-
-[sub_resource type="LabelSettings" id="LabelSettings_efr8d"]
-font = ExtResource("2_rbehb")
-font_size = 40
-outline_size = 5
-outline_color = Color(0, 0, 0, 1)
-shadow_size = 3
-shadow_color = Color(0, 0, 0, 1)
-shadow_offset = Vector2(2, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_aws3g"]
 font = ExtResource("3_pne3g")
@@ -95,83 +76,16 @@ _data = {
 &"scorePlus": SubResource("Animation_aws3g")
 }
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_65piv"]
-
 [sub_resource type="Animation" id="Animation_pne3g"]
 resource_name = "+Life2"
 length = 2.0
-tracks/0/type = "value"
+tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Panel:modulate")
+tracks/0/path = NodePath("Timer")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Panel/Vida3:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Panel/Vida2:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [false, false, true, false, true, false, true]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Panel")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"values": [{
-"args": [],
-"method": &"show"
-}, {
-"args": [],
-"method": &"hide"
-}]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Panel/Vida:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(2),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/5/type = "method"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Timer")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -183,66 +97,13 @@ tracks/5/keys = {
 [sub_resource type="Animation" id="Animation_efr8d"]
 resource_name = "+Life3"
 length = 2.0
-tracks/0/type = "value"
+tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Panel:modulate")
+tracks/0/path = NodePath("Timer")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Panel/Vida:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Panel/Vida3:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [false, false, true, false, true, false, true]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Panel")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"values": [{
-"args": [],
-"method": &"show"
-}, {
-"args": [],
-"method": &"hide"
-}]
-}
-tracks/4/type = "method"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Timer")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -250,132 +111,14 @@ tracks/4/keys = {
 "method": &"start"
 }]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Panel/Vida2:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
 
 [sub_resource type="Animation" id="Animation_rgqb5"]
 resource_name = "Life2"
 length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Panel:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Panel/Vida2:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [true, true, false, true, false, true, false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Panel/Vida3:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Panel")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"values": [{
-"args": [],
-"method": &"show"
-}, {
-"args": [],
-"method": &"hide"
-}]
-}
 
 [sub_resource type="Animation" id="Animation_65piv"]
 resource_name = "Life3"
 length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Panel:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Panel/Vida3:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [true, true, false, true, false, true, false]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Panel")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"values": [{
-"args": [],
-"method": &"show"
-}, {
-"args": [],
-"method": &"hide"
-}]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Panel/Vida2:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0.0333333),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rgqb5"]
 _data = {
@@ -385,30 +128,26 @@ _data = {
 &"Life3": SubResource("Animation_65piv")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_efr8d"]
+font = ExtResource("2_rbehb")
+font_size = 40
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 1)
+
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_65piv")
-
-[node name="Label" type="Label" parent="."]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -192.0
-offset_bottom = 72.0
-grow_horizontal = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_65piv")
-text = "0"
-label_settings = SubResource("LabelSettings_efr8d")
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="labelPlus" type="Node2D" parent="."]
 
 [node name="LabelScorePlus" type="Label" parent="labelPlus"]
 modulate = Color(1, 1, 1, 0)
-offset_left = 1152.0
-offset_top = 64.0
-offset_right = 1344.0
-offset_bottom = 120.0
+offset_left = 928.0
+offset_top = 8.0
+offset_right = 1120.0
+offset_bottom = 64.0
 text = " + 100"
 label_settings = SubResource("LabelSettings_aws3g")
 horizontal_alignment = 1
@@ -420,46 +159,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_mednw")
 }
 
-[node name="Panel" type="Panel" parent="."]
-modulate = Color(1, 1, 1, 0)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 8.0
-offset_bottom = 8.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_65piv")
-
-[node name="Vida" type="Sprite2D" parent="Panel"]
-visible = false
-position = Vector2(32, 32)
-scale = Vector2(0.03, 0.03)
-texture = ExtResource("5_rgqb5")
-
-[node name="Vida2" type="Sprite2D" parent="Panel"]
-visible = false
-position = Vector2(96, 32)
-scale = Vector2(0.03, 0.03)
-texture = ExtResource("5_rgqb5")
-
-[node name="Vida3" type="Sprite2D" parent="Panel"]
-visible = false
-position = Vector2(160, 32)
-scale = Vector2(0.03, 0.03)
-texture = ExtResource("5_rgqb5")
-
-[node name="Recurso2sn" type="Sprite2D" parent="Panel"]
-z_index = 1
-position = Vector2(-91.4286, 148.571)
-texture = ExtResource("6_efr8d")
-
-[node name="Recurso1contador" type="Sprite2D" parent="Panel"]
-position = Vector2(-91.4286, 142.857)
-texture = ExtResource("7_aws3g")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_rgqb5")
@@ -469,33 +168,133 @@ libraries = {
 wait_time = 1.5
 one_shot = true
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+[node name="LifeAndScoreContainer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -312.0
+offset_bottom = 305.0
+grow_horizontal = 0
+size_flags_vertical = 4
+
+[node name="LifeBar" type="TextureProgressBar" parent="LifeAndScoreContainer"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -242.0
+offset_bottom = 242.0
+grow_horizontal = 0
+fill_mode = 5
+radial_initial_angle = 310.0
+radial_fill_degrees = 260.0
+nine_patch_stretch = true
+texture_under = ExtResource("8_2mj2r")
+texture_progress = ExtResource("9_lsjh4")
+
+[node name="ScoreBackgraund" type="TextureRect" parent="LifeAndScoreContainer"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -243.0
+offset_bottom = 243.0
+grow_horizontal = 0
+texture = ExtResource("6_mednw")
+expand_mode = 1
+
+[node name="Score" type="Label" parent="LifeAndScoreContainer/ScoreBackgraund"]
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -40.0
-offset_right = 106.0
-offset_bottom = 120.0
+offset_left = -66.0
+offset_top = 54.0
+offset_right = 66.0
+offset_bottom = 126.0
 grow_horizontal = 2
-texture_under = ExtResource("7_aws3g")
+text = "0"
+label_settings = SubResource("LabelSettings_efr8d")
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Sncontadorr-01" type="Sprite2D" parent="."]
-position = Vector2(232, 72)
-scale = Vector2(0.4, 0.4)
+[node name="CoinsContainer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 11.0
+offset_top = 18.0
+offset_right = 360.0
+offset_bottom = 164.0
+
+[node name="SnCoinsIcon" type="TextureRect" parent="CoinsContainer"]
+layout_mode = 1
+offset_right = 103.0
+offset_bottom = 103.0
 texture = ExtResource("8_yveuw")
+expand_mode = 1
 
-[node name="Sncontadpr-02" type="Sprite2D" parent="."]
-position = Vector2(-2272, 192)
-texture = ExtResource("9_7l7l8")
+[node name="lbl_snCoins" type="Label" parent="CoinsContainer"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -37.0
+offset_right = 102.0
+grow_vertical = 0
+text = "0"
+horizontal_alignment = 1
 
-[node name="Ecoparquecontador-01-01" type="Sprite2D" parent="."]
-position = Vector2(80, 72)
-scale = Vector2(0.4, 0.4)
+[node name="EcoCoinsIcon" type="TextureRect" parent="CoinsContainer"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -51.5
+offset_right = 51.5
+offset_bottom = 103.0
+grow_horizontal = 2
 texture = ExtResource("10_2mj2r")
+expand_mode = 1
 
-[node name="Rdcontador-01" type="Sprite2D" parent="."]
-position = Vector2(392, 72)
-scale = Vector2(0.4, 0.4)
+[node name="lbl_ecoCoins" type="Label" parent="CoinsContainer"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -51.0
+offset_top = -37.0
+offset_right = 51.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+horizontal_alignment = 1
+
+[node name="RdCoinsIcon" type="TextureRect" parent="CoinsContainer"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -103.0
+offset_bottom = 103.0
+grow_horizontal = 0
 texture = ExtResource("11_lsjh4")
+expand_mode = 1
+
+[node name="lbl_rdCoins" type="Label" parent="CoinsContainer"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -102.0
+offset_top = -37.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "0"
+horizontal_alignment = 1
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

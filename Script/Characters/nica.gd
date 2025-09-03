@@ -203,13 +203,9 @@ func lostLife():
 	life -= 1
 
 func collectSnFicha():
-	snficha += 1
-	if (snficha == 3):
-		life += 1
-		life_plus = true
-		snficha = 0
+	if life < 3:
+		snficha += 1
 		
-
 
 func _on_giro_body_entered(body: Node3D) -> void:
 	$"../Giro/AnimationPlayer".play("Giro")
