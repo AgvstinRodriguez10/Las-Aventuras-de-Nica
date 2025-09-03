@@ -90,7 +90,5 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.95352, 0.0597737, 67
 [node name="10" parent="Decoraciones/Balas/Izq" instance=ExtResource("4_2esqa")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.95352, 0.0597737, 52.2707)
 
-[node name="Autos" type="Node3D" parent="."]
-
 [node name="AreaStreetDelete" parent="." instance=ExtResource("6_3qry3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 593.706)
