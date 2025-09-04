@@ -9,13 +9,13 @@ size = Vector3(1.40717, 1.03082, 7.63672)
 [node name="Puente" type="Node3D"]
 
 [node name="RampaNormal" parent="." instance=ExtResource("1_pfr5o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 24.113)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 24.113)
 
 [node name="RampaNormal2" parent="." instance=ExtResource("1_pfr5o")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 35.893)
+transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 0, 0, 33.6012)
 
 [node name="TablaLarga" parent="." instance=ExtResource("2_1tl4j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.983, 30.014)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.80177, 28.8857)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TablaLarga"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00491333, -0.459625, -0.0287628)

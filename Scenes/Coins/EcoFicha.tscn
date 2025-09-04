@@ -48,7 +48,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_vyupv")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6iut2"]
-size = Vector3(0.597282, 0.622284, 0.284668)
+size = Vector3(0.732328, 0.678329, 0.284668)
 
 [node name="EcoFicha" type="Area3D" groups=["Coins"]]
 collision_layer = 4
@@ -56,12 +56,13 @@ collision_mask = 2
 script = ExtResource("1_n67kc")
 
 [node name="Circle" type="MeshInstance3D" parent="."]
-transform = Transform3D(30, 0, 0, 0, 30, -4.03077e-06, 0, 4.03077e-06, 30, 0, 0, 0)
+transform = Transform3D(40, 0, 0, 0, 40, -5.37436e-06, 0, 5.37436e-06, 40, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_n67kc")
 mesh = SubResource("ArrayMesh_ih6hg")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00395301, 0.0280227, 0)
 shape = SubResource("BoxShape3D_6iut2")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
