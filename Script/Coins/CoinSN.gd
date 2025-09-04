@@ -3,6 +3,7 @@ class_name CoinSN
 
 func byebye():
 	target.collectSnFicha()
+	userInterface.obtainCoin = true
 	super.byebye()
 
 
