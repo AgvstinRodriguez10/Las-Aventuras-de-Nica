@@ -36,7 +36,7 @@ func animationController(delta):
 			if is_movie:
 				currentState = STATES.IDLE
 			elif !is_on_floor():
-				currentState = STATES.JUMP
+				currentState = STATES.FALL
 
 func movingToForward(delta: float):
 	# Almacena la direccion local de donde mira el modelo

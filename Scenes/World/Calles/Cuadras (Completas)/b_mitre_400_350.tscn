@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://bxs55inw16h7x"]
+[gd_scene load_steps=23 format=4 uid="uid://bxs55inw16h7x"]
 
 [ext_resource type="Material" uid="uid://dn3uib65vub6t" path="res://Resource/Materials/Calles/Desague.tres" id="1_gcjee"]
 [ext_resource type="Material" uid="uid://0q4sd8uj7kf5" path="res://Resource/Materials/Calles/Adoquines.tres" id="2_yf1g7"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://crcmb22kteijj" path="res://Scenes/World/Objetos/LigthSinLigth.tscn" id="6_yf1g7"]
 [ext_resource type="PackedScene" uid="uid://by26dey3n4ca" path="res://Assets/San Nicolas/Object/Autos/Auto-1.tscn" id="8_4j01m"]
 [ext_resource type="PackedScene" uid="uid://daqotynvcl1u2" path="res://Assets/San Nicolas/Object/Decoración/BalaCalle.tscn" id="9_eddye"]
-[ext_resource type="PackedScene" uid="uid://dstppbqgrwtt1" path="res://Scenes/World/Optimization/area_street_delete.tscn" id="9_yf1g7"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8l00o"]
 _surfaces = [{
@@ -542,6 +541,3 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -8.5108, 0, 131.088)
 
 [node name="Auto-1" parent="Autos" instance=ExtResource("8_4j01m")]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 8.99714, 0, 63.7841)
-
-[node name="AreaStreetDelete" parent="." instance=ExtResource("9_yf1g7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.79793, 205.604)

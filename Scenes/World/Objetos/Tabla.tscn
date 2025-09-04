@@ -1,10 +1,14 @@
-[gd_scene load_steps=2 format=4 uid="uid://bfnomj38x8st1"]
+[gd_scene load_steps=3 format=4 uid="uid://bfnomj38x8st1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c4bpp"]
+albedo_color = Color(0.441383, 0.188602, 0, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_c4bpp"]
 _surfaces = [{
 "aabb": AABB(-2.59012, -0.0341492, -0.296509, 5.18024, 0.0682983, 0.593018),
 "attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
 "format": 34359738391,
+"material": SubResource("StandardMaterial3D_c4bpp"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 36,

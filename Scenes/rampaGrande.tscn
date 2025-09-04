@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=4 uid="uid://pp30i1w0ainw"]
+
+[ext_resource type="Texture2D" uid="uid://bi4w215nxh0ch" path="res://Assets/Extras/UVRAMPAGRANDENUEVO-03.png" id="1_phabb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_85q2p"]
+resource_name = "Material_0"
+albedo_color = Color(0.489622, 0.489622, 0.489622, 1)
+albedo_texture = ExtResource("1_phabb")
+albedo_texture_force_srgb = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_630qf"]
+_surfaces = [{
+"aabb": AABB(-0.0248351, -0.0293019, -4.28587e-18, 0.0397507, 0.0596066, 0.015),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAAAEAAEABQACAAAABQAGAAIABAAAAAcABAAHAAgAAAACAAkAAgADAAkAAAAJAAcACQADAAgACQAIAAcA"),
+"name": "Material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 10,
+"vertex_data": PackedByteArray("zYD//P//AADNgAAAAAAAAM2AAAD//wAAAAAAAAAAAADNgP/8AAAAAP////y7AwAA//8AALsDAAAAAP/8//8AAAAA//8AAAAAAAAAAP//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_a0gic"]
+resource_name = "rampaGrande_Mesh_1"
+_surfaces = [{
+"aabb": AABB(-0.0248351, -0.0293019, -4.28587e-18, 0.0397507, 0.0596066, 0.015),
+"attribute_data": PackedByteArray("svQz6j++dw+M9fcQYb376QVmZQwzBZnzMwVlDAVmmfPbcmHPz6iTMMaoZM/jcpAwsvQz6j++dw+M9fcQYb376eNykDDRqCMIz6iTMOVyIAjZctL3xqhkz82o4PfbcmHP"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_85q2p"),
+"name": "Material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("zYD//P//xv/NgAAAAABR/82AAAD//zb/zYD//AAA4v/////8uwN1ms2AAAD//3WazYD//P//dZr//wAAuwN1ms2A//z/////AAAAAP////8AAP/8/////82AAAD/////AAAAAP///78AAP//AAD/vwAA//z//wDAAAAAAAAA/7/NgAAA/////wAAAAAAAP//AAAAAP/////NgAAAAAD//82A//wAAIH/AAD//P//gf8AAP//AACB/82A//z//4H/4L/Bf5+/QH+QvyJ/77/ff/9/AAD/fwAA/38AAP9/AAD/f/9//3//f/9//3//f/9/CYD6/wN/B/7Hfo/9gIC+//9//z//f/8//3//P/9//z/5PpEA+T6RAPk+kQD5PpEA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_630qf")
+
+[node name="rampaGrande" type="Node3D"]
+
+[node name="Plane_007" type="MeshInstance3D" parent="."]
+transform = Transform3D(0, -56, 0, 0, 0, 56, -56, 0, 0, -0.00400162, 0, -0.669713)
+mesh = SubResource("ArrayMesh_a0gic")
+skeleton = NodePath("")
