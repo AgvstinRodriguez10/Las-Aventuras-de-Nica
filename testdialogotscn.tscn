@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://kf0fni8olwho"]
+
+[ext_resource type="Texture2D" uid="uid://cbrx1kw7f4rlp" path="res://Assets/Extras/DIALOGONICA-01.png" id="1_qhe55"]
+[ext_resource type="Texture2D" uid="uid://d2safvuoubqf" path="res://Assets/Extras/DIALOGOYAGUI-01.png" id="2_ain8w"]
+[ext_resource type="FontFile" uid="uid://gruu5234vhv1" path="res://Assets/Fonts/kagenobold-v4816.otf" id="3_7c5jq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vcrf2"]
+texture = ExtResource("1_qhe55")
+
+[sub_resource type="LabelSettings" id="LabelSettings_dtxg3"]
+font = ExtResource("3_7c5jq")
+font_size = 35
+
+[node name="Dialogos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Nica" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Dialogonica-01" type="Sprite2D" parent="Nica"]
+visible = false
+position = Vector2(1040, 400)
+texture = ExtResource("1_qhe55")
+
+[node name="Dialogonica-02" type="Sprite2D" parent="Nica"]
+visible = false
+position = Vector2(1040, 544)
+texture = ExtResource("1_qhe55")
+
+[node name="Yagui" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Dialogoyagui-01" type="Sprite2D" parent="Yagui"]
+visible = false
+position = Vector2(336, 520)
+texture = ExtResource("2_ain8w")
+
+[node name="Dialogoyagui-02" type="Sprite2D" parent="Yagui"]
+visible = false
+position = Vector2(336, 520)
+texture = ExtResource("2_ain8w")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 824.0
+offset_top = 344.0
+offset_right = 1512.0
+offset_bottom = 616.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/normal = SubResource("StyleBoxTexture_vcrf2")
+text = "         
+            
+                ¡AYUDAME A ESCAPAR
+                 DE YAGÜI!"
+label_settings = SubResource("LabelSettings_dtxg3")
+horizontal_alignment = 1
+vertical_alignment = 1

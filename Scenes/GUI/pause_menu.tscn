@@ -63,10 +63,10 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_top = 60.0
+offset_top = 28.0
 offset_right = 512.0
-offset_bottom = 192.0
-text = "GAME PAUSED"
+offset_bottom = 160.0
+text = "PAUSA"
 label_settings = SubResource("LabelSettings_0a2ss")
 horizontal_alignment = 1
 vertical_alignment = 1

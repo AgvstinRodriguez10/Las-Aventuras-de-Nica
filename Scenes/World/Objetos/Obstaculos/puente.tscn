@@ -1,22 +1,149 @@
-[gd_scene load_steps=4 format=3 uid="uid://bfttwterfi486"]
+[gd_scene load_steps=13 format=4 uid="uid://bfttwterfi486"]
 
-[ext_resource type="PackedScene" uid="uid://dv52g75eo242t" path="res://Scenes/World/Objetos/Obstaculos/rampa_normal.tscn" id="1_pfr5o"]
-[ext_resource type="PackedScene" uid="uid://bfnomj38x8st1" path="res://Scenes/World/Objetos/Tabla.tscn" id="2_1tl4j"]
+[ext_resource type="Texture2D" uid="uid://bxyskm6kslfs4" path="res://Assets/Extras/puentesito_uvpuentecito-03.png" id="1_0wjab"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_pfr5o"]
-size = Vector3(1.40717, 1.03082, 7.63672)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bay2r"]
+resource_name = "Material_0"
+albedo_color = Color(0.622881, 0.622881, 0.622881, 1)
+albedo_texture = ExtResource("1_0wjab")
+albedo_texture_force_srgb = true
 
-[node name="Puente" type="Node3D"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_oy665"]
+_surfaces = [{
+"aabb": AABB(-0.03, -0.01, -1.45519e-11, 0.0397507, 0.02, 0.015),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAgABAAQABQADAAAAAgAFAAAABQAGAAMABwAEAAYABwAGAAUAAgAEAAcAAgAHAAUACAAHAAIABwAIAAkA"),
+"name": "Material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 10,
+"vertex_data": PackedByteArray("AAD/////AADNgP//AAAAAM2A/////wAAAAD//wAAAADNgAAAAAAAAAAAAAD//wAAAAAAAAAAAADNgAAA//8AAP////8AAAAA//8AAAAAAAA=")
+}]
+blend_shape_mode = 0
 
-[node name="RampaNormal" parent="." instance=ExtResource("1_pfr5o")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 24.113)
+[sub_resource type="ArrayMesh" id="ArrayMesh_0sdy1"]
+resource_name = "puentesito_Mesh_0_001"
+_surfaces = [{
+"aabb": AABB(-0.03, -0.01, -1.45519e-11, 0.0397507, 0.02, 0.015),
+"attribute_data": PackedByteArray("3/ajxXyxrfl8saPF3/at+R8KLp50ia4+dIkunh8Krj50ia4+Hwounh8Krj50iS6evGq/qzAKmvkwCr+rvGqa+Xyxo8Xf9kCA3/ajxXyxQIB8sUCA3/Y2TN/2QIB8sTZM"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADQAMAA8AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_bay2r"),
+"name": "Material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAD////////NgP//AAD//82A////////AAD//wAA//8AAAAA//9U1QAA//8AAFTVAAD/////VNUAAAAAAABU1c2A/////1TVzYAAAAAAVNXNgAAA//9U1c2A//8AAFTVzYAAAP//////////AAD/////AAAAAP//zYD////////NgP///////wAAAAD/////AAD////////NgAAA/////82AAAD/////AAAAAAAA//8AAAAA/////82AAAAAAP///3//v/9//7//f/+//3//v1TVVNVU1VTVVNVU1VTVVNWqKqoqqiqqKqoqqiqqKqoqPKD/fzyg/388oP9/PKD/f/9//3//f/9//3//f/9//3//f/8//3//P/9//z//f/8/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_oy665")
 
-[node name="RampaNormal2" parent="." instance=ExtResource("1_pfr5o")]
-transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 0, 0, 33.6012)
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0wjab"]
+data = PackedVector3Array(-0.03, 0.01, 0.015, -0.01, 0.01, 0, -0.01, 0.01, 0.015, -0.03, 0.01, 0.015, -0.03, 0.01, 0, -0.01, 0.01, 0, -0.03, -0.01, 0.015, -0.03, 0.01, 0, -0.03, 0.01, 0.015, -0.03, -0.01, 0.015, -0.03, -0.01, 0, -0.03, 0.01, 0, -0.01, 0.01, 0.015, -0.01, -0.01, 0, -0.01, -0.01, 0.015, -0.01, 0.01, 0.015, -0.01, 0.01, 0, -0.01, -0.01, 0, -0.01, -0.01, 0.015, 0.0098, 0.01, 0, 0.0098, -0.01, 0, 0.0098, 0.01, 0, -0.01, -0.01, 0.015, -0.01, 0.01, 0.015, -0.01, 0.01, 0.015, -0.03, -0.01, 0.015, -0.03, 0.01, 0.015, -0.01, 0.01, 0.015, -0.01, -0.01, 0.015, -0.03, -0.01, 0.015, -0.01, -0.01, 0.015, -0.03, -0.01, 0, -0.03, -0.01, 0.015, -0.01, -0.01, 0.015, -0.01, -0.01, 0, -0.03, -0.01, 0)
 
-[node name="TablaLarga" parent="." instance=ExtResource("2_1tl4j")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.80177, 28.8857)
+[sub_resource type="ArrayMesh" id="ArrayMesh_ordss"]
+_surfaces = [{
+"aabb": AABB(-0.03, -0.01, -1.45519e-11, 0.0397507, 0.02, 0.015),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAAAEAAEAAgADAAUABQADAAYABwACAAUABQAGAAcABwAGAAQABwAAAAIABwAEAAAACAAAAAcAAAAIAAkA"),
+"name": "Material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 10,
+"vertex_data": PackedByteArray("zYAAAP//AAAAAAAAAAAAAAAAAAD//wAAAAD//wAAAADNgAAAAAAAAAAA/////wAAzYD//wAAAADNgP////8AAP////8AAAAA//8AAAAAAAA=")
+}]
+blend_shape_mode = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TablaLarga"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00491333, -0.459625, -0.0287628)
-shape = SubResource("BoxShape3D_pfr5o")
+[sub_resource type="ArrayMesh" id="ArrayMesh_csfc8"]
+resource_name = "puentesito_Mesh_1"
+_surfaces = [{
+"aabb": AABB(-0.03, -0.01, -1.45519e-11, 0.0397507, 0.02, 0.015),
+"attribute_data": PackedByteArray("fLFAgN/2Nkzf9kCAfLE2THSJrj4fCi6eHwquPnSJLp7f9qPFfLGt+Xyxo8Xf9q35vGq/qzAKmvkwCr+rvGqa+Xyxo8Xf9kCA3/ajxXyxQIAfCi6edImuPnSJLp4fCq4+"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADQAMAA8AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_bay2r"),
+"name": "Material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("zYAAAP////8AAAAAAAD//wAAAAD/////zYAAAAAA///NgP////9U1c2AAAAAAFTVzYAAAP//VNXNgP//AABU1QAA////////zYD//wAA///NgP///////wAA//8AAP//zYAAAP//////////AAD/////AAAAAP//zYD////////NgP///////wAAAAD/////AAD////////NgAAA/////wAAAAD//1TVAAD//wAAVNUAAP////9U1QAAAAAAAFTV/3//P/9//z//f/8//3//P6oqqiqqKqoqqiqqKqoqqir/f/+//3//v/9//7//f/+/PKD/fzyg/388oP9/PKD/f/9//3//f/9//3//f/9//39U1VTVVNVU1VTVVNVU1VTV")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ordss")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pfr5o"]
+data = PackedVector3Array(-0.01, -0.01, 0.015, -0.03, -0.01, 0, -0.03, -0.01, 0.015, -0.01, -0.01, 0.015, -0.01, -0.01, 0, -0.03, -0.01, 0, -0.01, 0.01, 0.015, -0.01, -0.01, 0, -0.01, -0.01, 0.015, -0.01, 0.01, 0.015, -0.01, 0.01, 0, -0.01, -0.01, 0, -0.03, 0.01, 0.015, -0.01, 0.01, 0, -0.01, 0.01, 0.015, -0.03, 0.01, 0.015, -0.03, 0.01, 0, -0.01, 0.01, 0, -0.01, -0.01, 0.015, 0.0098, 0.01, 0, 0.0098, -0.01, 0, 0.0098, 0.01, 0, -0.01, -0.01, 0.015, -0.01, 0.01, 0.015, -0.01, 0.01, 0.015, -0.03, -0.01, 0.015, -0.03, 0.01, 0.015, -0.01, 0.01, 0.015, -0.01, -0.01, 0.015, -0.03, -0.01, 0.015, -0.03, -0.01, 0.015, -0.03, 0.01, 0, -0.03, 0.01, 0.015, -0.03, -0.01, 0.015, -0.03, -0.01, 0, -0.03, 0.01, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5b5wl"]
+resource_name = "Material_1"
+albedo_color = Color(0.542318, 0.542318, 0.542318, 1)
+albedo_texture = ExtResource("1_0wjab")
+albedo_texture_force_srgb = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pd7y8"]
+_surfaces = [{
+"aabb": AABB(-2.59012, -0.0341492, -0.296509, 5.18024, 0.0682983, 0.593018),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AAABAAIAAgADAAAAAAADAAQABAAFAAAABgAFAAQABAAHAAYA"),
+"name": "Material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD//wAAAAAAAAAAAAAAAP//AAAAAAAA/////wAAAAD///////8AAAAA/////wAAAAAAAP//AAD//wAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jjton"]
+resource_name = "puentesito_Mesh_2"
+_surfaces = [{
+"aabb": AABB(-2.59012, -0.0341492, -0.296509, 5.18024, 0.0682983, 0.593018),
+"attribute_data": PackedByteArray("iPuQK4j70C4JBdAuCQWQK4j7GAyI+1gPCQVYDwkFGAwJBVgPiPtYD4j7kCsJBZAr"),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgA"),
+"material": SubResource("StandardMaterial3D_5b5wl"),
+"name": "Material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAD//wAA//8AAAAAAAD/////AAAAAP///////wAA//8AAAAA/////wAA/////////////////////wAA////////////////AAD///////8AAP//AAD///////8AAP///3/+//9//v//f/7//3/+//9//3//f/9//3//f/9//3//f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_pd7y8")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_i5nm4"]
+data = PackedVector3Array(-2.5901, 0.0341, -0.2965, -2.5901, -0.0341, -0.2965, 2.5901, -0.0341, -0.2965, 2.5901, -0.0341, -0.2965, 2.5901, 0.0341, -0.2965, -2.5901, 0.0341, -0.2965, -2.5901, -0.0341, 0.2965, -2.5901, 0.0341, 0.2965, 2.5901, 0.0341, 0.2965, 2.5901, 0.0341, 0.2965, 2.5901, -0.0341, 0.2965, -2.5901, -0.0341, 0.2965, 2.5901, 0.0341, 0.2965, -2.5901, 0.0341, 0.2965, -2.5901, 0.0341, -0.2965, -2.5901, 0.0341, -0.2965, 2.5901, 0.0341, -0.2965, 2.5901, 0.0341, 0.2965)
+
+[node name="puentesito" type="StaticBody3D"]
+
+[node name="Plane_005" type="MeshInstance3D" parent="."]
+transform = Transform3D(0, -56, 0, 0, 0, 56, -56, 0, 0, 0, 0, -4.76507)
+mesh = SubResource("ArrayMesh_0sdy1")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0, -56, 0, 0, 0, 56, -56, 0, 0, 0, 0, -4.76507)
+shape = SubResource("ConcavePolygonShape3D_0wjab")
+
+[node name="Plane_0052" type="MeshInstance3D" parent="."]
+transform = Transform3D(8.45577e-06, 56, 0, 0, 0, 56, 56, -8.45577e-06, 0, 0, 0, 4.80988)
+mesh = SubResource("ArrayMesh_csfc8")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(8.45577e-06, 56, 0, 0, 0, 56, 56, -8.45577e-06, 0, 0, 0, 4.80988)
+shape = SubResource("ConcavePolygonShape3D_pfr5o")
+
+[node name="Tabla" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.43051e-07, 0, 1.2, 0, 1.2, 0, -1.2, 0, -1.43051e-07, 0, 0.795092, 0)
+mesh = SubResource("ArrayMesh_jjton")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1.43051e-07, 0, 1.2, 0, 1.2, 0, -1.2, 0, -1.43051e-07, 0, 0.795092, 0)
+shape = SubResource("ConcavePolygonShape3D_i5nm4")

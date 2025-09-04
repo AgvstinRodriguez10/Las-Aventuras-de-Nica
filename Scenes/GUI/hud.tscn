@@ -401,10 +401,10 @@ vertical_alignment = 1
 
 [node name="LabelScorePlus" type="Label" parent="labelPlus"]
 modulate = Color(1, 1, 1, 0)
-offset_left = 1152.0
-offset_top = 64.0
-offset_right = 1344.0
-offset_bottom = 120.0
+offset_left = 928.0
+offset_top = 8.0
+offset_right = 1120.0
+offset_bottom = 64.0
 text = " + 100"
 label_settings = SubResource("LabelSettings_aws3g")
 horizontal_alignment = 1
@@ -428,19 +428,16 @@ size_flags_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_65piv")
 
 [node name="Vida" type="Sprite2D" parent="Panel"]
-visible = false
 position = Vector2(32, 32)
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("5_rgqb5")
 
 [node name="Vida2" type="Sprite2D" parent="Panel"]
-visible = false
 position = Vector2(96, 32)
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("5_rgqb5")
 
 [node name="Vida3" type="Sprite2D" parent="Panel"]
-visible = false
 position = Vector2(160, 32)
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("5_rgqb5")
