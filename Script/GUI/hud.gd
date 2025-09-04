@@ -13,9 +13,9 @@ class_name UI
 @onready var dangerCollision = $"../Nica/Alert/CollisionShape3D"
 
 @onready var dictCoinsLbls:Dictionary = {
-	"life": $CoinsContainer/lbl_snCoins,
-	"eco": $CoinsContainer/lbl_ecoCoins,
-	"rd": $CoinsContainer/lbl_rdCoins
+	"life": $LifeAndScoreContainer/SnCoinsIcon/lbl_snCoins,
+	"eco": $CoinsContainer/EcoCoinsIcon/lbl_ecoCoins,
+	"rd": $CoinsContainer/RdCoinsIcon/lbl_rdCoins
 }
 @onready var lifeBar = $LifeAndScoreContainer/LifeBar
 

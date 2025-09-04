@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://ikd1j0tjscug"]
+[gd_scene load_steps=22 format=3 uid="uid://ikd1j0tjscug"]
 
 [ext_resource type="Script" uid="uid://bbacyarupo523" path="res://Script/GUI/hud.gd" id="1_65piv"]
 [ext_resource type="FontFile" uid="uid://gruu5234vhv1" path="res://Assets/Fonts/kagenobold-v4816.otf" id="2_rbehb"]
@@ -130,12 +130,15 @@ _data = {
 
 [sub_resource type="LabelSettings" id="LabelSettings_efr8d"]
 font = ExtResource("2_rbehb")
-font_size = 40
+font_size = 18
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 3
 shadow_color = Color(0, 0, 0, 1)
 shadow_offset = Vector2(2, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mednw"]
+font_size = 18
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_65piv")
@@ -173,8 +176,8 @@ layout_mode = 3
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -312.0
-offset_bottom = 305.0
+offset_left = -229.0
+offset_bottom = 211.0
 grow_horizontal = 0
 size_flags_vertical = 4
 
@@ -183,8 +186,8 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -242.0
-offset_bottom = 242.0
+offset_left = -131.0
+offset_bottom = 131.0
 grow_horizontal = 0
 fill_mode = 5
 radial_initial_angle = 310.0
@@ -198,8 +201,8 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -243.0
-offset_bottom = 243.0
+offset_left = -136.0
+offset_bottom = 136.0
 grow_horizontal = 0
 texture = ExtResource("6_mednw")
 expand_mode = 1
@@ -210,66 +213,75 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -66.0
-offset_top = 54.0
+offset_top = 18.0
 offset_right = 66.0
-offset_bottom = 126.0
+offset_bottom = 90.0
 grow_horizontal = 2
 text = "0"
 label_settings = SubResource("LabelSettings_efr8d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CoinsContainer" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 11.0
-offset_top = 18.0
-offset_right = 360.0
-offset_bottom = 164.0
-
-[node name="SnCoinsIcon" type="TextureRect" parent="CoinsContainer"]
+[node name="SnCoinsIcon" type="TextureRect" parent="LifeAndScoreContainer"]
 layout_mode = 1
-offset_right = 103.0
-offset_bottom = 103.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -113.0
+offset_top = 139.0
+offset_right = -79.0
+offset_bottom = 173.0
+grow_horizontal = 0
 texture = ExtResource("8_yveuw")
 expand_mode = 1
 
-[node name="lbl_snCoins" type="Label" parent="CoinsContainer"]
+[node name="lbl_snCoins" type="Label" parent="LifeAndScoreContainer/SnCoinsIcon"]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -37.0
-offset_right = 102.0
-grow_vertical = 0
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 3.0
+offset_top = -13.0
+offset_right = 48.0
+offset_bottom = 13.0
+grow_horizontal = 0
+grow_vertical = 2
 text = "0"
+label_settings = SubResource("LabelSettings_mednw")
 horizontal_alignment = 1
+
+[node name="CoinsContainer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 37.0
+offset_top = 18.0
+offset_right = 181.0
+offset_bottom = 115.0
 
 [node name="EcoCoinsIcon" type="TextureRect" parent="CoinsContainer"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -51.5
-offset_right = 51.5
-offset_bottom = 103.0
-grow_horizontal = 2
+offset_right = 57.222
+offset_bottom = 57.222
 texture = ExtResource("10_2mj2r")
 expand_mode = 1
 
-[node name="lbl_ecoCoins" type="Label" parent="CoinsContainer"]
+[node name="lbl_ecoCoins" type="Label" parent="CoinsContainer/EcoCoinsIcon"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -51.0
-offset_top = -37.0
-offset_right = 51.0
+offset_left = -21.611
+offset_top = 5.778
+offset_right = 23.389
+offset_bottom = 31.778
 grow_horizontal = 2
 grow_vertical = 0
 text = "0"
+label_settings = SubResource("LabelSettings_mednw")
 horizontal_alignment = 1
 
 [node name="RdCoinsIcon" type="TextureRect" parent="CoinsContainer"]
@@ -277,24 +289,27 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -103.0
-offset_bottom = 103.0
+offset_left = -57.222
+offset_bottom = 57.222
 grow_horizontal = 0
 texture = ExtResource("11_lsjh4")
 expand_mode = 1
 
-[node name="lbl_rdCoins" type="Label" parent="CoinsContainer"]
+[node name="lbl_rdCoins" type="Label" parent="CoinsContainer/RdCoinsIcon"]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -102.0
-offset_top = -37.0
-grow_horizontal = 0
+offset_left = -25.389
+offset_top = 6.778
+offset_right = 26.611
+offset_bottom = 29.778
+grow_horizontal = 2
 grow_vertical = 0
 text = "0"
+label_settings = SubResource("LabelSettings_mednw")
 horizontal_alignment = 1
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
