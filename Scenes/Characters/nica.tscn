@@ -2737,7 +2737,7 @@ height = 3.34722
 
 [node name="Nica" type="CharacterBody3D"]
 collision_layer = 2
-collision_mask = 61
+collision_mask = 125
 script = ExtResource("1_r8wu8")
 
 [node name="Nica-v1_0" type="Node3D" parent="."]

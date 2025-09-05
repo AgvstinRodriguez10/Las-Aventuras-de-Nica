@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://kf0fni8olwho"]
+[gd_scene load_steps=7 format=3 uid="uid://ccrn1ie0sqgdk"]
 
-[ext_resource type="Texture2D" uid="uid://bo62d5alhse3s" path="res://Assets/Extras/nicadialogo-01-01.png" id="1_qhe55"]
-[ext_resource type="LabelSettings" uid="uid://cvr403pjpcnak" path="res://Resource/Extras/DialogesLabelSetting.tres" id="2_qhe55"]
-[ext_resource type="Texture2D" uid="uid://dmrwgx4kyxavi" path="res://Assets/Extras/yaguidialogo-01.png" id="3_ain8w"]
+[ext_resource type="Texture2D" uid="uid://bo62d5alhse3s" path="res://Assets/Extras/nicadialogo-01-01.png" id="1_kkv41"]
+[ext_resource type="LabelSettings" uid="uid://cvr403pjpcnak" path="res://Resource/Extras/DialogesLabelSetting.tres" id="2_cuq8k"]
+[ext_resource type="Texture2D" uid="uid://dmrwgx4kyxavi" path="res://Assets/Extras/yaguidialogo-01.png" id="3_kyu1j"]
 
 [sub_resource type="Animation" id="Animation_ain8w"]
 resource_name = "Dialogue"
@@ -79,52 +79,28 @@ tracks/5/keys = {
 "update": 0,
 "values": [Vector2(183, 544), Vector2(183, 544)]
 }
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Nica/NiArriaba/Label:text")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": ["¡Ayudame a recorrer San Nicolas!", "¡Ayudame a recorrer San Nicolas!"]
-}
 
 [sub_resource type="Animation" id="Animation_qhe55"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Nica/NiArriaba/Label:text")
+tracks/0/path = NodePath("Nica/NiArriaba:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["¡Ayudame a recorrer San Nicolas!"]
+"update": 0,
+"values": [Vector2(968, 400)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Nica/NiArriaba:position")
+tracks/1/path = NodePath("Yagui/YaAbajo:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(968, 400)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Yagui/YaAbajo:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -154,15 +130,16 @@ offset_bottom = 40.0
 modulate = Color(1, 1, 1, 0)
 position = Vector2(968, 400)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("1_qhe55")
+texture = ExtResource("1_kkv41")
 
 [node name="Label" type="Label" parent="Nica/NiArriaba"]
 offset_left = -80.0
 offset_top = -30.0
 offset_right = 230.0
 offset_bottom = 80.0
-text = "¡Ayudame a recorrer San Nicolas!"
-label_settings = ExtResource("2_qhe55")
+text = "CUIDADO,
+¡YAGÜI SE ACERCA!"
+label_settings = ExtResource("2_cuq8k")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -176,15 +153,15 @@ offset_bottom = 40.0
 modulate = Color(1, 1, 1, 0)
 position = Vector2(228, 544)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("3_ain8w")
+texture = ExtResource("3_kyu1j")
 
 [node name="Label" type="Label" parent="Yagui/YaAbajo"]
 offset_left = -229.0
 offset_top = -48.0
 offset_right = 98.0
 offset_bottom = 63.0
-text = "¡LA CIUDAD SERÁ MIA!"
-label_settings = ExtResource("2_qhe55")
+text = "¡TE VOY A ATRAPAR!"
+label_settings = ExtResource("2_cuq8k")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -193,4 +170,3 @@ autowrap_mode = 2
 libraries = {
 &"": SubResource("AnimationLibrary_vcrf2")
 }
-autoplay = "Dialogue"
