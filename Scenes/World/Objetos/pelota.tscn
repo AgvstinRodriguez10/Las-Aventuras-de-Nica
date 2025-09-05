@@ -70,6 +70,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_v84be")
 
+[sub_resource type="Animation" id="Animation_j385k"]
+length = 0.001
+
 [sub_resource type="Animation" id="Animation_lwtdm"]
 resource_name = "move"
 loop_mode = 1
@@ -86,21 +89,6 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0), Vector3(-6.28319, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_j385k"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Icosphere:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 6.28319, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qyrv8"]
 _data = {
 &"RESET": SubResource("Animation_j385k"),
@@ -110,7 +98,7 @@ _data = {
 [node name="pelota" type="Node3D"]
 
 [node name="Icosphere" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -0.863932, 0.503608, 0, -0.503608, -0.863932, 0, 0, 0)
 lod_bias = 0.5
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_ft8li")

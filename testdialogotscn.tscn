@@ -62,10 +62,10 @@ tracks/4/path = NodePath("Nica/NiArriaba:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 1.5, 2.5, 4, 5, 8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1320, 400), Vector2(1320, 400), Vector2(968, 400), Vector2(968, 400), Vector2(1320, 400), Vector2(1320, 400)]
+"values": [Vector2(968, 400), Vector2(968, 400)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -74,10 +74,10 @@ tracks/5/path = NodePath("Yagui/YaAbajo:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 4, 5.5, 7, 8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 9),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-176, 544), Vector2(-176, 544), Vector2(168, 544), Vector2(168, 544), Vector2(-176, 544)]
+"values": [Vector2(183, 544), Vector2(183, 544)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -117,6 +117,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(968, 400)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Yagui/YaAbajo:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(228, 544)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vcrf2"]
@@ -161,15 +173,17 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="YaAbajo" type="Sprite2D" parent="Yagui"]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(228, 544)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("3_ain8w")
 
 [node name="Label" type="Label" parent="Yagui/YaAbajo"]
-offset_left = -112.0
-offset_top = -21.3333
-offset_right = 59.0
-offset_bottom = 32.6667
-text = "LA CIUDAD S"
+offset_left = -229.0
+offset_top = -48.0
+offset_right = 98.0
+offset_bottom = 63.0
+text = "¡LA CIUDAD SERÁ MIA!"
 label_settings = ExtResource("2_qhe55")
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -147,9 +147,9 @@ script = ExtResource("1_65piv")
 
 [node name="LabelScorePlus" type="Label" parent="labelPlus"]
 modulate = Color(1, 1, 1, 0)
-offset_left = 1168.0
+offset_left = 928.0
 offset_top = 8.0
-offset_right = 1360.0
+offset_right = 1120.0
 offset_bottom = 64.0
 text = " + 100"
 label_settings = SubResource("LabelSettings_aws3g")
