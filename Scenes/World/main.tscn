@@ -151,6 +151,8 @@ _data = {
 
 [node name="Main" type="Node3D"]
 
+[node name="Dialogos" parent="." instance=ExtResource("20_xqo82")]
+
 [node name="FPSCount" parent="." instance=ExtResource("1_1pvyk")]
 process_mode = 3
 
@@ -554,9 +556,6 @@ shape = SubResource("BoxShape3D_ombbc")
 libraries = {
 &"": SubResource("AnimationLibrary_8o8og")
 }
-
-[node name="Dialogos" parent="." instance=ExtResource("20_xqo82")]
-visible = false
 
 [connection signal="timeout" from="Label/Timer" to="Label" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Nica/Alert" to="HUD" method="_on_alert_body_entered"]

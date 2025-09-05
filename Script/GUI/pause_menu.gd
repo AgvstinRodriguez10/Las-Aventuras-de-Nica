@@ -4,6 +4,7 @@ extends CanvasLayer
 
 func _ready() -> void:
 	hide()
+	$Panel/resume.grab_focus()
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Escape") and get_tree().paused == false:

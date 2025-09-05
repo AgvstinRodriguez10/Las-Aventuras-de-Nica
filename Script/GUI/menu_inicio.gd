@@ -2,6 +2,7 @@ extends CanvasLayer
 
 func _ready() -> void:
 	show()
+	$Panel/Iniciar.grab_focus()
 
 func _on_iniciar_pressed() -> void:
 	hide()
