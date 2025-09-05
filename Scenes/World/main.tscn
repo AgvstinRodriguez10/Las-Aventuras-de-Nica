@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://djlnov41bncl8"]
+[gd_scene load_steps=33 format=3 uid="uid://djlnov41bncl8"]
 
 [ext_resource type="PackedScene" uid="uid://d33hm0kfvhtj3" path="res://Scenes/GUI/fps_count.tscn" id="1_1pvyk"]
 [ext_resource type="PackedScene" uid="uid://ikd1j0tjscug" path="res://Scenes/GUI/hud.tscn" id="1_by2pg"]
@@ -17,7 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://bfttwterfi486" path="res://Scenes/World/Objetos/Obstaculos/puente.tscn" id="15_8o8og"]
 [ext_resource type="PackedScene" uid="uid://l6unlmqhug4r" path="res://Scenes/World/Objetos/Valla.tscn" id="15_nsfl0"]
 [ext_resource type="PackedScene" uid="uid://crj38hhv8sc57" path="res://Scenes/World/Objetos/Cono.tscn" id="15_xqo82"]
-[ext_resource type="ArrayOccluder3D" uid="uid://cdj7hyw8dd0bj" path="res://Resource/Extras/main.occ" id="17_psyr8"]
 [ext_resource type="PackedScene" uid="uid://dcey1tp07g3qh" path="res://Scenes/World/Objetos/Obstaculos/RampaGrande.tscn" id="18_xqo82"]
 [ext_resource type="PackedScene" uid="uid://kf0fni8olwho" path="res://testdialogotscn.tscn" id="20_xqo82"]
 
@@ -396,15 +395,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.67089, 174.509)
 [node name="EcoFicha43" parent="EcoFichas" instance=ExtResource("6_23yoc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.15366, 175.509)
 
-[node name="EcoFicha45" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 177.509)
-
-[node name="EcoFicha46" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 178.509)
-
-[node name="EcoFicha47" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 179.509)
-
 [node name="EcoFicha48" parent="EcoFichas" instance=ExtResource("6_23yoc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 180.509)
 
@@ -564,10 +554,6 @@ shape = SubResource("BoxShape3D_ombbc")
 libraries = {
 &"": SubResource("AnimationLibrary_8o8og")
 }
-
-[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.445, 0, -9.63213)
-occluder = ExtResource("17_psyr8")
 
 [node name="Dialogos" parent="." instance=ExtResource("20_xqo82")]
 visible = false
