@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://kf0fni8olwho"]
 
-[ext_resource type="Texture2D" uid="uid://cbrx1kw7f4rlp" path="res://Assets/Extras/DIALOGONICA-01.png" id="1_qhe55"]
-[ext_resource type="Texture2D" uid="uid://d2safvuoubqf" path="res://Assets/Extras/DIALOGOYAGUI-01.png" id="2_ain8w"]
+[ext_resource type="Texture2D" uid="uid://bo62d5alhse3s" path="res://Assets/Extras/nicadialogo-01-01.png" id="1_qhe55"]
 [ext_resource type="LabelSettings" uid="uid://cvr403pjpcnak" path="res://Resource/Extras/DialogesLabelSetting.tres" id="2_qhe55"]
+[ext_resource type="Texture2D" uid="uid://dmrwgx4kyxavi" path="res://Assets/Extras/yaguidialogo-01.png" id="3_ain8w"]
 
 [sub_resource type="Animation" id="Animation_ain8w"]
 resource_name = "Dialogue"
@@ -65,7 +65,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 1.5, 2.5, 4, 5, 8),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1320, 400), Vector2(1320, 400), Vector2(976, 400), Vector2(976, 400), Vector2(1320, 400), Vector2(1320, 400)]
+"values": [Vector2(1320, 400), Vector2(1320, 400), Vector2(968, 400), Vector2(968, 400), Vector2(1320, 400), Vector2(1320, 400)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -106,6 +106,18 @@ tracks/0/keys = {
 "update": 1,
 "values": ["¡Ayudame a recorrer San Nicolas!"]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Nica/NiArriaba:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(968, 400)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vcrf2"]
 _data = {
@@ -127,17 +139,16 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="NiArriaba" type="Sprite2D" parent="Nica"]
-visible = false
 modulate = Color(1, 1, 1, 0)
-position = Vector2(1320, 400)
-scale = Vector2(1.5, 1.5)
+position = Vector2(968, 400)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_qhe55")
 
 [node name="Label" type="Label" parent="Nica/NiArriaba"]
-offset_left = -64.0
-offset_top = -11.0
-offset_right = 107.0
-offset_bottom = 43.0
+offset_left = -80.0
+offset_top = -30.0
+offset_right = 230.0
+offset_bottom = 80.0
 text = "¡Ayudame a recorrer San Nicolas!"
 label_settings = ExtResource("2_qhe55")
 horizontal_alignment = 1
@@ -150,18 +161,15 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="YaAbajo" type="Sprite2D" parent="Yagui"]
-visible = false
-modulate = Color(1, 1, 1, 0)
-position = Vector2(-176, 544)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("2_ain8w")
+position = Vector2(228, 544)
+texture = ExtResource("3_ain8w")
 
 [node name="Label" type="Label" parent="Yagui/YaAbajo"]
 offset_left = -112.0
 offset_top = -21.3333
 offset_right = 59.0
 offset_bottom = 32.6667
-text = "¡La ciudad será mia!"
+text = "LA CIUDAD S"
 label_settings = ExtResource("2_qhe55")
 horizontal_alignment = 1
 vertical_alignment = 1
