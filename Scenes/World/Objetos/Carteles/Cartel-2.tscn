@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=4 uid="uid://clov32uairbxm"]
+
+[ext_resource type="Texture2D" uid="uid://boyqnl2pua2xs" path="res://Assets/Objetos/CartelesSN/CARTELESROTONDA-02.png" id="1_naepj"]
+[ext_resource type="Texture2D" uid="uid://by6b4y0h36gql" path="res://Assets/Objetos/CartelesSN/CartelRandom_Untitled.png" id="2_np3i6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_160jb"]
+albedo_texture = ExtResource("1_naepj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a23dv"]
+resource_name = "Material_0"
+albedo_texture = ExtResource("2_np3i6")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ncqw8"]
+_surfaces = [{
+"aabb": AABB(-0.586093, -0.387268, -0.56691, 1.17219, 0.774536, 1.13382),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAwABAAAAAgAEAAAAAAAFAAMAAwAGAAIABwAFAAAAAwAFAAcAAAAEAAcABwAGAAMABwAEAAIAAgAGAAcA"),
+"name": "Material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAALYKAAD+CQAAAAAAAP4J//8AAAAA//8AAEj1AAAAAP//tgoAAAD2AAD//wAA/////0j1AAAA9v////8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_w0i72"]
+resource_name = "CartelRandom_Mesh_0"
+_surfaces = [{
+"aabb": AABB(-0.586093, -0.387268, -0.56691, 1.17219, 0.774536, 1.13382),
+"attribute_data": PackedByteArray("69ZUAurWzQP47uADtsrjBE/7KARH+xwC3vvSKt77LNUgBCzV+O7gA/nuZwLr1lQCIAQs1SAE0ire+9IqrsrXAkf7HAJP+ygER/scAq7K1wK2yuME3vvSKt77LNUgBCzVBNeYBAXXHwMT7zIDIAQs1SAE0ire+9IqT/soBLbK4wSuytcCE+8yAxLvqwQE15gE"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAWABcAGAAZABoAGwAcAB0AHgAfACAAIQAiACMA"),
+"material": SubResource("StandardMaterial3D_a23dv"),
+"name": "Material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("AAAAALYK4Bb+CQAAAADgFv4J//8AAOAW//8AAEj1Phb+CQAAAAA+FgAAAAC2Cj4W/gn//wAAu+D+CQAAAAC74P//AABI9bvg/gn//wAA4BYAAP//tgrgFgAAAAC2CuAWAAAAALYKQp8AAP//tgpCnwD2/////0KfAPb/////wOkAAP//tgrA6f4J//8AAMDpAAAAALYKPhYA9gAA//8+Fv//AABI9T4WAPb/////Qp8A9gAA//9CnwAAAAC2CkKf//8AAEj1ZsYA9gAA//9mxgD2/////2bG//8AAEj1u+D/////SPW74P4J//8AALvg/gn//wAAwOn/////SPXA6QD2/////8DpAPb/////Zsb/////SPVmxv//AABI9WbGFMtNyxTLTcsUy03LHWrwSh1q8EodavBK/38AAP9/AAD/fwAAFMtNyxTLTcsUy03L/3////9/////f///8MrhFfDK4RXwyuEVHWrwSh1q8EodavBK/3////9/////f///TR1tHU0dbR1NHW0d/38AAP9/AAD/fwAA8MrhFfDK4RXwyuEVTR1tHU0dbR1NHW0d")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ncqw8")
+
+[node name="Cartel-1" type="Node3D"]
+
+[node name="1" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.53553, 0, 3.53553, 0, 5, 0, -3.53553, 0, 3.53553, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_160jb")
+mesh = SubResource("ArrayMesh_w0i72")
+skeleton = NodePath("")

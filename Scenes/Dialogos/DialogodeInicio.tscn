@@ -151,6 +151,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="NiArriaba" type="Sprite2D" parent="Nica"]
+visible = false
 modulate = Color(1, 1, 1, 0)
 position = Vector2(968, 400)
 scale = Vector2(0.8, 0.8)
@@ -173,6 +174,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="YaAbajo" type="Sprite2D" parent="Yagui"]
+visible = false
 modulate = Color(1, 1, 1, 0)
 position = Vector2(228, 544)
 scale = Vector2(0.8, 0.8)
@@ -194,3 +196,4 @@ libraries = {
 &"": SubResource("AnimationLibrary_vcrf2")
 }
 autoplay = "Dialogue"
+speed_scale = 1.3
