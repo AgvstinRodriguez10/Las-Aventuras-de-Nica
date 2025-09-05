@@ -1,10 +1,28 @@
-[gd_scene load_steps=6 format=3 uid="uid://dngf56sh7pjqo"]
+[gd_scene load_steps=12 format=3 uid="uid://dngf56sh7pjqo"]
 
 [ext_resource type="Script" uid="uid://dtauwcvryl0cr" path="res://Script/GUI/pause_menu.gd" id="1_cifqg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0a2ss"]
 font_size = 50
 shadow_color = Color(0.0588235, 0.294118, 0.580392, 1)
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_cifqg"]
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_mtqfn"]
+events = [SubResource("InputEventJoypadButton_cifqg")]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_ceptl"]
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_o572i"]
+events = [SubResource("InputEventJoypadButton_ceptl")]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_tjfu5"]
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_b8nr0"]
+events = [SubResource("InputEventJoypadButton_tjfu5")]
 
 [sub_resource type="Animation" id="Animation_mtqfn"]
 length = 0.001
@@ -37,6 +55,20 @@ tracks/1/keys = {
 "method": &"show"
 }]
 }
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel/resume")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"grab_focus"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mtqfn"]
 _data = {
@@ -49,6 +81,7 @@ process_mode = 3
 script = ExtResource("1_cifqg")
 
 [node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -71,7 +104,7 @@ label_settings = SubResource("LabelSettings_0a2ss")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="resume" type="Button" parent="Panel"]
+[node name="resume" type="Button" parent="Panel" node_paths=PackedStringArray("shortcut_context")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -84,10 +117,12 @@ offset_right = 96.0
 offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
+shortcut_context = NodePath(".")
 theme_override_font_sizes/font_size = 20
+shortcut = SubResource("Shortcut_mtqfn")
 text = "CONTINUAR"
 
-[node name="restart" type="Button" parent="Panel"]
+[node name="restart" type="Button" parent="Panel" node_paths=PackedStringArray("shortcut_context")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -100,10 +135,12 @@ offset_right = 96.0
 offset_bottom = 108.0
 grow_horizontal = 2
 grow_vertical = 2
+shortcut_context = NodePath(".")
 theme_override_font_sizes/font_size = 20
+shortcut = SubResource("Shortcut_o572i")
 text = "REINTENTAR"
 
-[node name="exit" type="Button" parent="Panel"]
+[node name="exit" type="Button" parent="Panel" node_paths=PackedStringArray("shortcut_context")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -116,7 +153,9 @@ offset_right = 96.0
 offset_bottom = 204.0
 grow_horizontal = 2
 grow_vertical = 2
+shortcut_context = NodePath(".")
 theme_override_font_sizes/font_size = 20
+shortcut = SubResource("Shortcut_b8nr0")
 text = "SALIR
 "
 

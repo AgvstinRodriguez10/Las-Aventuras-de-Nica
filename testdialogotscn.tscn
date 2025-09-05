@@ -1,15 +1,141 @@
-[gd_scene load_steps=6 format=3 uid="uid://kf0fni8olwho"]
+[gd_scene load_steps=7 format=3 uid="uid://kf0fni8olwho"]
 
-[ext_resource type="Texture2D" uid="uid://cbrx1kw7f4rlp" path="res://Assets/Extras/DIALOGONICA-01.png" id="1_qhe55"]
-[ext_resource type="Texture2D" uid="uid://d2safvuoubqf" path="res://Assets/Extras/DIALOGOYAGUI-01.png" id="2_ain8w"]
-[ext_resource type="FontFile" uid="uid://gruu5234vhv1" path="res://Assets/Fonts/kagenobold-v4816.otf" id="3_7c5jq"]
+[ext_resource type="Texture2D" uid="uid://bo62d5alhse3s" path="res://Assets/Extras/nicadialogo-01-01.png" id="1_qhe55"]
+[ext_resource type="LabelSettings" uid="uid://cvr403pjpcnak" path="res://Resource/Extras/DialogesLabelSetting.tres" id="2_qhe55"]
+[ext_resource type="Texture2D" uid="uid://dmrwgx4kyxavi" path="res://Assets/Extras/yaguidialogo-01.png" id="3_ain8w"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vcrf2"]
-texture = ExtResource("1_qhe55")
+[sub_resource type="Animation" id="Animation_ain8w"]
+resource_name = "Dialogue"
+length = 9.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Nica/NiArriaba:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Yagui/YaAbajo:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Nica/NiArriaba:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.5, 2.5, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Yagui/YaAbajo:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4.5, 5.5, 6.5, 7.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Nica/NiArriaba:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(968, 400), Vector2(968, 400)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Yagui/YaAbajo:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(183, 544), Vector2(183, 544)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Nica/NiArriaba/Label:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["¡Ayudame a recorrer San Nicolas!", "¡Ayudame a recorrer San Nicolas!"]
+}
 
-[sub_resource type="LabelSettings" id="LabelSettings_dtxg3"]
-font = ExtResource("3_7c5jq")
-font_size = 35
+[sub_resource type="Animation" id="Animation_qhe55"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Nica/NiArriaba/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["¡Ayudame a recorrer San Nicolas!"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Nica/NiArriaba:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(968, 400)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Yagui/YaAbajo:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(228, 544)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vcrf2"]
+_data = {
+&"Dialogue": SubResource("Animation_ain8w"),
+&"RESET": SubResource("Animation_qhe55")
+}
 
 [node name="Dialogos" type="Control"]
 layout_mode = 3
@@ -24,43 +150,47 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Dialogonica-01" type="Sprite2D" parent="Nica"]
-visible = false
-position = Vector2(1040, 400)
+[node name="NiArriaba" type="Sprite2D" parent="Nica"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(968, 400)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_qhe55")
 
-[node name="Dialogonica-02" type="Sprite2D" parent="Nica"]
-visible = false
-position = Vector2(1040, 544)
-texture = ExtResource("1_qhe55")
+[node name="Label" type="Label" parent="Nica/NiArriaba"]
+offset_left = -80.0
+offset_top = -30.0
+offset_right = 230.0
+offset_bottom = 80.0
+text = "¡Ayudame a recorrer San Nicolas!"
+label_settings = ExtResource("2_qhe55")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="Yagui" type="Control" parent="."]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Dialogoyagui-01" type="Sprite2D" parent="Yagui"]
-visible = false
-position = Vector2(336, 520)
-texture = ExtResource("2_ain8w")
+[node name="YaAbajo" type="Sprite2D" parent="Yagui"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(228, 544)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_ain8w")
 
-[node name="Dialogoyagui-02" type="Sprite2D" parent="Yagui"]
-visible = false
-position = Vector2(336, 520)
-texture = ExtResource("2_ain8w")
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 824.0
-offset_top = 344.0
-offset_right = 1512.0
-offset_bottom = 616.0
-scale = Vector2(0.5, 0.5)
-theme_override_styles/normal = SubResource("StyleBoxTexture_vcrf2")
-text = "         
-            
-                ¡AYUDAME A ESCAPAR
-                 DE YAGÜI!"
-label_settings = SubResource("LabelSettings_dtxg3")
+[node name="Label" type="Label" parent="Yagui/YaAbajo"]
+offset_left = -229.0
+offset_top = -48.0
+offset_right = 98.0
+offset_bottom = 63.0
+text = "¡LA CIUDAD SERÁ MIA!"
+label_settings = ExtResource("2_qhe55")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_vcrf2")
+}
+autoplay = "Dialogue"

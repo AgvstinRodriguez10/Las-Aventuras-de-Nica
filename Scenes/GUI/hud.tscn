@@ -249,6 +249,7 @@ text = "0"
 label_settings = SubResource("LabelSettings_efr8d")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="SnCoinsIcon" type="TextureRect" parent="LifeAndScoreContainer"]
 layout_mode = 1
