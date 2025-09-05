@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ikd1j0tjscug"]
+[gd_scene load_steps=25 format=3 uid="uid://ikd1j0tjscug"]
 
 [ext_resource type="Script" uid="uid://bbacyarupo523" path="res://Script/GUI/hud.gd" id="1_65piv"]
 [ext_resource type="FontFile" uid="uid://gruu5234vhv1" path="res://Assets/Fonts/kagenobold-v4816.otf" id="2_rbehb"]
@@ -128,17 +128,30 @@ _data = {
 &"Life3": SubResource("Animation_65piv")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_yveuw"]
+font_size = 14
+
 [sub_resource type="LabelSettings" id="LabelSettings_efr8d"]
 font = ExtResource("2_rbehb")
-font_size = 18
-outline_size = 5
-outline_color = Color(0, 0, 0, 1)
-shadow_size = 3
-shadow_color = Color(0, 0, 0, 1)
+font_size = 20
 shadow_offset = Vector2(2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7l7l8"]
+bg_color = Color(0, 0, 0, 0.337255)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [sub_resource type="LabelSettings" id="LabelSettings_mednw"]
 font_size = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2mj2r"]
+bg_color = Color(0, 0, 0, 0.337255)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_65piv")
@@ -176,7 +189,8 @@ layout_mode = 3
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -229.0
+offset_left = -160.0
+offset_right = -31.0
 offset_bottom = 211.0
 grow_horizontal = 0
 size_flags_vertical = 4
@@ -207,15 +221,29 @@ grow_horizontal = 0
 texture = ExtResource("6_mednw")
 expand_mode = 1
 
+[node name="ScoreText" type="Label" parent="LifeAndScoreContainer/ScoreBackgraund"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -23.0
+offset_top = 28.0
+offset_right = 23.0
+offset_bottom = 48.0
+grow_horizontal = 2
+text = "pasos"
+label_settings = SubResource("LabelSettings_yveuw")
+horizontal_alignment = 1
+
 [node name="Score" type="Label" parent="LifeAndScoreContainer/ScoreBackgraund"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -66.0
-offset_top = 18.0
-offset_right = 66.0
-offset_bottom = 90.0
+offset_left = -25.0
+offset_top = 50.0
+offset_right = 25.0
+offset_bottom = 72.0
 grow_horizontal = 2
 text = "0"
 label_settings = SubResource("LabelSettings_efr8d")
@@ -227,27 +255,29 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -113.0
-offset_top = 139.0
-offset_right = -79.0
-offset_bottom = 173.0
+offset_left = -98.0
+offset_top = 144.0
+offset_right = -64.0
+offset_bottom = 178.0
 grow_horizontal = 0
 texture = ExtResource("8_yveuw")
 expand_mode = 1
 
 [node name="lbl_snCoins" type="Label" parent="LifeAndScoreContainer/SnCoinsIcon"]
+z_index = -1
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 3.0
+offset_left = -11.0
 offset_top = -13.0
-offset_right = 48.0
+offset_right = 33.0
 offset_bottom = 13.0
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_7l7l8")
 text = "0"
 label_settings = SubResource("LabelSettings_mednw")
 horizontal_alignment = 1
@@ -277,9 +307,10 @@ anchor_bottom = 1.0
 offset_left = -21.611
 offset_top = 5.778
 offset_right = 23.389
-offset_bottom = 31.778
+offset_bottom = 27.778
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_2mj2r")
 text = "0"
 label_settings = SubResource("LabelSettings_mednw")
 horizontal_alignment = 1
@@ -302,12 +333,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -25.389
-offset_top = 6.778
-offset_right = 26.611
-offset_bottom = 29.778
+offset_left = -22.389
+offset_top = 5.778
+offset_right = 22.611
+offset_bottom = 27.778
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_2mj2r")
 text = "0"
 label_settings = SubResource("LabelSettings_mednw")
 horizontal_alignment = 1
