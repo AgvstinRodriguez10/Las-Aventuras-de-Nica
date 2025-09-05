@@ -3582,7 +3582,7 @@ _data = {
 [node name="B Mitre 400 350" parent="." instance=ExtResource("2_6jyht")]
 
 [node name="Nica" type="CharacterBody3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 50)
+transform = Transform3D(-1, 0, 2.53518e-06, 0, 1, 0, -2.53518e-06, 0, -1, 0, 0, 50)
 collision_layer = 2
 collision_mask = 61
 
@@ -3895,7 +3895,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.84867, 0)
 shape = SubResource("CapsuleShape3D_r8wu8")
 
 [node name="Yagui" type="CharacterBody3D" parent="."]
-transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 0, 0, 4.67837)
+transform = Transform3D(-2, 0, 5.07036e-06, 0, 2, 0, -5.07036e-06, 0, -2, 0, 0, 4.67837)
 collision_layer = 16
 collision_mask = 2
 
