@@ -44,7 +44,7 @@ region_rect = Rect2(461.799, 525.048, 381.613, 127.088)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s6sec"]
 texture = ExtResource("1_bf1bg")
-region_rect = Rect2(1140.36, 140.8, 547.59, 762.3)
+region_rect = Rect2(1133.06, 140.223, 558.95, 764.051)
 
 [resource]
 Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)

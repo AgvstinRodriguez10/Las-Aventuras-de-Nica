@@ -32,17 +32,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -224.0
+offset_left = -204.0
 offset_top = -224.0
-offset_right = 224.0
+offset_right = 204.0
 offset_bottom = 224.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
+offset_left = 4.0
 offset_top = 68.0
-offset_right = 448.0
+offset_right = 404.0
 offset_bottom = 160.0
 text = "COMENZÁ A RECORRER 
 SAN NICOLÁS"
@@ -53,9 +54,9 @@ autowrap_mode = 3
 
 [node name="Iniciar" type="Button" parent="Panel" node_paths=PackedStringArray("shortcut_context")]
 layout_mode = 0
-offset_left = 128.0
+offset_left = 116.0
 offset_top = 204.0
-offset_right = 312.0
+offset_right = 300.0
 offset_bottom = 264.0
 shortcut_context = NodePath(".")
 theme = ExtResource("3_esk8f")
@@ -64,9 +65,9 @@ text = "INICIAR"
 
 [node name="Salir" type="Button" parent="Panel" node_paths=PackedStringArray("shortcut_context")]
 layout_mode = 0
-offset_left = 128.0
+offset_left = 116.0
 offset_top = 300.0
-offset_right = 312.0
+offset_right = 300.0
 offset_bottom = 360.0
 shortcut_context = NodePath(".")
 shortcut = SubResource("Shortcut_88rb8")
