@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dcmdpwf6w8opd"]
+[gd_scene load_steps=22 format=3 uid="uid://dcmdpwf6w8opd"]
 
 [ext_resource type="PackedScene" uid="uid://bxs55inw16h7x" path="res://Scenes/World/Calles/Cuadras (Completas)/b_mitre_400_350.tscn" id="1_i7jcd"]
 [ext_resource type="PackedScene" uid="uid://6vltpx4piqv4" path="res://Scenes/World/Calles/Cuadras (Completas)/b_mitre_350_300.tscn" id="2_86gof"]
@@ -21,7 +21,10 @@
 [ext_resource type="PackedScene" uid="uid://dj0ym6awon4au" path="res://Scenes/World/Objetos/Carteles/Carteles-Calles/DFSarmiento.tscn" id="19_0p18o"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cmu8q"]
-size = Vector3(400, 1, 4000)
+size = Vector3(370.563, 1, 3398.56)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0p18o"]
+size = Vector3(54.114, 1, 65.133)
 
 [node name="San Nicolas" type="Node3D"]
 
@@ -29,8 +32,13 @@ size = Vector3(400, 1, 4000)
 collision_mask = 18
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7184, 0, -300.718)
 shape = SubResource("BoxShape3D_cmu8q")
 debug_color = Color(1, 0, 0, 0.419608)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 197.52, 0, 1306.68)
+shape = SubResource("BoxShape3D_0p18o")
 
 [node name="B Mitre 400 350" parent="." instance=ExtResource("1_i7jcd")]
 
@@ -68,43 +76,16 @@ transform = Transform3D(-0.0321965, 0, 0.498962, 0, 0.5, 0, -0.498962, 0, -0.032
 [node name="Ligth" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.6332, 0, 1162.45)
 
-[node name="Ligth2" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.6332, 0, 1177.2)
-
-[node name="Ligth3" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.4016, 0, 1177.2)
-
 [node name="Ligth4" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.8249, 0, 1192.41)
-
-[node name="Ligth5" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 89.2765, 0, 1192.41)
-
-[node name="Ligth6" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 89.2765, 0, 1207.41)
 
 [node name="Ligth7" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.277, 0, 1207.41)
 
-[node name="Ligth8" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.277, 0, 1222.64)
-
-[node name="Ligth9" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119.277, 0, 1222.64)
-
 [node name="Ligth10" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119.277, 0, 1237.64)
 
-[node name="Ligth11" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 134.277, 0, 1237.64)
-
-[node name="Ligth12" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 134.277, 0, 1251.64)
-
 [node name="Ligth13" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 147.277, 0, 1251.64)
-
-[node name="Ligth14" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 147.277, 0, 1251.64)
 
 [node name="Arboles" type="Node3D" parent="."]

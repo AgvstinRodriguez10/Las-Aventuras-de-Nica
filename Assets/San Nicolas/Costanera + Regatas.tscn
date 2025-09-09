@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://cqh3220s635ah"]
+[gd_scene load_steps=47 format=4 uid="uid://cqh3220s635ah"]
 
 [ext_resource type="Material" uid="uid://sfntlht18jy4" path="res://Resource/Materials/Calles/Vereda.tres" id="1_f51fo"]
 [ext_resource type="Material" uid="uid://fjppst14hsn" path="res://Resource/Materials/Calles/CalleCostanera.tres" id="1_q2v7p"]
@@ -9,6 +9,18 @@
 [ext_resource type="PackedScene" uid="uid://clov32uairbxm" path="res://Scenes/World/Objetos/Carteles/Cartel-2.tscn" id="7_26w5c"]
 [ext_resource type="PackedScene" uid="uid://bl7juva62gltw" path="res://Scenes/World/Objetos/Carteles/Cartel-3.tscn" id="8_qg183"]
 [ext_resource type="PackedScene" uid="uid://br18evv225rx2" path="res://Scenes/World/Objetos/Carteles/Cartel-4.tscn" id="9_cwpyi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qg183"]
+size = Vector3(6.82077, 1, 12.0031)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qy66f"]
+size = Vector3(8.07983, 1, 12.0031)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_26w5c"]
+size = Vector3(51.2553, 1, 12.0031)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cwpyi"]
+size = Vector3(29.3385, 1, 185.937)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6x4oa"]
 resource_name = "Material.001"
@@ -659,6 +671,32 @@ shadow_mesh = SubResource("ArrayMesh_30f67")
 
 [node name="ESCALERAS DEL REGATAS" type="Node3D"]
 
+[node name="Suelos" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Suelos"]
+transform = Transform3D(0.819152, -0.573576, 0, 0.573576, 0.819152, 0, 0, 0, 1, 36.9512, 2.60898, 0.406525)
+shape = SubResource("BoxShape3D_qg183")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Suelos"]
+transform = Transform3D(0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0, 0, 1, 31.4807, 0.487374, 0.406525)
+shape = SubResource("BoxShape3D_qy66f")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Suelos"]
+transform = Transform3D(0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0, 0, 1, 23.2647, -1.29304, 0.406525)
+shape = SubResource("BoxShape3D_qy66f")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Suelos"]
+transform = Transform3D(0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0, 0, 1, 14.4245, -3.43256, 0.406525)
+shape = SubResource("BoxShape3D_qy66f")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Suelos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.3215, -5.25943, 0.406525)
+shape = SubResource("BoxShape3D_26w5c")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Suelos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.6927, -6.43659, 87.3732)
+shape = SubResource("BoxShape3D_cwpyi")
+
 [node name="Plane" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.9083, -2.38332, 46.5101)
 mesh = SubResource("ArrayMesh_j6vk3")
@@ -706,7 +744,7 @@ transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 
 transform = Transform3D(0.284534, 0, -0.958666, 0, 1, 0, 0.958666, 0, 0.284534, -76.2561, 0, 7.70414)
 
 [node name="Cartel-3" parent="Carteles" instance=ExtResource("8_qg183")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.3853, 0, 0)
+transform = Transform3D(0.38057, 0, 0.924752, 0, 1, 0, -0.924752, 0, 0.38057, -76.0632, 0, -7.34438)
 
 [node name="Cartel-4" parent="Carteles" instance=ExtResource("9_cwpyi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.5033, 0, 0)
+transform = Transform3D(0.0270144, 0, 0.999635, 0, 1, 0, -0.999635, 0, 0.0270144, -77.3897, 0, 0.00326395)

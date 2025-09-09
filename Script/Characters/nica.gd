@@ -205,7 +205,16 @@ func lostLife():
 func collectSnFicha():
 	if life < 3:
 		snficha += 1
-		
 
 func _on_giro_body_entered(body: Node3D) -> void:
-	$"../Giro/AnimationPlayer".play("Giro")
+	AnimacionGiro(body.name, $"../Giro/AnimationPlayer")
+
+func _on_giro_escalinata_body_entered(body: Node3D) -> void:
+		AnimacionGiro(body.name, $"../GiroEscalinata/AnimationPlayer")
+
+func _on_giro_costanera_body_entered(body: Node3D) -> void:
+		AnimacionGiro(body.name, $"../GiroCostanera/AnimationPlayer")
+
+func AnimacionGiro(objetoAAnimar: String, animPlayer:AnimationPlayer):
+	if objetoAAnimar == "Nica":
+		animPlayer.play("Giro")

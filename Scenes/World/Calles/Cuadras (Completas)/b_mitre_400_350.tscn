@@ -375,14 +375,12 @@ transform = Transform3D(-6, 0, -9.05975e-07, 0, 6, 0, 9.05975e-07, 0, -6, 0, 0, 
 [node name="1" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Calles"]
 transform = Transform3D(-1.19209e-07, 0, 1, 0, 1, 0, -1, 0, -1.19209e-07, 0, 0, 3)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_e8xf4")
 skeleton = NodePath("")
 
 [node name="2" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Calles"]
 transform = Transform3D(-1.19209e-07, 0, 1, 0, 1, 0, -1, 0, -1.19209e-07, -1.9233e-06, 0, 25)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_e8xf4")
 skeleton = NodePath("")
 
@@ -391,21 +389,18 @@ skeleton = NodePath("")
 [node name="Vereda" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Cruces"]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, -3.49459, 0, 3.48658)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_l15hi")
 skeleton = NodePath("")
 
 [node name="AlcantarillasCurvas" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Cruces"]
 transform = Transform3D(70.7107, -70.7107, -2.98023e-06, -2.98023e-06, -1.19209e-05, 100, -70.7107, -70.7107, -1.19209e-05, 0, 0, 0)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_gcjee")
 skeleton = NodePath("")
 
 [node name="Calle" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Cruces"]
 transform = Transform3D(-100, -1.42109e-12, -8.74228e-06, -8.74228e-06, 1.78814e-05, 100, 0, 100, -1.19209e-05, 0.000819683, -0.000461891, -2.14373)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_yf1g7")
 skeleton = NodePath("")
 
@@ -414,35 +409,30 @@ skeleton = NodePath("")
 [node name="1" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Vereda"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 19.95)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_54sop")
 skeleton = NodePath("")
 
 [node name="2" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Vereda"]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, -3.5, 0, 23.45)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_kyso7")
 skeleton = NodePath("")
 
 [node name="3" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Vereda"]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, 3.5, 0, 23.45)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_n4oxj")
 skeleton = NodePath("")
 
 [node name="4" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Vereda"]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, 3.5, 0, 43.45)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_n4oxj")
 skeleton = NodePath("")
 
 [node name="5" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Vereda"]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, -3.5, 0, 43.45)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_n4oxj")
 skeleton = NodePath("")
 

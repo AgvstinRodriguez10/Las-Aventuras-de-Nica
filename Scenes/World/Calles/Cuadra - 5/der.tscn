@@ -806,35 +806,30 @@ transform = Transform3D(50, 0, 0, 0, -5.96046e-06, 50, 0, -50, -5.96046e-06, 0, 
 [node name="Base" type="MeshInstance3D" parent="edificio 1/edificio_farmacia_urquiza_mitre"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_f3fmi")
 skeleton = NodePath("")
 
 [node name="Cartel" type="MeshInstance3D" parent="edificio 1/edificio_farmacia_urquiza_mitre"]
 transform = Transform3D(0.873853, 8.34221e-09, 0.707107, 0.873853, -3.33688e-08, -0.707107, 3.68302e-08, 0.279918, -1.19209e-07, 0, 0, 0.0202813)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_k8one")
 skeleton = NodePath("")
 
 [node name="Cartel_001" type="MeshInstance3D" parent="edificio 1/edificio_farmacia_urquiza_mitre"]
 transform = Transform3D(1.23581, 0, 0, 0, -6.67377e-08, -1, 0, 0.279918, -2.38419e-07, -0.0253308, -0.0103875, 0.0202813)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_1ijtf")
 skeleton = NodePath("")
 
 [node name="Cartel_002" type="MeshInstance3D" parent="edificio 1/edificio_farmacia_urquiza_mitre"]
 transform = Transform3D(0, 8.34221e-09, 1, 1.23581, 0, 2.98023e-08, 3.683e-08, 0.279918, 0, 0.0102539, 0.0256057, 0.0202813)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_54xtb")
 skeleton = NodePath("")
 
 [node name="EdificioAlto" type="MeshInstance3D" parent="edificio 1/edificio_farmacia_urquiza_mitre"]
 transform = Transform3D(2.61169, 0, 0, 0, 2.61169, 0, 0, 0, 2.61169, -0.0189493, 0.0192321, 0.0543215)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_5jrdo")
 skeleton = NodePath("")
 
@@ -846,19 +841,16 @@ transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 
 
 [node name="Cube" type="MeshInstance3D" parent="edificio 2/bleri"]
 transform = Transform3D(0.575943, 0, 0, 0, 0.575943, 0, 0, 0, 0.575943, 0, 0, 0)
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_xdyd6")
 skeleton = NodePath("")
 
 [node name="Cube_001" type="MeshInstance3D" parent="edificio 2/bleri"]
 transform = Transform3D(0.575943, 0, 0, 0, 0.575943, 0, 0, 0, 0.575943, 0, 0, 0.0225701)
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_rblis")
 skeleton = NodePath("")
 
 [node name="Cube_002" type="MeshInstance3D" parent="edificio 2/bleri"]
 transform = Transform3D(0.252028, 0, 0, 0, 0.252028, 0, 0, 0, 0.252028, 0.0131233, 0, 0.0261038)
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_ax4nx")
 skeleton = NodePath("")
 
@@ -874,14 +866,12 @@ transform = Transform3D(1, -2.10649e-35, 0, 2.10649e-35, 1, 1.05879e-22, 0, -1.0
 [node name="Base" type="MeshInstance3D" parent="edificio 3/Casa-Duplicable-V4/BASE"]
 transform = Transform3D(1, -2.10649e-35, 0, 2.10649e-35, 1, 1.05879e-22, 0, -1.05879e-22, 1, 8.47033e-24, 0, 0.00685231)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_fipw3")
 skeleton = NodePath("")
 
 [node name="Ventanas y Puertas" type="MeshInstance3D" parent="edificio 3/Casa-Duplicable-V4/BASE/Base"]
 transform = Transform3D(1, -2.10649e-35, 0, 2.10649e-35, 1, 1.05879e-22, 0, -1.05879e-22, 1, 0, 0, 1.91238e-30)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_c2lls")
 skeleton = NodePath("")
 
@@ -891,14 +881,12 @@ transform = Transform3D(-1, -2.10649e-35, 1.84271e-42, -2.10649e-35, 1, -8.74228
 [node name="Base2" type="MeshInstance3D" parent="edificio 3/Casa-Duplicable-V4/BASE2"]
 transform = Transform3D(1, 2.10649e-35, 0, -2.10649e-35, 1, 1.05879e-22, 0, -1.05879e-22, 1, 0, 1.11496e-15, 0.00685231)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_bmveo")
 skeleton = NodePath("")
 
 [node name="Ventanas y Puertas2" type="MeshInstance3D" parent="edificio 3/Casa-Duplicable-V4/BASE2/Base2"]
 transform = Transform3D(1, 2.10649e-35, 0, -2.10649e-35, 1, 1.05879e-22, 0, -1.05879e-22, 1, 0, 1.11496e-15, -1.48457e-15)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_tmirx")
 skeleton = NodePath("")
 
@@ -910,31 +898,26 @@ transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 
 
 [node name="BASE" type="MeshInstance3D" parent="edificio 4/Edificio-Primera-Esquina"]
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_258om")
 skeleton = NodePath("")
 
 [node name="Columnas2" type="MeshInstance3D" parent="edificio 4/Edificio-Primera-Esquina"]
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_kdfc6")
 skeleton = NodePath("")
 
 [node name="Pisos" type="MeshInstance3D" parent="edificio 4/Edificio-Primera-Esquina"]
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_d65n1")
 skeleton = NodePath("")
 
 [node name="PrimeraPlanta2" type="MeshInstance3D" parent="edificio 4/Edificio-Primera-Esquina"]
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_5juux")
 skeleton = NodePath("")
 
 [node name="Ventanas-Puertas" type="MeshInstance3D" parent="edificio 4/Edificio-Primera-Esquina"]
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_vpxvj")
 skeleton = NodePath("")
 

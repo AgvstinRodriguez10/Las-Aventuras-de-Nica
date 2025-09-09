@@ -106,18 +106,5 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 9.28459, 0, 223.695)
 
 [node name="Body" parent="Autos/Auto-2/Autito-v3" index="0"]
 transform = Transform3D(124.331, 0, 0, 0, 1.29477, 124.324, 0, -124.324, 1.29477, -0.000437438, -0.0172109, 0.00671396)
-visibility_range_end = 300.0
-
-[node name="Wheel_FL" parent="Autos/Auto-2/Autito-v3" index="1"]
-visibility_range_end = 300.0
-
-[node name="Wheel_FR" parent="Autos/Auto-2/Autito-v3" index="2"]
-visibility_range_end = 300.0
-
-[node name="Wheel_RL" parent="Autos/Auto-2/Autito-v3" index="3"]
-visibility_range_end = 300.0
-
-[node name="Wheel_RR" parent="Autos/Auto-2/Autito-v3" index="4"]
-visibility_range_end = 300.0
 
 [editable path="Autos/Auto-2"]

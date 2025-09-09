@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://djlnov41bncl8"]
+[gd_scene load_steps=44 format=3 uid="uid://djlnov41bncl8"]
 
 [ext_resource type="PackedScene" uid="uid://d33hm0kfvhtj3" path="res://Scenes/GUI/fps_count.tscn" id="1_1pvyk"]
 [ext_resource type="PackedScene" uid="uid://ikd1j0tjscug" path="res://Scenes/GUI/hud.tscn" id="1_by2pg"]
@@ -95,7 +95,7 @@ _data = {
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g3oxa"]
 sky_top_color = Color(0.689056, 0.689377, 0.681842, 1)
 sky_cover = ExtResource("9_psyr8")
-ground_curve = 1.47034
+ground_horizon_color = Color(0, 0.603922, 0.847059, 1)
 
 [sub_resource type="Sky" id="Sky_ombbc"]
 sky_material = SubResource("ProceduralSkyMaterial_g3oxa")
@@ -108,7 +108,6 @@ background_energy_multiplier = 0.7
 sky = SubResource("Sky_ombbc")
 
 [sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_psyr8"]
-frustum_far = 250.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g3oxa"]
 size = Vector3(17.7956, 3.13379, 1)
@@ -128,7 +127,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 3.14159, 0), Vector3(0, 4.01426, 0)]
+"values": [Vector3(0, 3.14159, 0), Vector3(0, 3.92699, 0)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -157,7 +156,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0.872665, 0)]
+"values": [Vector3(0, 0, 0), Vector3(0, 0.785398, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_psyr8"]
@@ -167,6 +166,163 @@ length = 0.001
 _data = {
 &"Giro": SubResource("Animation_ombbc"),
 &"RESET": SubResource("Animation_psyr8")
+}
+
+[sub_resource type="Animation" id="Animation_y76hn"]
+resource_name = "Giro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Nica:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 3.92699, 0), Vector3(0, 3.14159, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CameraFocus:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.785398, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Nica")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"reset_target_line"
+}, {
+"args": [],
+"method": &"actualizar_eje_local"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_lml7n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Nica:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 3.14159, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CameraFocus:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lml7n"]
+_data = {
+&"Giro": SubResource("Animation_y76hn"),
+&"RESET": SubResource("Animation_lml7n")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y76hn"]
+size = Vector3(15.7744, 5.87842, 1)
+
+[sub_resource type="Animation" id="Animation_ytmut"]
+resource_name = "Giro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Nica:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 3.14159, 0), Vector3(0, 4.71239, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Nica")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0666667, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"reset_target_line"
+}, {
+"args": [],
+"method": &"actualizar_eje_local"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../CameraFocus:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_llg4m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Nica:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 3.14159, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CameraFocus:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qggjr"]
+_data = {
+&"Giro": SubResource("Animation_ytmut"),
+&"RESET": SubResource("Animation_llg4m")
 }
 
 [node name="Main" type="Node3D"]
@@ -249,6 +405,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 99.266, -5, 708.944)
 
 [node name="CameraFocus" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 533.561)
 
 [node name="Camera3D" type="Camera3D" parent="CameraFocus"]
 transform = Transform3D(-0.999945, -0.0104718, -8.44833e-08, -0.0101197, 0.966323, 0.257133, -0.00269255, 0.257119, -0.966376, 0, 3.93963, -8.4115)
@@ -260,7 +417,7 @@ current = true
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -25.2382)
 
 [node name="Nica" parent="." instance=ExtResource("2_ntgcc")]
-transform = Transform3D(-0.5, 0, 1.26759e-06, 0, 0.5, 0, -1.26759e-06, 0, -0.5, 0, 0, 0)
+transform = Transform3D(-0.5, 0, 1.26759e-06, 0, 0.5, 0, -1.26759e-06, 0, -0.5, 0, 0, 533.561)
 
 [node name="Alert" type="Area3D" parent="Nica"]
 transform = Transform3D(-2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, 0, 0, 0)
@@ -578,12 +735,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0571282, -0.219, 206.782)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0571282, -0.219, 233.782)
 
 [node name="Giro" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 564.613)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 554.905)
 collision_layer = 64
 collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Giro"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.605957, 2.43921, 6.17487)
+[node name="Coll_Mitre" type="CollisionShape3D" parent="Giro"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.439, 0)
 shape = SubResource("BoxShape3D_ombbc")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Giro"]
@@ -591,11 +748,41 @@ libraries = {
 &"": SubResource("AnimationLibrary_8o8og")
 }
 
+[node name="GiroEscalinata" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.913, 2.439, 652.559)
+collision_layer = 64
+collision_mask = 2
+
+[node name="Coll_Escalinata" type="CollisionShape3D" parent="GiroEscalinata"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
+shape = SubResource("BoxShape3D_ombbc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GiroEscalinata"]
+libraries = {
+&"": SubResource("AnimationLibrary_lml7n")
+}
+
+[node name="GiroCostanera" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.266, -7.94148, 765.522)
+collision_layer = 64
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GiroCostanera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.296365, 0.0186157)
+shape = SubResource("BoxShape3D_y76hn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GiroCostanera"]
+libraries = {
+&"": SubResource("AnimationLibrary_qggjr")
+}
+
 [connection signal="body_entered" from="Dialogos/Area3D" to="Dialogos/Area3D" method="_on_body_entered"]
 [connection signal="timeout" from="Label/Timer" to="Label" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Nica/Alert" to="HUD" method="_on_alert_body_entered"]
 [connection signal="timeout" from="Nica/Alert/TimerAlert" to="HUD" method="_on_timer_alert_timeout"]
 [connection signal="body_entered" from="Giro" to="Nica" method="_on_giro_body_entered"]
+[connection signal="body_entered" from="GiroEscalinata" to="Nica" method="_on_giro_escalinata_body_entered"]
+[connection signal="body_entered" from="GiroCostanera" to="Nica" method="_on_giro_costanera_body_entered"]
 
 [editable path="Dialogos/DialogoDeInicio"]
 [editable path="Dialogos/Area3D/Dialogos"]
