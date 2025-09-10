@@ -672,6 +672,26 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 
 mesh = SubResource("ArrayMesh_ytn0u")
 skeleton = NodePath("")
 
+[node name="Plane5" type="MeshInstance3D" parent="CuadraSanNicolas2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -6.99289)
+mesh = SubResource("ArrayMesh_ytn0u")
+skeleton = NodePath("")
+
+[node name="Plane6" type="MeshInstance3D" parent="CuadraSanNicolas2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -8.99289)
+mesh = SubResource("ArrayMesh_ytn0u")
+skeleton = NodePath("")
+
+[node name="Plane7" type="MeshInstance3D" parent="CuadraSanNicolas2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -10.9786)
+mesh = SubResource("ArrayMesh_ytn0u")
+skeleton = NodePath("")
+
+[node name="Plane8" type="MeshInstance3D" parent="CuadraSanNicolas2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -12.9786)
+mesh = SubResource("ArrayMesh_ytn0u")
+skeleton = NodePath("")
+
 [node name="CuadraSanNicolas3" type="Node3D" parent="."]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 191.634, 0, 1111.05)
 
@@ -707,6 +727,12 @@ skeleton = NodePath("")
 
 [node name="Vereda_002" type="MeshInstance3D" parent="CuadraSanNicolas3"]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, 3.50005, 0.01, 28.5503)
+lod_bias = 0.001
+mesh = SubResource("ArrayMesh_xvmbs")
+skeleton = NodePath("")
+
+[node name="Vereda_003" type="MeshInstance3D" parent="CuadraSanNicolas3"]
+transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, 8.48118, 0.01, 28.5503)
 lod_bias = 0.001
 mesh = SubResource("ArrayMesh_xvmbs")
 skeleton = NodePath("")

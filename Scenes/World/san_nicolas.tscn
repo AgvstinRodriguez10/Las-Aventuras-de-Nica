@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dcmdpwf6w8opd"]
+[gd_scene load_steps=26 format=3 uid="uid://dcmdpwf6w8opd"]
 
 [ext_resource type="PackedScene" uid="uid://bxs55inw16h7x" path="res://Scenes/World/Calles/Cuadras (Completas)/b_mitre_400_350.tscn" id="1_i7jcd"]
 [ext_resource type="PackedScene" uid="uid://6vltpx4piqv4" path="res://Scenes/World/Calles/Cuadras (Completas)/b_mitre_350_300.tscn" id="2_86gof"]
@@ -19,12 +19,20 @@
 [ext_resource type="PackedScene" uid="uid://hwf8ullmcjf4" path="res://Scenes/World/Objetos/Carteles/Carteles-Calles/9deJulio.tscn" id="17_yjfyf"]
 [ext_resource type="PackedScene" uid="uid://2ic2321eg456" path="res://Scenes/World/Objetos/Carteles/Carteles-Calles/Francia.tscn" id="18_0p18o"]
 [ext_resource type="PackedScene" uid="uid://dj0ym6awon4au" path="res://Scenes/World/Objetos/Carteles/Carteles-Calles/DFSarmiento.tscn" id="19_0p18o"]
+[ext_resource type="PackedScene" uid="uid://b17ssv2tgs07m" path="res://Scenes/World/Objetos/Arbol.res" id="20_atd8f"]
+[ext_resource type="Script" uid="uid://b50df3hy3gm6i" path="res://Script/Objetos/ArbolesController.gd" id="20_iemyh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cmu8q"]
 size = Vector3(370.563, 1, 3398.56)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0p18o"]
 size = Vector3(54.114, 1, 65.133)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0p18o"]
+size = Vector3(90, 40, 50)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0p18o"]
+size = Vector2(62.26, 120.78)
 
 [node name="San Nicolas" type="Node3D"]
 
@@ -41,6 +49,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 197.52, 0, 1306.68)
 shape = SubResource("BoxShape3D_0p18o")
 
 [node name="B Mitre 400 350" parent="." instance=ExtResource("1_i7jcd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0461502, 0.0312576, 0.0747528)
 
 [node name="B Mitre 350 300" parent="." instance=ExtResource("2_86gof")]
 
@@ -88,7 +97,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119.277, 0, 1237.64)
 [node name="Ligth13" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 147.277, 0, 1251.64)
 
-[node name="Arboles" type="Node3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Plaza"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 256.568, 14.803, 1358.35)
+mesh = SubResource("BoxMesh_0p18o")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Plaza"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 272.362, 7.39244, 1270.64)
+mesh = SubResource("BoxMesh_0p18o")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Plaza"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 322.532, 7.39244, 1327.95)
+mesh = SubResource("PlaneMesh_0p18o")
 
 [node name="CartelesCalles" type="Node3D" parent="."]
 
@@ -124,3 +143,63 @@ transform = Transform3D(-5.24537e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.24537e-08, 
 
 [node name="Sarmiento" parent="CartelesCalles" instance=ExtResource("19_0p18o")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -37.7985, 6.96466, 1125.8)
+
+[node name="Arboles" type="Node3D" parent="."]
+script = ExtResource("20_iemyh")
+
+[node name="Arbol" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 11.8402, 0, 2.71661)
+
+[node name="Arbol2" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, -10.4801, 0, 63.8746)
+
+[node name="Arbol3" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 11.8402, 0, 90.8697)
+
+[node name="Arbol4" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 11.8402, 0, 202.369)
+
+[node name="Arbol5" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, -10.4801, 0, 247.144)
+
+[node name="Arbol6" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 11.8402, 0, 306.191)
+
+[node name="Arbol7" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, -10.7046, 0, 289.434)
+
+[node name="Arbol8" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 11.8402, 0, 377.277)
+
+[node name="Arbol9" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, -10.4801, 0, 438.435)
+
+[node name="Arbol10" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 11.8402, 0, 465.43)
+
+[node name="Arbol11" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(-0.1, -8.74228e-09, -3.82137e-16, 0, -4.37114e-09, 0.1, -8.74228e-09, 0.1, 4.37114e-09, -8.86439, 0, 569.22)
+
+[node name="Arbol12" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(-0.1, -8.74228e-09, -3.82137e-16, 0, -4.37114e-09, 0.1, -8.74228e-09, 0.1, 4.37114e-09, 8.73924, 0, 586.639)
+
+[node name="Arbol13" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(-0.1, -8.74228e-09, -3.82137e-16, 0, -4.37114e-09, 0.1, -8.74228e-09, 0.1, 4.37114e-09, -10.025, 0, 676.386)
+
+[node name="Arbol14" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, -1.50996e-08, 0.1, 4.37114e-09, 9.47993, 0, 776.618)
+
+[node name="Arbol15" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, -1.50996e-08, 0.1, 4.37114e-09, -9.78722, 0, 819.962)
+
+[node name="Arbol16" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, -1.50996e-08, 0.1, 4.37114e-09, 9.21201, 0, 864.144)
+
+[node name="Arbol17" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, -1.50996e-08, 0.1, 4.37114e-09, 9.47993, 0, 982.975)
+
+[node name="Arbol18" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, -1.50996e-08, 0.1, 4.37114e-09, -9.78722, 0, 1001.12)
+
+[node name="Arbol19" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, -1.50996e-08, 0.1, 4.37114e-09, 9.21201, 0, 1057.06)

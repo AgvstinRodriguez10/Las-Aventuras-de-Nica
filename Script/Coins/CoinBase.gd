@@ -4,7 +4,7 @@ class_name CoinBase
 @onready var userInterface:UI = $"../../HUD"
 @onready var collision:CollisionShape3D = $CollisionShape3D
 
-var distUp = 4
+var distUp = 3
 var posInitial: Vector3
 var idleDistUp = 1.3
 var targetHeight 
