@@ -147,59 +147,54 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -37.79
 [node name="Arboles" type="Node3D" parent="."]
 script = ExtResource("20_iemyh")
 
-[node name="Arbol" parent="Arboles" instance=ExtResource("20_atd8f")]
-transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 11.8402, 0, 2.71661)
+[node name="ETQ_der" type="Node3D" parent="Arboles"]
 
 [node name="Arbol2" parent="Arboles" instance=ExtResource("20_atd8f")]
-transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, -10.4801, 0, 63.8746)
-
-[node name="Arbol3" parent="Arboles" instance=ExtResource("20_atd8f")]
-transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 11.8402, 0, 90.8697)
-
-[node name="Arbol4" parent="Arboles" instance=ExtResource("20_atd8f")]
-transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 11.8402, 0, 202.369)
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, -8, 0, 49.6028)
 
 [node name="Arbol5" parent="Arboles" instance=ExtResource("20_atd8f")]
-transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, -10.4801, 0, 247.144)
-
-[node name="Arbol6" parent="Arboles" instance=ExtResource("20_atd8f")]
-transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 11.8402, 0, 306.191)
-
-[node name="Arbol7" parent="Arboles" instance=ExtResource("20_atd8f")]
-transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, -10.7046, 0, 289.434)
-
-[node name="Arbol8" parent="Arboles" instance=ExtResource("20_atd8f")]
-transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 11.8402, 0, 377.277)
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, -8, 0, 247.144)
 
 [node name="Arbol9" parent="Arboles" instance=ExtResource("20_atd8f")]
-transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, -10.4801, 0, 438.435)
-
-[node name="Arbol10" parent="Arboles" instance=ExtResource("20_atd8f")]
-transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 11.8402, 0, 465.43)
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, -8, 0, 409.453)
 
 [node name="Arbol11" parent="Arboles" instance=ExtResource("20_atd8f")]
-transform = Transform3D(-0.1, -8.74228e-09, -3.82137e-16, 0, -4.37114e-09, 0.1, -8.74228e-09, 0.1, 4.37114e-09, -8.86439, 0, 569.22)
-
-[node name="Arbol12" parent="Arboles" instance=ExtResource("20_atd8f")]
-transform = Transform3D(-0.1, -8.74228e-09, -3.82137e-16, 0, -4.37114e-09, 0.1, -8.74228e-09, 0.1, 4.37114e-09, 8.73924, 0, 586.639)
+transform = Transform3D(-0.1, -8.74228e-09, -3.82137e-16, 0, -4.37114e-09, 0.1, -8.74228e-09, 0.1, 4.37114e-09, -8, 0, 569.22)
 
 [node name="Arbol13" parent="Arboles" instance=ExtResource("20_atd8f")]
-transform = Transform3D(-0.1, -8.74228e-09, -3.82137e-16, 0, -4.37114e-09, 0.1, -8.74228e-09, 0.1, 4.37114e-09, -10.025, 0, 676.386)
-
-[node name="Arbol14" parent="Arboles" instance=ExtResource("20_atd8f")]
-transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, -1.50996e-08, 0.1, 4.37114e-09, 9.47993, 0, 776.618)
+transform = Transform3D(-0.1, -8.74228e-09, -3.82137e-16, 0, -4.37114e-09, 0.1, -8.74228e-09, 0.1, 4.37114e-09, -8, 0, 663.396)
 
 [node name="Arbol15" parent="Arboles" instance=ExtResource("20_atd8f")]
-transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, -1.50996e-08, 0.1, 4.37114e-09, -9.78722, 0, 819.962)
-
-[node name="Arbol16" parent="Arboles" instance=ExtResource("20_atd8f")]
-transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, -1.50996e-08, 0.1, 4.37114e-09, 9.21201, 0, 864.144)
+transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, -1.50996e-08, 0.1, 4.37114e-09, -8, 0, 806.128)
 
 [node name="Arbol17" parent="Arboles" instance=ExtResource("20_atd8f")]
-transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, -1.50996e-08, 0.1, 4.37114e-09, 9.47993, 0, 982.975)
-
-[node name="Arbol18" parent="Arboles" instance=ExtResource("20_atd8f")]
-transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, -1.50996e-08, 0.1, 4.37114e-09, -9.78722, 0, 1001.12)
+transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, -1.50996e-08, 0.1, 4.37114e-09, -8, 0, 982.975)
 
 [node name="Arbol19" parent="Arboles" instance=ExtResource("20_atd8f")]
-transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, -1.50996e-08, 0.1, 4.37114e-09, 9.21201, 0, 1057.06)
+transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, -1.50996e-08, 0.1, 4.37114e-09, -8, 0, 1086.8)
+
+[node name="ETQ_izq" type="Node3D" parent="Arboles"]
+
+[node name="Arbol" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 8, 0, 2.71661)
+
+[node name="Arbol3" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 8, 0, 102.129)
+
+[node name="Arbol4" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 8, 0, 188.344)
+
+[node name="Arbol6" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 8, 0, 306.191)
+
+[node name="Arbol10" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 8, 0, 453.149)
+
+[node name="Arbol12" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(-0.1, -8.74228e-09, -3.82137e-16, 0, -4.37114e-09, 0.1, -8.74228e-09, 0.1, 4.37114e-09, 8, 0, 570.755)
+
+[node name="Arbol14" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, -1.50996e-08, 0.1, 4.37114e-09, 8, 0, 776.618)
+
+[node name="Arbol16" parent="Arboles" instance=ExtResource("20_atd8f")]
+transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, -1.50996e-08, 0.1, 4.37114e-09, 8, 0, 866.121)

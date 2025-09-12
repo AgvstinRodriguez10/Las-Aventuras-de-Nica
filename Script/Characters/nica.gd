@@ -40,6 +40,8 @@ var powerUpDuration:Dictionary = {
 	"ABOSRBCOIN": 2
 }
 
+const percentSpeedUp:int = 60
+
 var frontalCamIsActive = false
 var frontalCamDuration = 7
 
@@ -184,7 +186,7 @@ func powerUpActive():
 			#reinicia todos los valores
 			velocity_z = baseVelocity
 		POWERUPSTATE.SPEEDUP:
-			velocity_z = velocity_z * 2
+			velocity_z = velocity_z + (velocity_z * percentSpeedUp / 100)
 			durationPowerUp = powerUpDuration.SPEEDUP
 		POWERUPSTATE.ABOSRBCOIN:
 			durationPowerUp = powerUpDuration.ABOSRBCOIN

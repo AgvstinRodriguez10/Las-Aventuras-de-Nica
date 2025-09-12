@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://4vitstolrp7f"]
+[gd_scene load_steps=8 format=3 uid="uid://4vitstolrp7f"]
 
 [ext_resource type="PackedScene" uid="uid://dm31dfumplcgo" path="res://Scenes/World/Calles/CuadraSanNicolasDarsenas.tscn" id="1_0hgdq"]
 [ext_resource type="PackedScene" uid="uid://chnyromppmhsm" path="res://Scenes/World/Calles/Cuadra - 3/izq.tscn" id="2_1hg1j"]
 [ext_resource type="PackedScene" uid="uid://bld018yr76wid" path="res://Scenes/World/Calles/Cuadra - 3/der.tscn" id="3_3qry3"]
 [ext_resource type="PackedScene" uid="uid://daqotynvcl1u2" path="res://Assets/San Nicolas/Object/Decoración/BalaCalle.tscn" id="4_2esqa"]
 [ext_resource type="PackedScene" uid="uid://crcmb22kteijj" path="res://Scenes/World/Objetos/LigthSinLigth.tscn" id="4_3qry3"]
+[ext_resource type="PackedScene" uid="uid://l4xmyxlvt4h5" path="res://Assets/Objetos/CartelesSN/cartel_taxi_sn.glb" id="5_3qry3"]
+[ext_resource type="PackedScene" uid="uid://b5f0d4bxhwlvs" path="res://Assets/Objetos/CartelesSN/cartel_farol_prohibido.glb" id="6_2esqa"]
 
 [node name="B Mitre 300 250" type="Node3D"]
 
@@ -28,7 +30,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 250.784)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.06898, 0, 224.595)
 
 [node name="LigthSinLigth2" parent="Decoraciones/Faroles/Izq" instance=ExtResource("4_3qry3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.06898, 0, 120.595)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.06898, 0, 139.26)
+
+[node name="cartel_taxi_sn" parent="Decoraciones/Faroles/Izq/LigthSinLigth2" instance=ExtResource("5_3qry3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.39258, 4.5, 0)
 
 [node name="Der" type="Node3D" parent="Decoraciones/Faroles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 250.784)
@@ -38,6 +43,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.93102, 0, 254.949)
 
 [node name="LigthSinLigth2" parent="Decoraciones/Faroles/Der" instance=ExtResource("4_3qry3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.93102, 0, 149.826)
+
+[node name="LigthSinLigth3" parent="Decoraciones/Faroles/Der" instance=ExtResource("4_3qry3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.93102, 0, 192.448)
+
+[node name="cartel_farol_prohibido" parent="Decoraciones/Faroles/Der/LigthSinLigth3" instance=ExtResource("6_2esqa")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.82, 4.5, 0)
 
 [node name="Balas" type="Node3D" parent="Decoraciones"]
 

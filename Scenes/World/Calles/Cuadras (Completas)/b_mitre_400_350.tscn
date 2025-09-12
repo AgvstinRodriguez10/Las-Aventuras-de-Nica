@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bjyktxltm0o4s" path="res://Scenes/World/Calles/Cuadra - 1/der.tscn" id="5_gcjee"]
 [ext_resource type="PackedScene" uid="uid://bkkyuo0eactnv" path="res://Scenes/World/Calles/Cuadra - 1/izq.tscn" id="6_xr1vn"]
 [ext_resource type="PackedScene" uid="uid://crcmb22kteijj" path="res://Scenes/World/Objetos/LigthSinLigth.tscn" id="6_yf1g7"]
-[ext_resource type="PackedScene" uid="uid://ddxfwdprrlewj" path="res://Assets/Objetos/CartelesSN/cartel-estacionamiento.glb" id="7_yf1g7"]
+[ext_resource type="PackedScene" uid="uid://b5f0d4bxhwlvs" path="res://Assets/Objetos/CartelesSN/cartel_farol_prohibido.glb" id="7_yf1g7"]
 [ext_resource type="PackedScene" uid="uid://by26dey3n4ca" path="res://Assets/San Nicolas/Object/Autos/Auto-1.tscn" id="8_4j01m"]
 [ext_resource type="PackedScene" uid="uid://daqotynvcl1u2" path="res://Assets/San Nicolas/Object/Decoración/BalaCalle.tscn" id="9_eddye"]
 
@@ -459,8 +459,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.02988, 0, -4.5803)
 [node name="LigthSinLigth3" parent="Decoraciónes/Faroles/Izq" instance=ExtResource("6_yf1g7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.03447, 0, 79.5343)
 
-[node name="cartel-estacionamiento" parent="Decoraciónes/Faroles/Izq/LigthSinLigth3" instance=ExtResource("7_yf1g7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.52934, -0.816109)
+[node name="cartel_farol_prohibido" parent="Decoraciónes/Faroles/Izq/LigthSinLigth3" instance=ExtResource("7_yf1g7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.819987, 4.5, 0)
 
 [node name="LigthSinLigth4" parent="Decoraciónes/Faroles/Izq" instance=ExtResource("6_yf1g7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.03447, 0, 123.37)

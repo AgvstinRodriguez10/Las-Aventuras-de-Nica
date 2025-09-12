@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ddxfwdprrlewj"
-path="res://.godot/imported/cartel-estacionamiento.glb-42af5521c9f1f8b1015a948913d15eb6.scn"
+uid="uid://l4xmyxlvt4h5"
+path="res://.godot/imported/cartel_taxi_sn.glb-88d56d59c31e3bbed96fe434c323ebfb.scn"
 
 [deps]
 
-source_file="res://Assets/Objetos/CartelesSN/cartel-estacionamiento.glb"
-dest_files=["res://.godot/imported/cartel-estacionamiento.glb-42af5521c9f1f8b1015a948913d15eb6.scn"]
+source_file="res://Assets/Objetos/CartelesSN/cartel_taxi_sn.glb"
+dest_files=["res://.godot/imported/cartel_taxi_sn.glb-88d56d59c31e3bbed96fe434c323ebfb.scn"]
 
 [params]
 

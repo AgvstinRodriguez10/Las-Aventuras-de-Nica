@@ -1,9 +1,11 @@
-[gd_scene load_steps=47 format=4 uid="uid://cqh3220s635ah"]
+[gd_scene load_steps=53 format=4 uid="uid://cqh3220s635ah"]
 
 [ext_resource type="Material" uid="uid://sfntlht18jy4" path="res://Resource/Materials/Calles/Vereda.tres" id="1_f51fo"]
 [ext_resource type="Material" uid="uid://fjppst14hsn" path="res://Resource/Materials/Calles/CalleCostanera.tres" id="1_q2v7p"]
 [ext_resource type="Texture2D" uid="uid://btjfrdy8l40h7" path="res://Assets/San Nicolas/Costanera/ESCALERAS DEL REGATAS_ricocartelYESCALINATA-03.png" id="3_1y5l7"]
 [ext_resource type="Texture2D" uid="uid://bimm4j2o2rqu4" path="res://Assets/San Nicolas/Costanera/ESCALERAS DEL REGATAS_ricocartel-01-03-03 (1).png" id="4_3wfy4"]
+[ext_resource type="Texture2D" uid="uid://d4ed8x7i8hjeh" path="res://Assets/Objetos/Decoration/baranda.png" id="4_26w5c"]
+[ext_resource type="Texture2D" uid="uid://b3dsvvy5hd8ct" path="res://Assets/Objetos/Decoration/pasto_escalera_regatas.png" id="4_qg183"]
 [ext_resource type="PackedScene" uid="uid://c8xxr7s1712jo" path="res://Assets/Objetos/Decoration/Calistenia.fbx" id="5_agykn"]
 [ext_resource type="PackedScene" uid="uid://cokm61aofsqpb" path="res://Scenes/World/Objetos/Carteles/Cartel-1.tscn" id="6_qy66f"]
 [ext_resource type="PackedScene" uid="uid://clov32uairbxm" path="res://Scenes/World/Objetos/Carteles/Cartel-2.tscn" id="7_26w5c"]
@@ -632,6 +634,21 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_f2weh")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qy66f"]
+albedo_color = Color(0.0862745, 0.27451, 0, 1)
+albedo_texture = ExtResource("4_qg183")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qy66f"]
+size = Vector2(7, 2.95)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qg183"]
+transparency = 1
+albedo_texture = ExtResource("4_26w5c")
+texture_repeat = false
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_26w5c"]
+size = Vector2(2.5, 1.8)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gxlqe"]
 resource_name = "Material.003"
 cull_mode = 2
@@ -722,10 +739,154 @@ transform = Transform3D(-7.56, 0, -3.69504e-06, 0, 7.56, 0, 2.46336e-06, 0, -11.
 mesh = SubResource("ArrayMesh_d3cj6")
 skeleton = NodePath("")
 
-[node name="Plane_002" type="MeshInstance3D" parent="."]
+[node name="escalinata" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9253, 0.627592, 0.459346)
 mesh = SubResource("ArrayMesh_ufysm")
 skeleton = NodePath("")
+
+[node name="Pasto" type="MeshInstance3D" parent="escalinata"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5784, 0.379557, 3.88594)
+material_override = SubResource("StandardMaterial3D_qy66f")
+mesh = SubResource("PlaneMesh_qy66f")
+
+[node name="Pasto2" type="MeshInstance3D" parent="escalinata"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5784, 0.379557, -3.85497)
+material_override = SubResource("StandardMaterial3D_qy66f")
+mesh = SubResource("PlaneMesh_qy66f")
+
+[node name="Pasto3" type="MeshInstance3D" parent="escalinata"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.14499, -1.59662, 3.88594)
+material_override = SubResource("StandardMaterial3D_qy66f")
+mesh = SubResource("PlaneMesh_qy66f")
+
+[node name="Pasto4" type="MeshInstance3D" parent="escalinata"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.14499, -1.59662, -3.85497)
+material_override = SubResource("StandardMaterial3D_qy66f")
+mesh = SubResource("PlaneMesh_qy66f")
+
+[node name="Pasto5" type="MeshInstance3D" parent="escalinata"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.209538, -3.54134, 3.88594)
+material_override = SubResource("StandardMaterial3D_qy66f")
+mesh = SubResource("PlaneMesh_qy66f")
+
+[node name="Pasto6" type="MeshInstance3D" parent="escalinata"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.209538, -3.54134, -3.85497)
+material_override = SubResource("StandardMaterial3D_qy66f")
+mesh = SubResource("PlaneMesh_qy66f")
+
+[node name="Rejas" type="Node3D" parent="escalinata"]
+
+[node name="Izq" type="Node3D" parent="escalinata/Rejas"]
+
+[node name="Rejas1" type="MeshInstance3D" parent="escalinata/Rejas/Izq"]
+transform = Transform3D(-4.60689e-08, 0.99846, 0.055473, 4.12193e-08, 0.055473, -0.99846, -1, -4.37114e-08, -4.37114e-08, 19.8867, 1.28603, 3.61776)
+material_override = SubResource("StandardMaterial3D_qg183")
+mesh = SubResource("PlaneMesh_26w5c")
+skeleton = NodePath("../../..")
+
+[node name="Rejas5" type="MeshInstance3D" parent="escalinata/Rejas/Izq"]
+transform = Transform3D(-0.998662, -8.73058e-08, 0.0517084, -0.0517084, -4.5205e-09, -0.998662, 8.74228e-08, -1, 1.91069e-15, 18.4628, 1.19851, 2.38931)
+material_override = SubResource("StandardMaterial3D_qg183")
+mesh = SubResource("PlaneMesh_26w5c")
+skeleton = NodePath("../../..")
+
+[node name="Rejas6" type="MeshInstance3D" parent="escalinata/Rejas/Izq"]
+transform = Transform3D(-0.998662, -8.73058e-08, 0.0517084, -0.0517084, -4.5205e-09, -0.998662, 8.74228e-08, -1, 1.91069e-15, 15.8916, 1.06538, 2.38931)
+material_override = SubResource("StandardMaterial3D_qg183")
+mesh = SubResource("PlaneMesh_26w5c")
+skeleton = NodePath("../../..")
+
+[node name="Rejas2" type="MeshInstance3D" parent="escalinata/Rejas/Izq"]
+transform = Transform3D(-4.60689e-08, 0.99846, 0.055473, 4.12193e-08, 0.055473, -0.99846, -1, -4.37114e-08, -4.37114e-08, 11.3583, -0.70663, 3.61776)
+material_override = SubResource("StandardMaterial3D_qg183")
+mesh = SubResource("PlaneMesh_26w5c")
+skeleton = NodePath("../../..")
+
+[node name="Rejas7" type="MeshInstance3D" parent="escalinata/Rejas/Izq"]
+transform = Transform3D(-0.998662, -8.73058e-08, 0.0517084, -0.0517084, -4.5205e-09, -0.998662, 8.74228e-08, -1, 1.91069e-15, 9.93437, -0.794144, 2.38931)
+material_override = SubResource("StandardMaterial3D_qg183")
+mesh = SubResource("PlaneMesh_26w5c")
+skeleton = NodePath("../../..")
+
+[node name="Rejas8" type="MeshInstance3D" parent="escalinata/Rejas/Izq"]
+transform = Transform3D(-0.998662, -8.73058e-08, 0.0517084, -0.0517084, -4.5205e-09, -0.998662, 8.74228e-08, -1, 1.91069e-15, 7.36315, -0.927276, 2.38931)
+material_override = SubResource("StandardMaterial3D_qg183")
+mesh = SubResource("PlaneMesh_26w5c")
+skeleton = NodePath("../../..")
+
+[node name="Rejas3" type="MeshInstance3D" parent="escalinata/Rejas/Izq"]
+transform = Transform3D(-4.60689e-08, 0.99846, 0.055473, 4.12193e-08, 0.055473, -0.99846, -1, -4.37114e-08, -4.37114e-08, 2.69023, -2.76057, 3.61776)
+material_override = SubResource("StandardMaterial3D_qg183")
+mesh = SubResource("PlaneMesh_26w5c")
+skeleton = NodePath("../../..")
+
+[node name="Rejas9" type="MeshInstance3D" parent="escalinata/Rejas/Izq"]
+transform = Transform3D(-0.998662, -8.73058e-08, 0.0517084, -0.0517084, -4.5205e-09, -0.998662, 8.74228e-08, -1, 1.91069e-15, 1.26632, -2.84808, 2.38931)
+material_override = SubResource("StandardMaterial3D_qg183")
+mesh = SubResource("PlaneMesh_26w5c")
+skeleton = NodePath("../../..")
+
+[node name="Rejas10" type="MeshInstance3D" parent="escalinata/Rejas/Izq"]
+transform = Transform3D(-0.998662, -8.73058e-08, 0.0517084, -0.0517084, -4.5205e-09, -0.998662, 8.74228e-08, -1, 1.91069e-15, -1.3049, -2.98121, 2.38931)
+material_override = SubResource("StandardMaterial3D_qg183")
+mesh = SubResource("PlaneMesh_26w5c")
+skeleton = NodePath("../../..")
+
+[node name="Der" type="Node3D" parent="escalinata/Rejas"]
+
+[node name="Rejas2" type="MeshInstance3D" parent="escalinata/Rejas/Der"]
+transform = Transform3D(-4.37114e-08, 0.998441, 0.0558215, 0, 0.0558215, -0.998441, -1, -4.36432e-08, -2.44004e-09, 19.8867, 1.28603, -3.65711)
+material_override = SubResource("StandardMaterial3D_qg183")
+mesh = SubResource("PlaneMesh_26w5c")
+skeleton = NodePath("../../..")
+
+[node name="Rejas3" type="MeshInstance3D" parent="escalinata/Rejas/Der"]
+transform = Transform3D(0.999142, -7.91449e-17, 0.0414223, 0.0414223, 1.90905e-15, -0.999142, 0, 1, 1.91069e-15, 18.3001, 1.09216, -2.35352)
+material_override = SubResource("StandardMaterial3D_qg183")
+mesh = SubResource("PlaneMesh_26w5c")
+skeleton = NodePath("../../..")
+
+[node name="Rejas4" type="MeshInstance3D" parent="escalinata/Rejas/Der"]
+transform = Transform3D(0.999142, -7.91449e-17, 0.0414223, 0.0414223, 1.90905e-15, -0.999142, 0, 1, 1.91069e-15, 15.7708, 0.987303, -2.35352)
+material_override = SubResource("StandardMaterial3D_qg183")
+mesh = SubResource("PlaneMesh_26w5c")
+skeleton = NodePath("../../..")
+
+[node name="Rejas5" type="MeshInstance3D" parent="escalinata/Rejas/Der"]
+transform = Transform3D(-4.37114e-08, 0.998441, 0.0558215, 0, 0.0558215, -0.998441, -1, -4.36432e-08, -2.44004e-09, 11.2329, -0.645103, -3.65711)
+material_override = SubResource("StandardMaterial3D_qg183")
+mesh = SubResource("PlaneMesh_26w5c")
+skeleton = NodePath("../../..")
+
+[node name="Rejas6" type="MeshInstance3D" parent="escalinata/Rejas/Der"]
+transform = Transform3D(0.999142, -7.91449e-17, 0.0414223, 0.0414223, 1.90905e-15, -0.999142, 0, 1, 1.91069e-15, 9.64627, -0.83897, -2.35352)
+material_override = SubResource("StandardMaterial3D_qg183")
+mesh = SubResource("PlaneMesh_26w5c")
+skeleton = NodePath("../../..")
+
+[node name="Rejas7" type="MeshInstance3D" parent="escalinata/Rejas/Der"]
+transform = Transform3D(0.999142, -7.91449e-17, 0.0414223, 0.0414223, 1.90905e-15, -0.999142, 0, 1, 1.91069e-15, 7.11699, -0.943829, -2.35352)
+material_override = SubResource("StandardMaterial3D_qg183")
+mesh = SubResource("PlaneMesh_26w5c")
+skeleton = NodePath("../../..")
+
+[node name="Rejas8" type="MeshInstance3D" parent="escalinata/Rejas/Der"]
+transform = Transform3D(-4.37114e-08, 0.998441, 0.0558215, 0, 0.0558215, -0.998441, -1, -4.36432e-08, -2.44004e-09, 2.6832, -2.77279, -3.65711)
+material_override = SubResource("StandardMaterial3D_qg183")
+mesh = SubResource("PlaneMesh_26w5c")
+skeleton = NodePath("../../..")
+
+[node name="Rejas9" type="MeshInstance3D" parent="escalinata/Rejas/Der"]
+transform = Transform3D(0.999142, -7.91449e-17, 0.0414223, 0.0414223, 1.90905e-15, -0.999142, 0, 1, 1.91069e-15, 1.09662, -2.96666, -2.35352)
+material_override = SubResource("StandardMaterial3D_qg183")
+mesh = SubResource("PlaneMesh_26w5c")
+skeleton = NodePath("../../..")
+
+[node name="Rejas10" type="MeshInstance3D" parent="escalinata/Rejas/Der"]
+transform = Transform3D(0.999142, -7.91449e-17, 0.0414223, 0.0414223, 1.90905e-15, -0.999142, 0, 1, 1.91069e-15, -1.43266, -3.07151, -2.35352)
+material_override = SubResource("StandardMaterial3D_qg183")
+mesh = SubResource("PlaneMesh_26w5c")
+skeleton = NodePath("../../..")
 
 [node name="Plane_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.931, 1, 160.004)

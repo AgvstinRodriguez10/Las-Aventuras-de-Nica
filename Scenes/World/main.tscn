@@ -1,9 +1,10 @@
-[gd_scene load_steps=44 format=3 uid="uid://djlnov41bncl8"]
+[gd_scene load_steps=45 format=3 uid="uid://djlnov41bncl8"]
 
 [ext_resource type="PackedScene" uid="uid://d33hm0kfvhtj3" path="res://Scenes/GUI/fps_count.tscn" id="1_1pvyk"]
 [ext_resource type="PackedScene" uid="uid://ikd1j0tjscug" path="res://Scenes/GUI/hud.tscn" id="1_by2pg"]
 [ext_resource type="PackedScene" uid="uid://dcmdpwf6w8opd" path="res://Scenes/World/san_nicolas.tscn" id="1_n1kio"]
 [ext_resource type="PackedScene" uid="uid://dngf56sh7pjqo" path="res://Scenes/GUI/pause_menu.tscn" id="1_wpgpo"]
+[ext_resource type="Script" uid="uid://rt61ajvdfypx" path="res://Script/game_controller.gd" id="1_y76hn"]
 [ext_resource type="Script" uid="uid://pvrbshktn0cf" path="res://Script/Dialogos/Dialogo-1.gd" id="2_cu8p5"]
 [ext_resource type="PackedScene" uid="uid://6h6e464pgrsa" path="res://Scenes/GUI/danger_alert.tscn" id="2_g3oxa"]
 [ext_resource type="PackedScene" uid="uid://bg2ova3uojcc0" path="res://Scenes/Characters/nica.tscn" id="2_ntgcc"]
@@ -318,6 +319,9 @@ _data = {
 }
 
 [node name="Main" type="Node3D"]
+
+[node name="GameController" type="Node3D" parent="."]
+script = ExtResource("1_y76hn")
 
 [node name="Dialogos" type="Node3D" parent="."]
 

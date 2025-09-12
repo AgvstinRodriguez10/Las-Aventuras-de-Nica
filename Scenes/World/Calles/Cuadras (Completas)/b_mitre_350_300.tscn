@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://crcmb22kteijj" path="res://Scenes/World/Objetos/LigthSinLigth.tscn" id="4_s2mi4"]
 [ext_resource type="PackedScene" uid="uid://daqotynvcl1u2" path="res://Assets/San Nicolas/Object/Decoración/BalaCalle.tscn" id="4_upp1v"]
 [ext_resource type="PackedScene" uid="uid://c2ekbe2jv24w7" path="res://Assets/San Nicolas/Object/Autos/Auto-2.fbx" id="5_cykjn"]
-[ext_resource type="PackedScene" uid="uid://ddxfwdprrlewj" path="res://Assets/Objetos/CartelesSN/cartel-estacionamiento.glb" id="5_s2mi4"]
+[ext_resource type="PackedScene" uid="uid://b5f0d4bxhwlvs" path="res://Assets/Objetos/CartelesSN/cartel_farol_prohibido.glb" id="5_s2mi4"]
 
 [node name="B Mitre 350 300" type="Node3D"]
 
@@ -34,8 +34,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.02988, 0, 7.44406)
 [node name="LigthSinLigth2" parent="Decoraciónes/Faroles/Izq" instance=ExtResource("4_s2mi4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.02988, 0, 66.4441)
 
-[node name="cartel-estacionamiento" parent="Decoraciónes/Faroles/Izq/LigthSinLigth2" instance=ExtResource("5_s2mi4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.75619, -0.792603)
+[node name="cartel_farol_prohibido" parent="Decoraciónes/Faroles/Izq/LigthSinLigth2" instance=ExtResource("5_s2mi4")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.819987, 4.5, 0)
 
 [node name="LigthSinLigth3" parent="Decoraciónes/Faroles/Izq" instance=ExtResource("4_s2mi4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.02988, 0, 126.444)
