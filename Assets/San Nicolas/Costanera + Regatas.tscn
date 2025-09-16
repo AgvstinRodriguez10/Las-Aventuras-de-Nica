@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=4 uid="uid://cqh3220s635ah"]
+[gd_scene load_steps=55 format=4 uid="uid://cqh3220s635ah"]
 
 [ext_resource type="Material" uid="uid://sfntlht18jy4" path="res://Resource/Materials/Calles/Vereda.tres" id="1_f51fo"]
 [ext_resource type="Material" uid="uid://fjppst14hsn" path="res://Resource/Materials/Calles/CalleCostanera.tres" id="1_q2v7p"]
@@ -9,8 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://c8xxr7s1712jo" path="res://Assets/Objetos/Decoration/Calistenia.fbx" id="5_agykn"]
 [ext_resource type="PackedScene" uid="uid://cokm61aofsqpb" path="res://Scenes/World/Objetos/Carteles/Cartel-1.tscn" id="6_qy66f"]
 [ext_resource type="PackedScene" uid="uid://clov32uairbxm" path="res://Scenes/World/Objetos/Carteles/Cartel-2.tscn" id="7_26w5c"]
+[ext_resource type="PackedScene" uid="uid://d13rf38gehy5" path="res://Scenes/World/Objetos/Ligth.tscn" id="7_odni6"]
 [ext_resource type="PackedScene" uid="uid://bl7juva62gltw" path="res://Scenes/World/Objetos/Carteles/Cartel-3.tscn" id="8_qg183"]
 [ext_resource type="PackedScene" uid="uid://br18evv225rx2" path="res://Scenes/World/Objetos/Carteles/Cartel-4.tscn" id="9_cwpyi"]
+[ext_resource type="PackedScene" uid="uid://ddq3likg3gvtl" path="res://Scenes/World/Objetos/light_wall.tscn" id="12_cwpyi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qg183"]
 size = Vector3(6.82077, 1, 12.0031)
@@ -573,36 +575,14 @@ shadow_mesh = SubResource("ArrayMesh_ffrtc")
 resource_name = "Texture"
 cull_mode = 2
 albedo_texture = ExtResource("3_1y5l7")
+metallic_specular = 0.27
+roughness = 0.58
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_70d52"]
 resource_name = "Material.002"
 cull_mode = 2
 albedo_color = Color(0.368626, 0.317647, 0, 1)
-roughness = 0.5
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_f2weh"]
-_surfaces = [{
-"aabb": AABB(-25.4044, -5.64457, -6.0722, 50, 11.5, 12),
-"format": 34896613377,
-"index_count": 129,
-"index_data": PackedByteArray("AAABAAIAAAADAAIAAAAEAAMABQAAAAIABgAEAAAABgAHAAQACAAHAAYACAAJAAcACAAKAAkACAALAAoACAALAAwACAAMAA0ACAANAA4ADwAMAA0ADwAQAAwAEQAPAA0AEQASAA8AEwASABEAEwAUABIAEwAUABUABQAWABQABQAUABMAEwAFABcABQATAAAAAAATABgAAAAYABkAEwAVABoAAAAbAAEAGgAbABwAGgAcAB0AGgAeABsAGgAfAB4AIAAeAB8AIAAfACEAGwAiACMAGwAjACQAJQAmACcAJQAoACYAKQAqACsAKQAsACoALQAuAC8ALQAwAC4AMQAyADMA"),
-"name": "Texture",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 52,
-"vertex_data": PackedByteArray("ZmYAAKnqAAAAAJreqeoAAAAAAACp6gAAAAAAAP//AABmZgAA//8AAAAAAABVFQAAwfUAAKnqAADB9QAA//8AAOD6AACp6gAA4PoAAP//AAD//wAA//8AAP//AACp6gAA//8AAFUVAADg+gAAVRUAAOD6mt5VFQAA4PoAAAAAAAD//wAAAAAAAMH1AABVFQAAwfUAAAAAAABmZgAAVRUAAGZmAAAAAAAAZmaa3gAAAAAAAAAAAAAAAAAAmt5VFQAAZmYhC1UVAABmZiELqeoAAGZmmt5VFQAAZmaa3qnqAABmZv//qeoAAGZm//9VFQAAZmZYyKnqAABmZljIVRUAAAAAWMip6gAAAABYyFUVAADB9ZreqeoAAMH1mt7//wAAZmaa3v//AAD1aCELqeoAAPVoQhZVFQAA9WhCFqnqAAD1aCELVRUAAIRrQhap6gAAhGtkIVUVAACEa2QhqeoAAIRrQhZVFQAAFG5kIanqAAAUboUsVRUAABRuhSyp6gAAFG5kIVUVAADg+preqeoAAEdhmt6p6gAAR2Ga3v//AAA=")
-}, {
-"aabb": AABB(-25.4044, -5.64457, -6.0722, 50, 11.5, 12),
-"format": 34896613377,
-"index_count": 429,
-"index_data": PackedByteArray("AAABAAIAAQADAAQAAQAEAAIABQACAAAAAAAGAAUAAgAHAAgAAgAIAAkAAAACAAkAAAAJAAoAAAALAAYACwAGAAwACwANAAwACwAAAA4AAAAPAAEACwAOABAADQALABAADQAQABEADwASAAEAEwABABIAEwASABQADwAVABIAFgANABEAFgARABcAFgAXABgADQAWABkAFgAYABoADQAZABsAHAANABsAHQAcABsAHQAeABwADwAeAB0ADwAfAB4AGQAgABsAGQAhACAAIAAhACIAIAAjABsAIAAiACQAJQAkACIAGwAmACUAJAAnACAAIAAnACMADwAjACcADwAnACgAJQAiACkAIwAqACYAJQAmACoAJQAqACQAJAAqACcAIwAnACoAJQApACsALAArACkAJQArAC0ALQAuACUALQAvAC4ALAApABoAMAAsABoAMAAaADEAMQAyADAAMQAzADIAGgAYADQAGgA0AAoANAA1AAoANAA2ADUANwA1ADYADgA2ADQADgA0ADgADgA4ADkANwA2ADoADgA6ADYAOgAjADcAOgAnACMADgAnADoADgAoACcAOwA8AD0AOwA+ADwAPwBAAEEAPwBCAEAAQwBEAEUAQwBGAEQARwBIAEkARwBKAEgASABKAEsASABLAEwASwBNAEwASwBOAE0ATQBOAE8ATQBPAFAATwBRAFAATwBSAFEAUQBSAFMAUQBTAFQAUwBVAFQAUwBWAFUAVQBWAFcAVQBXAFgAVwBZAFgAVwBaAFkAWgBbAFkAWgBcAFsAXABdAFsAXABeAF0AXQBeAF8AXQBfAGAAYABfAGEAYABhAGIAYgBhAGMAYgBjAGQAZABjAGUAZABlAGYAZgBlAGcAZgBnAGgAZwBpAGgAZwBqAGkAaQBqAGsAaQBrAGwAbABrAG0AbABtAG4AbgBtAG8AbgBvAHAAcABvAHEAcABxAHIAcgBxAHMAcgBzAHQAdABzAHUAdAB1AHYAdgB1AHcAdgB3AHgAeAB3AHkAeAB5AHoAegB5AHsAegB7AHwAfAB7AH0AfAB9AH4AfgB9AH8AfgB/AIAAgAB/AIEAgACBAIIAggCBAIMAggCDAIQAhACDAIUAhACFAIYAhgCHAIUAhgCIAIcA"),
-"name": "Material.002",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 137,
-"vertex_data": PackedByteArray("Zmaa3lUVAAAAAJreqeoAAAAAmt5VFQAAAABYyKnqAAAAAFjIVRUAAGZmAABVFQAAwfUAAFUVAAAAAAAAVRUAAAAAAAAAAAAAAACa3gAAAABmZpreAAAAAMH1mt5VFQAA4PoAAFUVAADg+preVRUAAGZm//9VFQAAZmaa3qnqAADB9f//VRUAAOD6//9VFQAAAACa3v//AAAAAAAAqeoAAAAAAAD//wAAZmaa3v//AAD+/5reVRUAAP7///9VFQAA/v///wAAAAD+/5reqeoAAP7/mt4AAAAA4Pqa3qnqAADg+gAAqeoAAMH1mt6p6gAAwfUAAKnqAABmZgAAqeoAAOD6//+p6gAA/v///6nqAAD+//////8AAEdhmt6p6gAA4Pr/////AADg+pre//8AAEdhmt7//wAAR2H//6nqAABmZv//qeoAAP7/mt7//wAAR2H/////AAD+/wAA//8AAP7/AAAAAAAA4PoAAP//AAAAAJre//8AAAAAAAD//wAA4PoAAAAAAADg+preAAAAAAAAAAAAAAAAAACa3gAAAABmZv//AAAAAEdhmt4AAAAAR2H//wAAAABHYZreVRUAAP////8AAAAA/////1UVAABHYf//VRUAAGZmIQup6gAA9WghC1UVAAD1aCELqeoAAGZmIQtVFQAA9WhCFqnqAACEa0IWVRUAAIRrQhap6gAA9WhCFlUVAACEa2QhqeoAABRuZCFVFQAAFG5kIanqAACEa2QhVRUAABRuhSxVFQAA6pGFLKnqAAAUboUsqeoAAOqRhSxVFQAA6pGmN1UVAADqkaY3qeoAAHqUpjep6gAAepSmN1UVAAB6lMhCVRUAAHqUyEKp6gAACZfIQqnqAAAJl8hCVRUAAAmX6U1VFQAACZfpTanqAACZmelNqeoAAJmZ6U1VFQAAmZkKWVUVAACZmQpZqeoAAG+9Clmp6gAAb70KWVUVAABvvSxkqeoAAG+9LGRVFQAA/78sZKnqAAD/vyxkVRUAAP+/TW9VFQAA/79Nb6nqAACOwk1vVRUAAI7CTW+p6gAAjsJuelUVAACOwm56qeoAAB3FbnpVFQAAHcVueqnqAAAdxZCFVRUAAB3FkIWp6gAA9OiQhanqAAD06JCFVRUAAPTosZBVFQAA9OixkKnqAACE67GQVRUAAITrsZCp6gAAhOvSm1UVAACE69KbqeoAABPu0ptVFQAAE+7Sm6nqAAAT7telVRUAABPu16Wp6gAAovDXpVUVAACi8NelqeoAAKLw+LBVFQAAovD4sKnqAAAy8/iwVRUAADLz+LCp6gAAMvMZvFUVAAAy8xm8qeoAAMH1GbxVFQAAwfUZvKnqAADB9TvHVRUAAMH1O8ep6gAAUPg7x1UVAABQ+DvHqeoAAFD4XNJVFQAAUPhc0qnqAADg+lzSVRUAAOD6XNKp6gAA4Pp+3VUVAADg+n7dqeoAAA==")
-}]
-blend_shape_mode = 0
+metallic_specular = 0.15
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ufysm"]
 resource_name = "ESCALERAS DEL REGATAS_Plane_005"
@@ -632,7 +612,14 @@ _surfaces = [{
 "vertex_data": PackedByteArray("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/v///wAAAABmZv//AAAAAEdhmt4AAAAAZmaa3gAAAABHYf//AAAAAGZm//9VFf+//////wAA/7//////VRX/v2Zm//8AAP+/4Pr//6nq/7/+////////v+D6//////+//v///6nq/79HYf//qer/v0dh//////+//v+a3qnqAADg+v//qeoAAOD6mt6p6gAA/v///6nqAABHYZreqeoAAEdh//+p6gAAR2Ga3qnqAABHYf////8AAEdhmt7//wAAR2H//6nqAADg+preqer/P0dhmt7///8/4Pqa3v///z9HYZreVRUAAEdh//8AAAAAR2H//1UVAABHYZreAAAAAGZm//9VFf+/R2H//wAA/79mZv//AAD/v0dh//9VFf+/Zmaa3qnqAIBHYf//qeoAgGZm//+p6gCAR2Ga3qnqAIBHYf//VRUAAEdhmt6p6gAAR2Ga3lUVAABHYf//qeoAAGZm//9VFf+/R2H//6nq/79HYf//VRX/v2Zm//+p6v+/ZmYAAFUV/78AAJreVRX/v2Zmmt5VFf+/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f/8//3//P/9//z//f/8//3////9/////f////3////9//z//f/8//3//P/9//z//f////3////9/////f////3//P/9//z//f/8//3//P/9/////f////3////9/////f/8//3//P/9//z//f/8//3////9/////f////3////9//z//f/8//3//P/9//z//f////3////9/////f////3//P/9//z//f/8//3//P/9/////f////3////9/////f/8//3//P/9//z//f/8//3////9/////f////3////9//z//f/8//3//P/9//z//f////3////9/////f////3//P/9//z//f/8//3//P/9/////f////3////9/////f/8//3//P/9//z//f/8//3////9/////f////3////9//z//f/8//3//P/9//z//f////3////9/////f////3//P/9//z//f/8//3//P/9/////f////3////9/////f/9/////f////3////9///////9/////f////3////9/////f////3//P/9//z//f/8//3//P/9/////f////3////9/////f/8//3//P/9//z//f/8//3////9/////f////3////9//z//f/8//3//P/9//z//f////3////9/////f////3//fwAA/38AAP9/AAD/fwAA////f////3////9//z//f/8//3//P/9//3////9/////f////z//f/8//3//P/9//z//f////3////9/////f////3////9/////f/8//3//P/9//z//f/8//3//f////3////9/////f////3////9/////f////3////9/////f////3////9///////9/////f////3////9//38AAP9/AAD/fwAA/38AAP8//3//P/9//z//f/8//3//f////3////9/////f////3////9/////f////3////9/////f////3////9/////fwAA/38AAP9/AAD/fwAA////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9//z//f/8//3//P/9//z//fwAA/38AAP9/AAD/f/8//3//P/9//z//f/8//3////9/////f////3////9//3////9/////f////3////8//3//P/9//z//f/8//3////9/////f////3////9//3//f/9//3//f/9/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_f2weh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qg183"]
+transparency = 1
+albedo_texture = ExtResource("4_26w5c")
+texture_repeat = false
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_26w5c"]
+size = Vector2(2.5, 1.8)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qy66f"]
 albedo_color = Color(0.0862745, 0.27451, 0, 1)
@@ -643,14 +630,6 @@ size = Vector2(7, 2.95)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qg183"]
 size = Vector2(27.445, 2.95)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qg183"]
-transparency = 1
-albedo_texture = ExtResource("4_26w5c")
-texture_repeat = false
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_26w5c"]
-size = Vector2(2.5, 1.8)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gxlqe"]
 resource_name = "Material.003"
@@ -746,46 +725,6 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9253, 0.627592, 0.459346)
 mesh = SubResource("ArrayMesh_ufysm")
 skeleton = NodePath("")
-
-[node name="Pasto" type="MeshInstance3D" parent="escalinata"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5784, 0.379557, 3.88594)
-material_override = SubResource("StandardMaterial3D_qy66f")
-mesh = SubResource("PlaneMesh_qy66f")
-
-[node name="Pasto2" type="MeshInstance3D" parent="escalinata"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5784, 0.379557, -3.85497)
-material_override = SubResource("StandardMaterial3D_qy66f")
-mesh = SubResource("PlaneMesh_qy66f")
-
-[node name="Pasto3" type="MeshInstance3D" parent="escalinata"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.14499, -1.59662, 3.88594)
-material_override = SubResource("StandardMaterial3D_qy66f")
-mesh = SubResource("PlaneMesh_qy66f")
-
-[node name="Pasto4" type="MeshInstance3D" parent="escalinata"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.14499, -1.59662, -3.85497)
-material_override = SubResource("StandardMaterial3D_qy66f")
-mesh = SubResource("PlaneMesh_qy66f")
-
-[node name="Pasto5" type="MeshInstance3D" parent="escalinata"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.209538, -3.54134, 3.88594)
-material_override = SubResource("StandardMaterial3D_qy66f")
-mesh = SubResource("PlaneMesh_qy66f")
-
-[node name="Pasto6" type="MeshInstance3D" parent="escalinata"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.209538, -3.54134, -3.85497)
-material_override = SubResource("StandardMaterial3D_qy66f")
-mesh = SubResource("PlaneMesh_qy66f")
-
-[node name="Pasto7" type="MeshInstance3D" parent="escalinata"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.7162, -5.60341, 3.88594)
-material_override = SubResource("StandardMaterial3D_qy66f")
-mesh = SubResource("PlaneMesh_qg183")
-
-[node name="Pasto8" type="MeshInstance3D" parent="escalinata"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.7162, -5.60341, -3.85497)
-material_override = SubResource("StandardMaterial3D_qy66f")
-mesh = SubResource("PlaneMesh_qg183")
 
 [node name="Rejas" type="Node3D" parent="escalinata"]
 
@@ -901,7 +840,113 @@ material_override = SubResource("StandardMaterial3D_qg183")
 mesh = SubResource("PlaneMesh_26w5c")
 skeleton = NodePath("../../..")
 
-[node name="Plane_001" type="MeshInstance3D" parent="."]
+[node name="Pastos" type="Node3D" parent="escalinata"]
+
+[node name="Pasto" type="MeshInstance3D" parent="escalinata/Pastos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5784, 0.379557, 3.88594)
+material_override = SubResource("StandardMaterial3D_qy66f")
+mesh = SubResource("PlaneMesh_qy66f")
+skeleton = NodePath("../..")
+
+[node name="Pasto2" type="MeshInstance3D" parent="escalinata/Pastos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5784, 0.379557, -3.85497)
+material_override = SubResource("StandardMaterial3D_qy66f")
+mesh = SubResource("PlaneMesh_qy66f")
+skeleton = NodePath("../..")
+
+[node name="Pasto3" type="MeshInstance3D" parent="escalinata/Pastos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.14499, -1.59662, 3.88594)
+material_override = SubResource("StandardMaterial3D_qy66f")
+mesh = SubResource("PlaneMesh_qy66f")
+skeleton = NodePath("../..")
+
+[node name="Pasto4" type="MeshInstance3D" parent="escalinata/Pastos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.14499, -1.59662, -3.85497)
+material_override = SubResource("StandardMaterial3D_qy66f")
+mesh = SubResource("PlaneMesh_qy66f")
+skeleton = NodePath("../..")
+
+[node name="Pasto5" type="MeshInstance3D" parent="escalinata/Pastos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.209538, -3.54134, 3.88594)
+material_override = SubResource("StandardMaterial3D_qy66f")
+mesh = SubResource("PlaneMesh_qy66f")
+skeleton = NodePath("../..")
+
+[node name="Pasto6" type="MeshInstance3D" parent="escalinata/Pastos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.209538, -3.54134, -3.85497)
+material_override = SubResource("StandardMaterial3D_qy66f")
+mesh = SubResource("PlaneMesh_qy66f")
+skeleton = NodePath("../..")
+
+[node name="Pasto7" type="MeshInstance3D" parent="escalinata/Pastos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.7162, -5.60341, 3.88594)
+material_override = SubResource("StandardMaterial3D_qy66f")
+mesh = SubResource("PlaneMesh_qg183")
+skeleton = NodePath("../..")
+
+[node name="Pasto8" type="MeshInstance3D" parent="escalinata/Pastos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.7162, -5.60341, -3.85497)
+material_override = SubResource("StandardMaterial3D_qy66f")
+mesh = SubResource("PlaneMesh_qg183")
+skeleton = NodePath("../..")
+
+[node name="Luces" type="Node3D" parent="escalinata"]
+
+[node name="Derecha" type="Node3D" parent="escalinata/Luces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0144787)
+
+[node name="LightWall" parent="escalinata/Luces/Derecha" instance=ExtResource("12_cwpyi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.245, 2.5195, -4.99443)
+
+[node name="LightWall2" parent="escalinata/Luces/Derecha" instance=ExtResource("12_cwpyi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.75739, 1.068, -4.99443)
+
+[node name="LightWall3" parent="escalinata/Luces/Derecha" instance=ExtResource("12_cwpyi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00621319, -0.679851, -4.98911)
+
+[node name="LightWall4" parent="escalinata/Luces/Derecha" instance=ExtResource("12_cwpyi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.894, -1.686, -5.047)
+
+[node name="LightWall5" parent="escalinata/Luces/Derecha" instance=ExtResource("12_cwpyi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.309, -1.686, -5.05422)
+
+[node name="LightWall6" parent="escalinata/Luces/Derecha" instance=ExtResource("12_cwpyi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.399, -1.686, -5.05454)
+
+[node name="Izquierda" type="Node3D" parent="escalinata/Luces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, -0.205014)
+
+[node name="LightWall" parent="escalinata/Luces/Izquierda" instance=ExtResource("12_cwpyi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.245, 2.5195, -5.08482)
+
+[node name="LightWall2" parent="escalinata/Luces/Izquierda" instance=ExtResource("12_cwpyi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.75739, 1.068, -5.08482)
+
+[node name="LightWall3" parent="escalinata/Luces/Izquierda" instance=ExtResource("12_cwpyi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00621319, -0.679851, -5.08482)
+
+[node name="LightWall4" parent="escalinata/Luces/Izquierda" instance=ExtResource("12_cwpyi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.89387, -1.68587, -5.08482)
+
+[node name="LightWall5" parent="escalinata/Luces/Izquierda" instance=ExtResource("12_cwpyi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3091, -1.68587, -5.08482)
+
+[node name="LightWall6" parent="escalinata/Luces/Izquierda" instance=ExtResource("12_cwpyi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.3989, -1.68587, -5.08482)
+
+[node name="Ligth" parent="escalinata/Luces" instance=ExtResource("7_odni6")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -33.938, -6.01553, -3.98406)
+
+[node name="Ligth2" parent="escalinata/Luces" instance=ExtResource("7_odni6")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -45.8601, -6.01553, -3.98406)
+
+[node name="Ligth3" parent="escalinata/Luces" instance=ExtResource("7_odni6")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -33.938, -6.01553, 3.91447)
+
+[node name="Ligth4" parent="escalinata/Luces" instance=ExtResource("7_odni6")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -45.8601, -6.01553, 3.91447)
+
+[node name="Rico" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.931, 1, 160.004)
 mesh = SubResource("ArrayMesh_3mglk")
 skeleton = NodePath("")

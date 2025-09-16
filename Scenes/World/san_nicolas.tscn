@@ -109,6 +109,9 @@ mesh = SubResource("BoxMesh_0p18o")
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 322.532, 7.39244, 1327.95)
 mesh = SubResource("PlaneMesh_0p18o")
 
+[node name="CaminoJugable" type="Node3D" parent="Plaza"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 95.7529, 0, 1207.94)
+
 [node name="CartelesCalles" type="Node3D" parent="."]
 
 [node name="Mitre" parent="CartelesCalles" instance=ExtResource("13_c6j2c")]
