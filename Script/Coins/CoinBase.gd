@@ -6,7 +6,7 @@ class_name CoinBase
 
 var distUp = 3
 var posInitial: Vector3
-var idleDistUp = 1.2
+var idleDistUp = 1.1
 var targetHeight 
 
 var target:Player

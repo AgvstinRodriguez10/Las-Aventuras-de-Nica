@@ -203,6 +203,8 @@ func lostLife():
 	is_hitt = true
 	currentState = STATES.HIT
 	life -= 1
+	if life <= 0:
+		get_tree().change_scene_to_file("res://Scenes/World/MenuInicial.tscn")
 
 func collectSnFicha():
 	if life < 3:

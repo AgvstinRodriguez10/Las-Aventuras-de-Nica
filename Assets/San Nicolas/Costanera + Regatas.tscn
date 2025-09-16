@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=4 uid="uid://cqh3220s635ah"]
+[gd_scene load_steps=54 format=4 uid="uid://cqh3220s635ah"]
 
 [ext_resource type="Material" uid="uid://sfntlht18jy4" path="res://Resource/Materials/Calles/Vereda.tres" id="1_f51fo"]
 [ext_resource type="Material" uid="uid://fjppst14hsn" path="res://Resource/Materials/Calles/CalleCostanera.tres" id="1_q2v7p"]
@@ -641,6 +641,9 @@ albedo_texture = ExtResource("4_qg183")
 [sub_resource type="PlaneMesh" id="PlaneMesh_qy66f"]
 size = Vector2(7, 2.95)
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_qg183"]
+size = Vector2(27.445, 2.95)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qg183"]
 transparency = 1
 albedo_texture = ExtResource("4_26w5c")
@@ -774,6 +777,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.209538, -3.54134, -3.85497
 material_override = SubResource("StandardMaterial3D_qy66f")
 mesh = SubResource("PlaneMesh_qy66f")
 
+[node name="Pasto7" type="MeshInstance3D" parent="escalinata"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.7162, -5.60341, 3.88594)
+material_override = SubResource("StandardMaterial3D_qy66f")
+mesh = SubResource("PlaneMesh_qg183")
+
+[node name="Pasto8" type="MeshInstance3D" parent="escalinata"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.7162, -5.60341, -3.85497)
+material_override = SubResource("StandardMaterial3D_qy66f")
+mesh = SubResource("PlaneMesh_qg183")
+
 [node name="Rejas" type="Node3D" parent="escalinata"]
 
 [node name="Izq" type="Node3D" parent="escalinata/Rejas"]
@@ -899,13 +912,13 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -87.9973, -1.83705, 81.4351)
 [node name="Carteles" type="Node3D" parent="."]
 
 [node name="Cartel-1" parent="Carteles" instance=ExtResource("6_qy66f")]
-transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -72.2543, 0, 14.1892)
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -72.6299, -0.0679369, 14.1892)
 
 [node name="Cartel-2" parent="Carteles" instance=ExtResource("7_26w5c")]
-transform = Transform3D(0.284534, 0, -0.958666, 0, 1, 0, 0.958666, 0, 0.284534, -76.2561, 0, 7.70414)
+transform = Transform3D(0.21644, 0, -0.976296, 0, 1, 0, 0.976296, 0, 0.21644, -76.9928, -0.0679369, 6.5588)
 
 [node name="Cartel-3" parent="Carteles" instance=ExtResource("8_qg183")]
-transform = Transform3D(0.38057, 0, 0.924752, 0, 1, 0, -0.924752, 0, 0.38057, -76.0632, 0, -7.34438)
+transform = Transform3D(-0.104528, 0, -0.994522, 0, 1, 0, 0.994522, 0, -0.104528, -77.4647, -0.0679369, -2.541)
 
 [node name="Cartel-4" parent="Carteles" instance=ExtResource("9_cwpyi")]
-transform = Transform3D(0.0270144, 0, 0.999635, 0, 1, 0, -0.999635, 0, 0.0270144, -77.3897, 0, 0.00326395)
+transform = Transform3D(-0.587785, 0, -0.809017, 0, 1, 0, 0.809017, 0, -0.587785, -74.413, -0.0679369, -10.9159)
