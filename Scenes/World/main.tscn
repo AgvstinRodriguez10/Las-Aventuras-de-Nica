@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://djlnov41bncl8"]
+[gd_scene load_steps=76 format=3 uid="uid://djlnov41bncl8"]
 
 [ext_resource type="PackedScene" uid="uid://d33hm0kfvhtj3" path="res://Scenes/GUI/fps_count.tscn" id="1_1pvyk"]
 [ext_resource type="PackedScene" uid="uid://ikd1j0tjscug" path="res://Scenes/GUI/hud.tscn" id="1_by2pg"]
@@ -95,7 +95,7 @@ _data = {
 
 [sub_resource type="Animation" id="Animation_w1pl2"]
 resource_name = "DialogOn"
-length = 5.0
+length = 4.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -103,7 +103,7 @@ tracks/0/path = NodePath("Dialogoss-01:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.466667, 2.1, 2.63333),
+"times": PackedFloat32Array(0, 0.466667, 1.53333, 2.06666),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -115,7 +115,7 @@ tracks/1/path = NodePath("Dialogoss-02:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 2.6, 3.03333, 4.53333, 4.93333),
+"times": PackedFloat32Array(0, 1.86667, 2.3, 3.53333, 3.93333),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -159,7 +159,7 @@ size = Vector3(7.11865, 3.99133, 1)
 
 [sub_resource type="Animation" id="Animation_l5qvs"]
 resource_name = "DialogoOn"
-length = 6.0
+length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -167,22 +167,10 @@ tracks/0/path = NodePath("Dialogoss-01:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.433333, 2.5, 3),
+"times": PackedFloat32Array(0, 0.433333, 2.43333, 2.93333),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Dialogoss-02:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2.9, 3.33333, 5.43334, 5.86667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_p7lpm"]
@@ -199,18 +187,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Dialogoss-02:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p7lpm"]
 _data = {
@@ -221,7 +197,7 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_fegd5"]
 size = Vector3(7.11865, 3.99133, 1)
 
-[sub_resource type="Animation" id="Animation_qggjr"]
+[sub_resource type="Animation" id="Animation_85jov"]
 resource_name = "DialogoOn"
 length = 3.0
 tracks/0/type = "value"
@@ -231,7 +207,44 @@ tracks/0/path = NodePath("Dialogoss-01:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 2.53667, 3),
+"times": PackedFloat32Array(0, 0.433333, 2.66, 2.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ki7hj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialogoss-01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sy3dk"]
+_data = {
+&"DialogoOn": SubResource("Animation_85jov"),
+&"RESET": SubResource("Animation_ki7hj")
+}
+
+[sub_resource type="Animation" id="Animation_qggjr"]
+resource_name = "DialogoOn"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialogoss-01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 1.66667, 1.96667),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -642,6 +655,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogos/DialogoDeInicio"]
+process_mode = 3
 libraries = {
 &"": SubResource("AnimationLibrary_85jov")
 }
@@ -659,7 +673,7 @@ texture = ExtResource("3_p7lpm")
 
 [node name="Dialogo2_EcoFichas" type="Area3D" parent="Dialogos"]
 process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 39.4466)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 21.0189)
 collision_layer = 64
 collision_mask = 2
 script = ExtResource("2_cu8p5")
@@ -694,7 +708,7 @@ shape = SubResource("BoxShape3D_cu8p5")
 
 [node name="Dialogo3_RdFichas" type="Area3D" parent="Dialogos"]
 process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 57.7377)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 47.9988)
 collision_layer = 64
 collision_mask = 2
 script = ExtResource("2_cu8p5")
@@ -712,17 +726,41 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(974, 425.5)
 texture = ExtResource("5_llg4m")
 
-[node name="Dialogoss-02" type="Sprite2D" parent="Dialogos/Dialogo3_RdFichas/Dialogos"]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(974, 425.5)
-texture = ExtResource("6_qggjr")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogos/Dialogo3_RdFichas/Dialogos"]
 libraries = {
 &"": SubResource("AnimationLibrary_p7lpm")
 }
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Dialogos/Dialogo3_RdFichas"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0368652, 1.49567, 0)
+shape = SubResource("BoxShape3D_fegd5")
+
+[node name="Dialogo3_RdFichas2" type="Area3D" parent="Dialogos"]
+process_mode = 3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 118.577)
+collision_layer = 64
+collision_mask = 2
+script = ExtResource("2_cu8p5")
+
+[node name="Dialogos" type="Control" parent="Dialogos/Dialogo3_RdFichas2"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dialogoss-01" type="Sprite2D" parent="Dialogos/Dialogo3_RdFichas2/Dialogos"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(974, 425.5)
+texture = ExtResource("6_qggjr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogos/Dialogo3_RdFichas2/Dialogos"]
+libraries = {
+&"": SubResource("AnimationLibrary_sy3dk")
+}
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dialogos/Dialogo3_RdFichas2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0368652, 1.49567, 0)
 shape = SubResource("BoxShape3D_fegd5")
 
@@ -757,7 +795,7 @@ shape = SubResource("BoxShape3D_fegd5")
 
 [node name="Dialogo5_Pelota" type="Area3D" parent="Dialogos"]
 process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 285.784)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 267.674)
 collision_layer = 64
 collision_mask = 2
 script = ExtResource("2_cu8p5")
@@ -1309,22 +1347,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.4015, 0.511, 589.901)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.4019, 0.511, 590.901)
 
 [node name="68" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.193, 0.511, 592.901)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.193, 0.511, 593.09)
 
 [node name="69" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.193, 0.511, 593.901)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.193, 0.511, 594.09)
 
 [node name="70" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.193, 0.511, 594.901)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.193, 0.511, 595.09)
 
 [node name="71" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 47.9781, 0.511, 605.589)
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 48.2629, 0.511, 605.589)
 
 [node name="72" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 48.9781, 0.511, 606.589)
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 49.2629, 0.511, 606.589)
 
 [node name="73" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 49.9781, 0.511, 607.589)
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 50.2629, 0.511, 607.589)
 
 [node name="74" parent="EcoFichas" instance=ExtResource("6_23yoc")]
 transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 66.428, 1.105, 621.824)
@@ -1352,6 +1390,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04229, 2.17364, 95.171)
 [node name="SNFicha3" parent="SNFichas" instance=ExtResource("9_w7l72")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04229, 1.45819, 155.681)
 
+[node name="SNFicha5" parent="SNFichas" instance=ExtResource("9_w7l72")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04229, 0.70767, 308.695)
+
+[node name="SNFicha6" parent="SNFichas" instance=ExtResource("9_w7l72")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04229, 0.70767, 448.049)
+
+[node name="SNFicha7" parent="SNFichas" instance=ExtResource("9_w7l72")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00171357, 0.70767, 547.527)
+
 [node name="RDFichas" type="Node3D" parent="."]
 
 [node name="RDFicha" parent="RDFichas" instance=ExtResource("10_yteiy")]
@@ -1365,6 +1412,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0145233, 0.768754, 204.671
 
 [node name="RDFicha4" parent="RDFichas" instance=ExtResource("10_yteiy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0145233, 0.768754, 279.599)
+
+[node name="RDFicha7" parent="RDFichas" instance=ExtResource("10_yteiy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.00872, 0.768754, 415.311)
 
 [node name="RDFicha5" parent="RDFichas" instance=ExtResource("10_yteiy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6469, 1.10507, 581.248)
@@ -1630,6 +1680,7 @@ libraries = {
 
 [connection signal="body_entered" from="Dialogos/Dialogo2_EcoFichas" to="Dialogos/Dialogo2_EcoFichas" method="_on_body_entered"]
 [connection signal="body_entered" from="Dialogos/Dialogo3_RdFichas" to="Dialogos/Dialogo3_RdFichas" method="_on_body_entered"]
+[connection signal="body_entered" from="Dialogos/Dialogo3_RdFichas2" to="Dialogos/Dialogo3_RdFichas2" method="_on_body_entered"]
 [connection signal="body_entered" from="Dialogos/Dialogo4_Obstaculos" to="Dialogos/Dialogo4_Obstaculos" method="_on_body_entered"]
 [connection signal="body_entered" from="Dialogos/Dialogo5_Pelota" to="Dialogos/Dialogo5_Pelota" method="_on_body_entered"]
 [connection signal="body_entered" from="Dialogos/Dialogo6_Plaza" to="Dialogos/Dialogo6_Plaza" method="_on_body_entered"]

@@ -8,8 +8,8 @@ const dist_beetween_lanes = 2
 var lateral_free_position := Vector3.ZERO
 
 # Calculamos posición deseada para la cámara
-var camera_height = -0.2
-var camera_distance = -1.0
+var camera_height = 1 #-0.2 
+var camera_distance = -3 #-1.0
 
 # Va de 0 a 2 para enumerar las lineas
 var target_lane: int = 1
