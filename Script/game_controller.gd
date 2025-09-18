@@ -13,6 +13,6 @@ func _physics_process(delta: float) -> void:
 
 func time_controller(delta:float):
 	if directional_light_3d.light_energy > 0:
-		directional_light_3d.light_energy = directional_light_3d.light_energy - delta * 0.04
+		directional_light_3d.light_energy = directional_light_3d.light_energy - delta * 0.03
 		#directional_light_3d.light_energy = directional_light_3d.light_energy - delta * 0.4
 	

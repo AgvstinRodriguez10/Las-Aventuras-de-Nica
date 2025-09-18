@@ -82,5 +82,5 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.50347, 0)
-light_energy = 3.0
-omni_range = 15.0
+light_energy = 5.0
+omni_range = 21.6714

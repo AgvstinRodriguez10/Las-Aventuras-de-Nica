@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dcmdpwf6w8opd"]
+[gd_scene load_steps=27 format=3 uid="uid://dcmdpwf6w8opd"]
 
 [ext_resource type="PackedScene" uid="uid://bxs55inw16h7x" path="res://Scenes/World/Calles/Cuadras (Completas)/b_mitre_400_350.tscn" id="1_i7jcd"]
 [ext_resource type="PackedScene" uid="uid://6vltpx4piqv4" path="res://Scenes/World/Calles/Cuadras (Completas)/b_mitre_350_300.tscn" id="2_86gof"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://dj0ym6awon4au" path="res://Scenes/World/Objetos/Carteles/Carteles-Calles/DFSarmiento.tscn" id="19_0p18o"]
 [ext_resource type="PackedScene" uid="uid://b17ssv2tgs07m" path="res://Scenes/World/Objetos/Arbol.res" id="20_atd8f"]
 [ext_resource type="Script" uid="uid://b50df3hy3gm6i" path="res://Script/Objetos/ArbolesController.gd" id="20_iemyh"]
+[ext_resource type="PackedScene" uid="uid://dv1dtdx64hn24" path="res://Scenes/World/Objetos/Carteles/CalleProximamenteDisponible.tscn" id="22_d800x"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cmu8q"]
 size = Vector3(370.563, 1, 3398.56)
@@ -84,6 +85,15 @@ transform = Transform3D(-0.0321965, 0, 0.498962, 0, 0.5, 0, -0.498962, 0, -0.032
 
 [node name="Ligth" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.6332, 0, 1162.45)
+
+[node name="Ligth2" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9036, 0, 1149.07)
+
+[node name="Ligth3" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9036, 0, 1178.91)
+
+[node name="Ligth5" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.20751, 0, 1163.56)
 
 [node name="Ligth4" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.8249, 0, 1192.41)
@@ -201,3 +211,9 @@ transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, 
 
 [node name="Arbol16" parent="Arboles" instance=ExtResource("20_atd8f")]
 transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, -1.50996e-08, 0.1, 4.37114e-09, 8, 0, 866.121)
+
+[node name="CalleProximamenteDisponible" parent="." instance=ExtResource("22_d800x")]
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 0.249672, 4.8161, 1186.18)
+
+[node name="CalleProximamenteDisponible2" parent="." instance=ExtResource("22_d800x")]
+transform = Transform3D(-0.5, -0.866025, 3.78552e-08, 0, -4.37114e-08, -1, 0.866025, -0.5, 2.18557e-08, 206.789, 4.8161, 1302.36)

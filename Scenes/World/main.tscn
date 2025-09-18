@@ -28,9 +28,9 @@
 [ext_resource type="Texture2D" uid="uid://bdvp1uw1i6iml" path="res://Assets/Extras/Dialogs/DIALOGOSS-9.png" id="11_y8gtk"]
 [ext_resource type="PackedScene" uid="uid://bfttwterfi486" path="res://Scenes/World/Objetos/Obstaculos/puente.tscn" id="15_8o8og"]
 [ext_resource type="PackedScene" uid="uid://l6unlmqhug4r" path="res://Scenes/World/Objetos/Valla.tscn" id="15_nsfl0"]
-[ext_resource type="PackedScene" uid="uid://crj38hhv8sc57" path="res://Scenes/World/Objetos/Cono.tscn" id="15_xqo82"]
 [ext_resource type="PackedScene" uid="uid://dcey1tp07g3qh" path="res://Scenes/World/Objetos/Obstaculos/RampaGrande.tscn" id="18_xqo82"]
-[ext_resource type="PackedScene" uid="uid://b0h4ayhr722x5" path="res://Scenes/World/Objetos/pelota.tscn" id="21_lml7n"]
+[ext_resource type="PackedScene" uid="uid://b0h4ayhr722x5" path="res://Scenes/World/Objetos/Obstaculos/pelota.tscn" id="21_lml7n"]
+[ext_resource type="PackedScene" uid="uid://bvs1c5dn0kl1f" path="res://Scenes/Coins/YaguiFicha.tscn" id="27_l5qvs"]
 
 [sub_resource type="Animation" id="Animation_6ny57"]
 resource_name = "DialogoOn"
@@ -673,7 +673,7 @@ texture = ExtResource("3_p7lpm")
 
 [node name="Dialogo2_EcoFichas" type="Area3D" parent="Dialogos"]
 process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 21.0189)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 12.7296)
 collision_layer = 64
 collision_mask = 2
 script = ExtResource("2_cu8p5")
@@ -737,7 +737,7 @@ shape = SubResource("BoxShape3D_fegd5")
 
 [node name="Dialogo3_RdFichas2" type="Area3D" parent="Dialogos"]
 process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 118.577)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 63.0134)
 collision_layer = 64
 collision_mask = 2
 script = ExtResource("2_cu8p5")
@@ -766,7 +766,7 @@ shape = SubResource("BoxShape3D_fegd5")
 
 [node name="Dialogo4_Obstaculos" type="Area3D" parent="Dialogos"]
 process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 78.0388)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 117.112)
 collision_layer = 64
 collision_mask = 2
 script = ExtResource("2_cu8p5")
@@ -795,7 +795,7 @@ shape = SubResource("BoxShape3D_fegd5")
 
 [node name="Dialogo5_Pelota" type="Area3D" parent="Dialogos"]
 process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 267.674)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 161.061)
 collision_layer = 64
 collision_mask = 2
 script = ExtResource("2_cu8p5")
@@ -917,7 +917,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 99.266, -5, 708.944)
 
 [node name="CameraFocus" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.14239)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.34784)
 
 [node name="Camera3D" type="Camera3D" parent="CameraFocus"]
 transform = Transform3D(-0.999945, -0.0104718, -8.44833e-08, -0.0101197, 0.966323, 0.257133, -0.00269255, 0.257119, -0.966376, 0, 3.93963, -8.4115)
@@ -926,10 +926,10 @@ attributes = SubResource("CameraAttributesPhysical_psyr8")
 current = true
 
 [node name="Yagui" parent="." instance=ExtResource("8_t55t5")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -16.8794)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -17.0848)
 
 [node name="Nica" parent="." instance=ExtResource("2_ntgcc")]
-transform = Transform3D(-0.5, 0, 1.26759e-06, 0, 0.5, 0, -1.26759e-06, 0, -0.5, 0, 0, -1.14239)
+transform = Transform3D(-0.5, 0, 1.26759e-06, 0, 0.5, 0, -1.26759e-06, 0, -0.5, 0, 0, -1.34784)
 
 [node name="Alert" type="Area3D" parent="Nica"]
 transform = Transform3D(-2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, 0, 0, 0)
@@ -945,7 +945,7 @@ wait_time = 9.0
 one_shot = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.665869, -0.121724, -0.736072, 0.746069, 0.108639, 0.656947, 1.44913e-08, -0.986601, 0.163154, 0, 0, 0)
+transform = Transform3D(0.854568, -0.0847322, -0.512381, 0.51934, 0.139426, 0.843117, 1.36579e-08, -0.986601, 0.163154, 0, 0, 0)
 light_energy = 2.0
 light_bake_mode = 1
 shadow_enabled = true
@@ -960,40 +960,40 @@ directional_shadow_max_distance = 50.0
 [node name="EcoFichas" type="Node3D" parent="."]
 
 [node name="4" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.739924, 42.9807)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 42.981)
 
 [node name="11" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74, 56.9412)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 56.9412)
 
 [node name="12" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74, 55.9412)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 55.9412)
 
 [node name="13" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74, 54.9412)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 54.9412)
 
 [node name="14" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74, 53.9412)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 53.9412)
 
 [node name="15" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74, 53.9412)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 53.0703)
 
 [node name="16" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.995152, 1.47798, 95.543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 95.543)
 
 [node name="17" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.995152, 1.47798, 96.543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 96.543)
 
 [node name="18" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.995152, 1.47798, 97.543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 97.543)
 
 [node name="19" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.995152, 1.47798, 98.543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 98.543)
 
 [node name="20" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.995152, 1.47798, 99.543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 99.543)
 
 [node name="21" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.995152, 1.47798, 100.543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 100.543)
 
 [node name="22" parent="EcoFichas" instance=ExtResource("6_23yoc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 110.571)
@@ -1005,40 +1005,40 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 111.571)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 112.571)
 
 [node name="25" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044, 3, 125.466)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 125.466)
 
 [node name="26" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044, 3.1, 125.896)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1, 125.896)
 
 [node name="27" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044, 3.2, 126.405)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 126.405)
 
 [node name="28" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044, 3.2, 126.885)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 126.885)
 
 [node name="29" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044, 3.2, 127.418)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 127.418)
 
 [node name="30" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044, 3.1, 127.91)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1, 127.91)
 
 [node name="31" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044, 3, 128.332)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 128.332)
 
 [node name="32" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044, 2.9, 128.706)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9, 128.706)
 
 [node name="33" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.808, 165.074)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 165.074)
 
 [node name="34" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.808, 167.509)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 167.509)
 
 [node name="35" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.808, 166.509)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 166.509)
 
 [node name="36" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.808, 169.509)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 169.509)
 
 [node name="37" parent="EcoFichas" instance=ExtResource("6_23yoc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.4665, 170.509)
@@ -1092,136 +1092,136 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 218.509)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 219.509)
 
 [node name="54" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.28083, 223.263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 223.263)
 
 [node name="55" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.28083, 224.263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 224.263)
 
 [node name="56" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.28083, 225.263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 225.263)
 
 [node name="57" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.28083, 226.263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 226.263)
 
 [node name="58" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.28083, 227.263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 227.263)
 
 [node name="59" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.80902, 237.263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 237.263)
 
 [node name="60" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.80902, 239.263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 239.263)
 
 [node name="61" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.80902, 241.263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 241.263)
 
 [node name="62" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.818746, 243.224)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 243.224)
 
 [node name="63" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.80902, 245.224)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 245.224)
 
 [node name="78" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.80902, 247.114)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 247.114)
 
 [node name="79" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.80902, 249.114)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 249.114)
 
 [node name="80" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.80902, 251.114)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 251.114)
 
 [node name="83" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11636, 0.80902, 282.377)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 282.377)
 
 [node name="84" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11636, 0.80902, 284.377)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 284.377)
 
 [node name="85" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11636, 0.80902, 286.377)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 286.377)
 
 [node name="86" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0344789, 0.80902, 299.971)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 299.971)
 
 [node name="87" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0344789, 0.80902, 301.971)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 301.971)
 
 [node name="88" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0344789, 0.80902, 303.971)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 303.971)
 
 [node name="89" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0398241, 0.80902, 318.862)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 318.862)
 
 [node name="90" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0398241, 0.80902, 320.862)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 320.862)
 
 [node name="91" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0398241, 0.80902, 322.862)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 322.862)
 
 [node name="92" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0398241, 0.80902, 324.543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 324.543)
 
 [node name="93" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0398241, 0.80902, 326.543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 326.543)
 
 [node name="94" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0398241, 0.80902, 328.543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 328.543)
 
 [node name="95" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18882, 0.80902, 337.847)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 337.847)
 
 [node name="96" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18882, 0.80902, 339.847)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 339.847)
 
 [node name="97" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18882, 0.80902, 341.847)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 341.847)
 
 [node name="98" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10139, 0.80902, 352.185)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 352.185)
 
 [node name="99" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10139, 0.80902, 354.185)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 354.185)
 
 [node name="100" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10139, 0.80902, 356.185)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 356.185)
 
 [node name="101" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00843048, 0.80902, 372.417)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 372.417)
 
 [node name="102" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00843048, 0.80902, 374.417)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 374.417)
 
 [node name="103" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00843048, 0.80902, 376.417)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 376.417)
 
 [node name="104" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, -0.00843048, 0.803714, 392.559)
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0, 1, 392.559)
 
 [node name="105" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, -0.00843048, 0.80902, 394.559)
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0, 1, 394.559)
 
 [node name="106" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, -0.00843048, 0.814326, 396.559)
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0, 1, 396.559)
 
 [node name="107" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, -0.00843048, 0.814326, 398.496)
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0, 1, 398.496)
 
 [node name="108" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, -0.00843048, 0.814326, 408.858)
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0, 1, 408.858)
 
 [node name="109" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, -0.00843048, 0.814326, 410.053)
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0, 1, 410.053)
 
 [node name="110" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.971859, 1.4634, 418.769)
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 1, 1.4634, 418.769)
 
 [node name="111" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.971859, 1.4634, 419.964)
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 1, 1.4634, 419.964)
 
 [node name="112" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.971859, 1.4634, 421.305)
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 1, 1.4634, 421.305)
 
 [node name="113" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.971859, 1.4634, 422.5)
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 1, 1.4634, 422.5)
 
 [node name="119" parent="EcoFichas" instance=ExtResource("6_23yoc")]
 transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.971859, 0.736676, 449.569)
@@ -1320,61 +1320,61 @@ transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996
 transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.0152135, 0.601956, 544.601)
 
 [node name="114" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, -9.26036e-07, 0.000349065, 0, 0.999996, 0.0026529, -0.000349066, -0.0026529, 0.999996, -1.01395, 1.73274, 437.031)
+transform = Transform3D(1, -9.26036e-07, 0.000349065, 0, 0.999996, 0.0026529, -0.000349066, -0.0026529, 0.999996, -1, 1.73274, 437.031)
 
 [node name="115" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, -9.26036e-07, 0.000349065, 0, 0.999996, 0.0026529, -0.000349066, -0.0026529, 0.999996, -1.01353, 1.73274, 438.226)
+transform = Transform3D(1, -9.26036e-07, 0.000349065, 0, 0.999996, 0.0026529, -0.000349066, -0.0026529, 0.999996, -1, 1.73274, 438.226)
 
 [node name="116" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, -9.26036e-07, 0.000349065, 0, 0.999996, 0.0026529, -0.000349066, -0.0026529, 0.999996, -1.01306, 1.54421, 439.566)
+transform = Transform3D(1, -9.26036e-07, 0.000349065, 0, 0.999996, 0.0026529, -0.000349066, -0.0026529, 0.999996, -1, 1.54421, 439.566)
 
 [node name="117" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, -9.26036e-07, 0.000349065, 0, 0.999996, 0.0026529, -0.000349066, -0.0026529, 0.999996, -1.01264, 1.01968, 440.761)
+transform = Transform3D(1, -9.26036e-07, 0.000349065, 0, 0.999996, 0.0026529, -0.000349066, -0.0026529, 0.999996, -1, 1.30109, 440.761)
 
 [node name="118" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, -9.26036e-07, 0.000349065, 0, 0.999996, 0.0026529, -0.000349066, -0.0026529, 0.999996, -1.01264, 0.764817, 441.863)
+transform = Transform3D(1, -9.26036e-07, 0.000349065, 0, 0.999996, 0.0026529, -0.000349066, -0.0026529, 0.999996, -1, 1, 441.863)
 
 [node name="64" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.4843, 0.51055, 588.025)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.4843, 1, 588.025)
 
 [node name="65" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.4012, 0.51055, 588.901)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.4012, 1, 588.901)
 
 [node name="66" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.4015, 0.511, 589.901)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.4015, 1, 589.901)
 
 [node name="67" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.4019, 0.511, 590.901)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.4019, 1, 590.901)
 
 [node name="68" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.193, 0.511, 593.09)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.193, 1, 593.29)
 
 [node name="69" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.193, 0.511, 594.09)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.193, 1, 594.29)
 
 [node name="70" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.193, 0.511, 595.09)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.193, 1, 595.29)
 
 [node name="71" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 48.2629, 0.511, 605.589)
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 48.2629, 1, 605.317)
 
 [node name="72" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 49.2629, 0.511, 606.589)
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 49.2629, 1, 606.317)
 
 [node name="73" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 50.2629, 0.511, 607.589)
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 50.2629, 1, 607.317)
 
 [node name="74" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 66.428, 1.105, 621.824)
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 66.428, 1, 621.824)
 
 [node name="75" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 67.428, 1.105, 622.824)
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 67.428, 1, 622.824)
 
 [node name="76" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 68.428, 1.105, 623.824)
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 68.428, 1, 623.824)
 
 [node name="77" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 69.428, 1.105, 624.824)
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 69.428, 1, 624.824)
 
 [node name="SNFichas" type="Node3D" parent="."]
 
@@ -1385,188 +1385,127 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 82.1743)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 142.305)
 
 [node name="SNFicha2" parent="SNFichas" instance=ExtResource("9_w7l72")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04229, 2.17364, 95.171)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 95.171)
 
 [node name="SNFicha3" parent="SNFichas" instance=ExtResource("9_w7l72")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04229, 1.45819, 155.681)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.5, 155.681)
 
 [node name="SNFicha5" parent="SNFichas" instance=ExtResource("9_w7l72")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04229, 0.70767, 308.695)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 308.695)
 
 [node name="SNFicha6" parent="SNFichas" instance=ExtResource("9_w7l72")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04229, 0.70767, 448.049)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 448.049)
 
 [node name="SNFicha7" parent="SNFichas" instance=ExtResource("9_w7l72")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00171357, 0.70767, 547.527)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 547.527)
 
 [node name="RDFichas" type="Node3D" parent="."]
 
 [node name="RDFicha" parent="RDFichas" instance=ExtResource("10_yteiy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0816295, 2.28516, 61.3248)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 61.325)
 
 [node name="RDFicha2" parent="RDFichas" instance=ExtResource("10_yteiy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.34808, 124.517)
 
 [node name="RDFicha3" parent="RDFichas" instance=ExtResource("10_yteiy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0145233, 0.768754, 204.671)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 204.671)
 
 [node name="RDFicha4" parent="RDFichas" instance=ExtResource("10_yteiy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0145233, 0.768754, 279.599)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 279.599)
 
 [node name="RDFicha7" parent="RDFichas" instance=ExtResource("10_yteiy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.00872, 0.768754, 415.311)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 415.311)
 
 [node name="RDFicha5" parent="RDFichas" instance=ExtResource("10_yteiy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6469, 1.10507, 581.248)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.112, 1, 564.675)
 
 [node name="RDFicha6" parent="RDFichas" instance=ExtResource("10_yteiy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.4282, 1.105, 625.824)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.428, 1, 625.824)
+
+[node name="YaguiFichas" type="Node3D" parent="."]
+
+[node name="YaguiFicha" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 105.885)
+
+[node name="YaguiFicha2" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 213.268)
+
+[node name="YaguiFicha3" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 254.831)
+
+[node name="YaguiFicha4" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 415.466)
+
+[node name="YaguiFicha5" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 349.198)
+
+[node name="YaguiFicha6" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 382.322)
+
+[node name="YaguiFicha7" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 446.611)
+
+[node name="YaguiFicha8" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 478.442)
+
+[node name="YaguiFicha9" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 483.736)
+
+[node name="YaguiFicha10" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 515.747)
+
+[node name="YaguiFicha11" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.2952, 1, 591.381)
 
 [node name="Obstaculos" type="Node3D" parent="."]
-
-[node name="Cono" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15815, 0, 94.5249)
-
-[node name="Cono2" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15815, 0, 95.5532)
-
-[node name="Cono3" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.46754, 0, 137.089)
-
-[node name="Cono4" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52645, 0, 137.077)
-
-[node name="Cono5" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 190.455)
-
-[node name="Cono6" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 190.455)
-
-[node name="Cono7" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.690764, 0, 262.96)
-
-[node name="Cono8" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.69076, 0, 262.96)
-
-[node name="Cono9" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30924, 0, 262.96)
-
-[node name="Cono10" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.309236, 0, 262.96)
 
 [node name="Valla" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
 transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, 0.703255, 0, 85.3533)
 
-[node name="Valla2" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 116.353)
-
 [node name="Valla3" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 137.085)
 
-[node name="Valla4" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -0.836806, 0, 150.292)
-
-[node name="Valla5" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -0.837, 0, 182.268)
-
-[node name="Valla6" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -1.29433, 0, 213.268)
-
-[node name="Valla7" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 1, 0, 219.113)
-
-[node name="Valla8" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 1, 0, 238.113)
-
-[node name="Valla9" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 1.18798, 0, 249.179)
-
-[node name="Valla10" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -1.19908, 0, 254.831)
-
-[node name="Cono11" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000483513, 0.25, 284.104)
-
-[node name="Valla11" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34273, -0.0221124, 305.03)
-
 [node name="pelota" parent="Obstaculos" instance=ExtResource("21_lml7n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2745, 0.361814, 288.921)
-
-[node name="Cono12" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15815, 0, 359.699)
-
-[node name="Cono13" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15815, 0, 360.727)
-
-[node name="Cono14" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.46754, 0, 402.263)
-
-[node name="Cono15" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52645, 0, 402.251)
-
-[node name="Cono16" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 455.629)
-
-[node name="Cono17" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 455.629)
-
-[node name="Cono18" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.690764, 0, 528.134)
-
-[node name="Cono19" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.69076, 0, 528.134)
-
-[node name="Cono20" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30924, 0, 528.134)
-
-[node name="Cono21" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.309236, 0, 528.134)
-
-[node name="Valla12" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, 0.703255, 0, 350.527)
-
-[node name="Valla13" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 381.527)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.275, 0.2, 288.921)
 
 [node name="Valla14" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 402.259)
 
-[node name="Valla15" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -0.836806, 0, 415.466)
-
-[node name="Valla16" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -0.837, 0, 447.442)
-
-[node name="Valla17" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -1.29433, 0, 478.442)
-
-[node name="Valla18" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 1, 0, 484.287)
-
-[node name="Valla19" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 1, 0, 503.287)
-
-[node name="Valla20" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 1.18798, 0, 514.353)
-
-[node name="Valla21" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -1.19908, 0, 520.005)
-
-[node name="Valla22" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.792193, 0, 0.61027, 0, 1, 0, -0.61027, 0, 0.792193, 1.3565, 0, 546.942)
-
-[node name="Valla23" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.796044, 0, -0.605238, 0, 1, 0, 0.605238, 0, 0.796044, -1.52346, 0, 546.966)
+[node name="pelota13" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024, 0.2, 187.909)
 
 [node name="pelota2" parent="Obstaculos" instance=ExtResource("21_lml7n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.653, 0.260937, 615.898)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.653, 0.2, 615.898)
 
 [node name="pelota3" parent="Obstaculos" instance=ExtResource("21_lml7n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.699, 0.260937, 603.119)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.699, 0.2, 602.847)
 
 [node name="pelota4" parent="Obstaculos" instance=ExtResource("21_lml7n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.1606, 0.260936, 582.06)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.161, 0.2, 582.06)
+
+[node name="pelota5" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0.2, 262.671)
+
+[node name="pelota6" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 262.737)
+
+[node name="pelota7" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0.2, 303.846)
+
+[node name="pelota8" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0.2, 358.647)
+
+[node name="pelota9" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.375, 0.2, 402.253)
+
+[node name="pelota10" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3, 0.2, 402.253)
+
+[node name="pelota11" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0.2, 454.75)
+
+[node name="pelota12" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 527.674)
 
 [node name="Rampas y Tablas" type="Node3D" parent="."]
 
