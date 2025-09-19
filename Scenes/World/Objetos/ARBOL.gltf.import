@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ddxfwdprrlewj"
-path="res://.godot/imported/cartel-estacionamiento.glb-42af5521c9f1f8b1015a948913d15eb6.scn"
+uid="uid://bk6cnxovd7wkd"
+path="res://.godot/imported/ARBOL.gltf-4cbedb116a047f61c15bd73db336636d.scn"
 
 [deps]
 
-source_file="res://Assets/Objetos/CartelesSN/cartel-estacionamiento.glb"
-dest_files=["res://.godot/imported/cartel-estacionamiento.glb-42af5521c9f1f8b1015a948913d15eb6.scn"]
+source_file="res://Scenes/World/Objetos/ARBOL.gltf"
+dest_files=["res://.godot/imported/ARBOL.gltf-4cbedb116a047f61c15bd73db336636d.scn"]
 
 [params]
 

@@ -1,29 +1,361 @@
-[gd_scene load_steps=37 format=3 uid="uid://djlnov41bncl8"]
+[gd_scene load_steps=79 format=3 uid="uid://djlnov41bncl8"]
 
 [ext_resource type="PackedScene" uid="uid://d33hm0kfvhtj3" path="res://Scenes/GUI/fps_count.tscn" id="1_1pvyk"]
 [ext_resource type="PackedScene" uid="uid://ikd1j0tjscug" path="res://Scenes/GUI/hud.tscn" id="1_by2pg"]
 [ext_resource type="PackedScene" uid="uid://dcmdpwf6w8opd" path="res://Scenes/World/san_nicolas.tscn" id="1_n1kio"]
 [ext_resource type="PackedScene" uid="uid://dngf56sh7pjqo" path="res://Scenes/GUI/pause_menu.tscn" id="1_wpgpo"]
+[ext_resource type="Script" uid="uid://rt61ajvdfypx" path="res://Script/game_controller.gd" id="1_y76hn"]
 [ext_resource type="Script" uid="uid://pvrbshktn0cf" path="res://Script/Dialogos/Dialogo-1.gd" id="2_cu8p5"]
 [ext_resource type="PackedScene" uid="uid://6h6e464pgrsa" path="res://Scenes/GUI/danger_alert.tscn" id="2_g3oxa"]
+[ext_resource type="Texture2D" uid="uid://didi7da0cnu17" path="res://Assets/Extras/Dialogs/DIALOGOSS-0Y.png" id="2_l5qvs"]
 [ext_resource type="PackedScene" uid="uid://bg2ova3uojcc0" path="res://Scenes/Characters/nica.tscn" id="2_ntgcc"]
-[ext_resource type="PackedScene" uid="uid://ccrn1ie0sqgdk" path="res://Scenes/Dialogos/Dialogo-1.tscn" id="2_xqo82"]
+[ext_resource type="Texture2D" uid="uid://cnxvuwskw7qol" path="res://Assets/Extras/Dialogs/DIALOGOSS-0N.png" id="3_p7lpm"]
+[ext_resource type="Texture2D" uid="uid://bhsa8bb862wp7" path="res://Assets/Extras/Dialogs/DIALOGOSS-01.png" id="4_w1pl2"]
+[ext_resource type="Texture2D" uid="uid://d1rttotu4p4yb" path="res://Assets/Extras/Dialogs/DIALOGOSS-03.png" id="5_llg4m"]
+[ext_resource type="Texture2D" uid="uid://csxsq481s2mlk" path="res://Assets/Extras/Dialogs/DIALOGOSS-02.png" id="5_y8gtk"]
 [ext_resource type="PackedScene" uid="uid://dgf0l74w3bdo8" path="res://Scenes/Coins/EcoFicha.tscn" id="6_23yoc"]
+[ext_resource type="Texture2D" uid="uid://d62k0462p6xh" path="res://Assets/Extras/Dialogs/DIALOGOSS-04.png" id="6_qggjr"]
+[ext_resource type="Texture2D" uid="uid://s465l4bpa76t" path="res://Assets/Extras/Dialogs/DIALOGOSS-05.png" id="7_qggjr"]
 [ext_resource type="Script" uid="uid://mc36wktsjlfn" path="res://Script/GUI/label.gd" id="8_6jptx"]
+[ext_resource type="Texture2D" uid="uid://c3a7sedrpd1j5" path="res://Assets/Extras/Dialogs/DIALOGOSS-06.png" id="8_fegd5"]
 [ext_resource type="PackedScene" uid="uid://3gk3aubcupa6" path="res://Scenes/Characters/yagui.tscn" id="8_t55t5"]
 [ext_resource type="FontFile" uid="uid://c2hhi7jed7eo3" path="res://Assets/Fonts/kagenobolditalic-q2kvl.otf" id="8_wpgpo"]
+[ext_resource type="Texture2D" uid="uid://g47amc1rylyq" path="res://Assets/Extras/Dialogs/DIALOGOSS-07.png" id="9_pqm0m"]
 [ext_resource type="Texture2D" uid="uid://cwjasgt6l6nl4" path="res://Assets/Extras/SKY-06.png" id="9_psyr8"]
 [ext_resource type="PackedScene" uid="uid://bo2da4in2mjf8" path="res://Scenes/Coins/SNFicha.tscn" id="9_w7l72"]
 [ext_resource type="PackedScene" uid="uid://h2yyj2bmrsqb" path="res://Scenes/Coins/RDFicha.tscn" id="10_yteiy"]
 [ext_resource type="PackedScene" uid="uid://cqh3220s635ah" path="res://Assets/San Nicolas/Costanera + Regatas.tscn" id="11_cu8p5"]
+[ext_resource type="Texture2D" uid="uid://bdvp1uw1i6iml" path="res://Assets/Extras/Dialogs/DIALOGOSS-9.png" id="11_y8gtk"]
 [ext_resource type="PackedScene" uid="uid://bfttwterfi486" path="res://Scenes/World/Objetos/Obstaculos/puente.tscn" id="15_8o8og"]
 [ext_resource type="PackedScene" uid="uid://l6unlmqhug4r" path="res://Scenes/World/Objetos/Valla.tscn" id="15_nsfl0"]
-[ext_resource type="PackedScene" uid="uid://crj38hhv8sc57" path="res://Scenes/World/Objetos/Cono.tscn" id="15_xqo82"]
 [ext_resource type="PackedScene" uid="uid://dcey1tp07g3qh" path="res://Scenes/World/Objetos/Obstaculos/RampaGrande.tscn" id="18_xqo82"]
-[ext_resource type="PackedScene" uid="uid://kf0fni8olwho" path="res://Scenes/Dialogos/DialogodeInicio.tscn" id="20_xqo82"]
+[ext_resource type="PackedScene" uid="uid://b0h4ayhr722x5" path="res://Scenes/World/Objetos/Obstaculos/pelota.tscn" id="21_lml7n"]
+[ext_resource type="PackedScene" uid="uid://bvs1c5dn0kl1f" path="res://Scenes/Coins/YaguiFicha.tscn" id="27_l5qvs"]
+
+[sub_resource type="Animation" id="Animation_6ny57"]
+resource_name = "DialogoOn"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialogoss-0y:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2.6, 3.03333, 4.4, 4.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dialogoss-0n:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.533333, 2.13333, 2.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hgelp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialogoss-0y:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dialogoss-0n:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_85jov"]
+_data = {
+&"DialogoOn": SubResource("Animation_6ny57"),
+&"RESET": SubResource("Animation_hgelp")
+}
+
+[sub_resource type="Animation" id="Animation_w1pl2"]
+resource_name = "DialogOn"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialogoss-01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.466667, 1.53333, 2.06666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dialogoss-02:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.86667, 2.3, 3.53333, 3.93333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_y8gtk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialogoss-01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dialogoss-02:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l5qvs"]
+_data = {
+&"DialogoOn": SubResource("Animation_w1pl2"),
+&"RESET": SubResource("Animation_y8gtk")
+}
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cu8p5"]
 size = Vector3(7.11865, 3.99133, 1)
+
+[sub_resource type="Animation" id="Animation_l5qvs"]
+resource_name = "DialogoOn"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialogoss-01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333, 2.43333, 2.93333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_p7lpm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialogoss-01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p7lpm"]
+_data = {
+&"DialogoOn": SubResource("Animation_l5qvs"),
+&"RESET": SubResource("Animation_p7lpm")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fegd5"]
+size = Vector3(7.11865, 3.99133, 1)
+
+[sub_resource type="Animation" id="Animation_85jov"]
+resource_name = "DialogoOn"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialogoss-01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333, 2.66, 2.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ki7hj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialogoss-01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sy3dk"]
+_data = {
+&"DialogoOn": SubResource("Animation_85jov"),
+&"RESET": SubResource("Animation_ki7hj")
+}
+
+[sub_resource type="Animation" id="Animation_qggjr"]
+resource_name = "DialogoOn"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialogoss-01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 1.66667, 1.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fegd5"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pqm0m"]
+_data = {
+&"DialogoOn": SubResource("Animation_qggjr"),
+&"RESET": SubResource("Animation_fegd5")
+}
+
+[sub_resource type="Animation" id="Animation_mq1cb"]
+resource_name = "DialogoOn"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialogos/Dialogoss-01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333, 2.7, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dialogos/Dialogoss-02:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.16667, 3.6, 5.63333, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qhe55"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialogos/Dialogoss-01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dialogos/Dialogoss-02:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vcrf2"]
+_data = {
+&"DialogoOn": SubResource("Animation_mq1cb"),
+&"RESET": SubResource("Animation_qhe55")
+}
+
+[sub_resource type="Animation" id="Animation_4ra0o"]
+resource_name = "DialogoOn"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialogoss-01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.366667, 2.6, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bqd5y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialogoss-01:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6ny57"]
+_data = {
+&"DialogoOn": SubResource("Animation_4ra0o"),
+&"RESET": SubResource("Animation_bqd5y")
+}
 
 [sub_resource type="Animation" id="Animation_cu8p5"]
 resource_name = "tuto"
@@ -76,16 +408,6 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
-tracks/3/type = "animation"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Dialogos/DialogoDeInicio/AnimationPlayer")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"clips": PackedStringArray("Dialogue"),
-"times": PackedFloat32Array(1)
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bms8u"]
 _data = {
@@ -93,9 +415,10 @@ _data = {
 }
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g3oxa"]
-sky_top_color = Color(0.689056, 0.689377, 0.681842, 1)
 sky_cover = ExtResource("9_psyr8")
-ground_curve = 1.47034
+ground_bottom_color = Color(0, 0.619608, 0.854902, 1)
+ground_horizon_color = Color(0, 0.619608, 0.854902, 1)
+ground_energy_multiplier = 1.8
 
 [sub_resource type="Sky" id="Sky_ombbc"]
 sky_material = SubResource("ProceduralSkyMaterial_g3oxa")
@@ -108,7 +431,43 @@ background_energy_multiplier = 0.7
 sky = SubResource("Sky_ombbc")
 
 [sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_psyr8"]
-frustum_far = 250.0
+
+[sub_resource type="Animation" id="Animation_hbncn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:environment:sky:sky_material:energy_multiplier")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_sy3dk"]
+resource_name = "do_night"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:environment:sky:sky_material:energy_multiplier")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l1l4v"]
+_data = {
+&"RESET": SubResource("Animation_hbncn"),
+&"do_night": SubResource("Animation_sy3dk")
+}
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g3oxa"]
 size = Vector3(17.7956, 3.13379, 1)
@@ -128,7 +487,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 3.14159, 0), Vector3(0, 4.01426, 0)]
+"values": [Vector3(0, 3.14159, 0), Vector3(0, 3.92699, 0)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -137,12 +496,9 @@ tracks/1/path = NodePath("../Nica")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
 "values": [{
-"args": [],
-"method": &"reset_target_line"
-}, {
 "args": [],
 "method": &"actualizar_eje_local"
 }]
@@ -157,7 +513,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0.872665, 0)]
+"values": [Vector3(0, 0, 0), Vector3(0, 0.785398, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_psyr8"]
@@ -169,26 +525,375 @@ _data = {
 &"RESET": SubResource("Animation_psyr8")
 }
 
+[sub_resource type="Animation" id="Animation_y76hn"]
+resource_name = "Giro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Nica:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 3.92699, 0), Vector3(0, 3.14159, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CameraFocus:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.785398, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Nica")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"actualizar_eje_local"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_lml7n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Nica:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 3.14159, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CameraFocus:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lml7n"]
+_data = {
+&"Giro": SubResource("Animation_y76hn"),
+&"RESET": SubResource("Animation_lml7n")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y76hn"]
+size = Vector3(15.7744, 5.87842, 1)
+
+[sub_resource type="Animation" id="Animation_ytmut"]
+resource_name = "Giro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Nica:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 3.14159, 0), Vector3(0, 4.71239, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Nica")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"actualizar_eje_local"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../CameraFocus:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_llg4m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Nica:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 3.14159, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CameraFocus:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qggjr"]
+_data = {
+&"Giro": SubResource("Animation_ytmut"),
+&"RESET": SubResource("Animation_llg4m")
+}
+
 [node name="Main" type="Node3D"]
+
+[node name="GameController" type="Node3D" parent="."]
+script = ExtResource("1_y76hn")
 
 [node name="Dialogos" type="Node3D" parent="."]
 
-[node name="DialogoDeInicio" parent="Dialogos" instance=ExtResource("20_xqo82")]
+[node name="DialogoDeInicio" type="Control" parent="Dialogos"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="AnimationPlayer" parent="Dialogos/DialogoDeInicio" index="2"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogos/DialogoDeInicio"]
 process_mode = 3
+libraries = {
+&"": SubResource("AnimationLibrary_85jov")
+}
+autoplay = "DialogoOn"
 
-[node name="Area3D" type="Area3D" parent="Dialogos"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 49.0226)
+[node name="Dialogoss-0y" type="Sprite2D" parent="Dialogos/DialogoDeInicio"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(178, 506)
+texture = ExtResource("2_l5qvs")
+
+[node name="Dialogoss-0n" type="Sprite2D" parent="Dialogos/DialogoDeInicio"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(979, 395)
+texture = ExtResource("3_p7lpm")
+
+[node name="Dialogo2_EcoFichas" type="Area3D" parent="Dialogos"]
+process_mode = 3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 12.7296)
 collision_layer = 64
 collision_mask = 2
 script = ExtResource("2_cu8p5")
 
-[node name="Dialogos" parent="Dialogos/Area3D" instance=ExtResource("2_xqo82")]
+[node name="Dialogos" type="Control" parent="Dialogos/Dialogo2_EcoFichas"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Dialogos/Area3D"]
+[node name="Dialogoss-01" type="Sprite2D" parent="Dialogos/Dialogo2_EcoFichas/Dialogos"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(973, 425.5)
+texture = ExtResource("4_w1pl2")
+
+[node name="Dialogoss-02" type="Sprite2D" parent="Dialogos/Dialogo2_EcoFichas/Dialogos"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(973, 425.5)
+texture = ExtResource("5_y8gtk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogos/Dialogo2_EcoFichas/Dialogos"]
+process_mode = 3
+libraries = {
+&"": SubResource("AnimationLibrary_l5qvs")
+}
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dialogos/Dialogo2_EcoFichas"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0368652, 1.49567, 0)
 shape = SubResource("BoxShape3D_cu8p5")
+
+[node name="Dialogo3_RdFichas" type="Area3D" parent="Dialogos"]
+process_mode = 3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 47.9988)
+collision_layer = 64
+collision_mask = 2
+script = ExtResource("2_cu8p5")
+
+[node name="Dialogos" type="Control" parent="Dialogos/Dialogo3_RdFichas"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dialogoss-01" type="Sprite2D" parent="Dialogos/Dialogo3_RdFichas/Dialogos"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(974, 425.5)
+texture = ExtResource("5_llg4m")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogos/Dialogo3_RdFichas/Dialogos"]
+libraries = {
+&"": SubResource("AnimationLibrary_p7lpm")
+}
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dialogos/Dialogo3_RdFichas"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0368652, 1.49567, 0)
+shape = SubResource("BoxShape3D_fegd5")
+
+[node name="Dialogo3_RdFichas2" type="Area3D" parent="Dialogos"]
+process_mode = 3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 63.0134)
+collision_layer = 64
+collision_mask = 2
+script = ExtResource("2_cu8p5")
+
+[node name="Dialogos" type="Control" parent="Dialogos/Dialogo3_RdFichas2"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dialogoss-01" type="Sprite2D" parent="Dialogos/Dialogo3_RdFichas2/Dialogos"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(974, 425.5)
+texture = ExtResource("6_qggjr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogos/Dialogo3_RdFichas2/Dialogos"]
+libraries = {
+&"": SubResource("AnimationLibrary_sy3dk")
+}
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dialogos/Dialogo3_RdFichas2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0368652, 1.49567, 0)
+shape = SubResource("BoxShape3D_fegd5")
+
+[node name="Dialogo4_Obstaculos" type="Area3D" parent="Dialogos"]
+process_mode = 3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 117.112)
+collision_layer = 64
+collision_mask = 2
+script = ExtResource("2_cu8p5")
+
+[node name="Dialogos" type="Control" parent="Dialogos/Dialogo4_Obstaculos"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dialogoss-01" type="Sprite2D" parent="Dialogos/Dialogo4_Obstaculos/Dialogos"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(179, 505)
+texture = ExtResource("7_qggjr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogos/Dialogo4_Obstaculos/Dialogos"]
+libraries = {
+&"": SubResource("AnimationLibrary_pqm0m")
+}
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dialogos/Dialogo4_Obstaculos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0368652, 1.49567, 0)
+shape = SubResource("BoxShape3D_fegd5")
+
+[node name="Dialogo5_Pelota" type="Area3D" parent="Dialogos"]
+process_mode = 3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.738988, 161.061)
+collision_layer = 64
+collision_mask = 2
+script = ExtResource("2_cu8p5")
+
+[node name="Dialogos" type="Control" parent="Dialogos/Dialogo5_Pelota"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dialogoss-01" type="Sprite2D" parent="Dialogos/Dialogo5_Pelota/Dialogos"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(973, 472.5)
+texture = ExtResource("8_fegd5")
+
+[node name="Dialogoss-02" type="Sprite2D" parent="Dialogos/Dialogo5_Pelota/Dialogos"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(973, 472.5)
+texture = ExtResource("9_pqm0m")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogos/Dialogo5_Pelota/Dialogos"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_vcrf2")
+}
+speed_scale = 1.3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dialogos/Dialogo5_Pelota"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0368652, 1.49567, 0)
+shape = SubResource("BoxShape3D_fegd5")
+
+[node name="Dialogo6_Plaza" type="Area3D" parent="Dialogos"]
+process_mode = 3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47798, 550.525)
+collision_layer = 64
+collision_mask = 2
+script = ExtResource("2_cu8p5")
+
+[node name="Dialogos" type="Control" parent="Dialogos/Dialogo6_Plaza"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dialogoss-01" type="Sprite2D" parent="Dialogos/Dialogo6_Plaza/Dialogos"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(976, 472)
+texture = ExtResource("11_y8gtk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogos/Dialogo6_Plaza/Dialogos"]
+libraries = {
+&"": SubResource("AnimationLibrary_6ny57")
+}
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dialogos/Dialogo6_Plaza"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0368652, 1.49567, 0)
+shape = SubResource("BoxShape3D_fegd5")
 
 [node name="TEST" type="Node3D" parent="Dialogos"]
 
@@ -249,6 +954,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 99.266, -5, 708.944)
 
 [node name="CameraFocus" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 520.026)
 
 [node name="Camera3D" type="Camera3D" parent="CameraFocus"]
 transform = Transform3D(-0.999945, -0.0104718, -8.44833e-08, -0.0101197, 0.966323, 0.257133, -0.00269255, 0.257119, -0.966376, 0, 3.93963, -8.4115)
@@ -256,11 +962,16 @@ environment = SubResource("Environment_8o8og")
 attributes = SubResource("CameraAttributesPhysical_psyr8")
 current = true
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CameraFocus/Camera3D"]
+libraries = {
+&"": SubResource("AnimationLibrary_l1l4v")
+}
+
 [node name="Yagui" parent="." instance=ExtResource("8_t55t5")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -25.2382)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 504.289)
 
 [node name="Nica" parent="." instance=ExtResource("2_ntgcc")]
-transform = Transform3D(-0.5, 0, 1.26759e-06, 0, 0.5, 0, -1.26759e-06, 0, -0.5, 0, 0, 0)
+transform = Transform3D(-0.5, 0, 1.26759e-06, 0, 0.5, 0, -1.26759e-06, 0, -0.5, 0, 0, 520.026)
 
 [node name="Alert" type="Area3D" parent="Nica"]
 transform = Transform3D(-2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, 0, 0, 0)
@@ -276,7 +987,7 @@ wait_time = 9.0
 one_shot = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.665869, -0.121724, -0.736072, 0.746069, 0.108639, 0.656947, 1.44913e-08, -0.986601, 0.163154, 0, 0, 0)
+transform = Transform3D(0.854568, -0.0847322, -0.512381, 0.51934, 0.139426, 0.843117, 1.36579e-08, -0.986601, 0.163154, 0, 0, 0)
 light_energy = 2.0
 light_bake_mode = 1
 shadow_enabled = true
@@ -291,40 +1002,40 @@ directional_shadow_max_distance = 50.0
 [node name="EcoFichas" type="Node3D" parent="."]
 
 [node name="4" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.739924, 42.9807)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 42.981)
 
 [node name="11" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74, 56.9412)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 56.9412)
 
 [node name="12" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74, 55.9412)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 55.9412)
 
 [node name="13" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74, 54.9412)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 54.9412)
 
 [node name="14" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74, 53.9412)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 53.9412)
 
 [node name="15" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74, 53.9412)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 53.0703)
 
 [node name="16" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.995152, 1.47798, 95.543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 95.543)
 
 [node name="17" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.995152, 1.47798, 96.543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 96.543)
 
 [node name="18" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.995152, 1.47798, 97.543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 97.543)
 
 [node name="19" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.995152, 1.47798, 98.543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 98.543)
 
 [node name="20" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.995152, 1.47798, 99.543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 99.543)
 
 [node name="21" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.995152, 1.47798, 100.543)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 100.543)
 
 [node name="22" parent="EcoFichas" instance=ExtResource("6_23yoc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 110.571)
@@ -336,40 +1047,40 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 111.571)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 112.571)
 
 [node name="25" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044, 3, 125.466)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 125.466)
 
 [node name="26" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044, 3.1, 125.896)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1, 125.896)
 
 [node name="27" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044, 3.2, 126.405)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 126.405)
 
 [node name="28" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044, 3.2, 126.885)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 126.885)
 
 [node name="29" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044, 3.2, 127.418)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 127.418)
 
 [node name="30" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044, 3.1, 127.91)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1, 127.91)
 
 [node name="31" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044, 3, 128.332)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 128.332)
 
 [node name="32" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044, 2.9, 128.706)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9, 128.706)
 
 [node name="33" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.808, 165.074)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 165.074)
 
 [node name="34" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.808, 167.509)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 167.509)
 
 [node name="35" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.808, 166.509)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 166.509)
 
 [node name="36" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.808, 169.509)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 169.509)
 
 [node name="37" parent="EcoFichas" instance=ExtResource("6_23yoc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.4665, 170.509)
@@ -423,34 +1134,289 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 218.509)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 219.509)
 
 [node name="54" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.28083, 223.263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 223.263)
 
 [node name="55" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.28083, 224.263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 224.263)
 
 [node name="56" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.28083, 225.263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 225.263)
 
 [node name="57" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.28083, 226.263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 226.263)
 
 [node name="58" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.28083, 227.263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.3, 227.263)
 
 [node name="59" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.80902, 237.263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 237.263)
 
 [node name="60" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.80902, 239.263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 239.263)
 
 [node name="61" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.80902, 241.263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 241.263)
 
 [node name="62" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.80902, 243.224)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 243.224)
 
 [node name="63" parent="EcoFichas" instance=ExtResource("6_23yoc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.80902, 245.224)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 245.224)
+
+[node name="78" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 247.114)
+
+[node name="79" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 249.114)
+
+[node name="80" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 251.114)
+
+[node name="83" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 282.377)
+
+[node name="84" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 284.377)
+
+[node name="85" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 286.377)
+
+[node name="86" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 299.971)
+
+[node name="87" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 301.971)
+
+[node name="88" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 303.971)
+
+[node name="89" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 318.862)
+
+[node name="90" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 320.862)
+
+[node name="91" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 322.862)
+
+[node name="92" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 324.543)
+
+[node name="93" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 326.543)
+
+[node name="94" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 328.543)
+
+[node name="95" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 337.847)
+
+[node name="96" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 339.847)
+
+[node name="97" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 341.847)
+
+[node name="98" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 352.185)
+
+[node name="99" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 354.185)
+
+[node name="100" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 356.185)
+
+[node name="101" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 372.417)
+
+[node name="102" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 374.417)
+
+[node name="103" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 376.417)
+
+[node name="104" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0, 1, 392.559)
+
+[node name="105" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0, 1, 394.559)
+
+[node name="106" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0, 1, 396.559)
+
+[node name="107" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0, 1, 398.496)
+
+[node name="108" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0, 1, 408.858)
+
+[node name="109" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0, 1, 410.053)
+
+[node name="110" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 1, 1.4634, 418.769)
+
+[node name="111" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 1, 1.4634, 419.964)
+
+[node name="112" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 1, 1.4634, 421.305)
+
+[node name="113" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 1, 1.4634, 422.5)
+
+[node name="119" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.971859, 0.736676, 449.569)
+
+[node name="120" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.971859, 0.736676, 450.764)
+
+[node name="121" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.971859, 0.736676, 452.105)
+
+[node name="122" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, -0.0150504, 0.736676, 466.113)
+
+[node name="123" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, -0.0150504, 0.736676, 467.307)
+
+[node name="124" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, -0.0150504, 0.736676, 468.648)
+
+[node name="125" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, -0.0150504, 0.736676, 480.294)
+
+[node name="126" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, -0.0150504, 0.736676, 481.489)
+
+[node name="127" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, -0.0150504, 0.736676, 482.83)
+
+[node name="128" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, -0.987789, 1.33292, 488.98)
+
+[node name="129" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, -0.987789, 1.33292, 490.175)
+
+[node name="130" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, -0.987789, 1.33292, 491.516)
+
+[node name="131" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, -0.0150504, 0.736676, 507.371)
+
+[node name="132" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, -0.0150504, 0.736676, 508.566)
+
+[node name="133" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, -0.0150504, 0.736676, 509.907)
+
+[node name="134" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, -0.0150504, 0.736676, 510.971)
+
+[node name="135" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 1.26254, 0.736676, 520.638)
+
+[node name="136" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 1.26254, 0.736676, 521.833)
+
+[node name="137" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 1.26254, 0.736676, 523.174)
+
+[node name="138" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 1.26254, 0.736676, 524.238)
+
+[node name="139" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.0152135, 0.607152, 531.579)
+
+[node name="140" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.0152135, 1.02702, 532.774)
+
+[node name="141" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.0152135, 1.40061, 534.115)
+
+[node name="142" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.0152135, 1.40061, 535.179)
+
+[node name="143" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.0152135, 1.40061, 536.224)
+
+[node name="144" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.0152135, 1.40061, 537.419)
+
+[node name="145" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.0152135, 1.40061, 538.76)
+
+[node name="146" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.0152135, 1.40061, 540.093)
+
+[node name="147" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.0152135, 1.40061, 541.319)
+
+[node name="148" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.0152135, 1.08473, 542.493)
+
+[node name="149" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.0152135, 0.907945, 543.536)
+
+[node name="150" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0.0026529, 0, -0.0026529, 0.999996, 0.0152135, 0.601956, 544.601)
+
+[node name="114" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, -9.26036e-07, 0.000349065, 0, 0.999996, 0.0026529, -0.000349066, -0.0026529, 0.999996, -1, 1.73274, 437.031)
+
+[node name="115" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, -9.26036e-07, 0.000349065, 0, 0.999996, 0.0026529, -0.000349066, -0.0026529, 0.999996, -1, 1.73274, 438.226)
+
+[node name="116" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, -9.26036e-07, 0.000349065, 0, 0.999996, 0.0026529, -0.000349066, -0.0026529, 0.999996, -1, 1.54421, 439.566)
+
+[node name="117" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, -9.26036e-07, 0.000349065, 0, 0.999996, 0.0026529, -0.000349066, -0.0026529, 0.999996, -1, 1.30109, 440.761)
+
+[node name="118" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, -9.26036e-07, 0.000349065, 0, 0.999996, 0.0026529, -0.000349066, -0.0026529, 0.999996, -1, 1, 441.863)
+
+[node name="64" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.4843, 1, 588.025)
+
+[node name="65" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.4012, 1, 588.901)
+
+[node name="66" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.4015, 1, 589.901)
+
+[node name="67" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.4019, 1, 590.901)
+
+[node name="68" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.193, 1, 593.29)
+
+[node name="69" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.193, 1, 594.29)
+
+[node name="70" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.193, 1, 595.29)
+
+[node name="71" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 48.2629, 1, 605.317)
+
+[node name="72" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 49.2629, 1, 606.317)
+
+[node name="73" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 50.2629, 1, 607.317)
+
+[node name="74" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 66.428, 1, 621.824)
+
+[node name="75" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 67.428, 1, 622.824)
+
+[node name="76" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 68.428, 1, 623.824)
+
+[node name="77" parent="EcoFichas" instance=ExtResource("6_23yoc")]
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 69.428, 1, 624.824)
 
 [node name="SNFichas" type="Node3D" parent="."]
 
@@ -461,86 +1427,130 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 82.1743)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 142.305)
 
 [node name="SNFicha2" parent="SNFichas" instance=ExtResource("9_w7l72")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04229, 2.17364, 95.171)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 95.171)
 
 [node name="SNFicha3" parent="SNFichas" instance=ExtResource("9_w7l72")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04229, 2.14529, 155.681)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.5, 155.681)
+
+[node name="SNFicha5" parent="SNFichas" instance=ExtResource("9_w7l72")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 308.695)
+
+[node name="SNFicha6" parent="SNFichas" instance=ExtResource("9_w7l72")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 448.049)
+
+[node name="SNFicha7" parent="SNFichas" instance=ExtResource("9_w7l72")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 547.527)
 
 [node name="RDFichas" type="Node3D" parent="."]
 
 [node name="RDFicha" parent="RDFichas" instance=ExtResource("10_yteiy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0816295, 2.28516, 61.3248)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 61.325)
 
 [node name="RDFicha2" parent="RDFichas" instance=ExtResource("10_yteiy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.34808, 124.517)
 
 [node name="RDFicha3" parent="RDFichas" instance=ExtResource("10_yteiy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0145233, 0.768754, 204.671)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 204.671)
 
 [node name="RDFicha4" parent="RDFichas" instance=ExtResource("10_yteiy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0145233, 0.768754, 279.599)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 279.599)
+
+[node name="RDFicha7" parent="RDFichas" instance=ExtResource("10_yteiy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 415.311)
+
+[node name="RDFicha5" parent="RDFichas" instance=ExtResource("10_yteiy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.112, 1, 564.675)
+
+[node name="RDFicha6" parent="RDFichas" instance=ExtResource("10_yteiy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.428, 1, 625.824)
+
+[node name="RDFicha8" parent="RDFichas" instance=ExtResource("10_yteiy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2677, 1, 608.296)
+
+[node name="YaguiFichas" type="Node3D" parent="."]
+
+[node name="YaguiFicha" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 105.885)
+
+[node name="YaguiFicha2" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 213.268)
+
+[node name="YaguiFicha3" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 254.831)
+
+[node name="YaguiFicha4" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 415.466)
+
+[node name="YaguiFicha5" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 349.198)
+
+[node name="YaguiFicha6" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 382.322)
+
+[node name="YaguiFicha7" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 446.611)
+
+[node name="YaguiFicha8" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 478.442)
+
+[node name="YaguiFicha9" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 483.736)
+
+[node name="YaguiFicha10" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 515.747)
+
+[node name="YaguiFicha11" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.2952, 1, 591.381)
 
 [node name="Obstaculos" type="Node3D" parent="."]
-
-[node name="Cono" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15815, 0, 94.5249)
-
-[node name="Cono2" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15815, 0, 95.5532)
-
-[node name="Cono3" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.46754, 0, 137.089)
-
-[node name="Cono4" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52645, 0, 137.077)
-
-[node name="Cono5" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 190.455)
-
-[node name="Cono6" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 190.455)
-
-[node name="Cono7" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.690764, 0, 262.96)
-
-[node name="Cono8" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.69076, 0, 262.96)
-
-[node name="Cono9" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30924, 0, 262.96)
-
-[node name="Cono10" parent="Obstaculos" instance=ExtResource("15_xqo82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.309236, 0, 262.96)
 
 [node name="Valla" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
 transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, 0.703255, 0, 85.3533)
 
-[node name="Valla2" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 116.353)
-
 [node name="Valla3" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 137.085)
 
-[node name="Valla4" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -0.836806, 0, 150.292)
+[node name="pelota" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.275, 0.2, 288.921)
 
-[node name="Valla5" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -0.837, 0, 182.268)
+[node name="Valla14" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 402.259)
 
-[node name="Valla6" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -1.29433, 0, 213.268)
+[node name="pelota13" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024, 0.2, 187.909)
 
-[node name="Valla7" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 1, 0, 219.113)
+[node name="pelota2" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.653, 0.2, 615.898)
 
-[node name="Valla8" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 1, 0, 238.113)
+[node name="pelota3" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.699, 0.2, 602.847)
 
-[node name="Valla9" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 1, 0, 249.179)
+[node name="pelota4" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.161, 0.2, 582.06)
 
-[node name="Valla10" parent="Obstaculos" instance=ExtResource("15_nsfl0")]
-transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -1, 0, 252.453)
+[node name="pelota5" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0.2, 262.671)
+
+[node name="pelota6" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 262.737)
+
+[node name="pelota7" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0.2, 303.846)
+
+[node name="pelota8" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0.2, 358.647)
+
+[node name="pelota9" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.375, 0.2, 402.253)
+
+[node name="pelota10" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3, 0.2, 402.253)
+
+[node name="pelota11" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0.2, 454.75)
+
+[node name="pelota12" parent="Obstaculos" instance=ExtResource("21_lml7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 527.674)
 
 [node name="Rampas y Tablas" type="Node3D" parent="."]
 
@@ -577,13 +1587,46 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0571282, -0.219, 206.782)
 [node name="RampaGrande6" parent="Rampas y Tablas" instance=ExtResource("18_xqo82")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0571282, -0.219, 233.782)
 
+[node name="Puente6" parent="Rampas y Tablas" instance=ExtResource("15_8o8og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.224337, 294.678)
+
+[node name="Puente7" parent="Rampas y Tablas" instance=ExtResource("15_8o8og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.224, 363.364)
+
+[node name="Puente8" parent="Rampas y Tablas" instance=ExtResource("15_8o8og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.224, 421.046)
+
+[node name="Puente9" parent="Rampas y Tablas" instance=ExtResource("15_8o8og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.224, 490.36)
+
+[node name="Puente10" parent="Rampas y Tablas" instance=ExtResource("15_8o8og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.224, 537.83)
+
+[node name="RampaGrande7" parent="Rampas y Tablas" instance=ExtResource("18_xqo82")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.136842, -0.144583, 314.261)
+
+[node name="RampaGrande8" parent="Rampas y Tablas" instance=ExtResource("18_xqo82")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.019, -0.145, 387.882)
+
+[node name="RampaGrande9" parent="Rampas y Tablas" instance=ExtResource("18_xqo82")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.0977895, -0.145, 436.791)
+
+[node name="RampaGrande10" parent="Rampas y Tablas" instance=ExtResource("18_xqo82")]
+transform = Transform3D(-1.2, 0, -1.81195e-07, 0, 1.2, 0, 1.81195e-07, 0, -1.2, 0.0666868, -0.145, 438.759)
+
+[node name="RampaGrande11" parent="Rampas y Tablas" instance=ExtResource("18_xqo82")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0571282, -0.219, 471.956)
+
+[node name="RampaGrande12" parent="Rampas y Tablas" instance=ExtResource("18_xqo82")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0571282, -0.219, 498.956)
+
 [node name="Giro" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 564.613)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 554.905)
 collision_layer = 64
 collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Giro"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.605957, 2.43921, 6.17487)
+[node name="Coll_Mitre" type="CollisionShape3D" parent="Giro"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.439, -0.595764)
 shape = SubResource("BoxShape3D_ombbc")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Giro"]
@@ -591,11 +1634,43 @@ libraries = {
 &"": SubResource("AnimationLibrary_8o8og")
 }
 
-[connection signal="body_entered" from="Dialogos/Area3D" to="Dialogos/Area3D" method="_on_body_entered"]
+[node name="GiroEscalinata" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.913, 2.439, 652.559)
+collision_layer = 64
+collision_mask = 2
+
+[node name="Coll_Escalinata" type="CollisionShape3D" parent="GiroEscalinata"]
+transform = Transform3D(0.942706, 0, 0.333626, 0, 1, 0, -0.333626, 0, 0.942706, -1.54907, 0, 0.386047)
+shape = SubResource("BoxShape3D_ombbc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GiroEscalinata"]
+libraries = {
+&"": SubResource("AnimationLibrary_lml7n")
+}
+
+[node name="GiroCostanera" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.266, -7.94148, 765.522)
+collision_layer = 64
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GiroCostanera"]
+transform = Transform3D(0.921192, 0, 0.389108, 0, 1, 0, -0.389108, 0, 0.921192, 0, -0.296365, 0.0186157)
+shape = SubResource("BoxShape3D_y76hn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GiroCostanera"]
+libraries = {
+&"": SubResource("AnimationLibrary_qggjr")
+}
+
+[connection signal="body_entered" from="Dialogos/Dialogo2_EcoFichas" to="Dialogos/Dialogo2_EcoFichas" method="_on_body_entered"]
+[connection signal="body_entered" from="Dialogos/Dialogo3_RdFichas" to="Dialogos/Dialogo3_RdFichas" method="_on_body_entered"]
+[connection signal="body_entered" from="Dialogos/Dialogo3_RdFichas2" to="Dialogos/Dialogo3_RdFichas2" method="_on_body_entered"]
+[connection signal="body_entered" from="Dialogos/Dialogo4_Obstaculos" to="Dialogos/Dialogo4_Obstaculos" method="_on_body_entered"]
+[connection signal="body_entered" from="Dialogos/Dialogo5_Pelota" to="Dialogos/Dialogo5_Pelota" method="_on_body_entered"]
+[connection signal="body_entered" from="Dialogos/Dialogo6_Plaza" to="Dialogos/Dialogo6_Plaza" method="_on_body_entered"]
 [connection signal="timeout" from="Label/Timer" to="Label" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Nica/Alert" to="HUD" method="_on_alert_body_entered"]
 [connection signal="timeout" from="Nica/Alert/TimerAlert" to="HUD" method="_on_timer_alert_timeout"]
 [connection signal="body_entered" from="Giro" to="Nica" method="_on_giro_body_entered"]
-
-[editable path="Dialogos/DialogoDeInicio"]
-[editable path="Dialogos/Area3D/Dialogos"]
+[connection signal="body_entered" from="GiroEscalinata" to="Nica" method="_on_giro_escalinata_body_entered"]
+[connection signal="body_entered" from="GiroCostanera" to="Nica" method="_on_giro_costanera_body_entered"]

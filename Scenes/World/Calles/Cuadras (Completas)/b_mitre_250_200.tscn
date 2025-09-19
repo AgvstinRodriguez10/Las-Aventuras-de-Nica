@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://tmkk0hisgpct"]
+[gd_scene load_steps=7 format=3 uid="uid://tmkk0hisgpct"]
 
 [ext_resource type="PackedScene" uid="uid://rnqvipfo1iw6" path="res://Scenes/World/Calles/CuadraDarsenaIzquierda.tscn" id="1_vu68e"]
 [ext_resource type="PackedScene" uid="uid://daqotynvcl1u2" path="res://Assets/San Nicolas/Object/Decoración/BalaCalle.tscn" id="2_swyip"]
 [ext_resource type="PackedScene" uid="uid://crcmb22kteijj" path="res://Scenes/World/Objetos/LigthSinLigth.tscn" id="3_wam30"]
 [ext_resource type="PackedScene" uid="uid://b6txb1e0ge8qv" path="res://Scenes/World/Calles/Cuadra - 4/izq.tscn" id="3_x6dmu"]
 [ext_resource type="PackedScene" uid="uid://dvjy5erkeic7" path="res://Scenes/World/Calles/Cuadra - 4/der.tscn" id="4_wam30"]
+[ext_resource type="PackedScene" uid="uid://7y6r3ff1uqaf" path="res://Assets/Objetos/CartelesSN/cartel_farol_darsena.glb" id="4_x6dmu"]
 
 [node name="B Mitre 250 200" type="Node3D"]
 
@@ -77,6 +78,12 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.95352, 0.0597737, 7.
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.06898, 0, 562.304)
 
 [node name="LigthSinLigth2" parent="Decoracion/Faroles/Izq" instance=ExtResource("3_wam30")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.06898, 0, 597.556)
+
+[node name="cartel_farol_darsena" parent="Decoracion/Faroles/Izq/LigthSinLigth2" instance=ExtResource("4_x6dmu")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.842629, 4.5, 0)
+
+[node name="LigthSinLigth3" parent="Decoracion/Faroles/Izq" instance=ExtResource("3_wam30")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.06898, 0, 682.304)
 
 [node name="Der" type="Node3D" parent="Decoracion/Faroles"]

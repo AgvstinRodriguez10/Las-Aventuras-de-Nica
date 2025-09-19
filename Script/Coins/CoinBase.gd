@@ -4,9 +4,9 @@ class_name CoinBase
 @onready var userInterface:UI = $"../../HUD"
 @onready var collision:CollisionShape3D = $CollisionShape3D
 
-var distUp = 4
+var distUp = 3
 var posInitial: Vector3
-var idleDistUp = 1.3
+var idleDistUp = .8
 var targetHeight 
 
 var target:Player
@@ -30,9 +30,11 @@ func _physics_process(delta: float) -> void:
 		STATE.IDLE_UP:
 			animationCoinsUp(delta)
 			animRotator(delta)
+			checkIsOffside()
 		STATE.IDLE_DOWN:
 			animationCoinsDown(delta)
 			animRotator(delta)
+			checkIsOffside()
 		STATE.PULLING_UP:
 			if distUp - 0.5 > posInitial.distance_to(position):
 				position = position.lerp(posInitial + Vector3(0,1,1) * distUp, 2 * delta)
@@ -44,6 +46,10 @@ func _physics_process(delta: float) -> void:
 			else:
 				byebye()
 
+func checkIsOffside():
+	#if position
+	
+	pass
 func animationCoinsUp(delta:float):
 	#definido en el ready:
 	#targetHeight = posInitial.y + idleDistUp

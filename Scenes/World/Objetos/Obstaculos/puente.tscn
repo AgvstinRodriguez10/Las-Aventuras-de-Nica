@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=4 uid="uid://bfttwterfi486"]
+[gd_scene load_steps=15 format=4 uid="uid://bfttwterfi486"]
 
 [ext_resource type="Texture2D" uid="uid://bxyskm6kslfs4" path="res://Assets/Extras/puentesito_uvpuentecito-03.png" id="1_0wjab"]
+[ext_resource type="Script" uid="uid://3k58hnnypyod" path="res://Script/Objetos/ObjectKillzone.gd" id="1_pfr5o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bay2r"]
 resource_name = "Material_0"
@@ -119,7 +120,13 @@ shadow_mesh = SubResource("ArrayMesh_pd7y8")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_i5nm4"]
 data = PackedVector3Array(-2.5901, 0.0341, -0.2965, -2.5901, -0.0341, -0.2965, 2.5901, -0.0341, -0.2965, 2.5901, -0.0341, -0.2965, 2.5901, 0.0341, -0.2965, -2.5901, 0.0341, -0.2965, -2.5901, -0.0341, 0.2965, -2.5901, 0.0341, 0.2965, 2.5901, 0.0341, 0.2965, 2.5901, 0.0341, 0.2965, 2.5901, -0.0341, 0.2965, -2.5901, -0.0341, 0.2965, 2.5901, 0.0341, 0.2965, -2.5901, 0.0341, 0.2965, -2.5901, 0.0341, -0.2965, -2.5901, 0.0341, -0.2965, 2.5901, 0.0341, -0.2965, 2.5901, 0.0341, 0.2965)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_0wjab"]
+size = Vector3(1.20215, 0.18457, 8.60217)
+
 [node name="puentesito" type="StaticBody3D"]
+collision_layer = 9
+collision_mask = 2
+script = ExtResource("1_pfr5o")
 
 [node name="Plane_005" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, -56, 0, 0, 0, 56, -56, 0, 0, 0, 0, -4.76507)
@@ -147,3 +154,13 @@ skeleton = NodePath("")
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
 transform = Transform3D(-1.43051e-07, 0, 1.2, 0, 1.2, 0, -1.2, 0, -1.43051e-07, 0, 0.795092, 0)
 shape = SubResource("ConcavePolygonShape3D_i5nm4")
+
+[node name="Killzone" type="Area3D" parent="."]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Killzone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.61595, 0.0296314)
+shape = SubResource("BoxShape3D_0wjab")
+
+[connection signal="body_entered" from="Killzone" to="." method="_on_killzone_body_entered"]

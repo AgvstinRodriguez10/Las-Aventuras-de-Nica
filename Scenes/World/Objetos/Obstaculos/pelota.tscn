@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=4 uid="uid://b0h4ayhr722x5"]
+[gd_scene load_steps=11 format=4 uid="uid://b0h4ayhr722x5"]
 
+[ext_resource type="Script" uid="uid://3k58hnnypyod" path="res://Script/Objetos/ObjectKillzone.gd" id="1_j385k"]
 [ext_resource type="Texture2D" uid="uid://cf7ycjpfwtd0i" path="res://Assets/Extras/pelota_pelotapruba3-03.png" id="1_lwtdm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3rvmh"]
@@ -72,6 +73,30 @@ shadow_mesh = SubResource("ArrayMesh_v84be")
 
 [sub_resource type="Animation" id="Animation_j385k"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icosphere:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.3, 0.3, 0.3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icosphere:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_lwtdm"]
 resource_name = "move"
@@ -79,14 +104,26 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Icosphere:rotation")
-tracks/0/interp = 1
+tracks/0/path = NodePath("Icosphere:scale")
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.433333, 0.6, 0.766667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(-6.28319, 0, 0)]
+"values": [Vector3(0.3, 0.3, 0.3), Vector3(0.3, 0.3, 0.3), Vector3(0.3, 0.2, 0.3), Vector3(0.3, 0.3, 0.3), Vector3(0.3, 0.3, 0.3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icosphere:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.54, 0.633333, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.52687, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 1.52687, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qyrv8"]
@@ -95,10 +132,16 @@ _data = {
 &"move": SubResource("Animation_lwtdm")
 }
 
-[node name="pelota" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_lwtdm"]
+size = Vector3(0.516602, 0.484375, 0.477539)
+
+[node name="pelota" type="Area3D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_j385k")
 
 [node name="Icosphere" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.863932, 0.503608, 0, -0.503608, -0.863932, 0, 0, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 lod_bias = 0.5
 visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_ft8li")
@@ -108,3 +151,10 @@ skeleton = NodePath("")
 libraries = {
 &"": SubResource("AnimationLibrary_qyrv8")
 }
+autoplay = "move"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0241346, 0)
+shape = SubResource("BoxShape3D_lwtdm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

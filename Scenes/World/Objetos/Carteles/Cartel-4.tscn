@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://br18evv225rx2"]
+[gd_scene load_steps=10 format=4 uid="uid://br18evv225rx2"]
 
 [ext_resource type="Texture2D" uid="uid://b4xb5pbmr6e87" path="res://Assets/Objetos/CartelesSN/CARTELESROTONDA-04.png" id="1_5fhje"]
 [ext_resource type="Texture2D" uid="uid://by6b4y0h36gql" path="res://Assets/Objetos/CartelesSN/CartelRandom_Untitled.png" id="2_d0n8j"]
+[ext_resource type="Texture2D" uid="uid://ctavr2u6rp13b" path="res://Assets/Objetos/CartelesSN/marco_carteles_rotonda.png" id="3_d0n8j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fw2my"]
 albedo_texture = ExtResource("1_5fhje")
@@ -42,6 +43,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ncqw8")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ysfu1"]
+transparency = 1
+albedo_texture = ExtResource("3_d0n8j")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_db1ii"]
+size = Vector2(9.59, 7.17)
+
 [node name="Cartel-1" type="Node3D"]
 
 [node name="1" type="MeshInstance3D" parent="."]
@@ -49,3 +57,8 @@ transform = Transform3D(3.53553, 0, 3.53553, 0, 5, 0, -3.53553, 0, 3.53553, 0, 0
 material_override = SubResource("StandardMaterial3D_fw2my")
 mesh = SubResource("ArrayMesh_w0i72")
 skeleton = NodePath("")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 0, -0.483848, 0.0703614)
+material_override = SubResource("StandardMaterial3D_ysfu1")
+mesh = SubResource("PlaneMesh_db1ii")
