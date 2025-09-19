@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=4 uid="uid://cqh3220s635ah"]
+[gd_scene load_steps=57 format=4 uid="uid://cqh3220s635ah"]
 
 [ext_resource type="Material" uid="uid://sfntlht18jy4" path="res://Resource/Materials/Calles/Vereda.tres" id="1_f51fo"]
 [ext_resource type="Material" uid="uid://fjppst14hsn" path="res://Resource/Materials/Calles/CalleCostanera.tres" id="1_q2v7p"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bl7juva62gltw" path="res://Scenes/World/Objetos/Carteles/Cartel-3.tscn" id="8_qg183"]
 [ext_resource type="PackedScene" uid="uid://br18evv225rx2" path="res://Scenes/World/Objetos/Carteles/Cartel-4.tscn" id="9_cwpyi"]
 [ext_resource type="PackedScene" uid="uid://ddq3likg3gvtl" path="res://Scenes/World/Objetos/light_wall.tscn" id="12_cwpyi"]
+[ext_resource type="Script" uid="uid://cn7loa16sqbup" path="res://Script/meta.gd" id="14_j4f7l"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qg183"]
 size = Vector3(6.82077, 1, 12.0031)
@@ -575,14 +576,13 @@ shadow_mesh = SubResource("ArrayMesh_ffrtc")
 resource_name = "Texture"
 cull_mode = 2
 albedo_texture = ExtResource("3_1y5l7")
-metallic_specular = 0.27
-roughness = 0.58
+metallic_specular = 0.2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_70d52"]
 resource_name = "Material.002"
 cull_mode = 2
 albedo_color = Color(0.368626, 0.317647, 0, 1)
-metallic_specular = 0.15
+metallic_specular = 0.3
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ufysm"]
 resource_name = "ESCALERAS DEL REGATAS_Plane_005"
@@ -667,6 +667,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_30f67")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_odni6"]
+size = Vector3(9.69141, 6.52637, 1)
 
 [node name="ESCALERAS DEL REGATAS" type="Node3D"]
 
@@ -896,7 +899,7 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0144787)
 
 [node name="LightWall" parent="escalinata/Luces/Derecha" instance=ExtResource("12_cwpyi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.245, 2.5195, -4.99443)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6342, 2.67242, -4.99443)
 
 [node name="LightWall2" parent="escalinata/Luces/Derecha" instance=ExtResource("12_cwpyi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.75739, 1.068, -4.99443)
@@ -914,25 +917,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.309, -1.686, -5.05422)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.399, -1.686, -5.05454)
 
 [node name="Izquierda" type="Node3D" parent="escalinata/Luces"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, -0.205014)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.91845)
 
 [node name="LightWall" parent="escalinata/Luces/Izquierda" instance=ExtResource("12_cwpyi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.245, 2.5195, -5.08482)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16.6342, 2.67242, -4.99443)
 
 [node name="LightWall2" parent="escalinata/Luces/Izquierda" instance=ExtResource("12_cwpyi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.75739, 1.068, -5.08482)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.75739, 1.068, -4.99443)
 
 [node name="LightWall3" parent="escalinata/Luces/Izquierda" instance=ExtResource("12_cwpyi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00621319, -0.679851, -5.08482)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.00621319, -0.679851, -4.98911)
 
 [node name="LightWall4" parent="escalinata/Luces/Izquierda" instance=ExtResource("12_cwpyi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.89387, -1.68587, -5.08482)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8.894, -1.686, -5.047)
 
 [node name="LightWall5" parent="escalinata/Luces/Izquierda" instance=ExtResource("12_cwpyi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3091, -1.68587, -5.08482)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -15.309, -1.686, -5.05422)
 
 [node name="LightWall6" parent="escalinata/Luces/Izquierda" instance=ExtResource("12_cwpyi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.3989, -1.68587, -5.08482)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -23.399, -1.686, -5.05454)
 
 [node name="Ligth" parent="escalinata/Luces" instance=ExtResource("7_odni6")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -33.938, -6.01553, -3.98406)
@@ -940,11 +943,27 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -33.938, -6.01553, -3.9
 [node name="Ligth2" parent="escalinata/Luces" instance=ExtResource("7_odni6")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -45.8601, -6.01553, -3.98406)
 
+[node name="Ligth5" parent="escalinata/Luces" instance=ExtResource("7_odni6")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 25.9211, 4.24045, -5.5451)
+
+[node name="Ligth6" parent="escalinata/Luces" instance=ExtResource("7_odni6")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 25.9211, 4.24045, 5.45857)
+
 [node name="Ligth3" parent="escalinata/Luces" instance=ExtResource("7_odni6")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -33.938, -6.01553, 3.91447)
 
 [node name="Ligth4" parent="escalinata/Luces" instance=ExtResource("7_odni6")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -45.8601, -6.01553, 3.91447)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="escalinata/Luces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.3903, 4.34105, 0)
+omni_range = 20.0
+omni_attenuation = 0.5
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="escalinata/Luces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7262, -0.604796, 0)
+omni_range = 14.434
+omni_attenuation = 0.5
 
 [node name="Rico" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.931, 1, 160.004)
@@ -969,6 +988,19 @@ transform = Transform3D(-0.104528, 0, -0.994522, 0, 1, 0, 0.994522, 0, -0.104528
 transform = Transform3D(-0.587785, 0, -0.809017, 0, 1, 0, 0.809017, 0, -0.587785, -74.413, -0.0679369, -10.9159)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Carteles"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -63.7671, 0, 0)
-spot_range = 20.6827
-spot_angle = 57.6563
+transform = Transform3D(-0.00354304, 0, 0.999994, 0, 1, 0, -0.999994, 0, -0.00354304, -59.5073, 0, 0)
+light_energy = 5.0
+spot_range = 32.9976
+spot_angle = 73.0373
+
+[node name="Meta" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.7902, -5.36043, 169.049)
+collision_layer = 32
+collision_mask = 2
+script = ExtResource("14_j4f7l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Meta"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.12781)
+shape = SubResource("BoxShape3D_odni6")
+
+[connection signal="body_entered" from="Meta" to="Meta" method="_on_body_entered"]

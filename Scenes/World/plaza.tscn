@@ -1333,14 +1333,8 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 98.2166, 0, 1154.08)
 [node name="12" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
 transform = Transform3D(-1.41421, 0, 1.41421, 0, 2, 0, -1.41421, 0, -1.41421, 66.583, 0, 1171.61)
 
-[node name="13" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
-transform = Transform3D(-1.41421, 0, 1.41421, 0, 2, 0, -1.41421, 0, -1.41421, 92.8181, 0, 1197.89)
-
 [node name="14" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
 transform = Transform3D(-1.41421, 0, 1.41421, 0, 2, 0, -1.41421, 0, -1.41421, 121.879, 0, 1226.9)
 
-[node name="15" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
-transform = Transform3D(1.41421, 0, -1.41421, 0, 2, 0, 1.41421, 0, 1.41421, 101.737, 0, 1218.12)
-
 [node name="16" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
-transform = Transform3D(1.41421, 0, -1.41421, 0, 2, 0, 1.41421, 0, 1.41421, 73.6037, -1.90735e-06, 1189.86)
+transform = Transform3D(1.41421, 0, -1.41421, 0, 2, 0, 1.41421, 0, 1.41421, 91.6286, 1.90735e-06, 1208.81)
