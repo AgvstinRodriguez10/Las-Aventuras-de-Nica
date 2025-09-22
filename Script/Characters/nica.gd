@@ -24,6 +24,7 @@ var is_hitt : bool = false
 var life_plus : bool = false
 var life = 3
 var snficha = 0
+var speedMax:float
 
 # Timer para la duracion de los powerups
 var durationPowerUp:float = 0.0
@@ -49,6 +50,7 @@ func _ready() -> void:
 	super._ready()
 	animationPlayer = $"Nica-v1_0/AnimationPlayer"
 	baseVelocity = velocity_z
+	speedMax = velocity_z + (velocity_z * percentSpeedUp / 100)
 
 func _physics_process(delta: float) -> void:
 	if currentState == STATES.RUN:
@@ -74,6 +76,7 @@ func _physics_process(delta: float) -> void:
 			#esto deberia cambiar una vez tengamos cuando se activa, llamando directamente a la funcion siguiente
 			changeVisionCam()
 	
+	# Temporizador de los power up
 	if currentPowerUp != POWERUPSTATE.NOTHING:
 		if durationPowerUp > 0:
 			durationPowerUp -= delta
@@ -186,8 +189,8 @@ func powerUpActive():
 			#reinicia todos los valores
 			velocity_z = baseVelocity
 		POWERUPSTATE.SPEEDUP:
-			velocity_z = velocity_z + (velocity_z * percentSpeedUp / 100)
-			durationPowerUp = powerUpDuration.SPEEDUP
+			velocity_z = speedMax
+			durationPowerUp += powerUpDuration.SPEEDUP
 		POWERUPSTATE.ABOSRBCOIN:
 			durationPowerUp = powerUpDuration.ABOSRBCOIN
 
