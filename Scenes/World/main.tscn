@@ -24,11 +24,11 @@
 [ext_resource type="Texture2D" uid="uid://cwjasgt6l6nl4" path="res://Assets/Extras/SKY-06.png" id="9_psyr8"]
 [ext_resource type="PackedScene" uid="uid://bo2da4in2mjf8" path="res://Scenes/Coins/SNFicha.tscn" id="9_w7l72"]
 [ext_resource type="PackedScene" uid="uid://h2yyj2bmrsqb" path="res://Scenes/Coins/RDFicha.tscn" id="10_yteiy"]
-[ext_resource type="PackedScene" uid="uid://cqh3220s635ah" path="res://Assets/San Nicolas/Costanera + Regatas.tscn" id="11_cu8p5"]
 [ext_resource type="Texture2D" uid="uid://bdvp1uw1i6iml" path="res://Assets/Extras/Dialogs/DIALOGOSS-9.png" id="11_y8gtk"]
 [ext_resource type="PackedScene" uid="uid://bfttwterfi486" path="res://Scenes/World/Objetos/Obstaculos/puente.tscn" id="15_8o8og"]
 [ext_resource type="PackedScene" uid="uid://l6unlmqhug4r" path="res://Scenes/World/Objetos/Valla.tscn" id="15_nsfl0"]
 [ext_resource type="PackedScene" uid="uid://dcey1tp07g3qh" path="res://Scenes/World/Objetos/Obstaculos/RampaGrande.tscn" id="18_xqo82"]
+[ext_resource type="PackedScene" uid="uid://1u5gnpg14lp0" path="res://Scenes/World/EscalerasRegatas + Costanera-v2.tscn .tscn" id="20_l5qvs"]
 [ext_resource type="PackedScene" uid="uid://b0h4ayhr722x5" path="res://Scenes/World/Objetos/Obstaculos/pelota.tscn" id="21_lml7n"]
 [ext_resource type="PackedScene" uid="uid://bvs1c5dn0kl1f" path="res://Scenes/Coins/YaguiFicha.tscn" id="27_l5qvs"]
 
@@ -950,7 +950,7 @@ one_shot = true
 [node name="San Nicolas" parent="." instance=ExtResource("1_n1kio")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
-[node name="ESCALERAS_REGATAS" parent="." instance=ExtResource("11_cu8p5")]
+[node name="EscalerasRegatas + Costanera2" parent="." instance=ExtResource("20_l5qvs")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 99.266, -5, 708.944)
 
 [node name="CameraFocus" type="Marker3D" parent="."]
@@ -971,7 +971,7 @@ libraries = {
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -13.9116)
 
 [node name="Nica" parent="." instance=ExtResource("2_ntgcc")]
-transform = Transform3D(-0.5, 0, 1.26759e-06, 0, 0.5, 0, -1.26759e-06, 0, -0.5, 0, 0, 1.82541)
+transform = Transform3D(-0.5, 0, 1.26759e-06, 0, 0.5, 0, -1.26759e-06, 0, -0.5, 0, 0, 0)
 
 [node name="Alert" type="Area3D" parent="Nica"]
 transform = Transform3D(-2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, 0, 0, 0)
@@ -992,7 +992,6 @@ light_energy = 2.0
 light_bake_mode = 1
 shadow_enabled = true
 shadow_bias = 10.0
-shadow_reverse_cull_face = true
 directional_shadow_mode = 0
 directional_shadow_split_1 = 0.5
 directional_shadow_split_2 = 0.5
