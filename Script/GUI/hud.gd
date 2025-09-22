@@ -57,20 +57,17 @@ func _process(delta: float) -> void:
 
 func animatedLifeBar():
 	isInanimationLifebar = true
-	if (player.snficha == 3):
-		player.life += 1
-		player.life_plus = true
-		player.snficha = 0
-		lifeBar.value = 0
-		isInanimationLifebar = false
-		return
-	elif isInanimationLifebar:
+	if isInanimationLifebar:
 		var fillTarget = player.snficha * 100 / 3
 		while lifeBar.value < fillTarget:
 			lifeBar.value += 1
 			await get_tree().create_timer(0).timeout
 			#fillTarget = player.snficha * 100 / 3
-			
+		if (player.snficha == 3):
+			player.life += 1
+			player.life_plus = true
+			player.snficha = 0
+			lifeBar.value = 0	
 	isInanimationLifebar = false
 
 func add_point():
@@ -103,7 +100,6 @@ func _on_alert_body_entered(body: Node3D) -> void:
 		dangerAnim.play("ALERT")
 		dangerCollision.disabled = true
 		dangerTimer.start()
-
 
 func _on_timer_alert_timeout() -> void:
 	$"../Nica/Alert/CollisionShape3D".disabled = false

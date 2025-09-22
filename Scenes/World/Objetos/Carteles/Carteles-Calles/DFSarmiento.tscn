@@ -1,0 +1,95 @@
+[gd_scene load_steps=10 format=4 uid="uid://dj0ym6awon4au"]
+
+[ext_resource type="Texture2D" uid="uid://nivsemjkkrrg" path="res://Assets/Objetos/CartelesSN/Direcciones-Calles/D.F.Sarmiento.png" id="1_s3dkq"]
+[ext_resource type="Texture2D" uid="uid://doy3fnvqi0s7q" path="res://Assets/Objetos/CartelesSN/cartel_calles_sn_nombresCalles-06.png" id="2_h7nr2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lb2yu"]
+albedo_texture = ExtResource("1_s3dkq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t7p8j"]
+resource_name = "Textos"
+cull_mode = 2
+albedo_texture = ExtResource("2_h7nr2")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wx4ly"]
+_surfaces = [{
+"aabb": AABB(0.0597375, 0.12453, -1.22157, 1e-05, 0.570823, 2.44314),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Textos",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAP////8AAAAA//8AAAAAAAAAAP//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_c2wi4"]
+resource_name = "cartel_calles_sn_Cube"
+_surfaces = [{
+"aabb": AABB(0.0597375, 0.12453, -1.22157, 1e-05, 0.570823, 2.44314),
+"attribute_data": PackedByteArray("0/hw6SsGjZjT+I2YKwZw6Q=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_t7p8j"),
+"name": "Textos",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAAAA/78AAP//////vwAA//8AAP+/AAAAAP///7//fwAA/38AAP9/AAD/fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_wx4ly")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3r8ue"]
+resource_name = "CartelBase"
+cull_mode = 2
+albedo_color = Color(0, 0.376471, 0.513726, 1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tte1q"]
+_surfaces = [{
+"aabb": AABB(-0.105334, 0.00118631, -1.22157, 0.210667, 0.81751, 2.44314),
+"format": 34896613377,
+"index_count": 78,
+"index_data": PackedByteArray("DAAAAAUAAgAFAAAAAgADAAUABAAFAAMABAAMAAUAAQAEAAMAAQADAAIABgAMAAQADQACAAAADQABAAIADAANAAAADgABAA0ADwANAAwABgAPAAwADwAOAA0ADgAJAAEACwAGAAkACAAOAA8ACgAPAAYACgAIAA8ACwAKAAYACAAHAA4ABwAJAA4ABwAIAAoABwALAAkABwAKAAsA"),
+"lods": [1.11534e-08, PackedByteArray("AAABAAIAAQADAAIAAQAEAAMAAgADAAUABAAFAAMAAgAFAAAABgAFAAQABwABAAAACAAAAAUABgAIAAUACAAHAAAABwAJAAEACgAIAAYABwAIAAoACwAGAAkABwALAAkACwAKAAYABwAKAAsA")],
+"name": "CartelBase",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AAD//wAAAACWyF/ZAAAAAP////8AAAAA////////AACWyF/Z//8AAAAA/////wAAlsifJv//AAAAAAAAAAAAAAAAAAD//wAAlsifJgAAAAD//wAA//8AAP//AAAAAAAAAABf2f//AAAAAF/ZAAAAAAAAnyYAAAAAAACfJv//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_m4ikv"]
+resource_name = "cartel_calles_sn_Cube_001"
+_surfaces = [{
+"aabb": AABB(-0.105334, 0.00118631, -1.22157, 0.210667, 0.81751, 2.44314),
+"attribute_data": PackedByteArray("30W/a586/0nfRf9JHyS/a18v/0kfJP9Jnzr/Sd9FPyjfRf9Jnzo/KJ86PyjfRX8G30U/KF8vPygfJH8GHyQ/KF8C/0kfJD8oHyT/SV8CPyjfRf9Jn2c/KJ9n/0nfRT8oHyT/SV8vPyhfL/9JHyQ/KB8kf43fRb9r30V/jR8kv2ufOn+Nnzq/a586v2tfL79rnzp/Bl8vfwZfL79rXy9/jV8vf42fOr9rnzp/jV8vv2s="),
+"format": 34896613399,
+"index_count": 78,
+"index_data": PackedByteArray("IAAdAB4AIAAhAB0AIgACAAAAIgABAAIAIwABACIAIwAEAAEAAwAEACMAAwAFAAQABgAHAAgABgAJAAcACgALAAwACgAkAAsADQAkAAoADQAlACQADwAlAA0ADwAOACUAEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAmACcAHAAfACYAKAApACoAKAArACkA"),
+"lods": [1.11534e-08, PackedByteArray("AAABAAIAAwABAAAAAwAEAAEAAwAFAAQABgAHAAgABgAJAAcACgALAAwADQALAAoADQAOAAsADwAOAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0A")],
+"material": SubResource("StandardMaterial3D_3r8ue"),
+"name": "CartelBase",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 44,
+"vertex_data": PackedByteArray("AAD//wAA//+WyF/ZAAD///////8AAP//AAAAAAAA//+WyJ8mAAD/////AAAAAP//lshf2QAAjs3///////+Ozf////8AAI7Nlshf2f//js2WyF/Z//+4ugAA/////x26////////krGWyJ8m///yxwAAAAD///+///8AAP//J8gAAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP//AAD///////8AAP//AAD///////////////8AAAAAGN6WyJ8m//8Y3pbInyYAABje//8AAP//GN4AAAAA//9U1QAA//8AAFTVAAD/////VNUAAAAAAABU1QAAX9n//1TVAABf2QAAVNUAAF/ZAAD//wAAnyYAAP//AABf2f///78AAJ8m//9mwgAAnyYAAFTVAACfJv//VNUAAJ8m//9U1QAAX9kAAFTVAABf2f//VNUAAJ8mAABU1f+//79Dxru5bMaRuV67n8TYuyXEi7Ryy0ElfDVBJXw1QSV8NUElfDX///////////////////////////////8AAP9/AAD/fwAA/38AAP9//3//v/9//7//f/+//3//v3cvDyF3Lw8hdy8PIXcvDyFU1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNXiwRu+/7//v///////////VNVU1VTVVNVU1VTVVNVU1VTVVNVU1VTV")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_tte1q")
+
+[node name="cartel_calles_sn" type="Node3D"]
+
+[node name="Cartel" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_lb2yu")
+mesh = SubResource("ArrayMesh_c2wi4")
+skeleton = NodePath("")
+
+[node name="Texto" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_m4ikv")
+skeleton = NodePath("")

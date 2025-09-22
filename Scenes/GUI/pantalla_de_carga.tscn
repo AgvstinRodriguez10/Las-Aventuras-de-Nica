@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bg5630cosioxd"]
+[gd_scene load_steps=16 format=3 uid="uid://bg5630cosioxd"]
 
 [ext_resource type="Texture2D" uid="uid://bicwmerccv4nf" path="res://Assets/Extras/PANTALLAINICIOOO-06.png" id="1_cgqpu"]
 [ext_resource type="Script" uid="uid://xtoce68yo8ix" path="res://Script/GUI/pantalla_de_carga.gd" id="1_habic"]
@@ -16,8 +16,12 @@ region_rect = Rect2(1948.86, 2432.34, 943.512, 76.4114)
 device = -1
 keycode = 4194309
 
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_q3pre"]
+button_index = 6
+pressed = true
+
 [sub_resource type="Shortcut" id="Shortcut_habic"]
-events = [SubResource("InputEventKey_cgqpu")]
+events = [SubResource("InputEventKey_cgqpu"), SubResource("InputEventJoypadButton_q3pre")]
 
 [sub_resource type="Animation" id="Animation_q3pre"]
 resource_name = "Loading"

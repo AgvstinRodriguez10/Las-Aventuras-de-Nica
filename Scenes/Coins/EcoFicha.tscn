@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=4 uid="uid://dgf0l74w3bdo8"]
+[gd_scene load_steps=9 format=4 uid="uid://dgf0l74w3bdo8"]
 
 [ext_resource type="Texture2D" uid="uid://disrkkecy8xov" path="res://Assets/Coin/EcoFicha.png" id="1_6iut2"]
 [ext_resource type="Script" uid="uid://dp4lua0qlf3dq" path="res://Script/Coins/CoinEcoFicha.gd" id="1_n67kc"]
+[ext_resource type="AudioStream" uid="uid://bqv1r1107hfwe" path="res://Assets/Extras/Sounds/ecoficha.mp3" id="2_14fb0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n67kc"]
 albedo_texture = ExtResource("1_6iut2")
@@ -64,5 +65,8 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00395301, 0.0280227, 0)
 shape = SubResource("BoxShape3D_6iut2")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_14fb0")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

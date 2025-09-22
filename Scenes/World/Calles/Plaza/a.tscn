@@ -1,6 +1,8 @@
-[gd_scene load_steps=47 format=4 uid="uid://btg2o08c332n2"]
+[gd_scene load_steps=49 format=4 uid="uid://btg2o08c332n2"]
 
 [ext_resource type="Texture2D" uid="uid://cc5vnp0s4rjru" path="res://Assets/San Nicolas/Edificios/Plaza/A/edificio 3_Mural_albedo000.png" id="1_b7tft"]
+[ext_resource type="PackedScene" uid="uid://bpvroe0h6b4tx" path="res://Assets/San Nicolas/Object/Decoración/Mesa.fbx" id="1_ospqn"]
+[ext_resource type="PackedScene" uid="uid://cxfbgt0g4w6na" path="res://Assets/San Nicolas/Object/Decoración/Silla.fbx" id="2_8tlsf"]
 [ext_resource type="LightmapGIData" uid="uid://dh8n1k767t05m" path="res://Resource/LigthmapGI/a.lmbake" id="2_k2vpq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3pk1d"]
@@ -656,19 +658,16 @@ transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 
 
 [node name="BASE" type="MeshInstance3D" parent="edificio 1/OpticaPeña"]
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_b7tft")
 skeleton = NodePath("")
 
 [node name="Carteles" type="MeshInstance3D" parent="edificio 1/OpticaPeña"]
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_k2vpq")
 skeleton = NodePath("")
 
 [node name="Ventanas y Puertas" type="MeshInstance3D" parent="edificio 1/OpticaPeña"]
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_ospqn")
 skeleton = NodePath("")
 
@@ -681,40 +680,82 @@ transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 
 [node name="ADD" type="MeshInstance3D" parent="edificio 2/Bartolome+LaMira"]
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0.0134046, 0.0110141, 0)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_8tlsf")
 skeleton = NodePath("")
 
 [node name="1" type="MeshInstance3D" parent="edificio 2/Bartolome+LaMira/ADD"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.96046e-10, 0)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_jbioi")
 skeleton = NodePath("")
 
 [node name="BARTOLOME" type="MeshInstance3D" parent="edificio 2/Bartolome+LaMira"]
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_y0wkv")
 skeleton = NodePath("")
 
 [node name="DEC LA MIRA" type="MeshInstance3D" parent="edificio 2/Bartolome+LaMira"]
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_r77m4")
 skeleton = NodePath("")
 
 [node name="LA MIRA" type="MeshInstance3D" parent="edificio 2/Bartolome+LaMira"]
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_6cgcp")
 skeleton = NodePath("")
 
 [node name="VENTANAS Y PUERTAS" type="MeshInstance3D" parent="edificio 2/Bartolome+LaMira"]
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_a81ct")
 skeleton = NodePath("")
+
+[node name="MesitasVereda" type="Node3D" parent="edificio 2/Bartolome+LaMira"]
+transform = Transform3D(0.015, 1.53857e-23, -6.72531e-31, 0, -6.55671e-10, -0.015, -1.53857e-23, 0.015, -6.55671e-10, -0.0203443, -0.0224706, -0.00837035)
+
+[node name="Mesa" parent="edificio 2/Bartolome+LaMira/MesitasVereda" instance=ExtResource("1_ospqn")]
+transform = Transform3D(-4.37114e-08, -2.11758e-22, 1, 2.88505e-22, 1, 0, -1, -1.44253e-22, -4.37114e-08, -0.481903, -0.0171824, 0)
+
+[node name="Silla" parent="edificio 2/Bartolome+LaMira/MesitasVereda" instance=ExtResource("2_8tlsf")]
+transform = Transform3D(-4.37114e-08, -6.35275e-22, 1, 2.88505e-22, 1, -2.96462e-21, -1, -1.44253e-22, -4.37114e-08, -0.392349, -0.181802, 0.515499)
+
+[node name="Silla2" parent="edificio 2/Bartolome+LaMira/MesitasVereda" instance=ExtResource("2_8tlsf")]
+transform = Transform3D(-4.37114e-08, -4.23516e-22, -1, -3.59547e-28, 1, -2.11758e-22, 1, -1.44253e-22, -4.37114e-08, -0.0743408, -0.181802, -0.047961)
+
+[node name="Mesa2" parent="edificio 2/Bartolome+LaMira/MesitasVereda" instance=ExtResource("1_ospqn")]
+transform = Transform3D(-4.37114e-08, -4.23516e-22, 1, 2.88505e-22, 1, -6.35275e-22, -1, -1.44253e-22, -4.37114e-08, -2.79793, -0.0171824, -2.38419e-07)
+
+[node name="Silla3" parent="edificio 2/Bartolome+LaMira/MesitasVereda" instance=ExtResource("2_8tlsf")]
+transform = Transform3D(-4.37114e-08, -6.35275e-22, 1, 2.88505e-22, 1, -3.38813e-21, -1, -1.44253e-22, -4.37114e-08, -2.70837, -0.181802, 0.515498)
+
+[node name="Silla4" parent="edificio 2/Bartolome+LaMira/MesitasVereda" instance=ExtResource("2_8tlsf")]
+transform = Transform3D(-4.37114e-08, -6.35275e-22, -1, -3.59547e-28, 1, -2.11758e-22, 1, -1.44253e-22, -4.37114e-08, -2.39035, -0.181802, -0.0479612)
+
+[node name="Mesa3" parent="edificio 2/Bartolome+LaMira/MesitasVereda" instance=ExtResource("1_ospqn")]
+transform = Transform3D(-4.37114e-08, -6.35275e-22, 1, 2.88505e-22, 1, -1.27055e-21, -1, -1.44253e-22, -4.37114e-08, 1.96408, -0.0171824, -2.38419e-07)
+
+[node name="Silla5" parent="edificio 2/Bartolome+LaMira/MesitasVereda" instance=ExtResource("2_8tlsf")]
+transform = Transform3D(-4.37114e-08, -6.35275e-22, 1, 2.88505e-22, 1, -4.02341e-21, -1, -1.44253e-22, -4.37114e-08, 2.05363, -0.181802, 0.515498)
+
+[node name="Silla6" parent="edificio 2/Bartolome+LaMira/MesitasVereda" instance=ExtResource("2_8tlsf")]
+transform = Transform3D(-4.37114e-08, -6.35275e-22, -1, -3.59547e-28, 1, -2.11758e-22, 1, -1.44253e-22, -4.37114e-08, 2.37164, -0.181802, -0.0479612)
+
+[node name="Mesa4" parent="edificio 2/Bartolome+LaMira/MesitasVereda" instance=ExtResource("1_ospqn")]
+transform = Transform3D(-4.37114e-08, -6.35275e-22, 1, 2.88505e-22, 1, -1.69407e-21, -1, -1.44253e-22, -4.37114e-08, 4.19952, -0.0171824, -2.38419e-07)
+
+[node name="Silla7" parent="edificio 2/Bartolome+LaMira/MesitasVereda" instance=ExtResource("2_8tlsf")]
+transform = Transform3D(-4.37114e-08, -6.35275e-22, 1, 2.88505e-22, 1, -4.65868e-21, -1, -1.44253e-22, -4.37114e-08, 4.28906, -0.181802, 0.515498)
+
+[node name="Silla8" parent="edificio 2/Bartolome+LaMira/MesitasVereda" instance=ExtResource("2_8tlsf")]
+transform = Transform3D(-4.37114e-08, -6.35275e-22, -1, -3.59547e-28, 1, -2.11758e-22, 1, -1.44253e-22, -4.37114e-08, 4.60709, -0.181802, -0.047961)
+
+[node name="Mesa5" parent="edificio 2/Bartolome+LaMira/MesitasVereda" instance=ExtResource("1_ospqn")]
+transform = Transform3D(-4.37114e-08, -6.35275e-22, 1, 2.88505e-22, 1, -2.32934e-21, -1, -1.44253e-22, -4.37114e-08, 6.22227, -0.0171824, -2.38419e-07)
+
+[node name="Silla9" parent="edificio 2/Bartolome+LaMira/MesitasVereda" instance=ExtResource("2_8tlsf")]
+transform = Transform3D(-4.37114e-08, -6.35275e-22, 1, 2.88505e-22, 1, -5.0822e-21, -1, -1.44253e-22, -4.37114e-08, 6.31181, -0.181802, 0.515498)
+
+[node name="Silla10" parent="edificio 2/Bartolome+LaMira/MesitasVereda" instance=ExtResource("2_8tlsf")]
+transform = Transform3D(-4.37114e-08, -6.35275e-22, -1, -3.59547e-28, 1, -2.11758e-22, 1, -1.44253e-22, -4.37114e-08, 6.62982, -0.181802, -0.047961)
 
 [node name="edificio 3" type="Node3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -42.8642, -0.184711, 1222.24)
@@ -724,7 +765,6 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -42.8642, -0.184711, 1222.24)
 [node name="Edificio" type="MeshInstance3D" parent="edificio 3/edificio_galeria"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 1.69476, 0, -0.541819)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_oos2c")
 skeleton = NodePath("")
 
@@ -736,39 +776,33 @@ transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 
 
 [node name="ADD" type="MeshInstance3D" parent="edificio 4/Catedral"]
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_okjhq")
 skeleton = NodePath("")
 
 [node name="BASE" type="MeshInstance3D" parent="edificio 4/Catedral"]
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_0kevc")
 skeleton = NodePath("")
 
 [node name="SUELO" type="MeshInstance3D" parent="edificio 4/Catedral"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0385181, 0.0411523, -0.00438843)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_xqul1")
 skeleton = NodePath("")
 
 [node name="SUELO2" type="MeshInstance3D" parent="edificio 4/Catedral"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0385181, 0.041958, -0.00308721)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_bibly")
 skeleton = NodePath("")
 
 [node name="TORRES" type="MeshInstance3D" parent="edificio 4/Catedral"]
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_4p0e1")
 skeleton = NodePath("")
 
 [node name="VENTANAS Y PUERTAS" type="MeshInstance3D" parent="edificio 4/Catedral"]
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_wqca7")
 skeleton = NodePath("")
 

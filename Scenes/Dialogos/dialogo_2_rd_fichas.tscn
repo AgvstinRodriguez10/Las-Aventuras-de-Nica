@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bov4502liauyo"]
+
+[ext_resource type="Script" uid="uid://pvrbshktn0cf" path="res://Script/Dialogos/Dialogo-1.gd" id="1_qe2d4"]
+[ext_resource type="PackedScene" uid="uid://ccrn1ie0sqgdk" path="res://Scenes/Dialogos/Dialogo-1.tscn" id="2_d7iip"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cu8p5"]
+size = Vector3(7.11865, 3.99133, 1)
+
+[node name="Dialogo2_RdFichas" type="Area3D"]
+collision_layer = 64
+collision_mask = 2
+script = ExtResource("1_qe2d4")
+
+[node name="Dialogos" parent="." instance=ExtResource("2_d7iip")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0368652, 1.49567, 0)
+shape = SubResource("BoxShape3D_cu8p5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+
+[editable path="Dialogos"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://bxs55inw16h7x"]
+[gd_scene load_steps=24 format=4 uid="uid://bxs55inw16h7x"]
 
 [ext_resource type="Material" uid="uid://dn3uib65vub6t" path="res://Resource/Materials/Calles/Desague.tres" id="1_gcjee"]
 [ext_resource type="Material" uid="uid://0q4sd8uj7kf5" path="res://Resource/Materials/Calles/Adoquines.tres" id="2_yf1g7"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bjyktxltm0o4s" path="res://Scenes/World/Calles/Cuadra - 1/der.tscn" id="5_gcjee"]
 [ext_resource type="PackedScene" uid="uid://bkkyuo0eactnv" path="res://Scenes/World/Calles/Cuadra - 1/izq.tscn" id="6_xr1vn"]
 [ext_resource type="PackedScene" uid="uid://crcmb22kteijj" path="res://Scenes/World/Objetos/LigthSinLigth.tscn" id="6_yf1g7"]
+[ext_resource type="PackedScene" uid="uid://b5f0d4bxhwlvs" path="res://Assets/Objetos/CartelesSN/cartel_farol_prohibido.glb" id="7_yf1g7"]
 [ext_resource type="PackedScene" uid="uid://by26dey3n4ca" path="res://Assets/San Nicolas/Object/Autos/Auto-1.tscn" id="8_4j01m"]
 [ext_resource type="PackedScene" uid="uid://daqotynvcl1u2" path="res://Assets/San Nicolas/Object/Decoración/BalaCalle.tscn" id="9_eddye"]
 
@@ -375,14 +376,12 @@ transform = Transform3D(-6, 0, -9.05975e-07, 0, 6, 0, 9.05975e-07, 0, -6, 0, 0, 
 [node name="1" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Calles"]
 transform = Transform3D(-1.19209e-07, 0, 1, 0, 1, 0, -1, 0, -1.19209e-07, 0, 0, 3)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_e8xf4")
 skeleton = NodePath("")
 
 [node name="2" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Calles"]
 transform = Transform3D(-1.19209e-07, 0, 1, 0, 1, 0, -1, 0, -1.19209e-07, -1.9233e-06, 0, 25)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_e8xf4")
 skeleton = NodePath("")
 
@@ -391,21 +390,18 @@ skeleton = NodePath("")
 [node name="Vereda" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Cruces"]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, -3.49459, 0, 3.48658)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_l15hi")
 skeleton = NodePath("")
 
 [node name="AlcantarillasCurvas" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Cruces"]
 transform = Transform3D(70.7107, -70.7107, -2.98023e-06, -2.98023e-06, -1.19209e-05, 100, -70.7107, -70.7107, -1.19209e-05, 0, 0, 0)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_gcjee")
 skeleton = NodePath("")
 
 [node name="Calle" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Cruces"]
 transform = Transform3D(-100, -1.42109e-12, -8.74228e-06, -8.74228e-06, 1.78814e-05, 100, 0, 100, -1.19209e-05, 0.000819683, -0.000461891, -2.14373)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_yf1g7")
 skeleton = NodePath("")
 
@@ -414,35 +410,30 @@ skeleton = NodePath("")
 [node name="1" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Vereda"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 19.95)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_54sop")
 skeleton = NodePath("")
 
 [node name="2" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Vereda"]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, -3.5, 0, 23.45)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_kyso7")
 skeleton = NodePath("")
 
 [node name="3" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Vereda"]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, 3.5, 0, 23.45)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_n4oxj")
 skeleton = NodePath("")
 
 [node name="4" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Vereda"]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, 3.5, 0, 43.45)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_n4oxj")
 skeleton = NodePath("")
 
 [node name="5" type="MeshInstance3D" parent="CuadraDarsenaIzquierda/Vereda"]
 transform = Transform3D(2.4993, 0, 0, 0, 2.4993, 0, 0, 0, 2.4993, -3.5, 0, 43.45)
 lod_bias = 0.001
-visibility_range_end = 300.0
 mesh = SubResource("ArrayMesh_n4oxj")
 skeleton = NodePath("")
 
@@ -466,7 +457,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.02988, 0, -53.5803)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.02988, 0, -4.5803)
 
 [node name="LigthSinLigth3" parent="Decoraciónes/Faroles/Izq" instance=ExtResource("6_yf1g7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.03447, 0, 100.491)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.03447, 0, 79.5343)
+
+[node name="cartel_farol_prohibido" parent="Decoraciónes/Faroles/Izq/LigthSinLigth3" instance=ExtResource("7_yf1g7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.819987, 4.5, 0)
+
+[node name="LigthSinLigth4" parent="Decoraciónes/Faroles/Izq" instance=ExtResource("6_yf1g7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.03447, 0, 123.37)
 
 [node name="Der" type="Node3D" parent="Decoraciónes/Faroles"]
 

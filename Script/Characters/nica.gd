@@ -8,8 +8,8 @@ const dist_beetween_lanes = 2
 var lateral_free_position := Vector3.ZERO
 
 # Calculamos posición deseada para la cámara
-var camera_height = 1.0
-var camera_distance = 1.0
+var camera_height = 1 #-0.2 
+var camera_distance = -3 #-1.0
 
 # Va de 0 a 2 para enumerar las lineas
 var target_lane: int = 1
@@ -24,6 +24,7 @@ var is_hitt : bool = false
 var life_plus : bool = false
 var life = 3
 var snficha = 0
+var speedMax:float
 
 # Timer para la duracion de los powerups
 var durationPowerUp:float = 0.0
@@ -40,6 +41,8 @@ var powerUpDuration:Dictionary = {
 	"ABOSRBCOIN": 2
 }
 
+const percentSpeedUp:int = 60
+
 var frontalCamIsActive = false
 var frontalCamDuration = 7
 
@@ -47,6 +50,7 @@ func _ready() -> void:
 	super._ready()
 	animationPlayer = $"Nica-v1_0/AnimationPlayer"
 	baseVelocity = velocity_z
+	speedMax = velocity_z + (velocity_z * percentSpeedUp / 100)
 
 func _physics_process(delta: float) -> void:
 	if currentState == STATES.RUN:
@@ -72,6 +76,7 @@ func _physics_process(delta: float) -> void:
 			#esto deberia cambiar una vez tengamos cuando se activa, llamando directamente a la funcion siguiente
 			changeVisionCam()
 	
+	# Temporizador de los power up
 	if currentPowerUp != POWERUPSTATE.NOTHING:
 		if durationPowerUp > 0:
 			durationPowerUp -= delta
@@ -161,7 +166,7 @@ func camera_follow(delta:float):
 	# Pero si está bajando (por caída o escalera), permitir que la cámara lo siga
 	elif not is_on_floor() and velocity.y < 0:
 		# Suavizamos el descenso
-		var vertical_gap = current_cam_pos.y - target_position.y
+		var vertical_gap = current_cam_pos.y - target_position.y 
 		var descent_speed = clamp(vertical_gap * 3.0, 1.0, 10.0)
 		target_position.y = lerp(current_cam_pos.y, target_position.y, delta * descent_speed)
 	# Si está en el suelo, seguirlo normalmente
@@ -184,8 +189,8 @@ func powerUpActive():
 			#reinicia todos los valores
 			velocity_z = baseVelocity
 		POWERUPSTATE.SPEEDUP:
-			velocity_z = velocity_z * 2
-			durationPowerUp = powerUpDuration.SPEEDUP
+			velocity_z = speedMax
+			durationPowerUp += powerUpDuration.SPEEDUP
 		POWERUPSTATE.ABOSRBCOIN:
 			durationPowerUp = powerUpDuration.ABOSRBCOIN
 
@@ -201,11 +206,22 @@ func lostLife():
 	is_hitt = true
 	currentState = STATES.HIT
 	life -= 1
+	if life <= 0:
+		get_tree().change_scene_to_file("res://Scenes/World/MenuInicial.tscn")
 
 func collectSnFicha():
 	if life < 3:
 		snficha += 1
-		
 
 func _on_giro_body_entered(body: Node3D) -> void:
-	$"../Giro/AnimationPlayer".play("Giro")
+	AnimacionGiro(body.name, $"../Giro/AnimationPlayer")
+
+func _on_giro_escalinata_body_entered(body: Node3D) -> void:
+		AnimacionGiro(body.name, $"../GiroEscalinata/AnimationPlayer")
+
+func _on_giro_costanera_body_entered(body: Node3D) -> void:
+		AnimacionGiro(body.name, $"../GiroCostanera/AnimationPlayer")
+
+func AnimacionGiro(objetoAAnimar: String, animPlayer:AnimationPlayer):
+	if objetoAAnimar == "Nica":
+		animPlayer.play("Giro")

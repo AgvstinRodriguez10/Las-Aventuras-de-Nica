@@ -45,7 +45,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_e0fa7")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a05qm"]
-size = Vector3(1.50073, 1.02135, 0.0819092)
+size = Vector3(1.3291, 1.02135, 0.0819092)
 
 [node name="Valla" type="Area3D"]
 collision_layer = 8

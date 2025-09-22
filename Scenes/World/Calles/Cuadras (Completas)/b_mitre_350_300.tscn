@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://6vltpx4piqv4"]
+[gd_scene load_steps=8 format=3 uid="uid://6vltpx4piqv4"]
 
 [ext_resource type="PackedScene" uid="uid://rnqvipfo1iw6" path="res://Scenes/World/Calles/CuadraDarsenaIzquierda.tscn" id="1_we7sq"]
 [ext_resource type="PackedScene" uid="uid://d1dgk81b32dc2" path="res://Scenes/World/Calles/Cuadra - 2/izq.tscn" id="2_c6lbs"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://crcmb22kteijj" path="res://Scenes/World/Objetos/LigthSinLigth.tscn" id="4_s2mi4"]
 [ext_resource type="PackedScene" uid="uid://daqotynvcl1u2" path="res://Assets/San Nicolas/Object/Decoración/BalaCalle.tscn" id="4_upp1v"]
 [ext_resource type="PackedScene" uid="uid://c2ekbe2jv24w7" path="res://Assets/San Nicolas/Object/Autos/Auto-2.fbx" id="5_cykjn"]
+[ext_resource type="PackedScene" uid="uid://b5f0d4bxhwlvs" path="res://Assets/Objetos/CartelesSN/cartel_farol_prohibido.glb" id="5_s2mi4"]
 
 [node name="B Mitre 350 300" type="Node3D"]
 
@@ -32,6 +33,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.02988, 0, 7.44406)
 
 [node name="LigthSinLigth2" parent="Decoraciónes/Faroles/Izq" instance=ExtResource("4_s2mi4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.02988, 0, 66.4441)
+
+[node name="cartel_farol_prohibido" parent="Decoraciónes/Faroles/Izq/LigthSinLigth2" instance=ExtResource("5_s2mi4")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.819987, 4.5, 0)
 
 [node name="LigthSinLigth3" parent="Decoraciónes/Faroles/Izq" instance=ExtResource("4_s2mi4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.02988, 0, 126.444)
@@ -106,18 +110,5 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 9.28459, 0, 223.695)
 
 [node name="Body" parent="Autos/Auto-2/Autito-v3" index="0"]
 transform = Transform3D(124.331, 0, 0, 0, 1.29477, 124.324, 0, -124.324, 1.29477, -0.000437438, -0.0172109, 0.00671396)
-visibility_range_end = 300.0
-
-[node name="Wheel_FL" parent="Autos/Auto-2/Autito-v3" index="1"]
-visibility_range_end = 300.0
-
-[node name="Wheel_FR" parent="Autos/Auto-2/Autito-v3" index="2"]
-visibility_range_end = 300.0
-
-[node name="Wheel_RL" parent="Autos/Auto-2/Autito-v3" index="3"]
-visibility_range_end = 300.0
-
-[node name="Wheel_RR" parent="Autos/Auto-2/Autito-v3" index="4"]
-visibility_range_end = 300.0
 
 [editable path="Autos/Auto-2"]

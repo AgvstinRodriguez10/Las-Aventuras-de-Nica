@@ -3,7 +3,7 @@ class_name BasicCharacter
 
 var animationPlayer: AnimationPlayer
 var is_movie : bool = false
-var velocity_z = 300
+var velocity_z = 375
 const JUMP_VELOCITY: float = 10.0  # Jump strength
 
 const GRAVITY: float = 24.0  # Gravity strength
