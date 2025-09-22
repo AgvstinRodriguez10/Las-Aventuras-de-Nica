@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=4 uid="uid://bvs1c5dn0kl1f"]
+[gd_scene load_steps=13 format=4 uid="uid://bvs1c5dn0kl1f"]
 
 [ext_resource type="Script" uid="uid://diuek52slklqh" path="res://Script/Coins/CoinYagui.gd" id="1_b5iyr"]
 [ext_resource type="Texture2D" uid="uid://bmnj4r7ll52pl" path="res://Assets/Coin/MONEDAYAGUI-14.png" id="1_e8d8t"]
 [ext_resource type="Texture2D" uid="uid://busnrek554n5r" path="res://Assets/Extras/TextureHumo.png" id="3_r8xu8"]
+[ext_resource type="AudioStream" uid="uid://b15ydwjv6q1jx" path="res://Assets/Extras/Sounds/yaguificha.mp3" id="4_dm5yo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b5iyr"]
 albedo_texture = ExtResource("1_e8d8t")
@@ -98,5 +99,8 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, -0.342427, 0.0368882
 amount = 30
 process_material = SubResource("ParticleProcessMaterial_dm5yo")
 draw_pass_1 = SubResource("QuadMesh_62w7r")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_dm5yo")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
