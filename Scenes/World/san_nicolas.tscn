@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dcmdpwf6w8opd"]
+[gd_scene load_steps=31 format=3 uid="uid://dcmdpwf6w8opd"]
 
 [ext_resource type="PackedScene" uid="uid://bxs55inw16h7x" path="res://Scenes/World/Calles/Cuadras (Completas)/b_mitre_400_350.tscn" id="1_i7jcd"]
 [ext_resource type="PackedScene" uid="uid://6vltpx4piqv4" path="res://Scenes/World/Calles/Cuadras (Completas)/b_mitre_350_300.tscn" id="2_86gof"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://dj0ym6awon4au" path="res://Scenes/World/Objetos/Carteles/Carteles-Calles/DFSarmiento.tscn" id="19_0p18o"]
 [ext_resource type="PackedScene" uid="uid://b17ssv2tgs07m" path="res://Scenes/World/Objetos/Arbol.res" id="20_atd8f"]
 [ext_resource type="Script" uid="uid://b50df3hy3gm6i" path="res://Script/Objetos/ArbolesController.gd" id="20_iemyh"]
+[ext_resource type="PackedScene" uid="uid://chpqpvt4c7h7l" path="res://Scenes/World/Objetos/ArbustoHD.tscn" id="22_hgfbb"]
 [ext_resource type="Texture2D" uid="uid://byomd5wguvvcp" path="res://Assets/Objetos/CartelesSN/sigueintenivelproximamente.png" id="22_iobvy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cmu8q"]
@@ -225,6 +226,56 @@ transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, 
 
 [node name="Arbol16" parent="Arboles" instance=ExtResource("20_atd8f")]
 transform = Transform3D(-0.1, -1.50996e-08, -6.60024e-16, 0, -4.37114e-09, 0.1, -1.50996e-08, 0.1, 4.37114e-09, 8, 0, 866.121)
+
+[node name="Arbusto" type="Node3D" parent="."]
+
+[node name="ArbustoHD2" parent="Arbusto" instance=ExtResource("22_hgfbb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.00554, 0, 4.43509)
+
+[node name="ArbustoHD3" parent="Arbusto" instance=ExtResource("22_hgfbb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.70219, 0, 51.245)
+
+[node name="ArbustoHD4" parent="Arbusto" instance=ExtResource("22_hgfbb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.48963, 0, 104.55)
+
+[node name="ArbustoHD5" parent="Arbusto" instance=ExtResource("22_hgfbb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.48963, 0, 190.278)
+
+[node name="ArbustoHD6" parent="Arbusto" instance=ExtResource("22_hgfbb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.96783, 0, 248.936)
+
+[node name="ArbustoHD7" parent="Arbusto" instance=ExtResource("22_hgfbb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.56739, 0, 308.794)
+
+[node name="ArbustoHD8" parent="Arbusto" instance=ExtResource("22_hgfbb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.24599, 0, 411.85)
+
+[node name="ArbustoHD9" parent="Arbusto" instance=ExtResource("22_hgfbb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.8459, 0, 454.85)
+
+[node name="ArbustoHD10" parent="Arbusto" instance=ExtResource("22_hgfbb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.8459, 0, 572.85)
+
+[node name="ArbustoHD11" parent="Arbusto" instance=ExtResource("22_hgfbb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.75507, 0, 570.94)
+
+[node name="ArbustoHD12" parent="Arbusto" instance=ExtResource("22_hgfbb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.75507, 0, 664.94)
+
+[node name="ArbustoHD13" parent="Arbusto" instance=ExtResource("22_hgfbb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.45738, 0, 778.599)
+
+[node name="ArbustoHD14" parent="Arbusto" instance=ExtResource("22_hgfbb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.05483, 0, 807.685)
+
+[node name="ArbustoHD15" parent="Arbusto" instance=ExtResource("22_hgfbb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.91552, 0, 868.091)
+
+[node name="ArbustoHD16" parent="Arbusto" instance=ExtResource("22_hgfbb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.56142, 0, 984.703)
+
+[node name="ArbustoHD17" parent="Arbusto" instance=ExtResource("22_hgfbb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.56142, 0, 1088.43)
 
 [node name="CalleProximamenteDisponible" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 8.74228e-08, 1, -1.06581e-14, 3.82137e-15, -1.06581e-14, -1, 0.249672, 7.43482, 1186.18)

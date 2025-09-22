@@ -671,22 +671,22 @@ mesh = SubResource("ArrayMesh_bme0u")
 skeleton = NodePath("")
 
 [node name="Edificio-1" type="MeshInstance3D" parent="."]
-transform = Transform3D(-6, 0, 2.93257e-06, 0, 6, 0, -1.95505e-06, 0, -9, -36.5707, -4.78234, 29.3313)
+transform = Transform3D(-6, 0, 2.93257e-06, 0, 6, 0, -1.95505e-06, 0, -9, -34.1982, -4.78234, 29.3313)
 mesh = SubResource("ArrayMesh_n6s1q")
 skeleton = NodePath("")
 
 [node name="Edificio-2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0, 0, -10, 0, 10, 0, 10, 0, 0, -36.8872, -5, 48.4693)
+transform = Transform3D(0, 0, -10, 0, 10, 0, 10, 0, 0, -34.469, -5, 48.4693)
 mesh = SubResource("ArrayMesh_df5nn")
 skeleton = NodePath("")
 
 [node name="Edificio-3" type="MeshInstance3D" parent="."]
-transform = Transform3D(-8, 0, -5.21346e-06, 0, 8, 0, 2.60673e-06, 0, -16, -38.937, -5, 75.1845)
+transform = Transform3D(-8, 0, -5.21346e-06, 0, 8, 0, 2.60673e-06, 0, -16, -37.5174, -5, 75.1845)
 mesh = SubResource("ArrayMesh_c2uxm")
 skeleton = NodePath("")
 
 [node name="Edificio-4" type="MeshInstance3D" parent="."]
-transform = Transform3D(-7.56, 0, -3.69504e-06, 0, 7.56, 0, 2.46336e-06, 0, -11.34, -34.0044, -5, 102.707)
+transform = Transform3D(-7.56, 0, -3.69504e-06, 0, 7.56, 0, 2.46336e-06, 0, -11.34, -31.0269, -5, 102.707)
 mesh = SubResource("ArrayMesh_ohq8y")
 skeleton = NodePath("")
 
