@@ -4,12 +4,16 @@ class_name CoinBase
 @onready var userInterface:UI = $"../../HUD"
 @onready var collision:CollisionShape3D = $CollisionShape3D
 
+var coinSound:AudioStreamPlayer3D
+
 var distUp = 3
 var posInitial: Vector3
 var idleDistUp = .8
-var targetHeight 
+var targetHeight
 
 var target:Player
+var soundEmited = false
+var isOut = false
 
 enum STATE {
 	IDLE_DOWN,
@@ -24,6 +28,7 @@ func _ready() -> void:
 	show()
 	posInitial = position
 	targetHeight = posInitial.y + idleDistUp
+	coinSound = $AudioStreamPlayer3D
 
 func _physics_process(delta: float) -> void:
 	match currentState:
@@ -44,7 +49,9 @@ func _physics_process(delta: float) -> void:
 			if (position.distance_to(target.position) > 2):
 				position = position.lerp(target.position, 7 * delta)
 			else:
-				byebye()
+				if !isOut:
+					byebye()
+					isOut = true
 
 func checkIsOffside():
 	#if position
@@ -73,4 +80,12 @@ func _on_body_entered(body: Player) -> void:
 		currentState = STATE.PULLING_UP
 
 func byebye():
+	if !coinSound.playing && !soundEmited:
+		coinSound.play()
+		soundEmited = true
+		$CollisionShape3D.disabled = true
+		hide()
+	#await get_tree().create_timer(.5).timeout
+	await coinSound.finished
 	queue_free()
+	
