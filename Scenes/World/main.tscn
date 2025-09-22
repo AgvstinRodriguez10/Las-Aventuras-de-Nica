@@ -954,7 +954,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 99.266, -5, 708.944)
 
 [node name="CameraFocus" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 520.026)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.82541)
 
 [node name="Camera3D" type="Camera3D" parent="CameraFocus"]
 transform = Transform3D(-0.999945, -0.0104718, -8.44833e-08, -0.0101197, 0.966323, 0.257133, -0.00269255, 0.257119, -0.966376, 0, 3.93963, -8.4115)
@@ -968,10 +968,10 @@ libraries = {
 }
 
 [node name="Yagui" parent="." instance=ExtResource("8_t55t5")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 504.289)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -13.9116)
 
 [node name="Nica" parent="." instance=ExtResource("2_ntgcc")]
-transform = Transform3D(-0.5, 0, 1.26759e-06, 0, 0.5, 0, -1.26759e-06, 0, -0.5, 0, 0, 520.026)
+transform = Transform3D(-0.5, 0, 1.26759e-06, 0, 0.5, 0, -1.26759e-06, 0, -0.5, 0, 0, 1.82541)
 
 [node name="Alert" type="Area3D" parent="Nica"]
 transform = Transform3D(-2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, 0, 0, 0)
