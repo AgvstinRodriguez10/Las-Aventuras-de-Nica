@@ -133,11 +133,13 @@ func changeVisionCam():
 	
 func changeLine(dire) -> void:
 	var dist_recorrida = 0
+	
 	# Esta funcion "interpola" entre un punto y otro con el await para hacer una pasada en cada frame
 	while dist_recorrida < dist_beetween_lanes:
 		position += eje_local_x * (velociti_change_line) * dire
 		dist_recorrida += velociti_change_line
 		await get_tree().process_frame
+		
 
 func camera_follow(delta:float):
 	# Obtenemos el eje local del personaje
@@ -195,6 +197,7 @@ func powerUpActive():
 			durationPowerUp = powerUpDuration.ABOSRBCOIN
 
 func is_hitt_change():
+	# resetea el ishit y setea el estado segun su accion actual 
 	if is_hitt:
 		is_hitt = false
 	if velocity.y < 0:
@@ -224,4 +227,5 @@ func _on_giro_costanera_body_entered(body: Node3D) -> void:
 
 func AnimacionGiro(objetoAAnimar: String, animPlayer:AnimationPlayer):
 	if objetoAAnimar == "Nica":
+		velocity_z = baseVelocity
 		animPlayer.play("Giro")

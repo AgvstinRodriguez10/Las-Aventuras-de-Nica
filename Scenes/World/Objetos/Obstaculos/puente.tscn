@@ -124,7 +124,7 @@ data = PackedVector3Array(-2.5901, 0.0341, -0.2965, -2.5901, -0.0341, -0.2965, 2
 size = Vector3(1.20215, 0.18457, 8.60217)
 
 [node name="puentesito" type="StaticBody3D"]
-collision_layer = 9
+collision_layer = 8
 collision_mask = 2
 script = ExtResource("1_pfr5o")
 
