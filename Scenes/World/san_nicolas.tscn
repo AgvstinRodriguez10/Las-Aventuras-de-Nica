@@ -110,6 +110,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9036, 0, 1178.91)
 [node name="Ligth5" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.20751, 0, 1163.56)
 
+[node name="Ligth6" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.20751, 0, 1132.56)
+
+[node name="Ligth8" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.2075, 0, 1119.56)
+
 [node name="Ligth4" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.8249, 0, 1193.27)
 
@@ -121,6 +127,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119.277, 0, 1237.77)
 
 [node name="Ligth13" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 146.225, 0, 1249.22)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Plaza/Faroles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.3536, 14.5207, 1145.24)
+light_energy = 2.0
+omni_range = 28.4315
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Plaza"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 256.568, 14.803, 1358.35)
