@@ -29,7 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://bfttwterfi486" path="res://Scenes/World/Objetos/Obstaculos/puente.tscn" id="15_8o8og"]
 [ext_resource type="PackedScene" uid="uid://l6unlmqhug4r" path="res://Scenes/World/Objetos/Valla.tscn" id="15_nsfl0"]
 [ext_resource type="PackedScene" uid="uid://dcey1tp07g3qh" path="res://Scenes/World/Objetos/Obstaculos/RampaGrande.tscn" id="18_xqo82"]
-[ext_resource type="PackedScene" uid="uid://1u5gnpg14lp0" path="res://Scenes/World/EscalerasRegatas + Costanera-v2.tscn .tscn" id="20_l5qvs"]
+[ext_resource type="PackedScene" uid="uid://1u5gnpg14lp0" path="res://Scenes/World/EscaleraRegatas + Costanera.V2.tscn" id="20_l5qvs"]
 [ext_resource type="PackedScene" uid="uid://b0h4ayhr722x5" path="res://Scenes/World/Objetos/Obstaculos/pelota.tscn" id="21_lml7n"]
 [ext_resource type="PackedScene" uid="uid://bvs1c5dn0kl1f" path="res://Scenes/Coins/YaguiFicha.tscn" id="27_l5qvs"]
 
@@ -1821,7 +1821,7 @@ libraries = {
 }
 
 [node name="GiroCostanera" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.266, -7.94148, 765.522)
+transform = Transform3D(-0.994256, 0, -0.107028, 0, 1, 0, 0.107028, 0, -0.994256, 99.266, -7.94148, 768.776)
 collision_layer = 64
 collision_mask = 2
 
