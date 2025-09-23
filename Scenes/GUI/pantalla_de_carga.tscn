@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://bg5630cosioxd"]
+[gd_scene load_steps=17 format=3 uid="uid://bg5630cosioxd"]
 
 [ext_resource type="Texture2D" uid="uid://bicwmerccv4nf" path="res://Assets/Extras/PANTALLAINICIOOO-06.png" id="1_cgqpu"]
 [ext_resource type="Script" uid="uid://xtoce68yo8ix" path="res://Script/GUI/pantalla_de_carga.gd" id="1_habic"]
 [ext_resource type="Texture2D" uid="uid://1wvpofvi2gj" path="res://Assets/Extras/CARGAINICIOVACIA-06.png" id="2_habic"]
 [ext_resource type="Texture2D" uid="uid://4dch5lqrugw4" path="res://Assets/Extras/CARGAINICIO-06.png" id="3_q3pre"]
 [ext_resource type="Texture2D" uid="uid://dtup4fs3k1v05" path="res://Assets/Extras/DIFUMINADOFUCSIA-05.png" id="5_q3pre"]
+[ext_resource type="AudioStream" uid="uid://dqxb7ufuxmort" path="res://Assets/Extras/Sounds/sonido_pantalla_carga.mp3" id="6_s0fhk"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_habic"]
 texture = ExtResource("3_q3pre")
@@ -337,6 +338,7 @@ offset_left = 504.0
 offset_top = 680.0
 offset_right = 648.0
 offset_bottom = 720.0
+disabled = true
 shortcut = SubResource("Shortcut_habic")
 text = "ENTER
 "
@@ -379,6 +381,7 @@ position = Vector2(576, 324)
 texture = ExtResource("5_q3pre")
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
 z_index = 2
 anchors_preset = 15
 anchor_right = 1.0
@@ -391,5 +394,9 @@ color = Color(1, 1, 1, 0)
 libraries = {
 &"": SubResource("AnimationLibrary_0r0d7")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_s0fhk")
+autoplay = true
 
 [connection signal="pressed" from="Container/Button" to="." method="_on_button_pressed"]

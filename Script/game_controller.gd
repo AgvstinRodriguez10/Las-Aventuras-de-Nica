@@ -11,7 +11,6 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	time_controller(delta)
-	pass
 
 func time_controller(delta:float):
 	if directional_light_3d.light_energy > 0:
