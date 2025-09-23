@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=4 uid="uid://1u5gnpg14lp0"]
+[gd_scene load_steps=68 format=4 uid="uid://1u5gnpg14lp0"]
 
 [ext_resource type="Texture2D" uid="uid://btjfrdy8l40h7" path="res://Assets/San Nicolas/Costanera/ESCALERAS DEL REGATAS_ricocartelYESCALINATA-03.png" id="1_7b2dr"]
 [ext_resource type="Texture2D" uid="uid://bimm4j2o2rqu4" path="res://Assets/San Nicolas/Costanera/ESCALERAS DEL REGATAS_ricocartel-01-03-03 (1).png" id="2_3peyb"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ddq3likg3gvtl" path="res://Scenes/World/Objetos/light_wall.tscn" id="5_libo1"]
 [ext_resource type="PackedScene" uid="uid://d13rf38gehy5" path="res://Scenes/World/Objetos/Ligth.tscn" id="6_5hqwf"]
 [ext_resource type="PackedScene" uid="uid://bws8q78bn7eeo" path="res://Scenes/World/Objetos/StreetLigthSN.tscn" id="7_7b2dr"]
+[ext_resource type="Script" uid="uid://cn7loa16sqbup" path="res://Script/meta.gd" id="8_1ju7f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6x4oa"]
 resource_name = "Material.001"
@@ -767,6 +768,9 @@ size = Vector3(2.14758, 0.219727, 9.95264)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ra1mu"]
 size = Vector3(2.14758, 0.219727, 9.95264)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_e6iuq"]
+size = Vector3(21.2861, 9.7146, 1)
+
 [node name="ESCALERAS DEL REGATAS" type="Node3D"]
 
 [node name="Calle y Vereda" type="MeshInstance3D" parent="."]
@@ -1172,3 +1176,14 @@ omni_range = 30.472
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.0989, -2.13824, 189)
 light_energy = 3.0
 omni_range = 30.472
+
+[node name="AreaFinal" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.7243, -5.03758, 184.623)
+collision_mask = 2
+script = ExtResource("8_1ju7f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaFinal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.3573, 0)
+shape = SubResource("BoxShape3D_e6iuq")
+
+[connection signal="body_entered" from="AreaFinal" to="AreaFinal" method="_on_body_entered"]

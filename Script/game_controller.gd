@@ -6,9 +6,6 @@ class_name GameController
 @onready var animation_player:AnimationPlayer = $"../CameraFocus/Camera3D/AnimationPlayer"
 var isNight = false
 
-func _ready() -> void:
-	pass
-	
 func _physics_process(delta: float) -> void:
 	time_controller(delta)
 

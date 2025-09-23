@@ -128,6 +128,7 @@ func changeVisionCam():
 			camera_focus.rotation.y = deg_to_rad(currentDegs)
 			await get_tree().create_timer(0).timeout
 		
+		
 		camera_distance = 1.0
 		frontalCamIsActive = false
 	
@@ -197,9 +198,10 @@ func powerUpActive():
 			durationPowerUp = powerUpDuration.ABOSRBCOIN
 
 func is_hitt_change():
-	# resetea el ishit y setea el estado segun su accion actual 
+	# resetea el is_hitt y setea el estado segun su accion actual 
 	if is_hitt:
 		is_hitt = false
+		velocity_z = baseVelocity
 	if velocity.y < 0:
 		currentState = STATES.FALL
 	else:
@@ -208,6 +210,7 @@ func is_hitt_change():
 func lostLife():
 	is_hitt = true
 	currentState = STATES.HIT
+	velocity_z = baseVelocity * 0.1
 	life -= 1
 	if life <= 0:
 		get_tree().change_scene_to_file("res://Scenes/World/MenuInicial.tscn")
