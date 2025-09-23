@@ -33,6 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://1u5gnpg14lp0" path="res://Scenes/World/EscaleraRegatas + Costanera.V2.tscn" id="20_l5qvs"]
 [ext_resource type="PackedScene" uid="uid://b0h4ayhr722x5" path="res://Scenes/World/Objetos/Obstaculos/pelota.tscn" id="21_lml7n"]
 [ext_resource type="PackedScene" uid="uid://bvs1c5dn0kl1f" path="res://Scenes/Coins/YaguiFicha.tscn" id="27_l5qvs"]
+[ext_resource type="ArrayOccluder3D" uid="uid://bfrn0jdnw8mmj" path="res://Scenes/World/main.occ" id="33_4ra0o"]
 
 [sub_resource type="Animation" id="Animation_6ny57"]
 resource_name = "DialogoOn"
@@ -1920,6 +1921,9 @@ shape = SubResource("BoxShape3D_y76hn")
 libraries = {
 &"": SubResource("AnimationLibrary_qggjr")
 }
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+occluder = ExtResource("33_4ra0o")
 
 [connection signal="body_entered" from="Dialogos/Dialogo2_EcoFichas" to="Dialogos/Dialogo2_EcoFichas" method="_on_body_entered"]
 [connection signal="body_entered" from="Dialogos/Dialogo3_RdFichas" to="Dialogos/Dialogo3_RdFichas" method="_on_body_entered"]
