@@ -1,10 +1,11 @@
-[gd_scene load_steps=56 format=4 uid="uid://c6g1kat5u4r3x"]
+[gd_scene load_steps=57 format=4 uid="uid://c6g1kat5u4r3x"]
 
 [ext_resource type="PackedScene" uid="uid://c7o8d2sg86hoa" path="res://Scenes/GUI/menu_inicio.tscn" id="1_v7lc6"]
 [ext_resource type="PackedScene" uid="uid://bxs55inw16h7x" path="res://Scenes/World/Calles/Cuadras (Completas)/b_mitre_400_350.tscn" id="2_6jyht"]
 [ext_resource type="Texture2D" uid="uid://ciisboix2d5rn" path="res://Assets/Characters/Nica-v1_BakeTexture.png" id="3_gk0w6"]
 [ext_resource type="Texture2D" uid="uid://deod2mgc8pwqt" path="res://Assets/Characters/Nica-v1_Vincha_texture_Mesa de trabajo 1.png" id="4_woqss"]
 [ext_resource type="Texture2D" uid="uid://cqx4vm2ocv0vh" path="res://Assets/Sky/sky.hdr" id="5_355ar"]
+[ext_resource type="AudioStream" uid="uid://b3ftcoi28evd7" path="res://Assets/Extras/Sounds/sonidoAmbienteASN2.mp3" id="6_6jyht"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_um7xc"]
 resource_name = "Piel"
@@ -4230,3 +4231,8 @@ autoplay = "Move"
 transform = Transform3D(0.508134, -0.42252, -0.750517, 0.536929, -0.525941, 0.659616, -0.673429, -0.738148, -0.0403855, 0, 0, -0.500938)
 shadow_enabled = true
 shadow_reverse_cull_face = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_6jyht")
+volume_db = 8.0
+autoplay = true

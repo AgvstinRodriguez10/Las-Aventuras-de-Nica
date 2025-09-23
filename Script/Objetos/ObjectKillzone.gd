@@ -13,11 +13,13 @@ func bodyCollision(body):
 	if body.name == "Nica" and body.is_hitt == false:
 		body.lostLife()
 		var collisions: Array
+
 		for elem in get_children():
 			if elem.name == "Killzone":
-				collisions.append(elem.get_child(0))
+				elem.get_child(0).disabled = true
 			elif is_instance_of(elem, CollisionShape3D):
-				collisions.append(elem)
-		#print(coll)
-		for coll:CollisionShape3D in collisions:
-			coll.disabled = true
+				#collisions.append(elem)
+				elem.disabled = true
+		#print(collisions)
+		#for coll:CollisionShape3D in collisions:
+			#coll.disabled = true
