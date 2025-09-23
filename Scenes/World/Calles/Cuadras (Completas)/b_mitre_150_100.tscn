@@ -18,6 +18,7 @@ transform = Transform3D(-6, 0, -5.24537e-07, 0, 6, 0, 5.24537e-07, 0, -6, 0, 0, 
 [node name="Edificios" type="Node3D" parent="."]
 
 [node name="Izq" parent="Edificios" instance=ExtResource("2_8dllq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 969.843)
 
 [node name="Der" parent="Edificios" instance=ExtResource("3_om67y")]
 
