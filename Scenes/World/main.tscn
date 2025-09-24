@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://djlnov41bncl8"]
+[gd_scene load_steps=82 format=3 uid="uid://djlnov41bncl8"]
 
 [ext_resource type="PackedScene" uid="uid://d33hm0kfvhtj3" path="res://Scenes/GUI/fps_count.tscn" id="1_1pvyk"]
 [ext_resource type="PackedScene" uid="uid://ikd1j0tjscug" path="res://Scenes/GUI/hud.tscn" id="1_by2pg"]
@@ -550,10 +550,10 @@ tracks/0/path = NodePath("Label:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 1, 1.1, 2, 2.1, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.0999999, 1, 1.1, 2.06667, 2.16667, 3.06667, 3.16667, 4.06667, 4.16667, 5.06667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [false, true, false, true, false, true, false]
+"values": [false, true, false, true, false, true, false, true, false, true, false]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -562,10 +562,10 @@ tracks/1/path = NodePath("Label:text")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.1, 2.1),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 1, 2.06667, 3.16667, 4.16667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": ["3", "2", "1"]
+"values": ["5", "4", "3", "2", "1"]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -574,10 +574,10 @@ tracks/2/path = NodePath("Label:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.1, 0.5, 1.1, 1.5, 2.1, 2.5, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.0999999, 0.5, 1.1, 1.5, 2.16667, 2.56667, 3.16667, 3.56667, 4.16667, 4.56667, 5.06667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bms8u"]
@@ -598,7 +598,6 @@ radiance_size = 2
 [sub_resource type="Environment" id="Environment_8o8og"]
 background_mode = 2
 background_color = Color(0.432624, 0.432624, 0.432624, 1)
-background_energy_multiplier = 0.7
 sky = SubResource("Sky_ombbc")
 
 [sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_psyr8"]
@@ -628,7 +627,7 @@ tracks/0/path = NodePath(".:environment:sky:sky_material:energy_multiplier")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
+"times": PackedFloat32Array(0.0333333, 5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [1.0, 0.3]
@@ -850,6 +849,7 @@ _data = {
 [node name="Main" type="Node3D"]
 
 [node name="GameController" type="Node3D" parent="."]
+process_mode = 3
 script = ExtResource("1_y76hn")
 
 [node name="Dialogos" type="Node3D" parent="."]
@@ -1103,7 +1103,7 @@ offset_right = 158.0
 offset_bottom = 126.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "3"
+text = "5"
 label_settings = SubResource("LabelSettings_6jptx")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -1115,7 +1115,7 @@ libraries = {
 autoplay = "label"
 
 [node name="Timer" type="Timer" parent="Label"]
-wait_time = 3.5
+wait_time = 5.5
 one_shot = true
 
 [node name="PauseMenu" parent="." instance=ExtResource("1_wpgpo")]
@@ -1132,6 +1132,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 99.266
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.62634)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="CameraFocus"]
+process_mode = 3
 stream = ExtResource("2_4ra0o")
 volume_db = 8.0
 autoplay = true
@@ -1151,7 +1152,8 @@ libraries = {
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -13.1107)
 
 [node name="Nica" parent="." instance=ExtResource("2_ntgcc")]
-transform = Transform3D(-0.5, 0, 1.26759e-06, 0, 0.5, 0, -1.26759e-06, 0, -0.5, 0, 0, 0.800904)
+transform = Transform3D(-0.5, 0, 1.26759e-06, 0, 0.5, 0, -1.26759e-06, 0, -0.5, 0, 0, 0)
+debugAvanced = true
 
 [node name="Alert" type="Area3D" parent="Nica"]
 transform = Transform3D(-2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, 0, 0, 0)
@@ -1653,8 +1655,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 308.695)
 [node name="SNFicha6" parent="SNFichas" instance=ExtResource("9_w7l72")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 448.049)
 
+[node name="SNFicha12" parent="SNFichas" instance=ExtResource("9_w7l72")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 503.105)
+
 [node name="SNFicha7" parent="SNFichas" instance=ExtResource("9_w7l72")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 547.527)
+
+[node name="SNFicha13" parent="SNFichas" instance=ExtResource("9_w7l72")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.4387, 1, 620.917)
+
+[node name="SNFicha14" parent="SNFichas" instance=ExtResource("9_w7l72")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.2374, 1, 600.77)
 
 [node name="SNFicha8" parent="SNFichas" instance=ExtResource("9_w7l72")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.2, 1, 669.486)
@@ -1672,9 +1683,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.2, -9.358, 745.97)
 
 [node name="RDFicha" parent="RDFichas" instance=ExtResource("10_yteiy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 61.325)
-
-[node name="RDFicha9" parent="RDFichas" instance=ExtResource("10_yteiy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 36.6305)
 
 [node name="RDFicha2" parent="RDFichas" instance=ExtResource("10_yteiy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.34808, 124.517)

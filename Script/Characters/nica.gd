@@ -2,6 +2,7 @@ extends BasicCharacter
 class_name Player
 #@onready var animation_nica: AnimationPlayer = $"Nica-v1_0/AnimationPlayer"
 @onready var camera_focus: Marker3D = $"../CameraFocus"
+@export var debugAvanced = false
 
 const LANES: Array = [-1, 0, 1]  # Lane positions on x-axis
 const dist_beetween_lanes = 2
@@ -51,6 +52,9 @@ func _ready() -> void:
 	animationPlayer = $"Nica-v1_0/AnimationPlayer"
 	baseVelocity = velocity_z
 	speedMax = velocity_z + (velocity_z * percentSpeedUp / 100)
+	if debugAvanced:
+		position = Vector3(0, 0 , 548)
+		camera_focus.position = Vector3(camera_focus.position.x, camera_focus.position.y, position.z - 10)
 
 func _physics_process(delta: float) -> void:
 	if currentState == STATES.RUN:
@@ -128,6 +132,7 @@ func changeVisionCam():
 			camera_focus.rotation.y = deg_to_rad(currentDegs)
 			await get_tree().create_timer(0).timeout
 		
+		
 		camera_distance = 1.0
 		frontalCamIsActive = false
 	
@@ -197,9 +202,10 @@ func powerUpActive():
 			durationPowerUp = powerUpDuration.ABOSRBCOIN
 
 func is_hitt_change():
-	# resetea el ishit y setea el estado segun su accion actual 
+	# resetea el is_hitt y setea el estado segun su accion actual 
 	if is_hitt:
 		is_hitt = false
+		#velocity_z = baseVelocity
 	if velocity.y < 0:
 		currentState = STATES.FALL
 	else:
@@ -220,10 +226,10 @@ func _on_giro_body_entered(body: Node3D) -> void:
 	AnimacionGiro(body.name, $"../Giro/AnimationPlayer")
 
 func _on_giro_escalinata_body_entered(body: Node3D) -> void:
-		AnimacionGiro(body.name, $"../GiroEscalinata/AnimationPlayer")
+	AnimacionGiro(body.name, $"../GiroEscalinata/AnimationPlayer")
 
 func _on_giro_costanera_body_entered(body: Node3D) -> void:
-		AnimacionGiro(body.name, $"../GiroCostanera/AnimationPlayer")
+	AnimacionGiro(body.name, $"../GiroCostanera/AnimationPlayer")
 
 func AnimacionGiro(objetoAAnimar: String, animPlayer:AnimationPlayer):
 	if objetoAAnimar == "Nica":
