@@ -2,6 +2,7 @@ extends BasicCharacter
 class_name Player
 #@onready var animation_nica: AnimationPlayer = $"Nica-v1_0/AnimationPlayer"
 @onready var camera_focus: Marker3D = $"../CameraFocus"
+@export var debugAvanced = false
 
 const LANES: Array = [-1, 0, 1]  # Lane positions on x-axis
 const dist_beetween_lanes = 2
@@ -51,6 +52,9 @@ func _ready() -> void:
 	animationPlayer = $"Nica-v1_0/AnimationPlayer"
 	baseVelocity = velocity_z
 	speedMax = velocity_z + (velocity_z * percentSpeedUp / 100)
+	if debugAvanced:
+		position = Vector3(0, 0 , 548)
+		camera_focus.position = Vector3(camera_focus.position.x, camera_focus.position.y, position.z - 10)
 
 func _physics_process(delta: float) -> void:
 	if currentState == STATES.RUN:
@@ -201,7 +205,7 @@ func is_hitt_change():
 	# resetea el is_hitt y setea el estado segun su accion actual 
 	if is_hitt:
 		is_hitt = false
-		velocity_z = baseVelocity
+		#velocity_z = baseVelocity
 	if velocity.y < 0:
 		currentState = STATES.FALL
 	else:
@@ -210,7 +214,6 @@ func is_hitt_change():
 func lostLife():
 	is_hitt = true
 	currentState = STATES.HIT
-	velocity_z = baseVelocity * 0.1
 	life -= 1
 	if life <= 0:
 		get_tree().change_scene_to_file("res://Scenes/World/MenuInicial.tscn")
@@ -223,10 +226,10 @@ func _on_giro_body_entered(body: Node3D) -> void:
 	AnimacionGiro(body.name, $"../Giro/AnimationPlayer")
 
 func _on_giro_escalinata_body_entered(body: Node3D) -> void:
-		AnimacionGiro(body.name, $"../GiroEscalinata/AnimationPlayer")
+	AnimacionGiro(body.name, $"../GiroEscalinata/AnimationPlayer")
 
 func _on_giro_costanera_body_entered(body: Node3D) -> void:
-		AnimacionGiro(body.name, $"../GiroCostanera/AnimationPlayer")
+	AnimacionGiro(body.name, $"../GiroCostanera/AnimationPlayer")
 
 func AnimacionGiro(objetoAAnimar: String, animPlayer:AnimationPlayer):
 	if objetoAAnimar == "Nica":
