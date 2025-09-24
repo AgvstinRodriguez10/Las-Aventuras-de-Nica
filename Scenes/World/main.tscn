@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://djlnov41bncl8"]
+[gd_scene load_steps=82 format=3 uid="uid://djlnov41bncl8"]
 
 [ext_resource type="PackedScene" uid="uid://d33hm0kfvhtj3" path="res://Scenes/GUI/fps_count.tscn" id="1_1pvyk"]
 [ext_resource type="PackedScene" uid="uid://ikd1j0tjscug" path="res://Scenes/GUI/hud.tscn" id="1_by2pg"]
@@ -1070,6 +1070,7 @@ shape = SubResource("BoxShape3D_fegd5")
 
 [node name="Camera3D" type="Camera3D" parent="Dialogos/TEST"]
 transform = Transform3D(0.720345, 0, 0.693616, 0, 1, 0, -0.693616, 0, 0.720345, 0.917643, 1.10558, 44.3933)
+far = 300.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogos/TEST"]
 libraries = {
@@ -1923,6 +1924,7 @@ libraries = {
 }
 
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6304, -1.68683, -1.69312)
 occluder = ExtResource("33_4ra0o")
 
 [connection signal="body_entered" from="Dialogos/Dialogo2_EcoFichas" to="Dialogos/Dialogo2_EcoFichas" method="_on_body_entered"]

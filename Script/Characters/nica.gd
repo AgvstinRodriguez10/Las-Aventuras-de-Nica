@@ -138,6 +138,9 @@ func changeLine(dire) -> void:
 	while dist_recorrida < dist_beetween_lanes:
 		position += eje_local_x * (velociti_change_line) * dire
 		dist_recorrida += velociti_change_line
+
+
+
 		await get_tree().process_frame
 		
 
