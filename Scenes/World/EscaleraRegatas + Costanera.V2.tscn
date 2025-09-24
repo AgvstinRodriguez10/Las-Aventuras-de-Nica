@@ -547,7 +547,7 @@ shadow_mesh = SubResource("ArrayMesh_d3cj6")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_70d52"]
 resource_name = "Material.003"
 cull_mode = 2
-albedo_texture = ExtResource("2_3peyb")
+albedo_texture = ExtResource("1_7b2dr")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_f2weh"]
 _surfaces = [{
