@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=4 uid="uid://1u5gnpg14lp0"]
+[gd_scene load_steps=74 format=4 uid="uid://1u5gnpg14lp0"]
 
 [ext_resource type="Texture2D" uid="uid://btjfrdy8l40h7" path="res://Assets/San Nicolas/Costanera/ESCALERAS DEL REGATAS_ricocartelYESCALINATA-03.png" id="1_7b2dr"]
 [ext_resource type="Texture2D" uid="uid://bimm4j2o2rqu4" path="res://Assets/San Nicolas/Costanera/ESCALERAS DEL REGATAS_ricocartel-01-03-03 (1).png" id="2_3peyb"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://bl7juva62gltw" path="res://Scenes/World/Objetos/Carteles/Cartel-3.tscn" id="10_wsj1i"]
 [ext_resource type="PackedScene" uid="uid://br18evv225rx2" path="res://Scenes/World/Objetos/Carteles/Cartel-4.tscn" id="11_2o235"]
 [ext_resource type="PackedScene" uid="uid://kq6jyckuaejx" path="res://Scenes/World/Objetos/Guirnaldas.tscn" id="12_dl1xx"]
+[ext_resource type="PackedScene" uid="uid://c8xxr7s1712jo" path="res://Assets/Objetos/Decoration/Calistenia.fbx" id="13_wsj1i"]
+[ext_resource type="PackedScene" uid="uid://b17ssv2tgs07m" path="res://Scenes/World/Objetos/Arbol.res" id="14_2o235"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6x4oa"]
 resource_name = "Material.001"
@@ -22,12 +24,13 @@ roughness = 0.5
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nvt0r"]
 resource_name = "Calle"
 cull_mode = 2
-albedo_color = Color(0.265819, 0.265819, 0.265819, 1)
+albedo_color = Color(0.0781564, 0.0781564, 0.0781564, 1)
+albedo_texture_force_srgb = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_alfcq"]
 resource_name = "Vereda"
 cull_mode = 2
-albedo_color = Color(0.291134, 0.291134, 0.291134, 1)
+albedo_color = Color(0.20033, 0.20033, 0.20033, 1)
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0u2pb"]
@@ -1183,27 +1186,27 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -46.46
 
 [node name="OmniLight3D" type="OmniLight3D" parent="TestLuz"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.0989, 0.46296, 0)
-light_energy = 3.0
+light_energy = 5.0
 omni_range = 31.6687
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="TestLuz"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.0989, -1.20426, 47)
-light_energy = 3.0
+light_energy = 5.0
 omni_range = 33.7511
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="TestLuz"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.0989, -1.32607, 98)
-light_energy = 3.0
+light_energy = 5.0
 omni_range = 28.5001
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="TestLuz"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.0989, -1.07978, 146)
-light_energy = 3.0
+light_energy = 5.0
 omni_range = 30.472
 
 [node name="OmniLight3D5" type="OmniLight3D" parent="TestLuz"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.0989, -2.13824, 189)
-light_energy = 3.0
+light_energy = 5.0
 omni_range = 30.472
 
 [node name="Carteles" type="Node3D" parent="."]
@@ -1325,7 +1328,28 @@ height = 10.0
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.112953, 0.199726, -8.54724)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Postes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104.953, 3.66611, 203.524)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104.953, 4.76102, 203.524)
+light_color = Color(1, 1, 0.490196, 1)
+light_energy = 30.0
+omni_range = 62.0271
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Postes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.4059, 1.70198, 159.793)
 light_color = Color(1, 1, 0.490196, 1)
 light_energy = 5.0
 omni_range = 62.0271
+
+[node name="Calistenia" parent="." instance=ExtResource("13_wsj1i")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -103.522, -1.48531, 113.104)
+
+[node name="Arboles" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.71793, 0, -0.277763)
+
+[node name="Arbol2" parent="Arboles" instance=ExtResource("14_2o235")]
+transform = Transform3D(0.14, 0, 0, 0, -6.11959e-09, 0.14, 0, -0.14, -6.11959e-09, -63.4468, -5.13314, 28.7476)
+
+[node name="Arbol3" parent="Arboles" instance=ExtResource("14_2o235")]
+transform = Transform3D(0.14, 0, 0, 0, -6.11959e-09, 0.14, 0, -0.14, -6.11959e-09, -63.4468, -5.13314, 64.7476)
+
+[node name="Arbol4" parent="Arboles" instance=ExtResource("14_2o235")]
+transform = Transform3D(0.14, 0, 0, 0, -6.11959e-09, 0.14, 0, -0.14, -6.11959e-09, -63.4468, -5.13314, 103.748)

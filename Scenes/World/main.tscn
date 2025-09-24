@@ -602,7 +602,6 @@ background_energy_multiplier = 0.7
 sky = SubResource("Sky_ombbc")
 
 [sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_psyr8"]
-frustum_far = 300.0
 
 [sub_resource type="Animation" id="Animation_hbncn"]
 length = 0.001
