@@ -111,7 +111,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9036, 0, 1178.91)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.20751, 0, 1163.56)
 
 [node name="Ligth6" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.20751, 0, 1132.56)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.20751, 0, 1136.73)
 
 [node name="Ligth8" parent="Plaza/Faroles" instance=ExtResource("12_c6j2c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.2075, 0, 1119.56)
