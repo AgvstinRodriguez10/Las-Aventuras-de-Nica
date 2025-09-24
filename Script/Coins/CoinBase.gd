@@ -88,3 +88,4 @@ func byebye():
 	#await get_tree().create_timer(.5).timeout
 	await coinSound.finished
 	queue_free()
+	
