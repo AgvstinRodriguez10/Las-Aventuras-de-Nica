@@ -552,10 +552,10 @@ tracks/0/path = NodePath("Label:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 1, 1.1, 2, 2.1, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.0999999, 1.01, 1.11, 2.03333, 2.13333, 3.03333, 3.13333, 4.03333, 4.13333, 5.03333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [false, true, false, true, false, true, false]
+"values": [false, true, false, true, false, true, false, true, false, true, false]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -564,10 +564,10 @@ tracks/1/path = NodePath("Label:text")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.1, 2.1),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 1.01, 2.03333, 3.13333, 4.13333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": ["3", "2", "1"]
+"values": ["5", "4", "3", "2", "1"]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -576,10 +576,10 @@ tracks/2/path = NodePath("Label:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.1, 0.5, 1.1, 1.5, 2.1, 2.5, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.0999999, 0.5, 1.11, 1.51, 2.13333, 2.53333, 3.13333, 3.53333, 4.13333, 4.53333, 5.03333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bms8u"]
@@ -1106,7 +1106,7 @@ offset_right = 158.0
 offset_bottom = 126.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "3"
+text = "5"
 label_settings = SubResource("LabelSettings_6jptx")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -1118,7 +1118,7 @@ libraries = {
 autoplay = "label"
 
 [node name="Timer" type="Timer" parent="Label"]
-wait_time = 3.5
+wait_time = 5.5
 one_shot = true
 
 [node name="PauseMenu" parent="." instance=ExtResource("1_wpgpo")]
