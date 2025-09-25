@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ivrx1uxn5ebn"
-path="res://.godot/imported/ESCALERAS DEL REGATAS.glb-219dcece25b8f35c2a4952019a189712.scn"
+uid="uid://dv5taibgvuq8t"
+path="res://.godot/imported/MitadrampaPequeña.fbx-e518bd93cccc137e630216c1126a32d8.scn"
 
 [deps]
 
-source_file="res://Assets/San Nicolas/Costanera/ESCALERAS DEL REGATAS.glb"
-dest_files=["res://.godot/imported/ESCALERAS DEL REGATAS.glb-219dcece25b8f35c2a4952019a189712.scn"]
+source_file="res://Assets/Objetos/Obstaculos/RampaRework/MitadrampaPequeña.fbx"
+dest_files=["res://.godot/imported/MitadrampaPequeña.fbx-e518bd93cccc137e630216c1126a32d8.scn"]
 
 [params]
 
@@ -28,10 +28,11 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=false
+animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
-gltf/naming_version=1
-gltf/embedded_image_handling=1
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1

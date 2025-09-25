@@ -7,11 +7,10 @@ class_name GameController
 var isNight = false
 
 func _ready() -> void:
-	directional_light_3d.light_energy = 2
-
+	pass
+	
 func _physics_process(delta: float) -> void:
-	if !get_tree().paused:
-		time_controller(delta)
+	time_controller(delta)
 
 func time_controller(delta:float):
 	if directional_light_3d.light_energy > 0:
