@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://djlnov41bncl8"]
+[gd_scene load_steps=80 format=3 uid="uid://djlnov41bncl8"]
 
 [ext_resource type="PackedScene" uid="uid://d33hm0kfvhtj3" path="res://Scenes/GUI/fps_count.tscn" id="1_1pvyk"]
 [ext_resource type="PackedScene" uid="uid://ikd1j0tjscug" path="res://Scenes/GUI/hud.tscn" id="1_by2pg"]
@@ -603,21 +603,6 @@ sky = SubResource("Sky_ombbc")
 
 [sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_psyr8"]
 
-[sub_resource type="Animation" id="Animation_hbncn"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:environment:sky:sky_material:energy_multiplier")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.0]
-}
-
 [sub_resource type="Animation" id="Animation_sy3dk"]
 resource_name = "do_night"
 length = 5.0
@@ -636,7 +621,6 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l1l4v"]
 _data = {
-&"RESET": SubResource("Animation_hbncn"),
 &"do_night": SubResource("Animation_sy3dk")
 }
 
@@ -1690,6 +1674,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.2, -3.37, 678.313)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.2, -9.358, 701.792)
 
 [node name="YaguiFichas" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.046875, -0.195438, -0.0167847)
 
 [node name="YaguiFicha" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 105.885)
