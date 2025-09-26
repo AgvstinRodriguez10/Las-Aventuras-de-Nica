@@ -1141,7 +1141,7 @@ shape = SubResource("BoxShape3D_ra1mu")
 [node name="StreetLigth" type="Node3D" parent="."]
 
 [node name="StreetLigthSN" parent="StreetLigth" instance=ExtResource("7_7b2dr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.7941, -5.99512, 24.1213)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.5, -5.995, 24.121)
 
 [node name="StreetLigthSN5" parent="StreetLigth" instance=ExtResource("7_7b2dr")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -46.7941, -5.99512, 39.1213)
@@ -1159,10 +1159,10 @@ transform = Transform3D(0.87533, 0, -0.483527, 0, 1, 0, 0.483527, 0, 0.87533, -6
 transform = Transform3D(0.761685, 0, 0.647947, 0, 1, 0, -0.647947, 0, 0.761685, -69.2679, -5.99512, 11.1213)
 
 [node name="StreetLigthSN6" parent="StreetLigth" instance=ExtResource("7_7b2dr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.7941, -5.99512, 51.1213)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.5, -5.995, 51.121)
 
 [node name="StreetLigthSN7" parent="StreetLigth" instance=ExtResource("7_7b2dr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.7941, -5.99512, 75.1213)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.5, -5.995, 75.121)
 
 [node name="StreetLigthSN2" parent="StreetLigth" instance=ExtResource("7_7b2dr")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -47.6682, -5.99512, 62.5716)
@@ -1174,10 +1174,10 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -47.66
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -47.6682, -5.99512, 118.035)
 
 [node name="StreetLigthSN3" parent="StreetLigth" instance=ExtResource("7_7b2dr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.6573, -5.99512, 106.96)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.5, -5.995, 106.96)
 
 [node name="StreetLigthSN10" parent="StreetLigth" instance=ExtResource("7_7b2dr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.6573, -5.99512, 149.171)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.5, -5.995, 149.171)
 
 [node name="StreetLigthSN4" parent="StreetLigth" instance=ExtResource("7_7b2dr")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -46.4655, -5.99512, 132.949)
@@ -1346,10 +1346,10 @@ transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -103.522, -1.48531, 113.104)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.71793, 0, -0.277763)
 
 [node name="Arbol2" parent="Arboles" instance=ExtResource("14_2o235")]
-transform = Transform3D(0.14, 0, 0, 0, -6.11959e-09, 0.14, 0, -0.14, -6.11959e-09, -63.4468, -5.13314, 28.7476)
+transform = Transform3D(0.07, 0, 0, 0, -3.0598e-09, 0.07, 0, -0.07, -3.0598e-09, -56.8, -5.133, 27.558)
 
 [node name="Arbol3" parent="Arboles" instance=ExtResource("14_2o235")]
-transform = Transform3D(0.14, 0, 0, 0, -6.11959e-09, 0.14, 0, -0.14, -6.11959e-09, -63.4468, -5.13314, 64.7476)
+transform = Transform3D(0.07, 0, 0, 0, -3.0598e-09, 0.07, 0, -0.07, -3.0598e-09, -56.8, -5.133, 64.748)
 
 [node name="Arbol4" parent="Arboles" instance=ExtResource("14_2o235")]
-transform = Transform3D(0.14, 0, 0, 0, -6.11959e-09, 0.14, 0, -0.14, -6.11959e-09, -63.4468, -5.13314, 103.748)
+transform = Transform3D(0.07, 0, 0, 0, -3.0598e-09, 0.07, 0, -0.07, -3.0598e-09, -56.8, -5.133, 103.748)
