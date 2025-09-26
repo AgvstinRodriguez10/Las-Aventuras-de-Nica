@@ -2,6 +2,7 @@ extends CharacterBody3D
 class_name BasicCharacter
 
 var animationPlayer: AnimationPlayer
+var is_movie_idle : bool = false
 var is_movie : bool = false
 var velocity_z = 375
 const JUMP_VELOCITY: float = 10.0  # Jump strength
@@ -28,12 +29,12 @@ func animationController(delta):
 		STATES.IDLE:
 			animationPlayer.play("anim_idle")
 			stopMove()
-			if !is_movie:
+			if !is_movie_idle:
 				currentState = STATES.RUN
 		STATES.RUN:
 			animationPlayer.play("anim_run")
 			movingToForward(delta)
-			if is_movie:
+			if is_movie_idle:
 				currentState = STATES.IDLE
 			elif !is_on_floor():
 				currentState = STATES.FALL
@@ -48,7 +49,7 @@ func movingToForward(delta: float):
 
 func gravityApply(delta: float):
 	# ///GRAVEDAD/// #
-	if not is_on_floor() and is_movie == false:
+	if not is_on_floor() and is_movie_idle == false:
 		velocity.y -= GRAVITY * delta
 	else:
 		velocity.y = 0
