@@ -53,23 +53,10 @@ func _ready() -> void:
 	speedMax = velocity_z + (velocity_z * percentSpeedUp / 100)
 
 func _physics_process(delta: float) -> void:
-	if currentState == STATES.RUN:
-		if Input.is_action_just_pressed("Derecha"):
-			if !frontalCamIsActive and target_lane > 0:
-				target_lane -= 1 # minimo 0
-				changeLine(0.5)
-			elif frontalCamIsActive and target_lane < LANES.size() - 1:
-				target_lane += 1 # maximo 2
-				changeLine(-0.5)
-		if Input.is_action_just_pressed("Izquierda"):
-			if !frontalCamIsActive and target_lane < LANES.size() - 1 :
-				target_lane += 1 # maximo 2
-				changeLine(-0.5)
-			elif frontalCamIsActive and target_lane > 0:
-				target_lane -= 1 # maximo 0
-				changeLine(0.5)
-				
-			# ///LOGICA DE SALTO/// #
+	if currentState == STATES.RUN && !is_movie:
+		lateralController()
+		
+		# ///LOGICA DE SALTO/// #
 		if Input.is_action_pressed("Saltar"):
 			currentState = STATES.JUMP
 		if Input.is_key_label_pressed(KEY_M):
@@ -89,6 +76,22 @@ func _physics_process(delta: float) -> void:
 	camera_follow(delta)
 	animationController(delta)
 	move_and_slide()
+
+func lateralController():
+	if Input.is_action_just_pressed("Derecha"):
+		if !frontalCamIsActive and target_lane > 0:
+			target_lane -= 1 # minimo 0
+			changeLine(0.5)
+		elif frontalCamIsActive and target_lane < LANES.size() - 1:
+			target_lane += 1 # maximo 2
+			changeLine(-0.5)
+	if Input.is_action_just_pressed("Izquierda"):
+		if !frontalCamIsActive and target_lane < LANES.size() - 1 :
+			target_lane += 1 # maximo 2
+			changeLine(-0.5)
+		elif frontalCamIsActive and target_lane > 0:
+			target_lane -= 1 # maximo 0
+			changeLine(0.5)
 
 func animationController(delta:float):
 	super.animationController(delta)
