@@ -846,7 +846,7 @@ mesh = SubResource("ArrayMesh_mlecd")
 skeleton = NodePath("")
 
 [node name="Peaton" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.3, 0, 0, 0, 1, 0, 0, 0, 2.5, -57.0234, -5.07258, 134.372)
+transform = Transform3D(-0.3, 0, 0, 0, 1, 0, 0, 0, 2.5, -57.023, -5.273, 134.372)
 mesh = SubResource("ArrayMesh_5oof1")
 skeleton = NodePath("")
 

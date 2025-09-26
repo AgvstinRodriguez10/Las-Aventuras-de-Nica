@@ -52,7 +52,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_n51kg")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e8d8t"]
-size = Vector3(1.04468, 1.02344, 1)
+size = Vector3(0.787239, 1.02344, 0.458374)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dm5yo"]
 emission_shape_scale = Vector3(0.76, 1, 1)
@@ -91,7 +91,7 @@ mesh = SubResource("ArrayMesh_3fccv")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0637305, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0206408, 0.0637305, 0.0314331)
 shape = SubResource("BoxShape3D_e8d8t")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
