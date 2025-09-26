@@ -1818,19 +1818,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.2, -9.81926, 731.926)
 [node name="Rampa-v" type="Node3D" parent="."]
 
 [node name="RampaPequeña" parent="Rampa-v" instance=ExtResource("34_bqd5y")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.30637, 0, 31.413)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.399989, 0, 31.413)
 
 [node name="RampaGrande" parent="Rampa-v" instance=ExtResource("35_6ny57")]
 transform = Transform3D(0.7, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 49.0996)
 
 [node name="RampaPequeña2" parent="Rampa-v" instance=ExtResource("34_bqd5y")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.68849, 0, 100.624)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.77844, 0, 100.624)
 
 [node name="MitadDeRampa" parent="Rampa-v" instance=ExtResource("36_hgelp")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.5, 0, 0, 123.703)
 
 [node name="RampaPequeña3" parent="Rampa-v" instance=ExtResource("34_bqd5y")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.224881, 0, 157.564)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.331724, 0, 157.564)
 
 [node name="RampaGrande2" parent="Rampa-v" instance=ExtResource("35_6ny57")]
 transform = Transform3D(0.7, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 172.204)
@@ -1839,7 +1839,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 172.204)
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.5, 0, 0, 210.824)
 
 [node name="RampaPequeña4" parent="Rampa-v" instance=ExtResource("34_bqd5y")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.72612, 0, 227.038)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.80262, 0, 227.038)
 
 [node name="MitadDeRampa3" parent="Rampa-v" instance=ExtResource("36_hgelp")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.5, 0, 0, 238.11)
@@ -1848,19 +1848,19 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.5, 0, 0, 238.11)
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.716257, 0, 274.12)
 
 [node name="RampaPequeña6" parent="Rampa-v" instance=ExtResource("34_bqd5y")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.260366, 0, 296.684)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.330604, 0, 296.684)
 
 [node name="MitadDeRampa4" parent="Rampa-v" instance=ExtResource("36_hgelp")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.5, 0, 0, 316.863)
 
 [node name="RampaPequeña7" parent="Rampa-v" instance=ExtResource("34_bqd5y")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.73383, 0, 365.374)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.83549, 0, 365.374)
 
 [node name="MitadDeRampa5" parent="Rampa-v" instance=ExtResource("36_hgelp")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.5, 0, 0, 390.425)
 
 [node name="RampaPequeña8" parent="Rampa-v" instance=ExtResource("34_bqd5y")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.254441, 0, 422.154)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.329334, 0, 422.154)
 
 [node name="RampaGrande3" parent="Rampa-v" instance=ExtResource("35_6ny57")]
 transform = Transform3D(0.7, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 438.415)
@@ -1869,7 +1869,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 438.415)
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.5, 0, 0, 475.024)
 
 [node name="RampaPequeña9" parent="Rampa-v" instance=ExtResource("34_bqd5y")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.7438, 0, 491.823)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.83099, 0, 491.823)
 
 [node name="MitadDeRampa7" parent="Rampa-v" instance=ExtResource("36_hgelp")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.5, 0, 0, 502.926)
