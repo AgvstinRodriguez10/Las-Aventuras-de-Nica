@@ -104,6 +104,8 @@ func animationController(delta:float):
 				currentState = STATES.RUN
 		STATES.HIT:
 			animationPlayer.play("anim_hitt")
+			velocity_z = baseVelocity * 0.5
+			movingToForward(delta)
 			gravityApply(delta)
 
 func changeVisionCam():
@@ -138,8 +140,6 @@ func changeLine(dire) -> void:
 	while dist_recorrida < dist_beetween_lanes:
 		position += eje_local_x * (velociti_change_line) * dire
 		dist_recorrida += velociti_change_line
-
-
 
 		await get_tree().process_frame
 		
@@ -203,6 +203,7 @@ func is_hitt_change():
 	# resetea el ishit y setea el estado segun su accion actual 
 	if is_hitt:
 		is_hitt = false
+		velocity_z = baseVelocity
 	if velocity.y < 0:
 		currentState = STATES.FALL
 	else:
@@ -223,10 +224,10 @@ func _on_giro_body_entered(body: Node3D) -> void:
 	AnimacionGiro(body.name, $"../Giro/AnimationPlayer")
 
 func _on_giro_escalinata_body_entered(body: Node3D) -> void:
-		AnimacionGiro(body.name, $"../GiroEscalinata/AnimationPlayer")
+	AnimacionGiro(body.name, $"../GiroEscalinata/AnimationPlayer")
 
 func _on_giro_costanera_body_entered(body: Node3D) -> void:
-		AnimacionGiro(body.name, $"../GiroCostanera/AnimationPlayer")
+	AnimacionGiro(body.name, $"../GiroCostanera/AnimationPlayer")
 
 func AnimacionGiro(objetoAAnimar: String, animPlayer:AnimationPlayer):
 	if objetoAAnimar == "Nica":
