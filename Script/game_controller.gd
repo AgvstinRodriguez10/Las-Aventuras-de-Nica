@@ -7,10 +7,11 @@ class_name GameController
 var isNight = false
 
 func _ready() -> void:
-	pass
-	
+	$"../Nica".position = Vector3(0,0,0.801)
+
 func _physics_process(delta: float) -> void:
 	time_controller(delta)
+	
 
 func time_controller(delta:float):
 	if directional_light_3d.light_energy > 0:
