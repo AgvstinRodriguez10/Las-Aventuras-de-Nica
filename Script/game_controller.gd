@@ -8,6 +8,7 @@ class_name GameController
 var isNight
 
 func _ready() -> void:
+	animation_player.play("RESET")
 	isNight = false
 	if !debugDesdePlazaMitre:
 		$"../Nica".position = Vector3(0,0,0.801)
