@@ -1801,8 +1801,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 527.674)
 [node name="pelota14" parent="Obstaculos" instance=ExtResource("21_lml7n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.2, -9.81926, 731.926)
 
-[node name="Rampas y Tablas" type="Node3D" parent="."]
-
 [node name="Rampa-v" type="Node3D" parent="."]
 
 [node name="RampaPequeña" parent="Rampa-v" instance=ExtResource("34_bqd5y")]
