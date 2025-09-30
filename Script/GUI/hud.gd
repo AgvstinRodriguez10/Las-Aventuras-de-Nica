@@ -43,9 +43,10 @@ func _ready() -> void:
 	dictCoinsLbls.life.text = str(3)
 	
 func _process(delta: float) -> void:
-	score += 0.1
-	
-	labelScore.text = str(int(score))
+	if(!player.is_movie_idle):
+		score += 0.1
+		labelScore.text = str(int(score))
+		
 	if player.is_hitt == true:
 		dictCoinsLbls.life.text = str(player.life)
 	if player.life_plus == true:
