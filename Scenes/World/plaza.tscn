@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://2ckhrahl7oko" path="res://Assets/San Nicolas/Object/Grass/Poliigon_GrassPatchyGround_4585_Roughness.jpg" id="8_ytn0u"]
 [ext_resource type="PackedScene" uid="uid://dnh48xc1hlgvj" path="res://Assets/San Nicolas/Object/BalaCalle.tscn" id="9_d643n"]
 [ext_resource type="PackedScene" uid="uid://bdnklvuvq236p" path="res://Assets/San Nicolas/Object/Decoración/FuentePlaza.tscn" id="10_lsnii"]
-[ext_resource type="PackedScene" uid="uid://drw1pjxuu8xp8" path="res://Scenes/World/Objetos/Bench.tscn" id="11_ytn0u"]
+[ext_resource type="PackedScene" uid="uid://veqqqd2b7n4k" path="res://Assets/Objetos/Decoration/BancoPlaza.glb" id="11_ytn0u"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_oiwm1"]
 _surfaces = [{
@@ -1297,44 +1297,26 @@ transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 72.5364, 0, 1229.53)
 
 [node name="Bancos" type="Node3D" parent="Decoración"]
 
-[node name="1" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
-transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 43.7318, 0, 1176.11)
+[node name="BancoPlaza9" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45.4846, 0, 1177.49)
 
-[node name="2" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
-transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 43.7318, 0, 1205.11)
+[node name="BancoPlaza10" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45.4846, 0, 1226.68)
 
-[node name="3" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
-transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 43.7318, 0, 1238.11)
+[node name="BancoPlaza13" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 146.983, 0, 1187.97)
 
-[node name="4" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
-transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 62.4984, 0, 1259.39)
+[node name="BancoPlaza14" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 146.983, 0, 1221.99)
 
-[node name="5" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
-transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 94.4984, 0, 1259.39)
+[node name="BancoPlaza2" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 87.2285, 0, 1155.77)
 
-[node name="6" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
-transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 126.498, 0, 1259.39)
+[node name="BancoPlaza4" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 140.229, 0, 1155.77)
 
-[node name="7" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
-transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 148.217, 0, 1237.39)
+[node name="BancoPlaza6" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.495, 0, 1259.35)
 
-[node name="8" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
-transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 148.217, 0, 1206.39)
-
-[node name="9" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
-transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 148.217, 0, 1172.39)
-
-[node name="10" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 134.217, 0, 1154.08)
-
-[node name="11" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 98.2166, 0, 1154.08)
-
-[node name="12" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
-transform = Transform3D(-1.41421, 0, 1.41421, 0, 2, 0, -1.41421, 0, -1.41421, 66.583, 0, 1171.61)
-
-[node name="14" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
-transform = Transform3D(-1.41421, 0, 1.41421, 0, 2, 0, -1.41421, 0, -1.41421, 121.879, 0, 1226.9)
-
-[node name="16" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
-transform = Transform3D(1.41421, 0, -1.41421, 0, 2, 0, 1.41421, 0, 1.41421, 91.6286, 1.90735e-06, 1208.81)
+[node name="BancoPlaza7" parent="Decoración/Bancos" instance=ExtResource("11_ytn0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 115.863, 0, 1259.35)

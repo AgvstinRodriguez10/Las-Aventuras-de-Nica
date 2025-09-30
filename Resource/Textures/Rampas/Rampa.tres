@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cb4u7kv5dhpy8"]
+
+[ext_resource type="Texture2D" uid="uid://c6ixb32j01pr3" path="res://Assets/Objetos/Obstaculos/RampaRework/Rampa Pequeña_Poliigon_ConcreteFloorPoured_7656_BaseColor.jpg" id="1_bubau"]
+[ext_resource type="Texture2D" uid="uid://c7rku6gn6kj4q" path="res://Assets/Objetos/Obstaculos/RampaRework/Rampa Pequeña_Poliigon_ConcreteFloorPoured_7656_Normal.png" id="2_oetfi"]
+
+[resource]
+resource_name = "Base"
+cull_mode = 2
+albedo_texture = ExtResource("1_bubau")
+metallic = 1.0
+metallic_texture_channel = 2
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_oetfi")
