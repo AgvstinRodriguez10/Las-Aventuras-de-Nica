@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=4 uid="uid://1u5gnpg14lp0"]
+[gd_scene load_steps=81 format=4 uid="uid://1u5gnpg14lp0"]
 
 [ext_resource type="Texture2D" uid="uid://btjfrdy8l40h7" path="res://Assets/San Nicolas/Costanera/ESCALERAS DEL REGATAS_ricocartelYESCALINATA-03.png" id="1_7b2dr"]
 [ext_resource type="Texture2D" uid="uid://bimm4j2o2rqu4" path="res://Assets/San Nicolas/Costanera/ESCALERAS DEL REGATAS_ricocartel-01-03-03 (1).png" id="2_3peyb"]
@@ -14,6 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://kq6jyckuaejx" path="res://Scenes/World/Objetos/Guirnaldas.tscn" id="12_dl1xx"]
 [ext_resource type="PackedScene" uid="uid://c8xxr7s1712jo" path="res://Assets/Objetos/Decoration/Calistenia.fbx" id="13_wsj1i"]
 [ext_resource type="PackedScene" uid="uid://b17ssv2tgs07m" path="res://Scenes/World/Objetos/Arbol.res" id="14_2o235"]
+[ext_resource type="PackedScene" uid="uid://by26dey3n4ca" path="res://Assets/San Nicolas/Object/Autos/Auto-1.tscn" id="15_e1cel"]
+[ext_resource type="PackedScene" uid="uid://c7itjwhda7mk2" path="res://Assets/San Nicolas/Object/Autos/Auto-2.tscn" id="16_jfmnw"]
+[ext_resource type="Script" uid="uid://bty20p6gycl7k" path="res://Script/autitos.gd" id="17_jfmnw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6x4oa"]
 resource_name = "Material.001"
@@ -803,6 +806,95 @@ size = Vector3(2.14758, 0.219727, 9.95264)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ra1mu"]
 size = Vector3(2.14758, 0.219727, 9.95264)
 
+[sub_resource type="Animation" id="Animation_e1cel"]
+resource_name = "Autitos"
+length = 20.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Auto-1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-53.9735, -5.21875, 202.166), Vector3(-53.9735, -5.21875, 11.6445)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Auto-2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 9.5, 19.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Auto-1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 9.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Auto-2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(9.5, 19.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-53.9735, -5.21875, 202.166), Vector3(-53.9735, -5.21875, 12.8749)]
+}
+
+[sub_resource type="Animation" id="Animation_jfmnw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Auto-1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Auto-2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k2cu5"]
+_data = {
+&"Autitos": SubResource("Animation_e1cel"),
+&"RESET": SubResource("Animation_jfmnw")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yxlny"]
+size = Vector3(1, 4.82532, 7.76294)
+
 [node name="ESCALERAS DEL REGATAS" type="Node3D"]
 
 [node name="Calle y Vereda" type="MeshInstance3D" parent="."]
@@ -836,7 +928,7 @@ mesh = SubResource("ArrayMesh_70d52")
 skeleton = NodePath("")
 
 [node name="CartelRico" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.931, 1, 160.004)
+transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, -56.931, 5.04817, 160.004)
 mesh = SubResource("ArrayMesh_gxlqe")
 skeleton = NodePath("")
 
@@ -1238,7 +1330,7 @@ transform = Transform3D(-0.999998, 0, -0.00216428, 0, 1, 0, 0.00216428, 0, -0.99
 [node name="Guirnaldas" type="Node3D" parent="."]
 
 [node name="Guirnaldas" parent="Guirnaldas" instance=ExtResource("12_dl1xx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.9025, -1.16605, 160.399)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.9025, 3.55041, 160.399)
 
 [node name="Postes" type="Node3D" parent="."]
 
@@ -1353,3 +1445,30 @@ transform = Transform3D(0.07, 0, 0, 0, -3.0598e-09, 0.07, 0, -0.07, -3.0598e-09,
 
 [node name="Arbol4" parent="Arboles" instance=ExtResource("14_2o235")]
 transform = Transform3D(0.07, 0, 0, 0, -3.0598e-09, 0.07, 0, -0.07, -3.0598e-09, -56.8, -5.133, 103.748)
+
+[node name="Autos" type="Node3D" parent="."]
+
+[node name="Auto-1" parent="Autos" instance=ExtResource("15_e1cel")]
+transform = Transform3D(-1.3, 0, -1.1365e-07, 0, 1.3, 0, 1.1365e-07, 0, -1.3, -53.9735, -5.21875, 202.166)
+visible = false
+
+[node name="Auto-2" parent="Autos" instance=ExtResource("16_jfmnw")]
+transform = Transform3D(-1.4, 0, -2.11394e-07, 0, 1.4, 0, 2.11394e-07, 0, -1.4, -53.9735, -5.21875, 22.3395)
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Autos"]
+libraries = {
+&"": SubResource("AnimationLibrary_k2cu5")
+}
+
+[node name="Autitos" type="Area3D" parent="Autos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.1244, -5.20921, 0.135553)
+collision_layer = 64
+collision_mask = 2
+script = ExtResource("17_jfmnw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Autos/Autitos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91266, 0.587769)
+shape = SubResource("BoxShape3D_yxlny")
+
+[connection signal="body_entered" from="Autos/Autitos" to="Autos/Autitos" method="_on_body_entered"]
