@@ -5,6 +5,11 @@ extends CanvasLayer
 @onready var objectsInFrame = $Panel/objectInFrame
 @onready var vRam = $Panel/MemVRAM
 @onready var textMem = $Panel/MemoryText
+@onready var labelVelPlayer = $Panel/PlayerVel
+
+@onready var PLayer = $"../Nica"
+var vel : int
+
 
 var fps_on : bool = false
 var number = 1_000_000
@@ -14,11 +19,14 @@ func _ready() -> void:
 	hide()
 
 func _process(delta: float) -> void:
+	
 	fpslabel.text = "FPS: " + str(Engine.get_frames_per_second())
 	drawCalls.text = "DRAW CALLS: " + str(Performance.get_monitor(Performance.RENDER_TOTAL_DRAW_CALLS_IN_FRAME))
 	objectsInFrame.text = "OBJECT COUNT: " + str(Performance.get_monitor(Performance.RENDER_TOTAL_OBJECTS_IN_FRAME))
 	vRam.text = "VRAM: " + str(format_number(Performance.get_monitor(Performance.RENDER_VIDEO_MEM_USED)))
 	textMem.text = "MTexture: " + str(format_number(Performance.get_monitor(Performance.RENDER_TEXTURE_MEM_USED)))
+	labelVelPlayer.text = "PlayerVel: " + str(int(PLayer.velocity_z))
+	
 	
 	if Input.is_action_just_pressed("FPS") and fps_on == false:
 		fps_on = true

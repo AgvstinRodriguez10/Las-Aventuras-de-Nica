@@ -7,12 +7,15 @@ func _ready() -> void:
 	$Panel/resume.grab_focus()
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("Escape") and get_tree().paused == false:
-		get_tree().paused = true
-		animationPlayer.play("animPause")
-	elif Input.is_action_just_pressed("Escape") and get_tree().paused == true:
-		get_tree().paused = false
-		hide()
+	if !$"../Label".x == true:
+		if Input.is_action_just_pressed("Escape") and get_tree().paused == false:
+			get_tree().paused = true
+			animationPlayer.play("animPause")
+			$"../Label".x = false
+		elif Input.is_action_just_pressed("Escape") and get_tree().paused == true:
+			get_tree().paused = false
+			hide()
+			$"../Label".x = false
 
 func _on_resume_pressed() -> void:
 	get_tree().paused = false

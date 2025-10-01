@@ -19,13 +19,14 @@ func _physics_process(delta: float) -> void:
 	time_controller(delta)
 
 func time_controller(delta:float):
-	if directional_light_3d.light_energy > 0:
+	if !get_tree().paused:
+		if directional_light_3d.light_energy > 0:
 		#si tiene el debug desdse la plaza, la oscuridad se acelera para ver efectos de noche
-		if !debugDesdePlazaMitre:
-			directional_light_3d.light_energy = directional_light_3d.light_energy - delta * 0.03
-		else:
-			directional_light_3d.light_energy = directional_light_3d.light_energy - delta * 0.8
+			if !debugDesdePlazaMitre:
+				directional_light_3d.light_energy = directional_light_3d.light_energy - delta * 0.03
+			else:
+				directional_light_3d.light_energy = directional_light_3d.light_energy - delta * 0.8
 		
-		if directional_light_3d.light_energy < 0.1 && !isNight:
-			animation_player.play("do_night")
-			isNight = true
+			if directional_light_3d.light_energy < 0.1 && !isNight:
+				animation_player.play("do_night")
+				isNight = true
