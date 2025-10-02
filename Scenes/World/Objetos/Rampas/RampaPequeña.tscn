@@ -89,7 +89,7 @@ mesh = SubResource("ArrayMesh_5bvbs")
 skeleton = NodePath("")
 
 [node name="Rampa" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.5625, 0.875, -6.375)
+transform = Transform3D(2.7, 0, 0, 0, 3, 0, 0, 0, 3, 0.5625, 0.875, -6.375)
 mesh = SubResource("ArrayMesh_isluo")
 skeleton = NodePath("")
 
