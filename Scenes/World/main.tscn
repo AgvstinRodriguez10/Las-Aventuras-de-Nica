@@ -833,7 +833,6 @@ size = Vector3(2.98999, 12.6249, 29.0703)
 [node name="GameController" type="Node3D" parent="."]
 process_mode = 3
 script = ExtResource("1_y76hn")
-debugDesdePlazaMitre = true
 
 [node name="Dialogos" type="Node3D" parent="."]
 

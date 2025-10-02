@@ -20,6 +20,8 @@ var baseVelocity
 const velociti_change_line:float = 0.5
 
 var is_hitt : bool = false
+var collideL : bool = false
+var collideR : bool = false
 # Variable que se usa para la animacion del up de vide
 var life_plus : bool = false
 var life = 3
@@ -53,6 +55,15 @@ func _ready() -> void:
 	speedMax = velocity_z + (velocity_z * percentSpeedUp / 100)
 
 func _physics_process(delta: float) -> void:
+	
+	if $ShapeCastLeft.is_colliding():
+		collideL = true
+		$"TimerColl-L".start()
+	
+	if $ShapeCastRigth.is_colliding():
+		collideR = true
+		$"TimerColl -R".start()
+	
 	if currentState == STATES.RUN && !is_movie:
 		lateralController()
 		
@@ -76,22 +87,25 @@ func _physics_process(delta: float) -> void:
 	camera_follow(delta)
 	animationController(delta)
 	move_and_slide()
+	
 
 func lateralController():
-	if Input.is_action_just_pressed("Derecha"):
+	if Input.is_action_just_pressed("Derecha") and collideR == false:
 		if !frontalCamIsActive and target_lane > 0:
 			target_lane -= 1 # minimo 0
 			changeLine(0.5)
 		elif frontalCamIsActive and target_lane < LANES.size() - 1:
 			target_lane += 1 # maximo 2
 			changeLine(-0.5)
-	if Input.is_action_just_pressed("Izquierda"):
-		if !frontalCamIsActive and target_lane < LANES.size() - 1 :
+
+	if Input.is_action_just_pressed("Izquierda") and collideL == false:
+		if !frontalCamIsActive and target_lane < LANES.size() - 1:
 			target_lane += 1 # maximo 2
 			changeLine(-0.5)
 		elif frontalCamIsActive and target_lane > 0:
 			target_lane -= 1 # maximo 0
 			changeLine(0.5)
+
 
 func animationController(delta:float):
 	super.animationController(delta)
@@ -236,3 +250,10 @@ func AnimacionGiro(objetoAAnimar: String, animPlayer:AnimationPlayer):
 	if objetoAAnimar == "Nica":
 		velocity_z = baseVelocity
 		animPlayer.play("Giro")
+		
+
+func _on_timer_coll_r_timeout() -> void:
+	collideR = false
+
+func _on_timer_coll_l_timeout() -> void:
+	collideL = false
