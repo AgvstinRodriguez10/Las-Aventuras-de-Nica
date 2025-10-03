@@ -3049,23 +3049,23 @@ shape = SubResource("CapsuleShape3D_r8wu8")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 
-[node name="ShapeCastLeft" type="RayCast3D" parent="."]
-transform = Transform3D(9.55346e-15, -2.18557e-07, 5, -5, -2.18557e-07, 2.71051e-20, 2.18557e-07, -5, -2.18557e-07, -1.5, 0.562928, 1)
-target_position = Vector3(0, 1, 0)
+[node name="RayCastLeft" type="RayCast3D" parent="."]
+transform = Transform3D(8.74228e-08, -2, -1.74846e-07, -2, -8.74228e-08, 0, -7.64274e-15, 1.74846e-07, -2, -0.5, 0.3, 0.03)
+target_position = Vector3(0, 0.5, 0.5)
 collision_mask = 32
+hit_from_inside = true
+debug_shape_thickness = 5
 
-[node name="ShapeCastRigth" type="RayCast3D" parent="."]
-transform = Transform3D(9.55346e-15, -2.18557e-07, 5, -5, -2.18557e-07, 2.71051e-20, 2.18557e-07, -5, -2.18557e-07, 1.5, 0.562928, 1)
-target_position = Vector3(0, 1, 0)
+[node name="RayCastRigth" type="RayCast3D" parent="."]
+transform = Transform3D(-8.74228e-08, 2, 0, -2, -8.74228e-08, 0, 0, 0, 2, 0.5, 0.3, 0.03)
+target_position = Vector3(0, 0.5, -0.5)
 collision_mask = 32
+hit_from_inside = true
+debug_shape_thickness = 5
 
-[node name="TimerColl -R" type="Timer" parent="."]
-wait_time = 1.5
-one_shot = true
+[node name="TimerColl-R" type="Timer" parent="."]
 
 [node name="TimerColl-L" type="Timer" parent="."]
-wait_time = 1.5
-one_shot = true
 
-[connection signal="timeout" from="TimerColl -R" to="." method="_on_timer_coll_r_timeout"]
+[connection signal="timeout" from="TimerColl-R" to="." method="_on_timer_coll_r_timeout"]
 [connection signal="timeout" from="TimerColl-L" to="." method="_on_timer_coll_l_timeout"]

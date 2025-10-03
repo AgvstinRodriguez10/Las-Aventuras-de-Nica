@@ -56,20 +56,22 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	
-	if $ShapeCastLeft.is_colliding():
+	print(collideL)
+	
+	if $RayCastLeft.is_colliding():
 		collideL = true
 		$"TimerColl-L".start()
 	else:
 		#$"TimerColl-L".stop()
-		#collideL = false
-		pass
-	if $ShapeCastRigth.is_colliding():
+		collideL = false
+		
+	if $RayCastRigth.is_colliding():
 		collideR = true
-		$"TimerColl -R".start()
+		$"TimerColl-R".start()
 	else:
 		#$"TimerColl -R".stop()
-		#collideR = false
-		pass
+		collideR = false
+		
 	if currentState == STATES.RUN && !is_movie:
 		lateralController()
 		

@@ -61,7 +61,7 @@ func animationCoinsUp(delta:float):
 	#definido en el ready:
 	#targetHeight = posInitial.y + idleDistUp
 	if(position.y < targetHeight - 0.1):
-		position.y = lerpf(position.y, targetHeight, delta * 2.2)
+		position.y = lerpf(position.y, targetHeight, delta * 1.8)
 	else:
 		currentState = STATE.IDLE_DOWN
 
