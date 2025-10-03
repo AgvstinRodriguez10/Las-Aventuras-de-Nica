@@ -3056,6 +3056,7 @@ debug_shape_thickness = 5
 
 [node name="RayCastLeft" type="RayCast3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1, 0.3, 0.5)
+exclude_parent = false
 target_position = Vector3(0.5, 0, 0.5)
 collision_mask = 32
 hit_from_inside = true
@@ -3063,11 +3064,14 @@ debug_shape_thickness = 5
 
 [node name="RayCastRigth" type="RayCast3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1, 0.3, 0.5)
+exclude_parent = false
 target_position = Vector3(-0.5, 0, 0.5)
 collision_mask = 32
 hit_from_inside = true
 debug_shape_thickness = 5
 
 [node name="TimerRayLeft" type="Timer" parent="."]
+one_shot = true
 
 [node name="TimerRayRigth" type="Timer" parent="."]
+one_shot = true

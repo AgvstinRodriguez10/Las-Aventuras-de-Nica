@@ -1143,7 +1143,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 curve = SubResource("Curve3D_4ra0o")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.999999, 0, -8.74227e-08, 0, 1, 0, 8.74227e-08, 0, -0.999999, 0, 0, 7.11861)
+transform = Transform3D(-0.999999, 0, -8.74227e-08, 0, 1, 0, 8.74227e-08, 0, -0.999999, 0, 0, 7.11862)
 progress = 7.11896
 loop = false
 script = ExtResource("24_fegd5")
@@ -1152,10 +1152,10 @@ script = ExtResource("24_fegd5")
 transform = Transform3D(-0.5, 0, 1.26759e-06, 0, 0.5, 0, -1.26759e-06, 0, -0.5, 0, 0, 0.801)
 
 [node name="TimerRayLeft" parent="Path3D/PathFollow3D/Nica" index="6"]
-process_callback = 0
+one_shot = true
 
 [node name="TimerRayRigth" parent="Path3D/PathFollow3D/Nica" index="7"]
-process_callback = 0
+one_shot = true
 
 [node name="Alert" type="Area3D" parent="Path3D/PathFollow3D/Nica"]
 transform = Transform3D(-2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, 0, 0, 0)
