@@ -7,5 +7,6 @@ func _on_body_entered(body: Player) -> void:
 		body.velocity_z = 0
 		body.currentState = body.STATES.IDLE
 		body.is_movie_idle = true
-		
+		get_tree().paused = true
+		$"../Ganaste!".show()
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://djlnov41bncl8"]
+[gd_scene load_steps=82 format=3 uid="uid://djlnov41bncl8"]
 
 [ext_resource type="PackedScene" uid="uid://d33hm0kfvhtj3" path="res://Scenes/GUI/fps_count.tscn" id="1_1pvyk"]
 [ext_resource type="PackedScene" uid="uid://ikd1j0tjscug" path="res://Scenes/GUI/hud.tscn" id="1_by2pg"]
@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://bo2da4in2mjf8" path="res://Scenes/Coins/SNFicha.tscn" id="9_w7l72"]
 [ext_resource type="PackedScene" uid="uid://h2yyj2bmrsqb" path="res://Scenes/Coins/RDFicha.tscn" id="10_yteiy"]
 [ext_resource type="Texture2D" uid="uid://bdvp1uw1i6iml" path="res://Assets/Extras/Dialogs/DIALOGOSS-9.png" id="11_y8gtk"]
+[ext_resource type="PackedScene" uid="uid://jjwvxcmyypck" path="res://Scenes/ganaste!.tscn" id="14_bqd5y"]
 [ext_resource type="PackedScene" uid="uid://l6unlmqhug4r" path="res://Scenes/World/Objetos/Valla.tscn" id="15_nsfl0"]
 [ext_resource type="PackedScene" uid="uid://1u5gnpg14lp0" path="res://Scenes/World/EscaleraRegatas + Costanera.V2.tscn" id="20_l5qvs"]
 [ext_resource type="PackedScene" uid="uid://b0h4ayhr722x5" path="res://Scenes/World/Objetos/Obstaculos/pelota.tscn" id="21_lml7n"]
@@ -1063,6 +1064,9 @@ libraries = {
 stream = ExtResource("3_bqd5y")
 volume_db = 50.0
 
+[node name="Ganaste!" parent="." instance=ExtResource("14_bqd5y")]
+process_mode = 3
+
 [node name="FPSCount" parent="." instance=ExtResource("1_1pvyk")]
 process_mode = 3
 
@@ -1136,7 +1140,7 @@ libraries = {
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -13.1107)
 
 [node name="Nica" parent="." instance=ExtResource("2_ntgcc")]
-transform = Transform3D(-0.5, 0, 1.26759e-06, 0, 0.5, 0, -1.26759e-06, 0, -0.5, 0, 0, 0.801)
+transform = Transform3D(-0.5, 0, 1.2675908e-06, 0, 0.5, 0, -1.2675908e-06, 0, -0.5, 0, 0, 0.801)
 
 [node name="Alert" type="Area3D" parent="Nica"]
 transform = Transform3D(-2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, 0, 0, 0)

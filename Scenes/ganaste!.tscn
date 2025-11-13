@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://jjwvxcmyypck"]
+
+[ext_resource type="Script" uid="uid://dlyurc7112iex" path="res://Script/GUI/ganaste!.gd" id="1_cjrxi"]
+
+[node name="Ganaste!" type="CanvasLayer"]
+script = ExtResource("1_cjrxi")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -290.0
+offset_top = -262.5
+offset_right = 290.0
+offset_bottom = 262.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 584.0
+offset_bottom = 149.5
+text = "HAS GANADO!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 109.5
+offset_right = 578.0
+offset_bottom = 201.0
+text = "HAS LOGRADO ESCAPAR DE YAGÜI"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Reintentar" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 214.5
+offset_right = 411.0
+offset_bottom = 289.5
+text = "REINTENTAR"
+
+[node name="Salir" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 353.5
+offset_right = 411.0
+offset_bottom = 428.5
+text = "SALIR"
+
+[connection signal="pressed" from="Panel/Reintentar" to="." method="_on_reintentar_pressed"]
+[connection signal="pressed" from="Panel/Salir" to="." method="_on_salir_pressed"]

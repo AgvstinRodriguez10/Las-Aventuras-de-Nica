@@ -13,3 +13,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 func actualizarSpeed(speed:float):
 	animationPlayer.speed_scale = speed * (velocity_z * .005)
+
+
+func _on_daño_body_entered(body: Node3D) -> void:
+	if body.name == "Nica":
+		body.lostLife()
