@@ -8,7 +8,7 @@ const dist_beetween_lanes = 2
 var lateral_free_position := Vector3.ZERO
 
 # Calculamos posición deseada para la cámara
-var camera_height = 1 #-0.2 
+var camera_height = 1 #-0.2
 var camera_distance = -3 #-1.0
 
 # Va de 0 a 2 para enumerar las lineas
@@ -48,6 +48,8 @@ const percentSpeedUp:int = 60
 var frontalCamIsActive = false
 var frontalCamDuration = 7
 
+var posPostGiro:Vector3
+
 func _ready() -> void:
 	super._ready()
 	animationPlayer = $"Nica-v1_0/AnimationPlayer"
@@ -55,9 +57,7 @@ func _ready() -> void:
 	speedMax = velocity_z + (velocity_z * percentSpeedUp / 100)
 
 func _physics_process(delta: float) -> void:
-	
-	print(collideL)
-	
+	#print(collideL)
 	if $RayCastLeft.is_colliding():
 		collideL = true
 		$"TimerColl-L".start()
@@ -95,7 +95,6 @@ func _physics_process(delta: float) -> void:
 	camera_follow(delta)
 	animationController(delta)
 	move_and_slide()
-	
 
 func lateralController():
 	if Input.is_action_just_pressed("Derecha") and collideR == false:
@@ -113,7 +112,6 @@ func lateralController():
 		elif frontalCamIsActive and target_lane > 0:
 			target_lane -= 1 # maximo 0
 			changeLine(0.5)
-
 
 func animationController(delta:float):
 	super.animationController(delta)
@@ -155,7 +153,7 @@ func changeVisionCam():
 			camera_focus.rotation.y = deg_to_rad(currentDegs)
 			await get_tree().create_timer(0).timeout
 		
-		camera_distance = 1.0
+		camera_distance = -4.0
 		frontalCamIsActive = false
 	
 func changeLine(dire) -> void:
@@ -167,7 +165,6 @@ func changeLine(dire) -> void:
 		dist_recorrida += velociti_change_line
 
 		await get_tree().process_frame
-		
 
 func camera_follow(delta:float):
 	# Obtenemos el eje local del personaje
@@ -196,7 +193,7 @@ func camera_follow(delta:float):
 	# Pero si está bajando (por caída o escalera), permitir que la cámara lo siga
 	elif not is_on_floor() and velocity.y < 0:
 		# Suavizamos el descenso
-		var vertical_gap = current_cam_pos.y - target_position.y 
+		var vertical_gap = current_cam_pos.y - target_position.y
 		var descent_speed = clamp(vertical_gap * 3.0, 1.0, 10.0)
 		target_position.y = lerp(current_cam_pos.y, target_position.y, delta * descent_speed)
 	# Si está en el suelo, seguirlo normalmente
@@ -208,6 +205,7 @@ func camera_follow(delta:float):
 
 func reset_target_line():
 	target_lane = 1
+	
 
 func setPower(power:POWERUPSTATE):
 	currentPowerUp = power
@@ -234,10 +232,10 @@ func is_hitt_change():
 	else:
 		currentState = STATES.RUN
 
-func lostLife():
+func lostLife(dmg:int):
 	is_hitt = true
 	currentState = STATES.HIT
-	life -= 1
+	life -= dmg
 	if life <= 0:
 		get_tree().change_scene_to_file("res://Scenes/World/MenuInicial.tscn")
 
@@ -247,21 +245,30 @@ func collectSnFicha():
 
 func _on_giro_body_entered(body: Node3D) -> void:
 	AnimacionGiro(body.name, $"../Giro/AnimationPlayer")
-
+	posPostGiro = $"../Giro/posPostGiro".global_position
+	
 func _on_giro_escalinata_body_entered(body: Node3D) -> void:
 	AnimacionGiro(body.name, $"../GiroEscalinata/AnimationPlayer")
+	posPostGiro = $"../GiroEscalinata/posPostGiro".global_position
 
 func _on_giro_costanera_body_entered(body: Node3D) -> void:
 	AnimacionGiro(body.name, $"../GiroCostanera/AnimationPlayer")
+	posPostGiro = Vector3.ZERO
 
 func AnimacionGiro(objetoAAnimar: String, animPlayer:AnimationPlayer):
 	if objetoAAnimar == "Nica":
 		velocity_z = baseVelocity
 		animPlayer.play("Giro")
-		
 
 func _on_timer_coll_r_timeout() -> void:
 	collideR = false
 
 func _on_timer_coll_l_timeout() -> void:
 	collideL = false
+
+func actualizar_eje_local():
+	super()
+	if posPostGiro != Vector3.ZERO:
+		#position = posPostGiro
+		position = lerp(position, posPostGiro, 1) 
+	reset_target_line()

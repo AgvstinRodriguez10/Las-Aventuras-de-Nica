@@ -23,6 +23,10 @@ buses/default_bus_layout=""
 
 window/stretch/mode="canvas_items"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [global_group]
 
 Houses=""

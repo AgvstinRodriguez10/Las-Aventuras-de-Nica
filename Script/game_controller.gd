@@ -7,6 +7,7 @@ class_name GameController
 @export var debugDesdePlazaMitre: bool = false
 var isNight
 
+
 func _ready() -> void:
 	animation_player.play("RESET")
 	isNight = false

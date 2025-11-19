@@ -8,5 +8,5 @@ func _on_body_entered(body: Player) -> void:
 		body.currentState = body.STATES.IDLE
 		body.is_movie_idle = true
 		get_tree().paused = true
-		$"../Ganaste!".show()
+		$"../Ganaste!".finished()
 	

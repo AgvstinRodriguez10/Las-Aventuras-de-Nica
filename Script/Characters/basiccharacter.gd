@@ -62,3 +62,4 @@ func is_movie_change():
 
 func actualizar_eje_local():
 	eje_local_x = global_transform.basis.x.normalized()
+	

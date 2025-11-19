@@ -11,7 +11,7 @@ func _on_killzone_body_entered(body: Node3D) -> void:
 
 func bodyCollision(body):
 	if body.name == "Nica" and body.is_hitt == false:
-		body.lostLife()
+		body.lostLife(1)
 		var collisions: Array
 
 		for elem in get_children():

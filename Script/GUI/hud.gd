@@ -68,7 +68,7 @@ func animatedLifeBar():
 			player.life += 1
 			player.life_plus = true
 			player.snficha = 0
-			lifeBar.value = 0	
+			lifeBar.value = 0
 	isInanimationLifebar = false
 
 func add_point():

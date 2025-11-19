@@ -1839,9 +1839,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 554.905)
 collision_layer = 64
 collision_mask = 2
 
-[node name="posPostGiro" type="Marker3D" parent="Giro"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5638263, 0, 2.1766357)
-
 [node name="Coll_Mitre" type="CollisionShape3D" parent="Giro"]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0, 2.439, -0.595764)
 shape = SubResource("BoxShape3D_ombbc")
@@ -1852,12 +1849,9 @@ libraries = {
 }
 
 [node name="GiroEscalinata" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.626, 0, 652.559)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.626, 2.439, 652.559)
 collision_layer = 64
 collision_mask = 2
-
-[node name="posPostGiro" type="Marker3D" parent="GiroEscalinata"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.425003, 0, 3.925354)
 
 [node name="Coll_Escalinata" type="CollisionShape3D" parent="GiroEscalinata"]
 transform = Transform3D(0.866026, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866026, -3.82977, 0, 0.817932)
@@ -1884,7 +1878,7 @@ libraries = {
 speed_scale = 0.5
 
 [node name="Meta" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135.4709, -10.2687, 765.47)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 273.672, -10.2687, 765.47)
 collision_layer = 64
 collision_mask = 2
 script = ExtResource("33_4ra0o")
@@ -1902,7 +1896,6 @@ shape = SubResource("BoxShape3D_p7lpm")
 [connection signal="timeout" from="Label/Timer" to="Label" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Nica/Alert" to="HUD" method="_on_alert_body_entered"]
 [connection signal="timeout" from="Nica/Alert/TimerAlert" to="HUD" method="_on_timer_alert_timeout"]
-[connection signal="body_entered" from="Giro" to="Yagui" method="_on_giro_body_entered"]
 [connection signal="body_entered" from="Giro" to="Nica" method="_on_giro_body_entered"]
 [connection signal="body_entered" from="GiroEscalinata" to="Nica" method="_on_giro_escalinata_body_entered"]
 [connection signal="body_entered" from="GiroCostanera" to="Nica" method="_on_giro_costanera_body_entered"]
