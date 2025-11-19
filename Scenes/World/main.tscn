@@ -1741,7 +1741,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 515.747)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.2952, 1, 591.381)
 
 [node name="YaguiFicha12" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.2, -7.303, 693.743)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100.2, -7.303, 693.743)
 
 [node name="YaguiFicha13" parent="YaguiFichas" instance=ExtResource("27_l5qvs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100.2, -9.358, 718.797)
