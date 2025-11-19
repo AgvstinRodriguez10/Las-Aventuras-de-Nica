@@ -1,0 +1,143 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckf33yr5odinp"]
+
+[ext_resource type="Texture2D" uid="uid://yo6ourdxebec" path="res://Assets/HUD/GUI SN.png" id="1_0qqng"]
+[ext_resource type="Texture2D" uid="uid://cje0q8homxtob" path="res://Resource/TestGradient.tres" id="2_8umsw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8umsw"]
+texture = ExtResource("1_0qqng")
+region_rect = Rect2(1146, 995, 536, 229)
+
+[sub_resource type="LabelSettings" id="LabelSettings_avkfs"]
+font_size = 35
+shadow_size = 2
+shadow_color = Color(0.011764706, 0, 0.75686276, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uyqeh"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0, 0, 0, 0.4392157)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[node name="TOPSCORE" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.5
+offset_top = -198.75
+offset_right = 252.5
+offset_bottom = 198.75
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 104.5
+offset_top = -45.25
+offset_right = 403.5
+offset_bottom = 50.75
+theme_override_styles/normal = SubResource("StyleBoxTexture_8umsw")
+text = "TOP 5"
+label_settings = SubResource("LabelSettings_avkfs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel"]
+position = Vector2(254.5, 119.75)
+texture = ExtResource("2_8umsw")
+
+[node name="Ranking" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = -139.5
+offset_right = 203.0
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uyqeh")
+
+[node name="misc" type="Control" parent="Panel/Ranking"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Pts" type="Label" parent="Panel/Ranking/misc"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 180.0
+offset_top = 17.5
+offset_right = 360.0
+offset_bottom = 54.5
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 25
+text = "Puntos"
+horizontal_alignment = 2
+
+[node name="Nombre" type="Label" parent="Panel/Ranking/misc"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 123.0
+offset_top = -2.5
+offset_right = 236.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Nombre"
+
+[node name="Rank" type="Label" parent="Panel/Ranking/misc"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 17.5
+offset_right = 93.0
+offset_bottom = 54.5
+theme_override_font_sizes/font_size = 25
+text = "Puesto"
+
+[node name="Top#1" type="Label" parent="Panel/Ranking"]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 68.5
+offset_right = 249.0
+offset_bottom = 99.5
+theme_override_font_sizes/font_size = 25
+text = "Agus"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Score" type="Label" parent="Panel/Ranking"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 68.5
+offset_right = 382.0
+offset_bottom = 105.5
+text = "1093"
+horizontal_alignment = 2
+
+[node name="Label" type="Label" parent="Panel/Ranking"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 68.5
+offset_right = 88.0
+offset_bottom = 105.5
+theme_override_font_sizes/font_size = 25
+text = "1"
