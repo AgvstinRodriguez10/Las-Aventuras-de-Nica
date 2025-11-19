@@ -51,14 +51,12 @@ func _process(delta: float) -> void:
 				return
 			else:
 				currentState = STATE.OFF
-			
-	
+
 func calcularMultiplicadores(lbl:Label, multi:float, points:float, siguienteState:STATE):
 	lbl.text = lbl.text + str(int(points))
 	lbl.text = str(int(multi * points))
 	puntajeTotal = puntajeTotal + multi * points
 	currentState = siguienteState
-	
 	
 func actualizarTotal(objetivo:float, delta) -> bool:
 	if puntajeTotalMostrado <= objetivo - 0.1:
