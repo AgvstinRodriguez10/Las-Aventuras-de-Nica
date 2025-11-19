@@ -23,10 +23,12 @@ enum STATE {
 	PUNTAJE_RD,
 	PUNTAJE_TOTAL
 }
+var scoresSaved: Dictionary
 
 func _ready() -> void:
 	hide()
 	currentState = STATE.OFF
+	scoresSaved.ranking = []
 	
 func _process(delta: float) -> void:
 	if !fadeInFinish:
@@ -65,12 +67,22 @@ func actualizarTotal(objetivo:float, delta) -> bool:
 		return true
 	else:
 		return false
-	
-func _on_reintentar_pressed() -> void:
-	get_tree().reload_current_scene()
 
 func _on_salir_pressed() -> void:
-	get_tree().quit()
+	getRanking()
+	var scoreFile = FileAccess.open("user://my_score_file.txt", FileAccess.WRITE)
+	scoresSaved.ranking.push_back({
+			"nombre": $Panel/Puntaje/NombreJugador.text,
+			"puntaje": puntajeTotal
+		})
+	
+	# Convierte el diccionario a una cadena JSON
+	var json_string = JSON.stringify(scoresSaved, "\t") # \t es para indentar el archivo
+	
+	scoreFile.store_string(json_string)
+	scoreFile.close()
+	await get_tree().create_timer(1).timeout
+	get_tree().change_scene_to_file("res://Scenes/World/MenuInicial.tscn")
 
 func finished():
 	show()
@@ -81,3 +93,10 @@ func finished():
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	fadeInFinish = true
 	currentState = STATE.PUNTAJE_BASE
+
+func getRanking():
+	var scoreFile = FileAccess.open("user://my_score_file.txt", FileAccess.READ)
+	if scoreFile.get_as_text() != "":
+		scoresSaved = JSON.parse_string(scoreFile.get_as_text())
+	scoreFile.close()
+	

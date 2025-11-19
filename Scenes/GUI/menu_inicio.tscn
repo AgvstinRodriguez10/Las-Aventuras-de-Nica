@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://c7o8d2sg86hoa"]
+[gd_scene load_steps=10 format=3 uid="uid://c7o8d2sg86hoa"]
 
 [ext_resource type="Script" uid="uid://csd7dokxfgtj8" path="res://Script/GUI/menu_inicio.gd" id="1_je8qq"]
 [ext_resource type="FontFile" uid="uid://gruu5234vhv1" path="res://Assets/Fonts/kagenobold-v4816.otf" id="1_ocdq1"]
 [ext_resource type="Theme" uid="uid://lx6j7vbg6ma" path="res://Resource/Themes/Default.tres" id="3_esk8f"]
+[ext_resource type="PackedScene" uid="uid://ckf33yr5odinp" path="res://Scenes/topscore.tscn" id="4_bree7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_je8qq"]
 font = ExtResource("1_ocdq1")
@@ -32,9 +33,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -204.0
+offset_left = -496.0
 offset_top = -224.0
-offset_right = 204.0
+offset_right = -88.0
 offset_bottom = 224.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -72,6 +73,8 @@ offset_bottom = 360.0
 shortcut_context = NodePath(".")
 shortcut = SubResource("Shortcut_88rb8")
 text = "SALIR"
+
+[node name="TOPSCORE" parent="." instance=ExtResource("4_bree7")]
 
 [connection signal="pressed" from="Panel/Iniciar" to="." method="_on_iniciar_pressed"]
 [connection signal="pressed" from="Panel/Salir" to="." method="_on_salir_pressed"]

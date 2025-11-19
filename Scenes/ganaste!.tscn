@@ -13,58 +13,46 @@ resource_name = "PuntajeFinal"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Panel/Reintentar:position")
+tracks/0/path = NodePath("Panel/Salir:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(179, 214.5), Vector2(179, 340.5)]
+"values": [Vector2(179, 353.5), Vector2(179, 394.5)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Panel/Salir:position")
+tracks/1/path = NodePath("Panel/Label2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(179, 353.5), Vector2(179, 432.5)]
+"values": [Vector2(1, 109.5), Vector2(1, 61.5)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Panel/Label2:position")
+tracks/2/path = NodePath("Panel/Label:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1, 109.5), Vector2(1, 61.5)]
+"values": [Vector2(0, 0), Vector2(0, -20.5)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Panel/Label:position")
+tracks/3/path = NodePath("Panel/Puntaje:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, -20.5)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Panel/Puntaje:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.68, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
@@ -76,58 +64,46 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Panel/Reintentar:position")
+tracks/0/path = NodePath("Panel/Salir:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(179, 214.5)]
+"values": [Vector2(179, 353.5)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Panel/Salir:position")
+tracks/1/path = NodePath("Panel/Label2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(179, 353.5)]
+"values": [Vector2(1, 109.5)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Panel/Label2:position")
+tracks/2/path = NodePath("Panel/Label:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1, 109.5)]
+"values": [Vector2(0, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Panel/Label:position")
+tracks/3/path = NodePath("Panel/Puntaje:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Panel/Puntaje:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -174,21 +150,13 @@ text = "HAS LOGRADO ESCAPAR DE YAGÜI"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Reintentar" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 179.0
-offset_top = 214.5
-offset_right = 411.0
-offset_bottom = 289.4999
-text = "REINTENTAR"
-
 [node name="Salir" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 179.0
 offset_top = 353.5
-offset_right = 411.0
-offset_bottom = 428.5
-text = "SALIR"
+offset_right = 441.0
+offset_bottom = 444.49994
+text = "MENU"
 
 [node name="Puntaje" type="Panel" parent="Panel"]
 modulate = Color(1, 1, 1, 0)
@@ -199,13 +167,13 @@ anchor_bottom = 1.0
 offset_left = 58.0
 offset_top = 132.5
 offset_right = -58.0
-offset_bottom = -192.5
+offset_bottom = -146.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_avehn")
 
 [node name="EcoCoinIcon" type="Sprite2D" parent="Panel/Puntaje"]
-position = Vector2(85.63312, 54)
+position = Vector2(85.63312, 70)
 scale = Vector2(0.051216424, 0.05121639)
 texture = ExtResource("2_gkrt1")
 region_enabled = true
@@ -214,61 +182,67 @@ region_rect = Rect2(0, 246.50749, 1025, 781.4925)
 [node name="lbl_eco" type="Label" parent="Panel/Puntaje"]
 layout_mode = 1
 offset_left = 112.0
-offset_top = 32.0
+offset_top = 48.0
 offset_right = 175.0
-offset_bottom = 69.0
+offset_bottom = 85.0
 text = "2x"
 
 [node name="lblx10" type="Label" parent="Panel/Puntaje"]
 layout_mode = 1
 offset_left = 112.0
-offset_top = 89.05731
-offset_right = 147.0
-offset_bottom = 126.05731
+offset_top = 105.05731
+offset_right = 157.0
+offset_bottom = 142.05731
 text = "10x"
 
 [node name="lblx5" type="Label" parent="Panel/Puntaje"]
 layout_mode = 1
 offset_left = 112.0
-offset_top = 144.0
+offset_top = 160.0
 offset_right = 146.0
-offset_bottom = 181.0
+offset_bottom = 197.0
 text = "5x"
 
 [node name="lbl_title_total" type="Label" parent="Panel/Puntaje"]
 layout_mode = 1
 offset_left = 312.0
-offset_top = 30.0
+offset_top = 46.0
 offset_right = 389.0
-offset_bottom = 67.0
+offset_bottom = 83.0
 text = "Total:"
 
 [node name="lbl_total" type="Label" parent="Panel/Puntaje"]
 layout_mode = 1
 offset_left = 304.0
-offset_top = 78.0
+offset_top = 94.0
 offset_right = 403.0
-offset_bottom = 115.0
+offset_bottom = 131.0
 
 [node name="SnCoinIcon" type="Sprite2D" parent="Panel/Puntaje"]
-position = Vector2(85.63312, 109.999985)
+position = Vector2(85.63312, 125.999985)
 scale = Vector2(0.013889446, 0.013889436)
 texture = ExtResource("3_byt38")
 region_enabled = true
 region_rect = Rect2(-30.61792, 1101.3221, 4267.175, 3172.6206)
 
 [node name="RdCoinIcon" type="Sprite2D" parent="Panel/Puntaje"]
-position = Vector2(85.63312, 166.00002)
+position = Vector2(85.63312, 182.00002)
 scale = Vector2(0.10694471, 0.106944636)
 texture = ExtResource("4_kqett")
 region_enabled = true
 region_rect = Rect2(4.8268433, -13.07251, 310.9898, 336.6679)
+
+[node name="NombreJugador" type="LineEdit" parent="Panel/Puntaje"]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 174.0
+offset_right = 448.0
+offset_bottom = 205.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_byt38")
 }
 
-[connection signal="pressed" from="Panel/Reintentar" to="." method="_on_reintentar_pressed"]
 [connection signal="pressed" from="Panel/Salir" to="." method="_on_salir_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
