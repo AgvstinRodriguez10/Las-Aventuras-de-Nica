@@ -43,11 +43,11 @@ func _process(delta: float) -> void:
 			else:
 				currentState = STATE.PUNTAJE_ECOFICHA
 		STATE.PUNTAJE_ECOFICHA:
-			calcularMultiplicadores(lbl_eco, 3.0, float(hud.dictCoinsLbls.eco.text), STATE.PUNTAJE_VIDAS)
+			calcularMultiplicadores(lbl_eco, 5.0, float(hud.dictCoinsLbls.eco.text), STATE.PUNTAJE_VIDAS)
 		STATE.PUNTAJE_VIDAS:
 			calcularMultiplicadores(lblx_life, 50.0, float(hud.dictCoinsLbls.life.text),STATE.PUNTAJE_RD)
 		STATE.PUNTAJE_RD:
-			calcularMultiplicadores(lblx_rd, 20.0, float(hud.dictCoinsLbls.rd.text), STATE.PUNTAJE_TOTAL)
+			calcularMultiplicadores(lblx_rd, 30.0, float(hud.dictCoinsLbls.rd.text), STATE.PUNTAJE_TOTAL)
 		STATE.PUNTAJE_TOTAL:
 			if actualizarTotal(puntajeTotal ,delta):
 				return

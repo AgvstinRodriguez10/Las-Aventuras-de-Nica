@@ -1652,9 +1652,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.2, 1, 669.486)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.2, -9.358, 722.727)
 
 [node name="SNFicha10" parent="SNFichas" instance=ExtResource("9_w7l72")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.2, -9.358, 722.727)
-
-[node name="SNFicha11" parent="SNFichas" instance=ExtResource("9_w7l72")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.2, -9.358, 745.97)
 
 [node name="RDFichas" type="Node3D" parent="."]
