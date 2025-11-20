@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://d33hm0kfvhtj3"]
+[gd_scene load_steps=3 format=3 uid="uid://d33hm0kfvhtj3"]
 
 [ext_resource type="Script" uid="uid://dbsom863oe14w" path="res://Script/GUI/fps_count.gd" id="1_sr7y8"]
-[ext_resource type="LabelSettings" uid="uid://b4flmmihcs4h5" path="res://Resource/Extras/fps_count.tres" id="2_1b1wk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yteiy"]
 bg_color = Color(0, 0, 0, 0.207843)
@@ -24,7 +23,6 @@ layout_mode = 1
 offset_right = 249.0
 offset_bottom = 43.0
 text = "FPS : 0"
-label_settings = ExtResource("2_1b1wk")
 vertical_alignment = 1
 
 [node name="DrawCalls" type="Label" parent="Panel"]
@@ -34,7 +32,6 @@ offset_top = 48.0
 offset_right = 249.0
 offset_bottom = 91.0
 text = "Draw : "
-label_settings = ExtResource("2_1b1wk")
 vertical_alignment = 1
 
 [node name="objectInFrame" type="Label" parent="Panel"]
@@ -44,7 +41,6 @@ offset_top = 96.0
 offset_right = 249.0
 offset_bottom = 139.0
 text = "Objects:"
-label_settings = ExtResource("2_1b1wk")
 vertical_alignment = 1
 
 [node name="MemVRAM" type="Label" parent="Panel"]
@@ -54,7 +50,6 @@ offset_top = 144.0
 offset_right = 249.0
 offset_bottom = 187.0
 text = "VRAM"
-label_settings = ExtResource("2_1b1wk")
 vertical_alignment = 1
 
 [node name="MemoryText" type="Label" parent="Panel"]
@@ -64,7 +59,6 @@ offset_top = 192.0
 offset_right = 249.0
 offset_bottom = 235.0
 text = "TexMem"
-label_settings = ExtResource("2_1b1wk")
 vertical_alignment = 1
 
 [node name="PlayerVel" type="Label" parent="Panel"]
@@ -74,4 +68,3 @@ offset_top = 240.0
 offset_right = 90.0
 offset_bottom = 277.0
 text = "PlayerVel : "
-label_settings = ExtResource("2_1b1wk")
