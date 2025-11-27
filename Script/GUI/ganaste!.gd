@@ -7,6 +7,7 @@ extends CanvasLayer
 @onready var hud: UI = $"../HUD"
 @onready var nica: Player = $"../Nica"
 
+var fileurl = "res://my_score.txt"
 
 var puntajeBase: float
 var puntajeTotal: float
@@ -70,7 +71,7 @@ func actualizarTotal(objetivo:float, delta) -> bool:
 
 func _on_salir_pressed() -> void:
 	getRanking()
-	var scoreFile = FileAccess.open("user://my_score_file.txt", FileAccess.WRITE)
+	var scoreFile = FileAccess.open(fileurl, FileAccess.WRITE)
 	scoresSaved.ranking.push_back({
 			"nombre": $Panel/Puntaje/NombreJugador.text,
 			"puntaje": puntajeTotal
@@ -95,7 +96,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	currentState = STATE.PUNTAJE_BASE
 
 func getRanking():
-	var scoreFile = FileAccess.open("user://my_score_file.txt", FileAccess.READ)
+	var scoreFile = FileAccess.open(fileurl, FileAccess.READ)
 	if scoreFile.get_as_text() != "":
 		scoresSaved = JSON.parse_string(scoreFile.get_as_text())
 	scoreFile.close()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c7o8d2sg86hoa"]
+[gd_scene load_steps=6 format=3 uid="uid://c7o8d2sg86hoa"]
 
 [ext_resource type="Script" uid="uid://csd7dokxfgtj8" path="res://Script/GUI/menu_inicio.gd" id="1_je8qq"]
 [ext_resource type="FontFile" uid="uid://gruu5234vhv1" path="res://Assets/Fonts/kagenobold-v4816.otf" id="1_ocdq1"]
@@ -10,18 +10,6 @@ font = ExtResource("1_ocdq1")
 font_size = 30
 shadow_size = 2
 shadow_color = Color(0.0588235, 0.294118, 0.580392, 1)
-
-[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_esk8f"]
-pressed = true
-
-[sub_resource type="Shortcut" id="Shortcut_bree7"]
-events = [SubResource("InputEventJoypadButton_esk8f")]
-
-[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_4lj40"]
-pressed = true
-
-[sub_resource type="Shortcut" id="Shortcut_88rb8"]
-events = [SubResource("InputEventJoypadButton_4lj40")]
 
 [node name="MenuInicio" type="CanvasLayer"]
 process_mode = 3
@@ -61,7 +49,6 @@ offset_right = 300.0
 offset_bottom = 264.0
 shortcut_context = NodePath(".")
 theme = ExtResource("3_esk8f")
-shortcut = SubResource("Shortcut_bree7")
 text = "INICIAR"
 
 [node name="Salir" type="Button" parent="Panel" node_paths=PackedStringArray("shortcut_context")]
@@ -70,8 +57,7 @@ offset_left = 116.0
 offset_top = 300.0
 offset_right = 300.0
 offset_bottom = 360.0
-shortcut_context = NodePath(".")
-shortcut = SubResource("Shortcut_88rb8")
+shortcut_context = NodePath("../Iniciar")
 text = "SALIR"
 
 [node name="TOPSCORE" parent="." instance=ExtResource("4_bree7")]

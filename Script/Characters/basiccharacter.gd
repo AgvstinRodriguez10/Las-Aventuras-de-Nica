@@ -23,7 +23,7 @@ var currentState:STATES = STATES.FALL
 func _ready() -> void:
 	position = position
 	eje_local_x = global_transform.basis.x.normalized()
-	
+
 func animationController(delta):
 	match currentState:
 		STATES.IDLE:
@@ -53,13 +53,12 @@ func gravityApply(delta: float):
 		velocity.y -= GRAVITY * delta
 	else:
 		velocity.y = 0
-	
+
 func stopMove():
 	velocity = Vector3.ZERO
-	
+
 func is_movie_change():
 	is_movie = !is_movie
 
 func actualizar_eje_local():
 	eje_local_x = global_transform.basis.x.normalized()
-	

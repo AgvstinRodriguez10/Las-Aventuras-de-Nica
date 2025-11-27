@@ -1,10 +1,12 @@
 extends CanvasLayer
 var savedScores: Dictionary
 var rank: int = 1
+var fileurl = "res://my_score.txt"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var scoreFile = FileAccess.open("user://my_score_file.txt", FileAccess.READ)
+	#var scoreFile = FileAccess.open("user://my_score_file.txt", FileAccess.READ)
+	var scoreFile = FileAccess.open(fileurl, FileAccess.READ)
 	if scoreFile.get_as_text() != "":
 		savedScores = JSON.parse_string(scoreFile.get_as_text())
 	scoreFile.close()

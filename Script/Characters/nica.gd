@@ -155,7 +155,7 @@ func changeVisionCam():
 		
 		camera_distance = -4.0
 		frontalCamIsActive = false
-	
+
 func changeLine(dire) -> void:
 	var dist_recorrida = 0
 	
@@ -205,7 +205,6 @@ func camera_follow(delta:float):
 
 func reset_target_line():
 	target_lane = 1
-	
 
 func setPower(power:POWERUPSTATE):
 	currentPowerUp = power
@@ -246,7 +245,7 @@ func collectSnFicha():
 func _on_giro_body_entered(body: Node3D) -> void:
 	AnimacionGiro(body.name, $"../Giro/AnimationPlayer")
 	posPostGiro = $"../Giro/posPostGiro".global_position
-	
+
 func _on_giro_escalinata_body_entered(body: Node3D) -> void:
 	AnimacionGiro(body.name, $"../GiroEscalinata/AnimationPlayer")
 	posPostGiro = $"../GiroEscalinata/posPostGiro".global_position

@@ -1,0 +1,8 @@
+{
+	"ranking": [
+		{
+			"nombre": "9",
+			"puntaje": 559.0
+		}
+	]
+}
