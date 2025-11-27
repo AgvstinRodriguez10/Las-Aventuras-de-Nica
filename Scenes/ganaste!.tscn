@@ -179,29 +179,26 @@ texture = ExtResource("2_gkrt1")
 region_enabled = true
 region_rect = Rect2(0, 246.50749, 1025, 781.4925)
 
-[node name="lbl_eco" type="Label" parent="Panel/Puntaje"]
+[node name="lblx_eco" type="Label" parent="Panel/Puntaje"]
 layout_mode = 1
 offset_left = 112.0
 offset_top = 48.0
 offset_right = 175.0
 offset_bottom = 85.0
-text = "2x"
 
-[node name="lblx10" type="Label" parent="Panel/Puntaje"]
+[node name="lblx_life" type="Label" parent="Panel/Puntaje"]
 layout_mode = 1
 offset_left = 112.0
 offset_top = 105.05731
 offset_right = 157.0
 offset_bottom = 142.05731
-text = "10x"
 
-[node name="lblx5" type="Label" parent="Panel/Puntaje"]
+[node name="lblx_rd" type="Label" parent="Panel/Puntaje"]
 layout_mode = 1
 offset_left = 112.0
 offset_top = 160.0
 offset_right = 146.0
 offset_bottom = 197.0
-text = "5x"
 
 [node name="lbl_title_total" type="Label" parent="Panel/Puntaje"]
 layout_mode = 1
